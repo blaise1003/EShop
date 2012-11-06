@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+  @@include "head.html"
+  <body class="home">
+    <div id="wrapper" class="container">
+        @@include "navbar-fixed-top.html" 
+      <div id="header" class="row">
+        @@include "topbar.html"
+        @@include "carousel.html"
+      </div>
+       @@include "breadcrumb-social.html"
+      <div id="main" class="row">
+        <div id="content">
+
+            <ul class="breadcrumb-step">
+                <li><strong>Vai alla cassa:</strong></li>
+                <li>1. Carrello <span class="divider">/</span></li>
+                <li>2. Informazioni personali <span class="divider">/</span></li>
+                <li class="active">3. Consegna <span class="divider">/</span></li>
+                <li>4. Conferma l'ordine</li>
+            </ul>
+
+            <h1 class="page-header">Vai alla cassa
+                <small>Completa i seguenti dati per inoltrare il tuo ordine</small>
+            </h1>
+            
+           <form method="post" action=".">
+            <div style="display:none">
+                <input type="hidden" 
+                       name="csrfmiddlewaretoken"
+                       value="04088975240523963d2eff28ff5088fd">
+            </div>
+            <h2>Informazioni di consegna!</h2>
+            <div class="alert alert-block">
+              
+              Seleziona ora il metodo di consegna fra quelli indicati qui sotto.
+            </div>
+             <div id="shipping">
+             <ul>
+                <li>
+                <label for="id_shipping_0"></label>
+                <input type="radio" id="id_shipping_0" value="Calendar" name="shipping">
+                    <strong>€ 6,00 Spedizione via corriere Executive</strong><br />
+                   <em>Arrivo previsto tra 2 giorni, 16:12 - 23:12
+                       <strong class="cslot">(remaining 5 free slots)</strong></em>
+                </li>
+                <li>
+                <label for="id_shipping_0"></label>
+                <input type="radio" id="id_shipping_0" value="Calendar" name="shipping">
+                    <strong>€ 3,00 Spedizione via Posta Ordinaria</strong><br />
+                    <em>Arrivo previsto tra 6 giorni, 16:12 - 23:12
+                        <strong class="cslot bit">(remaining 1 free slots)</strong></em>
+                </li>
+             </ul>
+           </div>
+           
+           <div class="actions">
+              <input type="submit" class="btn btn-primary" value="Conferma">
+           </div>
+           </form>
+        </div>
+      </div>
+    </div>
+    @@include "footer.html"
+  </body>
+</html>
+

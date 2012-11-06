@@ -1,0 +1,41 @@
+{% load i18n %}
+<div id="header">
+  <div id="logo">
+    {% if iconURI %}
+    <img src="{{iconURI}}" />
+    {% endif %}
+  </div>
+  <div id="shop-info">
+    <h3>{{shopDetails.store_name}}</h3>
+    <div>
+      {% if shopDetails.street1 %}
+      <p>{{shopDetails.street1}}</p>
+      {% endif %}
+      {% if shopDetails.street1 %}
+      <p>{{shopDetails.street2}}</p>
+      {% endif %}
+      <p>
+        {% if shopDetails.city %}{{shopDetails.city}}{% endif %}{% if shopDetails.state or shopDetails.postal_code %},{% endif %}
+        {% if shopDetails.postal_code %}{{shopDetails.postal_code}}{% endif %}
+        {% if shopDetails.state %}{{shopDetails.state}}{% endif %}
+      </p>
+      {% if shopDetails.country %}
+      <p>
+        {{shopDetails.country.name}}
+      </p>
+      {% endif %}
+    </div>
+    {% if shopDetails.phone or shopDetails.store_email %}
+    <dl>
+      {% if shopDetails.phone %}
+      <dt>{% trans "Phone" %}:</dt>
+      <dd>{{shopDetails.phone}}</dd>
+      {% endif %}
+      {% if shopDetails.store_email %}
+      <dt>{% trans "Email" %}:</dt>
+      <dd>{{shopDetails.store_email}}</dd>
+      {% endif %}
+    </dl>
+    {% endif %}
+  </div>
+</div>

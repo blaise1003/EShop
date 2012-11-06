@@ -1,0 +1,48 @@
+{% load i18n thumbnail satchmo_currency satchmo_discounts app_plugins %}
+{% if offer %}
+<div class="portlet sale">
+  <div class="portletHeader">
+      <div class="labelicon">
+          <img class="resize" src="/static/theme/img/labelsale.png" />
+      </div>
+      <h3>{% trans "Offer!" %}</h3>
+  </div>
+  <div class="portletItem">
+      <ul class="media-grid unstyled">
+          <li>
+              <a href="{{ offer.product.get_absolute_url }}">
+                  {% thumbnail offer.product.main_image.picture 128x128 as image %}
+                  <img src="{{ image.absolute_url }}" class="thumbnail"
+                        alt="{{offer.title}}"
+                        width="{{image.width}}px"
+                        height="{{image.heigth}}px" />
+              </a>
+          </li>
+      </ul>
+      <p>{{ offer.title }}</p>
+      <div class="buttonCart">
+              <div class="price">{{ offer.product|taxed_discount_price:''|currency }}</div>
+              <div class="actions iconsmall">
+                <a href="{{offer.product.get_absolute_url}}" rel="tooltip"
+                      alt="{{offer.product.name}}" title="{% trans 'Product details' %}"
+                      class="info"></a>
+                {% if offer.product.active %}
+                <form action="{% url satchmo_smart_add %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="quantity"
+                          value="1" />
+                    <input type="hidden" name="productname"
+                          value="{{offer.product.slug}}" />
+                    <div>
+                        <input type="submit" class="cart" title="{% trans 'Add to cart' %}"
+                          name="addcart" value="" rel="tooltip" />
+                        {% plugin_point "product_add_buttons" %}
+                        {% plugin_point "product_form" %}
+                    </div>
+                </form>
+                {% endif %}
+              </div>
+      </div>
+  </div>
+</div>
+{% endif %}

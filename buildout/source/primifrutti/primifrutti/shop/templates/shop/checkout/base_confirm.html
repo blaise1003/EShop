@@ -1,0 +1,56 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load satchmo_currency %}
+{% load satchmo_order %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+   <li>{% trans "Checkout" %}</li>
+{% endblock %}
+
+{% block spancheckout %}
+<div id="content">
+
+    <ul class="breadcrumb-step">
+        <li class="first"><i class="icon-shopping-cart"></i>
+            {% trans "Checkout:" %}</li><span class="divider">&nbsp;</span>
+        <li>{% trans "1. Cart" %} <i class="icon-ok"></i></li><span class="divider">&nbsp;</span>
+        <li>{% trans "2. Personal Data" %} <i class="icon-ok"></i></li><span class="divider">&nbsp;</span>
+        <li>{% trans "3. Shipment" %} <i class="icon-ok"></i></li><span class="divider">&nbsp;</span>
+        <li class="active">{% trans "4. Order Confirm" %}</li>
+    </ul>
+
+<h1 class="page-header">{% trans "Checkout" %} <small>{% trans "Please validate the following information, then submit your order." %}</small></h1>
+
+{% block error_processing %}
+{% if errors %}
+    <h3>{% block errorheader %}{% trans "The following error was returned while trying to process your payment. Please correct and resubmit." %}{% endblock %}</h3>
+    {{ errors }}
+{% endif %}
+{% endblock %}
+
+{% block order_details %}
+    {% order_details order default_view_tax %}
+{% endblock %}
+
+{% block payment_display %}
+{# override for module-specific needs, such as displaying card info #}
+{% endblock %}
+
+{% block payment_form %}
+{# override with any payment-module specific needs #}
+<form method="post" action=".">{% csrf_token %}
+<input type="hidden" class="btn" name="Process" value="True" />
+<input type="submit" class="btn" value="{% trans "Purchase Items" %}" />
+</form>
+{% endblock %}
+
+
+</div>
+{% endblock %}
+
+{% block leftcolumn %}
+{% endblock %}
+
+{% block rightcolumn %}
+{% endblock %}

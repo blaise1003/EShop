@@ -1,0 +1,58 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# This file is distributed under the same license as the Satchmo package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Satchmo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-02-28 19:57-0600\n"
+"PO-Revision-Date: 2009-03-05 01:36+0300\n"
+"Last-Translator: Pavel Kiper <iwtbarh@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: config.py:9
+msgid "Enable Akismet ratings"
+msgstr "Включить рейтинги Akismet"
+
+#: config.py:15
+msgid "Akismet API Key"
+msgstr "Ключ API Akismet"
+
+#: models.py:11 templates/productratings/_product_ratings.html:17
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: utils.py:49
+msgid "Not Rated"
+msgstr "Нет оценок"
+
+#: templates/productratings/_product_ratings.html:4
+msgid "Product Reviews"
+msgstr "Отзывы о продукте"
+
+#: templates/productratings/_product_ratings.html:8
+msgid "Be the first to review it!"
+msgstr "Оставьте ваш отзыв первыми!"
+
+#: templates/productratings/_product_ratings.html:12
+#, python-format
+msgid "Average rating %(rating)s"
+msgstr "Средний рейтинг %(rating)s"
+
+#: templates/productratings/_product_ratings.html:24
+msgid "Review this product"
+msgstr "Написать отзыв"
+
+#: templates/productratings/_product_ratings.html:28
+msgid "Please login to review this product."
+msgstr "Пожалуйста, авторизуйтесь, чтобы оставить отзыв об этом продукте."
+
+#: templates/productratings/plugins/sidebar_links.html:3
+msgid "Most Popular"
+msgstr "Наиболее популярные"

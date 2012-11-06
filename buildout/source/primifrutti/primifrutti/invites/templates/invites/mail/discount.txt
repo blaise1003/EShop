@@ -1,0 +1,14 @@
+{% load i18n %}{% load l10n %}{% blocktrans %}Congratulations {{ first_name }},{% endblocktrans %}
+
+{% blocktrans %}You have succesfully invited {{ invites_number }} people! As a reward, we are happy to provide you with an electronic coupon that will get you a {{ discount_amount }} discount on your next purchase!{% endblocktrans %}
+
+{% blocktrans %}The electronic coupon code is{% endblocktrans %}
+
+    {{ coupon_code }}
+
+{% blocktrans %}In order to use it, you must insert this code in the 'coupon' field found in the checkout page (the page where you give the billing details and select the payment method, right after clicking 'checkout'). After entering the code, the discount of {{ discount_amount }} will be applied to your order.{% endblocktrans %}
+
+{% localize %}{% blocktrans %}IMPORTANT: Remember that you can use this coupon ONLY ONE TIME and you must USE IT BEFORE {{ end_date|date:"DATE_FORMAT" }} {% endblocktrans %}{% endlocalize %}
+
+{% blocktrans %}All the best,{% endblocktrans %}
+    {{ shop_name }}

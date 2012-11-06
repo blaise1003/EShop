@@ -1,0 +1,48 @@
+{% load i18n thumbnail satchmo_currency satchmo_discounts app_plugins %}
+{% if gift %}
+<div class="portlet sale gift">
+  <div class="portletHeader">
+      <div class="labelicon">
+          <img class="resize" src="/static/theme/img/labelgift.png" />
+      </div>
+      <h3>{% trans "Gifts" %}</h3>
+  </div>
+  <div class="portletItem">
+      <ul class="media-grid unstyled">
+          <li>
+              <a href="{{ gift.get_absolute_url }}">
+                  {% thumbnail gift.main_image.picture 128x128 as image %}
+                  <img src="{{ image.absolute_url }}" class="thumbnail"
+                        alt="{{gift.title}}"
+                        width="{{image.width}}px"
+                        height="{{image.heigth}}px" />
+              </a>
+          </li>
+      </ul>
+      <p>{{ gift.name }}</p>
+      <div class="buttonCart">
+              <div class="price">{{ gift|taxed_discount_price:''|currency }}</div>
+              <div class="actions iconsmall">
+                <a href="{{gift.get_absolute_url}}" title="{% trans 'Product details' %}"
+                      alt="{{gift.name}}" rel="tooltip"
+                      class="info"></a>
+                {% if gift.active %}
+                <form action="{% url satchmo_smart_add %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="quantity"
+                          value="1" />
+                    <input type="hidden" name="productname"
+                          value="{{gift.slug}}" />
+                    <div>
+                        <input type="submit" class="cart" rel="tooltip"
+                          name="addcart" value="" title="{% trans 'Add to cart' %}"/>
+                        {% plugin_point "product_add_buttons" %}
+                        {% plugin_point "product_form" %}
+                    </div>
+                </form>
+                {% endif %}
+              </div>
+      </div>
+  </div>
+</div>
+{% endif %}

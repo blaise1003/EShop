@@ -1,0 +1,217 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# This file is distributed under the same license as the Satchmo package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-02-28 19:56-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: config.py:7
+msgid "Newsletter Settings"
+msgstr "뉴스레터 설정"
+
+#: config.py:11
+msgid "Active newsletter module"
+msgstr "뉴스레터 활성 모듈"
+
+#: config.py:12
+msgid ""
+"Select a newsletter, save and reload to set any module-specific newsletter "
+"settings."
+msgstr ""
+"뉴스레터를 선택하세요, 해당 뉴스레터 모듈을 설정하기 위해서는 저장 후 다시 페"
+"이지를 읽으세요"
+
+#: config.py:14
+msgid "No newsletter"
+msgstr "뉴스레터 없음"
+
+#: config.py:15
+msgid "Simple list"
+msgstr "간단 목록"
+
+#: config.py:16
+msgid "Mailman"
+msgstr "집배원"
+
+#: config.py:21
+msgid "Name of Newsletter"
+msgstr "뉴스레터 이름"
+
+#: config.py:22
+msgid "Give the exact name that matches the mailing list set up in Mailman."
+msgstr "메일맨에 설정된 정확한 메일링 리스트 이름을 입력 하세요"
+
+#: config.py:31
+#, fuzzy
+msgid "Newsletter Slug"
+msgstr "뉴스레터 설정"
+
+#: config.py:32
+msgid "The url slug for the newsletter.  Requires server restart if changed."
+msgstr ""
+
+#: forms.py:16
+msgid "Full Name"
+msgstr "이름"
+
+#: forms.py:17 templates/newsletter/subscribe_form.html:20
+#: templates/newsletter/unsubscribe_form.html:20
+#: templates/newsletter/update_form.html:20
+msgid "Email address"
+msgstr "이 메일"
+
+#: forms.py:18 templates/newsletter/subscribe_form.html:23
+#: templates/newsletter/update_form.html:22
+#: templates/newsletter/update_form.html:24
+msgid "Subscribe"
+msgstr "구독"
+
+#: mailman.py:44 simple.py:35
+#, fuzzy, python-format
+msgid "Updated subscription for %(email)s."
+msgstr "%(email)s은 이미 받이 보고 있습니다. "
+
+#: mailman.py:46 simple.py:37
+#, python-format
+msgid "Already subscribed %(email)s."
+msgstr "%(email)s은 이미 받이 보고 있습니다. "
+
+#: mailman.py:48 simple.py:40
+#, python-format
+msgid "Already removed %(email)s."
+msgstr "%(email)s은 탈퇴 이미 하셨습니다."
+
+#: mailman.py:58 mailman.py:95 simple.py:50
+#, python-format
+msgid "Subscribed: %(email)s"
+msgstr "구독: %(email)s"
+
+#: mailman.py:61 simple.py:52
+#, python-format
+msgid "Unsubscribed: %(email)s"
+msgstr "비구독: %(email)s"
+
+#: mailman.py:87
+#, python-format
+msgid "Already Subscribed: %s"
+msgstr "구독: %s"
+
+#: mailman.py:98
+#, python-format
+msgid "Already a member: %(email)s"
+msgstr "이미 구독자 입니다: %(email)s"
+
+#: mailman.py:102
+msgid "Bad/Invalid email address: blank line"
+msgstr "적합하지 않은 이메일 입니다."
+
+#: mailman.py:104
+#, python-format
+msgid "Bad/Invalid email address: %(email)s"
+msgstr "적합하지 않은 이메일 입니다: %(email)s"
+
+#: mailman.py:107
+#, python-format
+msgid "Hostile address (illegal characters): %(email)s"
+msgstr "부적합한 글자입니다: %(email)s"
+
+#: models.py:37
+msgid "Subscribed"
+msgstr "구독"
+
+#: models.py:38
+msgid "Email"
+msgstr "이메일"
+
+#: models.py:39
+msgid "Creation Date"
+msgstr "생성 날짜"
+
+#: models.py:40
+msgid "Update Date"
+msgstr "업데이트 날짜"
+
+#: models.py:102
+msgid "Attribute Name"
+msgstr ""
+
+#: models.py:103
+msgid "Value"
+msgstr ""
+
+#: models.py:106
+msgid "Subscription Attribute"
+msgstr ""
+
+#: models.py:107
+msgid "Subscription Attributes"
+msgstr ""
+
+#: views.py:40
+msgid "Error, not valid."
+msgstr "에르 유효하지 않음"
+
+#: templates/newsletter/subscribe_form.html:5
+#: templates/newsletter/unsubscribe_form.html:5
+#: templates/newsletter/update_form.html:5
+#: templates/newsletter/update_results.html:5
+msgid "Home"
+msgstr "홈"
+
+#: templates/newsletter/subscribe_form.html:6
+#: templates/newsletter/subscribe_form.html:10
+#: templates/newsletter/update_form.html:6
+#: templates/newsletter/update_form.html:10
+#: templates/newsletter/update_results.html:6
+#: templates/newsletter/update_results.html:10
+msgid "Newsletter Subscription"
+msgstr "뉴스레터 구독"
+
+#: templates/newsletter/subscribe_form.html:13
+#: templates/newsletter/unsubscribe_form.html:13
+#: templates/newsletter/update_form.html:13
+#, fuzzy
+msgid "Please correct the following error:"
+msgid_plural "Please correct the following errors:"
+msgstr[0] ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+msgstr[1] ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#: templates/newsletter/subscribe_form.html:18
+#: templates/newsletter/unsubscribe_form.html:18
+#: templates/newsletter/update_form.html:18
+msgid "Your name"
+msgstr "이름"
+
+#: templates/newsletter/unsubscribe_form.html:6
+#: templates/newsletter/unsubscribe_form.html:10
+msgid "Newsletter Unsubscribe"
+msgstr "뉴스레터 구독하지 않음"
+
+#: templates/newsletter/unsubscribe_form.html:22
+msgid "Remove Me"
+msgstr "탈퇴"

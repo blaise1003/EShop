@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load i18n satchmo_currency %}
+<html>
+  <head>
+    <title>
+      {% blocktrans with order_id=order.id shop_name=shopDetails.store_name %}
+        {{shop_name}} ― Shipping label for order #{{order_id}}
+      {% endblocktrans %}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">/*<![CDATA[*/
+    {% include "shop/pdf/styles.css" %}
+    /*]]>*/</style>
+  </head>
+  <body>
+    {% include "shop/pdf/navbar.html" with document_name=_("Shipping label") %}
+    <div id="wrapper">
+
+      <div id="billing" class="billing-and-shipping">
+        <h3>{% trans "Return to" %}</h3>
+        <p>{{shopDetails.store_name}}</p>
+        {% if shopDetails.street1 %}
+        <p>{{shopDetails.street1}}</p>
+        {% endif %}
+        {% if shopDetails.street1 %}
+        <p>{{shopDetails.street2}}</p>
+        {% endif %}
+        <p>
+          {% if shopDetails.city %}{{shopDetails.city}}{% endif %}{% if shopDetails.state or shopDetails.postal_code %},{% endif %}
+          {% if shopDetails.postal_code %}{{shopDetails.postal_code}}{% endif %}
+          {% if shopDetails.state %}{{shopDetails.state}}{% endif %}
+        </p>
+        {% if shopDetails.country %}
+        <p>
+          {{shopDetails.country.name}}
+        </p>
+        {% endif %}
+        {% if shopDetails.phone or shopDetails.store_email %}
+        <dl>
+          {% if shopDetails.phone %}
+          <dt>{% trans "Phone" %}:</dt>
+          <dd>{{shopDetails.phone}}</dd>
+          {% endif %}
+          {% if shopDetails.store_email %}
+          <dt>{% trans "Email" %}:</dt>
+          <dd>{{shopDetails.store_email}}</dd>
+          {% endif %}
+        </dl>
+        {% endif %}
+      </div>
+      <div id="shipping" class="billing-and-shipping">
+        <h3>{% trans "Send to" %}</h3>
+        {% if order.ship_addressee %}
+        <p>{{order.ship_addressee}}</p>
+        {% endif %}
+        {% if order.ship_street1 %}
+        <p>{{order.ship_street1}}</p>
+        {% endif %}
+        {% if order.ship_street1 %}
+        <p>{{order.ship_street2}}</p>
+        {% endif %}
+        <p>
+          {% if order.ship_city %}{{order.ship_city}}{% endif %}{% if order.ship_state or order.ship_postal_code %},{% endif %}
+          {% if order.ship_postal_code %}{{order.ship_postal_code}}{% endif %}
+          {% if order.ship_state %}{{order.ship_state}}{% endif %}
+        </p>
+        {% if order.ship_country %}
+        <p>
+          {{order.ship_country}}
+        </p>
+        {% endif %}
+      </div>
+      <div class="clear"><!-- clear floats --></div>
+    </div>
+  </body>
+</html>

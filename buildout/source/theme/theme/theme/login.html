@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>Primifrutti Theme</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet/less" type="text/css" href="/static/theme/styles/layout.less" />
+  <script type="text/javascript" src="/static/theme/scripts/bootstrap/bootstrap-modal.js"></script>
+  <script type="text/javascript" src="/static/theme/scripts/bootstrap/bootstrap-carousel.js"></script>
+  <script type="text/javascript" src="/static/theme/scripts/less-1.3.0.min.js"></script>
+  <script type="text/javascript" src="/static/theme/scripts/jquery-1.7.1.js"></script>
+ 
+  <script type="text/javascript" src="/static/theme/scripts/jquery.tools.min.js"></script>
+</head>
+  <body class="home">
+    <div id="wrapper" class="container">
+      <div id="header" class="row">
+ <div class="navbar navbar-inner navbar-fixed-top">
+     <div class="container">
+         <div class="btn-group pull-right ">
+           <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+           <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="/accounts/update/" title="Aggiorna profilo"><i class="icon-pencil"></i>Aggiorna profilo</a></li>
+             <li><a href="/accounts/password_change/" title="Modifica password"><i class="icon-pencil"></i>Modifica password</a></li>
+             <li><a href="/history/" title="Storia ordine"><i class="icon-list-alt"></i>Storia degli ordini</a></li>
+             <li><a href="/invites/invite_friends/" rel="#pb_1"><i class="icon-list-alt"></i>Invita gli amici</a></li>
+             <li class="divider"></li>
+             <li><a href="#"><i class="i"></i>Amministra</a></li>
+             <li><a href="#"><i class="i"></i>Esci</a></li>
+           </ul>
+         </div>
+         <div class="btn-group pull-right">
+           <a class="btn btn-warning" href="#">Login</a>
+           <a class="btn btn-warning dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li>
+
+ <form action="/accounts/login/" method="post" class="login">
+     <div style="display:none">
+       <input type="hidden" name="csrfmiddlewaretoken" value=
+       "e27ba2450bf71faf7176b43aafd35a3d" />
+     </div>
+
+     <fieldset>
+       <legend class="hidden">Dati di accesso</legend>
+
+       <div class="clearfix">
+         <label for="email">Email</label>
+
+         <div class="input">
+           <input type="email" required="true" placeholder="nome@dominio.com" class=
+           "span3 " id="id_username" name="username" />
+         </div>
+       </div>
+
+       <div class="clearfix">
+         <label for="password">Password</label>
+
+         <div class="input">
+           <input class="span3" type="password" value="********" name="password" id=
+           "id_password" size="20" />
+         </div>
+       </div>
+     </fieldset>
+     <div class="actions">
+        <input type="hidden" value="/accounts/" name="next">
+        <input id="login" type="submit" value="Entra" name="login" class="btn btn-primary">
+        <a id="register" title="Registrati" href="/accounts/register/" class="btn btn-warning">Registrati</a>
+    </div>
+   </form>
+             </li>
+           </ul>
+         </div>
+         <div class="btn-group pull-right">
+           <a class="btn btn-primary" href="#"><i class="icon-shopping-cart icon-white"></i>Carrello</a>
+           <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+           <ul class="dropdown-menu">
+            <li>
+            <div class="price">Hai 1 oggetto nel carrello <a href="/cart/"><i class="icon-info-sign icon-black"></i>€5,00</a></div>
+            </li>
+            <li class="divider"></li>
+             <li><a href="/checkout/">Vai alla cassa</a></li>
+           </ul>
+         </div>
+         
+     </div>
+ </div>
+ 
+           
+  <div id="top-bar">
+     <ul class="navigation nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="prodotto.html">Prodotti</a></li>
+        <li><a href="#">L'azienda</a></li>
+        <li><a href="#">Offerte</a></li>
+        <li><a href="#">Contatti</a></li>
+     </ul>
+   </div><div id="banner" class="row">
+    <div class="span6">
+      <img class="logo" src="/static/theme/img/logo.png" alt="logo" />
+    </div>
+    <div class="span10">
+		<div id="myCarousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="item">
+                <img src="/static/theme/img/banner1.jpg" alt="">
+                <div class="carousel-caption">
+                  <h4>First Thumbnail label</h4>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="/static/theme/img/banner1.jpg" alt="">
+                <div class="carousel-caption">
+                  <h4>Second Thumbnail label</h4>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </div>
+              </div>
+              <div class="item active">
+                <img src="/static/theme/img/banner1.jpg" alt="">
+                <div class="carousel-caption">
+                  <h4>Third Thumbnail label</h4>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </div>
+              </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+        </div>
+	</div>
+</div>
+<div class="sfuma"></div>
+
+
+
+      </div>
+<div class="row">
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a> <span class="divider">/</span></li>
+        <li><a href="#">Three</a> <span class="divider">/</span></li>
+        <li class="active">Three one</li>
+    </ul>
+    <div class="social">
+        <ul class="icons">
+        <li class="skype"><a href="skype:farmacia.miano?call" title="Skype" target="_blank"></a></li>
+        <li class="twitter"><a href="https://twitter.com/#!/FarmaciaLoreto"></a></li>
+        <li class="facebook"><a href="http://it-it.facebook.com/people/Farmacia-Loreto-Gallo/100000880541929"></a></li>
+        <!-- <li class="google"><a href="https://plus.google.com/s/farmacialoreto"></a></li>
+        <li class="newsletter"><a href="#"></a></li>
+        <li class="rss"><a href="#"></a></li>-->
+        </ul>
+    </div>
+    
+</div>      <div id="main" class="row">
+        <div id="left" class="span4">
+<div id="navigation" class="portlet">
+	<div class="portletHeader"><h3>Categorie</h3></div>
+	<div class="portletItem">
+      <ul class="unstyled">
+  		<li>One</li>
+  		<li>Two</li>
+  		<li>
+    		Three
+    		<ul>
+      			<li><span class="label">Three one</span></li>
+      			<li>Three two</li>
+    		</ul>
+  		</li>
+  		<li>Four <span class="label success">New!</span></li>
+  		<li>Five</li>
+  		<li>Six</li>
+	  </ul>
+	</div>
+</div>
+        </div>
+        <div id="content" class="span10">
+<div class="page-header">
+    <h1>Login<small>Inserisci nome utente e password per autenticarti</small></h1>
+</div>
+
+  <form class="form-stacked">
+    <fieldset>
+      <legend class="hidden">Dati di accesso</legend>
+      <div class="clearfix">
+        <label for="email">Email</label>
+        <div class="input">
+          <input type="email" name="email" id="email"
+                 class="xlarge" placeholder="nome@dominio.com"
+                 required="true" />
+        </div>
+      </div>
+      <div class="clearfix">
+        <label for="password">Password</label>
+        <div class="input">
+          <input type="password" name="password" id="password"
+                 class="xlarge" />
+        </div>
+      </div>
+    </fieldset>
+    <div class="actions">
+      <h4>Se non hai un account <button class="btn info">Registrati</button></h4>
+      <h4>Se non ricordi la tua password <a href="#" class="btn">clicca qui</a>per resettarla</h4>
+    </div>
+  </form>
+        </div>
+        <div id="right" class="span2">
+<div class="portlet sale">
+	<div class="portletHeader">
+	    <div class="labelicon">
+	       <img class="resize" src="/static/theme/img/labelsale.png" />
+	    </div>
+	    <h3>In Offerta!</h3>
+	</div>
+	<div class="portletItem">   
+      <ul class="media-grid">
+        <li>
+            <a href="#">
+            <img class="thumbnail" alt="" src="http://placehold.it/90x90" />
+            </a>
+        </li>
+      </ul>
+      <p>Cesto frutta esotica  mista</p>
+      <div class="buttonCart">
+            <div class="price">€5,00</div>
+            <div class="actions iconsmall">
+              <a href="/prodotti/noci-di-sorrento-confezionate/" class="info"></a>
+              <form action="/add/" method="post">
+                  <div>
+                      <input type="submit" class="cart" name="addcart" value="">
+                  </div>
+              </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portlet sale gift">
+	<div class="portletHeader">
+	    <div class="labelicon">
+	       <img src="/static/theme/img/labelgift.png" />
+	    </div>
+	    <h3>regali</h3>
+	</div>
+	<div class="portletItem">   
+      <ul class="media-grid">
+        <li>
+            <a href="#">
+            <img class="thumbnail" alt="" src="http://placehold.it/90x90" />
+            </a>
+        </li>
+      </ul>
+      <p>Cesto frutta esotica mista</p>
+      <div class="buttonCart">
+            <div class="price">€5,00</div>
+            <div class="actions iconsmall">
+              <a href="/prodotti/noci-di-sorrento-confezionate/" class="info"></a>
+              <form action="/add/" method="post">
+                  <div>
+                      <input type="submit" class="cart" name="addcart" value="">
+                  </div>
+              </form>
+            </div>
+        </div>
+    </div>
+</div>        </div>
+      </div>
+
+    </div>
+<div class="footer">
+    <div class="container row">
+        <div class="span3">
+          <p class="carte">Carte di credito</p>
+          <div class="social-footer">
+           <like colorscheme="light" show_faces="false" layout="button_count" font="segoe ui" action="like" width="400" image="/media/images/productimage-picture-default_jpg_85x85_q85.jpg" title="Farmacia Miano" href="http://www.mianoonline.com/" class="fb_edge_widget_with_comment fb_iframe_widget">
+              <span><iframe id="f3be8a2be0691dc" name="f31d7dabf6da502" style="border: medium none; overflow: hidden; height: 20px; width: 140px;" src="http://www.facebook.com/plugins/like.php?action=like&amp;api_key=1449414641&amp;channel_url=http%3A%2F%2Fstatic.ak.fbcdn.net%2Fconnect%2Fxd_proxy.php%23%3F%3D%26cb%3Df3bd189c4d96e4%26origin%3Dhttp%253A%252F%252Fhttp://www.mianoonline.com/%252Ffaee101139f5be%26relation%3Dparent.parent%26transport%3Dpostmessage&amp;colorscheme=light&amp;font=segoe%20ui&amp;href=http://www.facebook.com/FarmaciaMiano&amp;layout=button_count&amp;locale=it_IT&amp;node_type=link&amp;sdk=joey&amp;show_faces=false&amp;width=400&amp;">
+               </iframe></span>
+          </like>
+          </div>
+        </div>
+        <div class="span9">
+        <ul class="unstyled">
+          <li><a href="#" title="link">azienda</a><span>|</span></li>
+          <li><a href="#" title="link">offerte</a><span>|</span></li>
+          <li><a href="#" title="link">condizioni spedizione</a><span>|</span></li>
+          <li><a href="#" title="link">newsletter</a><span>|</span></li>
+          <li><a href="#" title="link">contatti</a><span>|</span></li>
+          <li><a href="#" title="link">mappa del sito</a><span>|</span></li>
+          <li><a href="#" title="link">login</a></li>      
+        </ul>
+        </div>
+        <div class="span4">
+            <address><p>VIA NUOVA SARNO TRAV. AIELLO 1</p><p>80036 - PALMA CAMPANIA (NA)</p><p>P:IVA 12345678910</p></address>
+        </div>
+        
+    </div>
+    
+    <div class="colophon">by Biagio Grimaldi</div>
+</div>  </body>
+</html>

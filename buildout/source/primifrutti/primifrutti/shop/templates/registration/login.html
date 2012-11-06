@@ -1,0 +1,68 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+{% endblock %}
+
+{% block content %}
+
+<div id="login">
+	<form method="post" action="{% url auth_login %}" class="form-login">
+        {% csrf_token %}
+	    <h1 class="page-header">{% trans "Login" %}</h1>
+        {% if form.non_field_errors %}
+        <div class="alert-message warning">{% for err in form.non_field_errors %}{{ err }}{% if not forloop.last %}<br/>{% endif %}
+        {% endfor %}</div>
+        {% endif %}
+	<fieldset>
+	<div class="control-group">
+	    <div class="control-label">
+            <label for="id_username">{% trans 'Email address' %}</label>
+        </div>
+	    <div class="controls">
+            {% if form.username.errors %}
+                <div class="alert alert-error">
+                {{ form.username }}
+                <div>{{ form.username.errors|join:", " }}</div>
+                </div>
+            {% else %}
+                {{ form.username }}
+            {% endif %}
+        </div>
+    </div>	
+	<div class="control-group">
+	    <div class="control-label">
+            <label for="id_password">{% trans 'Password' %}</label>
+        </div>
+        <div class="controls">
+    	    {% if form.password.errors %}
+            <div class="alert alert-error">
+                {{ form.password }}
+                <div>{{ form.password.errors|join:", " }}</div>
+            </div>
+    		{% else %}
+                {{ form.password }}
+    		{% endif %}
+        </div>
+    </div>
+    </fieldset>
+	
+	<div class="form-actions">
+        <input type="submit" class="btn btn-primary" value="{% trans 'Login' %}" />
+        <input type="hidden" name="next"
+        {% if next %}
+            value={{ next }} />
+        {% else %}
+            value="{% url satchmo_account_info %}" />
+        {% endif %}
+        </div>
+
+
+        <div class="well">
+        <p>{% trans "If you do not have an account, please" %} <a class="btn" href="{% url registration_register %}">{% trans "click here" %}</a>.</p>
+    	<p>{% trans "If you do not remember your password, please" %} <a class="btn" href="{% url auth_password_reset %}">{% trans "click here</a> to have it reset." %}</p>
+    	</div>
+	</form>
+</div>
+{% endblock %}

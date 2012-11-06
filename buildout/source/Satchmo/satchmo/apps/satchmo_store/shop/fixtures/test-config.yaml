@@ -1,0 +1,25 @@
+- fields: {group: !!str 'PAYMENT_DUMMY', key: !!str 'CREDITCHOICES',
+    site: !!int '1', value: !!str '["Visa", "Mastercard", "Discover"]'}
+  model: !!str 'livesettings.setting'
+  pk: !!int '1'
+- fields: {group: !!str 'PAYMENT_AUTHORIZENET', key: !!str 'CREDITCHOICES',
+    site: !!int '1', value: !!str '["Visa", "Mastercard", "Discover"]'}
+  model: !!str 'livesettings.setting'
+  pk: !!int '3'
+- fields: {group: !!str 'SHIPPING', key: !!str 'MODULES', site: !!int '1',
+    value: !!str '["shipping.modules.flat", "shipping.modules.per"]'}
+  model: !!str 'livesettings.setting'
+  pk: !!int '4'
+- fields: {group: !!str 'TAX', key: !!str 'MODULE', site: !!int '1',
+    value: !!str 'tax.modules.percent'}
+  model: !!str 'livesettings.setting'
+  pk: !!int '5'
+- fields: {group: !!str 'TAX', key: !!str 'PERCENT', site: !!int '1',
+    value: !!str '10'}
+  model: !!str 'livesettings.setting'
+  pk: !!int '6'
+- fields: {group: !!str 'LANGUAGE', key: !!str 'CURRENCY', site: !!int '1',
+    value: !!str '€'}
+  model: !!str 'livesettings.setting'
+  pk: !!int '7'
+

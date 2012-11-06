@@ -1,0 +1,12 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+{% block breadcrumbs %}{% if not is_popup %}
+<div class="breadcrumbs">
+     <a href="../../../../../../">{% trans "Home" %}</a> &rsaquo;
+     <a href="../../../../../">{% trans "Zones" %}</a> &rsaquo;
+     <a href="../../../../">{{ app_label|capfirst|escape }}</a> &rsaquo;
+     <a href="../../../">{{adminform.model_admin.container_object}}</a> &rsaquo;
+     {% if has_change_permission %}<a href="../">{% trans "Exceptional calendars" %}</a>{% else %}{% trans "Exceptional calendars" %}{% endif %} &rsaquo;
+     {% if add %}{% trans "Add" %} {{ opts.verbose_name }}{% else %}{{ original|truncatewords:"18" }}{% endif %}
+</div>
+{% endif %}{% endblock %}

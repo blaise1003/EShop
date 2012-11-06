@@ -1,0 +1,934 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-18 17:32+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin.py:27 admin.py:33
+msgid "Page updtated"
+msgstr ""
+
+#: admin.py:29
+msgid "activate"
+msgstr ""
+
+#: admin.py:35
+msgid "deactivate"
+msgstr ""
+
+#: config.py:14
+msgid "Invalid IBAN code. Please make sure to remove all spaces"
+msgstr ""
+
+#: config.py:29
+msgid "Shop configuration"
+msgstr ""
+
+#: config.py:36
+msgid "Shop name"
+msgstr ""
+
+#: config.py:37
+msgid "The name of the site, shown on all pages and mails"
+msgstr ""
+
+#: config.py:44
+msgid "IBAN"
+msgstr ""
+
+#: config.py:45
+msgid ""
+"your bank account code: fill in if you have chosen to accept payments via "
+"bank transfer"
+msgstr ""
+
+#: config.py:53
+msgid "Address"
+msgstr ""
+
+#: config.py:54
+msgid "the physical or legal address of your business"
+msgstr ""
+
+#: config.py:61
+msgid "Zip code"
+msgstr ""
+
+#: config.py:62
+msgid "the zip code of the shop address"
+msgstr ""
+
+#: config.py:69
+msgid "City"
+msgstr ""
+
+#: config.py:70
+msgid "the city of the shop"
+msgstr ""
+
+#: config.py:77
+msgid "E-mail"
+msgstr ""
+
+#: config.py:78
+msgid ""
+"an e-mail address where your customers can contact you for informations or "
+"other needs"
+msgstr ""
+
+#: config.py:86 formextensions.py:73
+msgid "Vat number"
+msgstr ""
+
+#: config.py:87
+msgid "shop vat number"
+msgstr ""
+
+#: config.py:94
+msgid "Telephone"
+msgstr ""
+
+#: config.py:95
+msgid "a phone number to allow your customers to contact you"
+msgstr ""
+
+#: config.py:102
+msgid "Fax"
+msgstr ""
+
+#: config.py:103
+msgid "a fax number to allow your customers to contact you"
+msgstr ""
+
+#: formextensions.py:24
+msgid ""
+"You must specify either your person number or the VAT number of your company "
+"in order to proceed with the purchase"
+msgstr ""
+
+#: formextensions.py:80 templates/contact/update_form.html:63
+#: templates/contact/view_profile.html:35
+msgid "Person number"
+msgstr ""
+
+#: formextensions.py:94
+msgid "I have read the Terms and Conditions"
+msgstr ""
+
+#: formextensions.py:102 templates/shop/checkout/form.html:18
+#: templates/shop/checkout/bonifico/confirm.html:6
+#: templates/shop/checkout/bonifico/confirm.html:9
+#: templates/shop/checkout/contrassegno/confirm.html:6
+#: templates/shop/checkout/contrassegno/confirm.html:9
+#: templates/shop/checkout/creditcard/confirm.html:7
+#: templates/shop/checkout/creditcard/confirm.html:15
+#: templates/shop/checkout/paypal/confirm.html:7
+#: templates/shop/checkout/paypal/confirm.html:10
+msgid "Payment"
+msgstr ""
+
+#: formextensions.py:107
+msgid "Basic informations"
+msgstr ""
+
+#: formextensions.py:116
+msgid "Billing informations"
+msgstr ""
+
+#: formextensions.py:129
+msgid "Shipping informations"
+msgstr ""
+
+#: formextensions.py:141
+msgid "Other informations"
+msgstr ""
+
+#: models.py:15
+msgid "contact"
+msgstr ""
+
+#: models.py:18
+msgid "business number"
+msgstr ""
+
+#: models.py:22
+msgid "person number"
+msgstr ""
+
+#: models.py:33
+#, python-format
+msgid "administrative information for %(contact_name)s"
+msgstr ""
+
+#: models.py:37
+msgid "administrative information"
+msgstr ""
+
+#: models.py:38
+msgid "administrative informations"
+msgstr ""
+
+#: models.py:46
+msgid "Title"
+msgstr ""
+
+#: models.py:51
+msgid "Slug Name"
+msgstr ""
+
+#: models.py:54
+msgid "Used for URLs, auto-generated from name if blank"
+msgstr ""
+
+#: models.py:57
+msgid "Text"
+msgstr ""
+
+#: models.py:58
+msgid "This field can contain HTML"
+msgstr ""
+
+#: models.py:62
+msgid "Ordering"
+msgstr ""
+
+#: models.py:64
+msgid "Override alphabetical order in category display"
+msgstr ""
+
+#: models.py:66
+msgid "Active"
+msgstr ""
+
+#: models.py:68
+msgid "This will determine whether or not this product will appear on the site"
+msgstr ""
+
+#: models.py:78
+msgid "page"
+msgstr ""
+
+#: models.py:79
+msgid "pages"
+msgstr ""
+
+#: validators.py:33 validators.py:61
+msgid "The code is too short or contains invalid characters"
+msgstr ""
+
+#: validators.py:42 validators.py:73
+msgid "The code is malformed"
+msgstr ""
+
+#: validators.py:48
+msgid "Invalid person number"
+msgstr ""
+
+#: validators.py:79
+msgid "Invalid Vat number"
+msgstr ""
+
+#: views.py:37
+msgid "General question"
+msgstr ""
+
+#: views.py:38
+msgid "Order problem"
+msgstr ""
+
+#: views.py:39
+msgid "Product Info"
+msgstr ""
+
+#: views.py:40
+msgid "Shipping Info"
+msgstr ""
+
+#: views.py:45
+msgid "Inquiry"
+msgstr ""
+
+#: views.py:46
+msgid "What about yuor question"
+msgstr ""
+
+#: views.py:48
+msgid "Insert word you see into image"
+msgstr ""
+
+#: payments/modules/base.py:35
+msgid "Success"
+msgstr ""
+
+#: payments/modules/views.py:89
+msgid "Payment needs to be confirmed"
+msgstr ""
+
+#: payments/modules/views.py:150 payments/modules/creditcard/views.py:186
+msgid "Your order has already been processed."
+msgstr ""
+
+#: payments/modules/bonifico/config.py:5
+msgid "Payment Bonifico Module Settings"
+msgstr ""
+
+#: payments/modules/bonifico/config.py:11
+#: payments/modules/contrassegno/config.py:11
+#: payments/modules/creditcard/config.py:11
+msgid "Accept real payments"
+msgstr ""
+
+#: payments/modules/bonifico/config.py:12
+#: payments/modules/contrassegno/config.py:12
+#: payments/modules/creditcard/config.py:12
+msgid "False if you want to be in test mode"
+msgstr ""
+
+#: payments/modules/bonifico/config.py:17
+#: payments/modules/contrassegno/config.py:17
+#: payments/modules/creditcard/config.py:17
+msgid "Implementation module"
+msgstr ""
+
+#: payments/modules/bonifico/config.py:23
+#: payments/modules/contrassegno/config.py:23
+#: payments/modules/creditcard/config.py:23
+msgid "Module key"
+msgstr ""
+
+#: payments/modules/bonifico/config.py:29
+#: payments/modules/contrassegno/config.py:29
+#: payments/modules/creditcard/config.py:34
+msgid "Currency Code"
+msgstr ""
+
+#: payments/modules/bonifico/config.py:30
+#: payments/modules/contrassegno/config.py:30
+#: payments/modules/creditcard/config.py:35
+msgid "Currency code for transactions (242 = EUR)."
+msgstr ""
+
+#: payments/modules/bonifico/config.py:35
+#: payments/modules/contrassegno/config.py:35
+#: payments/modules/creditcard/config.py:40
+msgid "English name for this group on the checkout screens"
+msgstr ""
+
+#: payments/modules/bonifico/config.py:37
+#: payments/modules/contrassegno/config.py:37
+#: payments/modules/creditcard/config.py:42
+msgid "This will be passed to the translation utility"
+msgstr ""
+
+#: payments/modules/bonifico/config.py:41
+#: payments/modules/contrassegno/config.py:41
+#: payments/modules/creditcard/config.py:46
+msgid ""
+"The url base used for constructing urlpatterns which will use this module"
+msgstr ""
+
+#: payments/modules/bonifico/config.py:46
+#: payments/modules/contrassegno/config.py:51
+#: payments/modules/creditcard/config.py:51
+msgid "Verbose logs"
+msgstr ""
+
+#: payments/modules/bonifico/config.py:47
+#: payments/modules/contrassegno/config.py:52
+#: payments/modules/creditcard/config.py:52
+msgid "Add extensive logs during post."
+msgstr ""
+
+#: payments/modules/contrassegno/config.py:5
+msgid "Payment Contrassegno Module Settings"
+msgstr ""
+
+#: payments/modules/contrassegno/config.py:36
+msgid "Payment on delivery"
+msgstr ""
+
+#: payments/modules/contrassegno/config.py:46
+msgid "The handling cost of this payment"
+msgstr ""
+
+#: payments/modules/creditcard/config.py:5
+msgid "Payment Credit card Module Settings thru BancaSella"
+msgstr ""
+
+#: payments/modules/creditcard/config.py:29
+msgid "Use SSL for the checkout pages?"
+msgstr ""
+
+#: payments/modules/creditcard/config.py:41
+msgid "Creditcard (Bancasella)"
+msgstr ""
+
+#: payments/modules/creditcard/config.py:57
+msgid "Post URL "
+msgstr ""
+
+#: payments/modules/creditcard/config.py:58
+msgid "The BancaSella URL for real transaction posting."
+msgstr ""
+
+#: payments/modules/creditcard/config.py:63
+msgid "Post URL TEST"
+msgstr ""
+
+#: payments/modules/creditcard/config.py:64
+msgid "The BancaSella URL for test transaction posting."
+msgstr ""
+
+#: payments/modules/creditcard/config.py:69
+msgid "Merchant ID"
+msgstr ""
+
+#: payments/modules/creditcard/config.py:74
+msgid "Merchant Key"
+msgstr ""
+
+#: payments/modules/creditcard/config.py:79
+msgid "Merchant Test ID"
+msgstr ""
+
+#: payments/modules/creditcard/config.py:84
+msgid "Merchant Test Key"
+msgstr ""
+
+#: payments/modules/creditcard/config.py:89
+msgid "Return URL"
+msgstr ""
+
+#: payments/modules/creditcard/config.py:90
+msgid ""
+"Where BancaSella will return the customer after the purchase is complete.  "
+"This can be a named url and defaults to the standard checkout success."
+msgstr ""
+
+#: payments/modules/creditcard/views.py:46
+msgid "Your order is no longer valid."
+msgstr ""
+
+#: tax/modules/noarea/config.py:6
+msgid "No Area Tax"
+msgstr ""
+
+#: tax/modules/noarea/config.py:13
+msgid "Tax Shipping?"
+msgstr ""
+
+#: tax/modules/noarea/config.py:22
+msgid "TaxClass for shipping"
+msgstr ""
+
+#: tax/modules/noarea/config.py:23
+msgid "Select a TaxClass that should be applied for shipments."
+msgstr ""
+
+#: tax/modules/noarea/config.py:31
+msgid "Use item full-price for tax?"
+msgstr ""
+
+#: tax/modules/noarea/models.py:9
+msgid "tax class"
+msgstr ""
+
+#: tax/modules/noarea/models.py:10 tax/modules/noarea/models.py:15
+msgid "Percentage"
+msgstr ""
+
+#: tax/modules/noarea/models.py:11
+msgid "% tax for this type"
+msgstr ""
+
+#: tax/modules/noarea/models.py:23
+msgid "tax rate"
+msgstr ""
+
+#: tax/modules/noarea/models.py:24
+msgid "tax rates"
+msgstr ""
+
+#: templates/admin/index.html:20
+msgid "(show)"
+msgstr ""
+
+#: templates/admin/index.html:21
+msgid "(hide)"
+msgstr ""
+
+#: templates/admin/index.html:66
+#, python-format
+msgid "Models available in the %(name)s application."
+msgstr ""
+
+#: templates/admin/index.html:67
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#: templates/admin/index.html:77
+msgid "Add"
+msgstr ""
+
+#: templates/admin/index.html:83
+msgid "Change"
+msgstr ""
+
+#: templates/admin/index.html:93
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: templates/admin/index.html:101
+msgid "Recent Actions"
+msgstr ""
+
+#: templates/admin/index.html:103
+msgid "My Actions"
+msgstr ""
+
+#: templates/admin/index.html:107
+msgid "None available"
+msgstr ""
+
+#: templates/admin/index.html:120
+msgid "Admin Tools"
+msgstr ""
+
+#: templates/admin/index.html:124
+msgid "Edit Site Settings"
+msgstr ""
+
+#: templates/admin/index.html:127
+msgid "Edit Inventory"
+msgstr ""
+
+#: templates/admin/index.html:130
+msgid "Export Product Defs"
+msgstr ""
+
+#: templates/admin/index.html:133
+msgid "Product Variation Manager"
+msgstr ""
+
+#: templates/admin/index.html:136
+msgid "Cache Status"
+msgstr ""
+
+#: templates/contact/update_form.html:5 templates/contact/view_profile.html:7
+#: templates/product/product.html:23 templates/shop/cart.html:11
+#: templates/shop/page.html:6 templates/shop/checkout/form.html:9
+#: templates/shop/checkout/success_bonifico.html:12
+#: templates/shop/checkout/success_contrassegno.html:12
+#: templates/shop/checkout/success_creditcard.html:12
+#: templates/shop/checkout/success_generic.html:12
+#: templates/shop/checkout/creditcard/error.html:9
+msgid "Home"
+msgstr ""
+
+#: templates/contact/update_form.html:6 templates/contact/view_profile.html:8
+msgid "Account"
+msgstr ""
+
+#: templates/contact/update_form.html:7
+msgid "Update Profile"
+msgstr ""
+
+#: templates/contact/update_form.html:15
+msgid "Your Profile"
+msgstr ""
+
+#: templates/contact/update_form.html:17
+msgid "Please correct the following error:"
+msgstr ""
+
+#: templates/contact/update_form.html:24
+msgid "You&apos;ll need to fill out at least the fields with a *"
+msgstr ""
+
+#: templates/contact/update_form.html:26
+msgid "Basic Information"
+msgstr ""
+
+#: templates/contact/update_form.html:27
+msgid "Email address"
+msgstr ""
+
+#: templates/contact/update_form.html:30
+msgid "First name"
+msgstr ""
+
+#: templates/contact/update_form.html:33
+msgid "Last name"
+msgstr ""
+
+#: templates/contact/update_form.html:36
+msgid "Organization"
+msgstr ""
+
+#: templates/contact/update_form.html:40
+msgid "Birthday"
+msgstr ""
+
+#: templates/contact/update_form.html:43
+msgid "Phone number"
+msgstr ""
+
+#: templates/contact/update_form.html:47
+msgid "Newsletter"
+msgstr ""
+
+#: templates/contact/update_form.html:58
+#: templates/contact/view_profile.html:32
+msgid "Administrative information"
+msgstr ""
+
+#: templates/contact/update_form.html:60
+#: templates/contact/view_profile.html:34
+msgid "Business number"
+msgstr ""
+
+#: templates/contact/update_form.html:71
+msgid "Update"
+msgstr ""
+
+#: templates/contact/view_profile.html:12
+msgid "Your Account info"
+msgstr ""
+
+#: templates/contact/view_profile.html:15
+#, python-format
+msgid "Welcome, %(full_name)s."
+msgstr ""
+
+#: templates/contact/view_profile.html:18
+msgid "Your profile"
+msgstr ""
+
+#: templates/contact/view_profile.html:20
+msgid "Email:"
+msgstr ""
+
+#: templates/contact/view_profile.html:22
+msgid "Organization:"
+msgstr ""
+
+#: templates/contact/view_profile.html:24
+msgid "Birthday:"
+msgstr ""
+
+#: templates/contact/view_profile.html:26
+msgid "Newsletter:"
+msgstr ""
+
+#: templates/contact/view_profile.html:26
+msgid "Yes"
+msgstr ""
+
+#: templates/contact/view_profile.html:26
+msgid "No"
+msgstr ""
+
+#: templates/contact/view_profile.html:28
+msgid "Billing Address:"
+msgstr ""
+
+#: templates/contact/view_profile.html:29
+msgid "Shipping Address:"
+msgstr ""
+
+#: templates/contact/view_profile.html:40
+msgid "Address Book Entries"
+msgstr ""
+
+#: templates/contact/view_profile.html:43
+msgid "Edit"
+msgstr ""
+
+#: templates/contact/view_profile.html:43
+msgid "Delete"
+msgstr ""
+
+#: templates/contact/view_profile.html:47
+#: templates/contact/view_profile.html:62
+msgid "Account options"
+msgstr ""
+
+#: templates/contact/view_profile.html:49
+msgid "Update your profile"
+msgstr ""
+
+#: templates/contact/view_profile.html:51
+msgid "Add address book entry"
+msgstr ""
+
+#: templates/contact/view_profile.html:53
+#: templates/contact/view_profile.html:66
+msgid "Change your password"
+msgstr ""
+
+#: templates/contact/view_profile.html:55
+msgid "Order History"
+msgstr ""
+
+#: templates/contact/view_profile.html:60
+msgid ""
+"Sorry, the user you've logged in as doesn't have any contact information."
+msgstr ""
+
+#: templates/contact/view_profile.html:60
+msgid "Probably because you are an admin."
+msgstr ""
+
+#: templates/contact/view_profile.html:64
+msgid "Set up contact information"
+msgstr ""
+
+#: templates/product/product.html:34 templates/shop/cart.html:35
+msgid "Price"
+msgstr ""
+
+#: templates/product/product.html:34
+msgid "(incl. tax)"
+msgstr ""
+
+#: templates/product/product.html:54 templates/shop/cart.html:29
+msgid "Quantity"
+msgstr ""
+
+#: templates/product/product.html:56
+msgid "Add to cart"
+msgstr ""
+
+#: templates/shop/cart.html:12
+msgid "Cart"
+msgstr ""
+
+#: templates/shop/cart.html:18
+msgid "Your Cart"
+msgstr ""
+
+#: templates/shop/cart.html:24
+msgid "Your cart is empty."
+msgstr ""
+
+#: templates/shop/cart.html:30
+msgid "Item"
+msgstr ""
+
+#: templates/shop/cart.html:32
+msgid "Regular Price"
+msgstr ""
+
+#: templates/shop/cart.html:33
+msgid "Sale Price"
+msgstr ""
+
+#: templates/shop/cart.html:37
+msgid "Total<br/>(incl.&nbsp;tax)"
+msgstr ""
+
+#: templates/shop/cart.html:37
+msgid "Total"
+msgstr ""
+
+#: templates/shop/cart.html:49
+msgid "update"
+msgstr ""
+
+#: templates/shop/cart.html:64
+msgid "Remove"
+msgstr ""
+
+#: templates/shop/cart.html:74
+msgid "Cart Total"
+msgstr ""
+
+#: templates/shop/cart.html:89
+msgid "Continue shopping"
+msgstr ""
+
+#: templates/shop/cart.html:92
+msgid "Empty"
+msgstr ""
+
+#: templates/shop/cart.html:95
+msgid "Check out"
+msgstr ""
+
+#: templates/shop/checkout/form.html:10 templates/shop/checkout/form.html:14
+#: templates/shop/checkout/success_bonifico.html:13
+#: templates/shop/checkout/success_contrassegno.html:13
+#: templates/shop/checkout/success_creditcard.html:13
+#: templates/shop/checkout/success_generic.html:13
+#: templates/shop/checkout/creditcard/error.html:10
+msgid "Checkout"
+msgstr ""
+
+#: templates/shop/checkout/form.html:17
+msgid "Ship/Bill"
+msgstr ""
+
+#: templates/shop/checkout/form.html:19
+msgid "Confirmation"
+msgstr ""
+
+#: templates/shop/checkout/form.html:24
+msgid ""
+"Please complete the following information in order to submit your order."
+msgstr ""
+
+#: templates/shop/checkout/form.html:28
+msgid "Please correct the following errors"
+msgstr ""
+
+#: templates/shop/checkout/form.html:37
+msgid ""
+"If you already have an account, you can login now to fill in most of the "
+"information below."
+msgstr ""
+
+#: templates/shop/checkout/form.html:38
+msgid "This is just a convenience, no account is required!"
+msgstr ""
+
+#: templates/shop/checkout/form.html:41
+msgid "Username or email"
+msgstr ""
+
+#: templates/shop/checkout/form.html:47
+msgid "Password"
+msgstr ""
+
+#: templates/shop/checkout/form.html:53
+msgid "Login"
+msgstr ""
+
+#: templates/shop/checkout/form.html:60
+msgid "You'll need to fill out at least the fields with a *"
+msgstr ""
+
+#: templates/shop/checkout/form.html:88
+msgid "Continue Checkout"
+msgstr ""
+
+#: templates/shop/checkout/success_bonifico.html:19
+#: templates/shop/checkout/success_bonifico.html:40
+#: templates/shop/checkout/success_contrassegno.html:19
+#: templates/shop/checkout/success_contrassegno.html:31
+#: templates/shop/checkout/success_creditcard.html:20
+#: templates/shop/checkout/success_creditcard.html:28
+#: templates/shop/checkout/success_generic.html:19
+#: templates/shop/checkout/success_generic.html:28
+msgid "Thank you for your order!"
+msgstr ""
+
+#: templates/shop/checkout/success_bonifico.html:21
+#: templates/shop/checkout/success_contrassegno.html:20
+#: templates/shop/checkout/success_creditcard.html:23
+#: templates/shop/checkout/success_generic.html:20
+msgid ""
+"Please print out this page as a receipt.  You will also receive an email "
+"with this information."
+msgstr ""
+
+#: templates/shop/checkout/success_bonifico.html:34
+msgid ""
+"La richiesta verr&agrave; evasa una volta ricevuta conferma dell'avvenuto "
+"pagamento."
+msgstr ""
+
+#: templates/shop/checkout/success_bonifico.html:44
+#: templates/shop/checkout/success_contrassegno.html:35
+#: templates/shop/checkout/success_creditcard.html:31
+#: templates/shop/checkout/success_generic.html:32
+msgid "You can check your order status"
+msgstr ""
+
+#: templates/shop/checkout/success_bonifico.html:45
+#: templates/shop/checkout/success_contrassegno.html:36
+#: templates/shop/checkout/success_creditcard.html:32
+#: templates/shop/checkout/success_generic.html:33
+msgid "order history"
+msgstr ""
+
+#: templates/shop/checkout/success_bonifico.html:46
+#: templates/shop/checkout/success_contrassegno.html:37
+#: templates/shop/checkout/success_creditcard.html:33
+#: templates/shop/checkout/success_generic.html:34
+msgid "Proceed with another purchase"
+msgstr ""
+
+#: templates/shop/checkout/success_bonifico.html:54
+msgid ""
+"Attenzione: le spese di spedizione non sono state conteggiate nell'ordine. "
+"<br /> Verrete contattati via email da un nostro operatore e il vostro "
+"ordine verr&agrave; <br /> confermato solo qualora accettiate il preventivo "
+"di spedizione <br />"
+msgstr ""
+
+#: templates/shop/checkout/success_contrassegno.html:24
+msgid ""
+"Attenzione!!! Il pagamento in contrassegno &egrave; valido solo in contanti. "
+"Il corriere accetter&agrave; solo contanti."
+msgstr ""
+
+#: templates/shop/checkout/bonifico/confirm.html:11
+msgid "Your payment will be processed through BONIFICO."
+msgstr ""
+
+#: templates/shop/checkout/bonifico/confirm.html:17
+#: templates/shop/checkout/contrassegno/confirm.html:17
+#: templates/shop/checkout/contrassegno/confirm.html:86
+#: templates/shop/checkout/creditcard/confirm.html:22
+#: templates/shop/checkout/creditcard/confirm.html:91
+#: templates/shop/checkout/paypal/confirm.html:18
+#: templates/shop/checkout/paypal/confirm.html:107
+msgid "Purchase Items"
+msgstr ""
+
+#: templates/shop/checkout/bonifico/confirm.html:87
+msgid "Conferma il tuo ordine"
+msgstr ""
+
+#: templates/shop/checkout/contrassegno/confirm.html:11
+msgid "Your payment will be processed through CONTRASSEGNO."
+msgstr ""
+
+#: templates/shop/checkout/creditcard/confirm.html:16
+msgid "Your payment will be processed through BANCASELLA."
+msgstr ""
+
+#: templates/shop/checkout/creditcard/error.html:16
+msgid "Error. Check your order!"
+msgstr ""
+
+#: templates/shop/checkout/paypal/confirm.html:12
+msgid "Your payment will be processed through PayPal."
+msgstr ""
+
+#: templates/shop/checkout/paypal/confirm.html:58
+#, python-format
+msgid "Remaining Balance for order %(order_id)s"
+msgstr ""
+
+#: templates/shop/checkout/paypal/confirm.html:73
+msgid "Shipping for free items"
+msgstr ""
+
+#: templates/tags/pages_links.html:5
+msgid "Other"
+msgstr ""

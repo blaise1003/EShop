@@ -1,0 +1,377 @@
+Basic Configuration
+===================
+
+Settings configured in Python files
+-----------------------------------
+
+.. index::
+   single: settings; SHOP_BASE
+   single: settings; LOCAL_DEV
+
+If you followed the installation steps, you should have a basic store to start using.  There are a
+number of places you might want to configure.
+
+1. In the :file:`settings.py` (or :file:`local_settings.py`) file, there are a number of general Django settings.  However, there are a
+   few that are specific to Satchmo. These default Satchmo settings can be overridden by adding them to a ``SATCHMO_SETTINGS``
+   dictionary like this::
+
+    SATCHMO_SETTINGS = {
+        'SHOP_BASE': '/shop',
+        'MULTISHOP': False,
+        'PRODUCT_SLUG': 'items',
+        'SSL':  True,
+    }
+
+ Satchmo recognises the following keys in ``SATCHMO_SETTINGS``:
+
+  .. _satchmo_settings_shop_base:
+
+  ``'SHOP_BASE'``
+
+    :default: ``'/shop'``
+
+    Used as the prefix for your store.  Don't append a trailing slash (``'/'``) - Satchmo does
+    this for you.  In the default setting, your store is located at
+    `www.yourname.com/shop/`.  If you would like to change this setting, this is the place
+    to do it.  If you would like your store to be at the root of the url, set this to
+    ``""``.
+
+  .. _satchmo_settings_shop_urls:
+
+  ``'SHOP_URLS'``
+
+    :default: ``[]``
+
+    .. TODO documentation needed.
+
+  .. _satchmo_settings_multishop:
+
+  ``'MULTISHOP'``
+
+    :default: ``False``
+
+    A boolean used to enable or disable an optimization for running multiple sites with independent 
+    carts from the same Satchmo instance. If enabled, Satchmo will patch ``Site.objects.get_current()`` 
+    to dynamically determine the current site by looking up the host in the request headers. 
+    Normally, you would have to create a separate settings file for each site, which in turn would 
+    require loading multiple copies of Satchmo into memory. This optimization can reduce the memory 
+    required to serve multiple sites in a memory constrained environment.
+
+  .. _satchmo_settings_custom_newsletter_modules:
+
+  ``'CUSTOM_NEWSLETTER_MODULES'``
+
+    :default: ``[]``
+
+    A list of custom newsletters.
+
+  .. _satchmo_settings_custom_shipping_modules:
+
+  ``'CUSTOM_SHIPPING_MODULES'``
+
+    :default: ``[]``
+
+    A list of custom shipping modules outside of the standard Satchmo distribution.
+
+  .. _satchmo_settings_custom_tax_modules:
+
+  ``'CUSTOM_TAX_MODULES'``
+
+    :default: ``[]``
+
+    A list of custom tax modules outside of the standard Satchmo distribution.
+
+  .. _satchmo_settings_cookie_max_seconds:
+
+  ``'COOKIE_MAX_SECONDS'``
+
+    :default: ``60*60*24*30``
+
+    Cookie expiration time.
+
+  .. _satchmo_settings_category_slug:
+
+  ``'CATEGORY_SLUG'``
+
+    :default: ``'category'``
+
+    The prefix used for category urls; see :data:`satchmo_category` and :data:`satchmo_category_index`.
+
+  .. _satchmo_settings_product_slug:
+
+  ``'PRODUCT_SLUG'``
+
+    :default: ``'product'``
+
+    The prefix used for product urls; see :data:`satchmo_product`.
+    
+  .. _satchmo_settings_ssl:
+
+  ``'SSL'``
+
+    :default: ``'False'``
+
+    Whether or not SSL should be enabled for the checkout modules.
+
+2. In addition to the Satchmo specific settings, there are some Django settings you will want to make sure are properly set:
+
+    - Make sure that your ``DATABASES['default']['ENGINE']`` variable is also set correctly.
+    - You should ensure that all of your paths are setup correctly.  Key ones to look at are:
+
+        + ``MEDIA_ROOT`` (this is where images will be stored)
+        + ``MEDIA_URL``
+        + ``ADMIN_MEDIA_PREFIX``
+        + ``TEMPLATE_DIRS``
+
+.. index::
+   single: settings; L10N
+
+.. _l10n_settings:
+
+Changing the L10N Settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Satchmo supports a setting ``L10N_SETTINGS`` that can be defined in your store's :file:`settings.py` file. To configure the 
+currency format and other internationalization options. The example below would configure the Euro::
+
+    L10N_SETTINGS = {
+      'currency_formats' : {
+         'EURO' : {'symbol': u'€', 'positive' : u"€%(val)0.2f", 'negative': u"€(%(val)0.2f)",
+                   'decimal' : ','},
+      },
+      'default_currency' : 'EURO',
+      'show_admin_translations': False,
+      'allow_translation_choice': False,
+    }
+
+Satchmo recognises the following keys in ``L10N_SETTINGS``:
+
+  .. _l10n_settings_default_currency:
+
+  ``'default_currency'``
+
+    The default currency type to display.
+
+  .. _l10n_settings_show_admin_translations:
+
+  ``'show_admin_translations'``
+
+    :default: ``True``
+
+    Enable or disable the use of the translation options in the admin.
+
+  .. _l10n_settings_allow_translation_choice:
+
+  ``'allow_translation_choice'``
+
+    :default: ``True``
+
+    Enable or disable the translation section for the store user.
+
+  .. TODO this seems to repeat one of the above options, but I'm not sure which.
+
+The ``L10N_SETTINGS`` variable also allows you to control whether or not translation fields
+should be displayed in the admin. In the example above, they will be disabled. The default is ``True``
+
+.. Note::
+    If you use a unicode character, you'll need to have an encoding at the top
+    of your settings.py file::
+
+        # -*- coding: UTF-8 -*-
+
+
+.. _site-settings:
+
+Settings configured via Django's admin interface
+------------------------------------------------
+
+The majority of the store configuration is done through the admin interface. This can be
+accessed from the main admin page (usually at `/admin/`) via the :menuselection:`Admin --> Edit Site Settings`
+link. It is also usually available at the URL `/settings/`.
+
+All of the configuration settings have detailed help notes. They also default to sensible configurations so your initial store should work fine without changing any values.
+
+Base Settings
+^^^^^^^^^^^^^
+
+These items are used for general store configuration and include:
+
+    - Account verification options
+    - Default currency symbol
+    - Enable/disable product ratings
+    - Controlling display of featured products
+    - Controlling quality of thumbnail creating
+    - Enabling sending of html formatted emails
+
+.. index::
+   single: Google; analytics
+   single: Google; adwords
+
+Google Settings
+^^^^^^^^^^^^^^^
+
+This section allows you to enable or disable google analytics and conversion tracking for adwords.
+
+Payment Settings
+^^^^^^^^^^^^^^^^
+
+Satchmo can handle multiple ways of accepting payment.  By default, you have a dummy processor that does nothing but accept payments.  Obviously, you'll want to enable one of the other modules before going live.
+
+Each payment module will have it's own configuration items. These items apply universally to all payment modules.
+
+    - Accept real payments
+    - Allow URL access for cron rebilling of subscriptions
+    - Force ship to and bill to countries to match during checkout
+    - Cron passkey to allow subscription rebilling
+
+
+.. Warning::
+    After saving changes to your payment processor, you will need to restart your server for the changes to take effect.
+
+.. index::
+   single: Product types; enabling
+
+Product Settings
+^^^^^^^^^^^^^^^^
+
+Before you use any of the products, you need to make sure the appropriate products are added to your ``INSTALLED_APPS``.
+
+In this section you can also configure:
+
+    - Allowing checkout with 0 inventory
+    - Using Akismet for comment spam prevention
+    - Number of recent items displayed
+    - Measurement system
+    - Number of featured items
+    - Random display of featured products
+    - Protected directory to be used for downloadable products
+    - Specific directory where images should be uploaded
+
+.. index::
+   single: Shipping; enabling
+
+Shipping Settings
+^^^^^^^^^^^^^^^^^
+
+This section allows you to choose which shipping modules you want to make available to users when they check out.
+
+Once you select the modules you would like to use, you will be given an option to enter any additional information required for that module.
+
+.. index::
+   single: Tax; enabling
+
+Tax Settings
+^^^^^^^^^^^^
+
+Satchmo allows different tax configurations. This section allows you to choose the active tax module and configure it for your store.
+
+.. index::
+   single: Newsletters; enabling
+
+.. _newsletter:
+
+Newsletters
+^^^^^^^^^^^
+
+Satchmo has two methods for handling newsletter subscriptions.  By default, you have an "ignore it" processor enabled.
+To enable handling, first add ``"satchmo.newsletter"`` to your list of installed modules in your settings file.
+
+Next, choose the way you want to handle the subscriptions.  Currently we have two working newsletter plugins:
+
+  - ``satchmo.newsletter.simple``  - This just tracks subscriptions in a database table for your querying pleasure.  You can then export that list to whatever mailing manager you want to use.
+  - ``satchmo.newsletter.mailman`` - This is an integration module which works with Gnu Mailman (http://www.gnu.org/software/mailman/).  This is particularly convenient if you have a Cpanel VPS system, since Mailman is installed by default on most such systems. To use this, you need to make sure Mailman is on your PYTHONPATH and you should have already set up a mailing list as an announce-only list (http://www.modwest.com/help/kb13-195.html). You'll need to enter the name of the list in your local settings file.
+
+.. index::
+   single: SSL
+
+SSL
+^^^
+
+SSL Security can be set on any url in your store.  In order for SSL to work,
+make sure that it is enabled in the middleware section of your settings.py::
+
+    MIDDLEWARE_CLASSES = (
+        "django.middleware.common.CommonMiddleware",
+        "django.contrib.sessions.middleware.SessionMiddleware",
+        "django.middleware.locale.LocaleMiddleware",
+        "django.contrib.auth.middleware.AuthenticationMiddleware",
+        "django.middleware.doc.XViewMiddleware",
+        "satchmo.shop.SSLMiddleware.SSLRedirect"
+    )
+
+In order to support a fully encrypted page, you also need to make sure you provide a secure url for the media.  This url
+will automatically be used in pages served by SSL, but only if you specify it in your settings.py::
+
+    MEDIA_SECURE_URL = 'https://secure.example.com/static/'
+
+Then, enable it for the specific urls you would like to be protected by adding
+``{'SSL': True}`` to each url.  Here's an example which would enable SSL for login::
+
+    (r'^accounts/login/$', 'login', {'SSL': True, 'template_name': 'login.html'}, 'satchmo_login'),
+
+SSL for Payments works slightly differently.  The are controlled by the Satchmo setting described above.
+To have all checkout pages enabled for SSL, just set ``SSL:True`` in your Satchmo settings.
+
+Disabling the Live Settings System
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Once your store is live, you may want to disable the admin ability to edit the site configuration.  To do this, edit your settings.py file and add a new entry ``LIVESETTINGS_OPTIONS`` with the settings you want to lock into place.
+The easiest way to get it is by the URL http://your.site/settings/export/.
+
+The ``LIVESETTINGS_OPTIONS`` must be formatted as follows::
+
+    LIVESETTINGS_OPTIONS = {
+        1 : {
+            'DB' : False,   # or True for use db and ignore these settings
+            'SETTINGS' : {
+                'GROUPKEY' : {
+                    'KEY' : val,
+                    'KEY2' : val,
+                    # ...
+                },
+
+                'GROUPKEY2' : {
+                    'KEY' : val,
+                    'KEY2' : val,
+                    # ...
+                },
+
+                # ...
+            }
+        },
+
+        # ...
+    }
+
+In the settings dict above, the ``1`` is a site index, allowing you to have different settings for different sites.
+The ``val`` entries must exactly match the format stored in the database for a setting.  For example, do not use a
+literal ``True`` or an integer, it needs to be the string representation of them.
+
+If ``DB`` is ``False``, then editting the settings via the admin will be disabled. All configuration must then be done
+through the settings file.
+
+The easiest way to do this is to query the database for livesettings_setting and livesettings_longsetting, and convert to a Python dictionary manually.
+
+.. index::
+   single: Shipping Countries; configuring
+
+.. _shippingcountries:
+
+Store Configuration
+^^^^^^^^^^^^^^^^^^^
+
+The final configuration option that is available is configuring which Countries you would like to ship to. This option is 
+available through the Admin interface through :menuselection:`Admin --> Shop --> Store Configuration`. It is typically accessed through the URL `/admin/shop/config`
+
+This section allows you to fill in store address and basic demographic information that is used throughout Satchmo. The
+`Shipping Countries` section will allow you to configure:
+
+    * Whether or not to ship only within 1 country
+    * The Default Country to ship to
+    * All Countries which may be chosen during the checkout process
+    
+If you choose to allow shipping to multiple countries, the checkout process will automatically populate valid
+states based on the selected country.
+
+.. _Authorize.net: http://www.authorize.net/
+.. _Mailman: http://www.gnu.org/software/mailman/

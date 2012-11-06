@@ -1,0 +1,7 @@
+{% load i18n %}
+{% load satchmo_currency %}
+<strong>{% if default_view_tax %}{% load satchmo_tax %}{% endif %}
+{% if default_view_tax %}{{ taxed_shipping_price }} {{ shipping_tax }}{% else %}{{amount|currency}}{% endif %} {% trans "Sent via"%} {{ method }}</strong>
+<br>
+<em>{% autoescape off %}{% blocktrans %}arrives approximately {{ expected_delivery }}.{% endblocktrans %}{% endautoescape %}</em>
+<hr>

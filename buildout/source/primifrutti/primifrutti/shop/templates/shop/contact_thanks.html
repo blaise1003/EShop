@@ -1,0 +1,24 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block globalnavbar %}
+<li><a href="{% url satchmo_home %}">Home</a></li>
+<li><a href="{% url satchmo_category_index %}">{% trans "Prodotti" %}</a></li>
+<li><a href="#">{% trans "L'azienda" %}</a></li>
+<li><a href="#">{% trans "Offerte" %}</a></li>
+<li class="active"><a href="{% url satchmo_contact %}">{% trans "Contacts" %}</a></li>
+{% endblock globalnavbar %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a> <span class="divider">/</span></li>
+   <li>{% trans "Contact Us" %}</li>
+{% endblock %}
+
+{% block content %}
+<h3>{% trans "Contact Information" %}</h3>
+
+<p>{% trans "Thank you for contacting us." %}</p>
+
+<p>{% trans "We will attempt to get back to you within 48 hours." %}</p>
+
+{% endblock %}

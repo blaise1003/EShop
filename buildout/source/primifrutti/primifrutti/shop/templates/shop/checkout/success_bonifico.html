@@ -1,0 +1,115 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load satchmo_order %}
+{% load satchmo_google %}
+{% load satchmo_util%}
+{% load normalize_decimal %}
+
+{% block extra-head %}
+{% endblock %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a> <span class="divider">/</span></li>
+   <li>{% trans "Checkout" %}</li>
+{% endblock %}
+
+{% block spancheckout %}
+<div id="content">
+<div id="ordersuccess">
+	<h1 class="page-header">{% trans "Thank you for your order!" %}</h1>
+	
+	<div class="alert alert-success">
+	    {% trans 'Please print out this page as a receipt.  You will also receive an email with this information.' %}
+	</div>
+	<div class="alert alert-success">
+	    {% trans "La richiesta verr&agrave; evasa una volta ricevuta conferma dell'avvenuto pagamento." %}
+	</div>
+        
+        {% order_tracking_details order %}
+
+        <div class="well span5 pull-right">
+        <dl class="dl-horizontal">
+                <dt>Modalit&agrave; pagamento:</dt>
+                <dd>Bonifico</dd>
+                <dt>Intestato a: </dt>
+                <dd>{{store_name}}</dd>
+                <dt>Conto corrente bancario: </dt>
+                <dd>IBAN {{iban}}</dd>
+                <dt>Inviare copia della ricevuta a:</dt>
+                <dd>{{store_name}}</dd>
+                <dd>{{store_street1}}</dd>
+                <dd>{{store_postal_code}} {{store_city}} </dd>
+                <dd>{{store_state}}</dd>
+                <dt>Tel.</dt>
+                <dd>{{store_phone}}</dd>
+                <dt>FAX</dt>
+                <dd>&nbsp;{{store_fax}}</dd>
+                <dt>e-mail</dt>
+                <dd>{{store_email}}</dd>
+                <dt>P.IVA</dt>
+                <dd>{{p_iva}}</dd>
+        </dl>
+        </div>
+        <div class="clear"><!-- --></div>
+        <br />
+	    <h1>{% trans "Thank you for your order!" %}</h1>
+	    <hr />
+	
+    	<div class="account-buttons">
+    		{% trans "You can check your order status" %}:
+        	<a class="btn" href="{% url satchmo_order_history %}">{% trans "order history" %}</a> oppure
+        	<a class="btn btn-primary" href="{% url satchmo_home %}">{% trans 'Proceed with another purchase' %}</a>
+    	</div>
+    
+    <div class="clearfix"><!-- --></div>
+    <p> &nbsp;</p>
+    {% if order.shipping_method == 'Foreign shipping' %}
+    <div class="alert-message warning">
+        <p>
+            {% trans "Attenzione: le spese di spedizione non sono state conteggiate nell'ordine. <br /> Verrete contattati via email da un nostro operatore e il vostro ordine verr&agrave; <br /> confermato solo qualora accettiate il preventivo di spedizione <br />" %}
+        </p>
+    </div>
+    {% endif %}
+
+    <!-- Google Code for Acquisto Conversion Page -->
+    <div id="google-conversion">
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 1015087871;
+        var google_conversion_language = "it";
+        var google_conversion_format = "3";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "Mk30CLGnuwEQ_4WE5AM";
+        var google_conversion_value = 0;
+        /* ]]> */
+        </script>
+        <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1015087871/?label=Mk30CLGnuwEQ_4WE5AM&amp;guid=ON&amp;script=0"/>
+            </div>
+        </noscript>
+    </div>
+    <!-- Google Code for Acquisto Conversion Page -->
+
+</div>
+</div>
+{% endblock %}
+
+{% block leftcolumn %}
+{% endblock %}
+
+{% block rightcolumn %}
+{% endblock %}
+
+{% block google-tracker %}
+{% if shop.options.GOOGLE.ANALYTICS.value %}
+{% show_tracker %}
+{% show_receipt %}
+{% endif %}
+{% if shop.options.GOOGLE.ADWORDS.value %}
+{% google_adwords_sale %}
+{% endif %}
+{% endblock %}
+

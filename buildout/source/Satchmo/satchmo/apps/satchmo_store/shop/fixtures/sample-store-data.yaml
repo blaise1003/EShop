@@ -1,0 +1,62 @@
+- fields: {create_date: 2007-05-19, name: !!str 'Rhinestone Ronny', notes: null,
+    role: !!str 'Supplier', type: !!str 'Company'}
+  model: !!str 'contact.organization'
+  pk: !!str '1'
+- fields: {create_date: 2007-05-19, dob: null, email: !!str 'chris@aol.com',
+    first_name: !!str 'Chris', last_name: !!str 'Smith',
+    notes: !!str 'Really cool stuff', organization: null, role: !!str 'Customer',
+    user: null}
+  model: !!str 'contact.contact'
+  pk: !!str '1'
+- fields: {create_date: 2007-05-19, dob: null, email: !!str 'abc@comcast.com',
+    first_name: !!str 'John', last_name: !!str 'Smith', 
+    notes: !!str 'Second user', organization: null, role: !!str 'Customer',
+    user: null}
+  model: !!str 'contact.contact'
+  pk: !!str '2'
+- fields: {create_date: 2007-05-19, dob: null, email: !!str 'fj@rr.com',
+    first_name: !!str 'Fred', last_name: !!str 'Jones', 
+    notes: !!str '', organization: !!int '1', role: !!str 'Supplier',
+    user: null}
+  model: !!str 'contact.contact'
+  pk: !!str '3'
+- fields: {city: !!str 'Anywhere Town', contact: !!int '1', country: 231,
+    description: !!str 'Home', is_default_billing: true, is_default_shipping: true,
+    postal_code: !!str '38138', state: !!str 'TN', street1: !!str '8235
+      Pike Street', street2: !!str ''}
+  model: !!str 'contact.addressbook'
+  pk: !!str '1'
+- fields: {city: !!str 'Stillwater', contact: !!int '2', country: 231,
+    description: !!str 'Work', is_default_billing: true, is_default_shipping: true,
+    postal_code: !!str '55082', state: !!str 'MN', street1: !!str '1245
+      Main Street', street2: !!str ''}
+  model: !!str 'contact.addressbook'
+  pk: !!str '2'
+- fields: {city: !!str 'Fishkill', contact: !!int '3', country: 231,
+    description: !!str 'Mailing address', is_default_billing: true, is_default_shipping: true,
+    postal_code: !!str '19010', state: !!str 'NJ', street1: !!str 'Receiving
+      Dept', street2: !!str '918 Funky Town St'}
+  model: !!str 'contact.addressbook'
+  pk: !!str '3'
+- fields: {contact: !!int '1', phone: !!str '601-555-5511', primary: true,
+    type: !!str 'Home'}
+  model: !!str 'contact.phonenumber'
+  pk: !!str '1'
+- fields: {contact: !!int '2', phone: !!str '999-555-5111', primary: true,
+    type: !!str 'Work'}
+  model: !!str 'contact.phonenumber'
+  pk: !!str '2'
+- fields: {contact: !!int '3', phone: !!str '800-188-7611', primary: true,
+    type: !!str 'Work'}
+  model: !!str 'contact.phonenumber'
+  pk: !!str '3'
+- fields: {contact: !!int '3', phone: !!str '755-555-1111', primary: false,
+    type: !!str 'Fax'}
+  model: !!str 'contact.phonenumber'
+  pk: !!str '4'
+- fields: {city: null, country: 231, in_country_only: true,
+    phone: null, postal_code: null, sales_country: 231,
+    state: null, store_description: null, store_email: null, store_name: !!str 'My
+      Site - Trunk',  street1: null, street2: null}
+  model: !!str 'shop.config'
+  pk: !!str '1'

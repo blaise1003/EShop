@@ -1,0 +1,159 @@
+{% extends "shop/base.html" %}
+{% load i18n thumbnail satchmo_currency satchmo_discounts app_plugins %}
+
+{% block extra-head %}
+{% if category.meta %}
+    <meta name="description" content="{{ category.meta|escape }}">
+{% endif %}
+{% endblock %}
+
+{% block globalnavbar %}
+<li><a href="{% url satchmo_home %}">Home</a></li>
+<li class="active"><a href="{% url satchmo_category_index %}">{% trans "Prodotti" %}</a></li>
+<li><a href="/pagine/l-azienda">{% trans "L'azienda" %}</a></li>
+<li><a href="/pagine/offerte">{% trans "Offerte" %}</a></li>
+<li><a href="{% url satchmo_contact %}">{% trans "Contacts" %}</a></li>
+{% endblock globalnavbar %}
+
+{% block navbar %}
+    <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+    <li><a href="{% url satchmo_category_index %}">{% trans "Category Index" %}</a><span class="divider">/</span></li>
+	{% for parent in category.parents %}<li><a href="{{ parent.get_absolute_url }}">{{ parent.translated_name }}</a><span class="divider">/</span></li>{% endfor %}
+	<li>{{ category.translated_name }}</li>
+{% endblock %}
+
+{% block content %}
+<div id="product_category">
+<h1 class="page-header">{{ category.translated_name }}</h1>
+    <div class="category">
+        {% if category.main_image %}
+                {% thumbnail category.main_image.picture 85x85 as image %}
+               <div class="filigrana pull-left">
+               <a href="{% url satchmo_category_index %}">
+                   <img src="{{ image }}" width="{{ image.width }}" height="{{ image.height }}" />
+               </a>
+               </div>
+        {% endif %}
+        {% if category.translated_description %}
+        <p class="span5">{{ category.translated_description }}</p>
+        {% else %}
+          <p class="span5"><span class="discreet">{% trans "no description available" %}</span></p>
+        {% endif %}
+        <div class="clearfix">&nbsp;</div>
+        <h2>{% trans "Products" %}</h2>
+        <div class="row-fluid">
+            {% if products %}
+                {% for product in products %}
+                        <div class="span3 well">
+                            <div class="portletItem">   
+                                <div class="filigrana">
+                                <a href="{{product.get_absolute_url}}">
+                                    {% thumbnail product.main_image.picture 165x120 as image %}
+                  	                <img src="{{ image.absolute_url }}" class="thumbnail"
+                                          alt="{{product.name}}"
+                                          width="{{image.width}}px"
+                                          height="{{image.height}}px" />
+                                </a>
+                                </div>
+                                <strong>{{ product.translated_name|truncatewords_html:3 }}</strong>
+                                {% if product.translated_short_description %}
+                                  <p>{{ product.translated_short_description|truncatewords_html:5 }}&nbsp;</p>
+                                {% else %}
+                                  <p><span class="discreet">{% trans "no description available" %}</span></p>
+                                {% endif %}
+                                <div class="buttonCart">
+                                    <div class="price">{{ product|taxed_discount_price:''|currency }}</div>
+                                    <div class="actions">
+                                        <a href="{{product.get_absolute_url}}" class="info"
+                                           rel="tooltip"
+                                           title="{% trans 'Product details' %}"></a>
+                                        {% if product.active %}
+                                        <form action="{% url satchmo_smart_add %}" method="post">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="quantity" 
+                                                value="1" />
+                                            <input type="hidden" name="productname" 
+                                                value="{{product.slug}}" />
+                                            <input type="submit" class="cart" name="addcart" 
+                                                 title="{% trans 'Add to cart' %}"
+                                                 rel="tooltip"
+                                                 value="" />
+                                            {% plugin_point "product_add_buttons" %}
+                                            {% plugin_point "product_form" %}
+                                        </form>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% if forloop.counter|divisibleby:"3" %}
+                            <div class="clearfix">&nbsp;</div>
+                        {% endif %}
+                {% endfor %}
+            {% else %}
+                <div class="alert alert-info">
+                   <strong>Info: </strong>{% trans "No products in this category" %}
+                </div>
+            {% endif %}
+        </div>
+        {% comment %}**Now the pagination section**"{% endcomment %}
+        {% if is_paginated %}
+          <div class="pagination pagination-centered">
+            <ul>
+              <li {% if not page_obj.has_previous %}class="disabled"{% endif %}>
+                <a href="{% if page_obj.has_previous %}{% url satchmo_category parent_slugs category.slug %}?page={{ page_obj.previous_page_number }}{% else %}#{% endif %}">
+                  <<
+                </a>
+              </li>
+              <li class="disabled">
+                <a href="#">{{ page_obj.number }}/{{ page_obj.paginator.num_pages }}</a>
+              </li>
+              <li {% if not page_obj.has_next %}class="disabled"{% endif %}>
+                <a href="{% if page_obj.has_next %}{% url satchmo_category parent_slugs category.slug %}?page={{ page_obj.next_page_number }}{% else %}#{% endif %}">
+                  >>
+                </a>
+              </li>
+            </ul>
+          </div>
+        {% endif %}
+    </div>
+    <hr />
+    {% if child_categories %}
+        <div class="category sub-category">
+            <h1>{% trans "Children Categories" %}</h1>
+            <div class="row-fluid">
+                {% for category in child_categories %}
+                        <div class="portletItem">   
+                            <div class="filigrana">
+                            {% if category.main_image %}
+                            <a href="{{category.get_absolute_url}}">
+                                {% thumbnail category.main_image.picture 165x120 as image %}
+              	                <img src="{{ image.absolute_url }}" class="thumbnail"
+                                      alt="{{category.name}}"
+                                      width="{{image.width}}px"
+                                      height="{{image.height}}px" />
+                            </a>
+                            {% endif %}
+                            </div>
+                            <strong>{{ category.translated_name|truncatewords_html:3 }}</strong>
+                            {% if category.translated_description %}
+                              <p>{{ category.translated_description|truncatewords_html:5 }}&nbsp;</p>
+                            {% else %}
+                              <p><span class="discreet">{% trans "no description available" %}</span></p>
+                            {% endif %}
+                            <div class="buttonCart">
+                                <div class="actions-extend pull-right">
+                                    <a href="{{category.get_absolute_url}}" class="btn btn-small btn-primary-info"
+                                         title="{% trans 'Category details' %}">{% trans 'Category details' %}</a>
+                                </div>
+                            </div>
+                        </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+    {% if sale %}
+    {% include "product/some_discount_eligible.html" %}
+    {% endif %}
+</div>
+{% endblock %}

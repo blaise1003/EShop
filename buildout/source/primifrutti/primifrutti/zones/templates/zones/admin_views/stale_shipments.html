@@ -1,0 +1,91 @@
+{% extends "admin/index.html" %}
+{% load i18n %}
+
+{% block navbar %}
+   <li>{% trans "Stale Orders" %}</li>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+{% if app_list %}
+    {% for app in app_list %}
+        <div class="module">
+        <table summary="{% blocktrans with app.name as name %}Models available in the {{ name }} application.{% endblocktrans %}">
+        <caption><a href="/admin/{{ app.app_url }}" class="section">{% blocktrans with app.name as name %}{{ name }}{% endblocktrans %}</a></caption>
+        {% for model in app.models %}
+            <tr>
+            {% if model.perms.change %}
+                <th scope="row"><a href="/admin/{{ model.admin_url }}">{{ model.name }}</a></th>
+            {% else %}
+                <th scope="row">{{ model.name }}</th>
+            {% endif %}
+
+            {% if model.perms.add %}
+                <td><a href="/admin/{{ model.admin_url }}add/" class="addlink">{% trans 'Add' %}</a></td>
+            {% else %}
+                <td>&nbsp;</td>
+            {% endif %}
+
+            {% if model.perms.change %}
+                <td><a href="/admin/{{ model.admin_url }}" class="changelink">{% trans 'Change' %}</a></td>
+            {% else %}
+                <td>&nbsp;</td>
+            {% endif %}
+            </tr>
+        {% endfor %}
+        </table>
+        </div>
+    {% endfor %}
+    <div class="module">
+    {% if risky_count %}
+    <p class="warning">
+      {% blocktrans count risky_count=risky_count%}
+      There is {{ risky_count }} stale shipment requiring immediate action!
+      {% plural %}
+      There are {{ risky_count }} stale shipments requiring immediate action!
+      {% endblocktrans %}
+    </p>
+    {% endif %}
+    <table summary="{% trans 'Stale shipments' %}">
+    <caption>{% trans 'Stale shipments' %}</caption>
+    {% if stale_shipments %}
+        <thead>
+        <tr>
+            <th>{% trans '# Order' %}</th>
+            <th>{% trans 'Zone' %}</th>
+			<th>{% trans 'Made on' %}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in stale_shipments %}
+        <tr>
+            <td>
+				<a href="{% url admin:shop_order_change item.order_id %}" target="_blank">
+                {{ item.order_id }}
+				</a>
+            </td>
+            <td>
+                {{ item.zone }}
+            </td>
+            <td>
+                {{ item.booked_on }}
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    {% else %}
+        <p>{% trans 'No shipments' %}</p>
+    {% endif %}
+    </table>
+    {% if total_shipments > 5 %}
+    <p>
+        <a href="{% url satchmo_deliveries %}">{% blocktrans %}See all {{ total_shipments }} stale shipments{% endblocktrans %}</a>
+    </p>
+    {% endif %}
+    </div>
+{% else %}
+    <p>{% trans "You don't have permission to edit anything." %}</p>
+{% endif %}
+</div>
+{% endblock %}

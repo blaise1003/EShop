@@ -1,0 +1,19 @@
+{% load i18n %}
+{% if pages %}
+<div class="portlet" id="navigation">
+    <div class="portletHeader">
+        <h3>{% trans "Other" %}</h3>
+    </div>
+    
+    <ul class="nav nav-list">
+        {% for page in pages %}
+        <li>
+            <a href="{{ page.get_absolute_url }}" title="{{ page.title }}">
+                <span>{{ page.title }}</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    
+</div>
+{% endif %}

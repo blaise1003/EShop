@@ -1,0 +1,94 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load satchmo_order %}
+{% load satchmo_google %}
+{% load satchmo_util%}
+{% load normalize_decimal %}
+
+{% block extra-head %}
+{% endblock %}
+
+{% block navbar %}
+   <li class="first"><a href="{{ shop_base }}/">{% trans "Home" %}</a></li>
+   <li>{% trans "Checkout" %}</li>
+{% endblock %}
+
+{% block content %}
+<div id="ordersuccess">
+	<div class="ship-step">&nbsp;</div>
+	<h1 class="documentFirstHeading">{% trans "Thank you for your order!" %}</h1>
+	
+	<h3>{% trans 'Please print out this page as a receipt.  You will also receive an email with this information.' %}</h3>
+    <div class="sf_gray">
+        {% order_tracking_details order %}
+        
+        <div class="evidenzia floatright width-38">
+            <h2>Modalit&agrave; pagamento:<h2 /> Bonifico<br />Intestato a {{store_name}}<br />CONTO CORRENTE BANCARIO: IBAN {{iban}}<br /><br />Inviare copia della ricevuta a:<br />{{store_name}}<br />
+            {{store_street1}}<br/>{{store_postal_code}} {{store_city}} <br />
+            {{store_state}}<br />
+            Tel. {{store_phone}}<br />
+            FAX {{store_fax}}<br />
+            e-mail {{store_email}}<br />
+            P.IVA {{p_iva}}<br />
+
+        	<p>{% trans "La richiesta verr&agrave; evasa una volta ricevuta conferma dell'avvenuto pagamento." %}</p>
+        </div>
+
+
+        <div class="visualClear"><!-- --></div>
+        <br />
+	    <p class="bold">{% trans "Thank you for your order!" %}</p>
+	    <hr />
+	
+    	<div class="account-buttons">
+    		{% trans "You can check your order status" %}:
+        	<a class="button-orange" href="{% url satchmo_order_history %}">{% trans "order history" %}</a> oppure
+        	<a class="button-back" href="/">{% trans 'Proceed with another purchase' %}</a>
+    	</div>
+    </div>
+    <div class="visualClear"><!-- --></div>
+    <p> &nbsp;</p>
+    {% if order.shipping_method == 'Foreign shipping' %}
+    <div class="foreign-message evidenzia">
+        <p>
+            {% trans "Attenzione: le spese di spedizione non sono state conteggiate nell'ordine. <br /> Verrete contattati via email da un nostro operatore e il vostro ordine verr&agrave; <br /> confermato solo qualora accettiate il preventivo di spedizione <br />" %}
+        </p>
+    </div>
+    {% endif %}
+
+    <!-- Google Code for Acquisto Conversion Page -->
+    <div id="google-conversion">
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 1015087871;
+        var google_conversion_language = "it";
+        var google_conversion_format = "3";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "Mk30CLGnuwEQ_4WE5AM";
+        var google_conversion_value = 0;
+        /* ]]> */
+        </script>
+        <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1015087871/?label=Mk30CLGnuwEQ_4WE5AM&amp;guid=ON&amp;script=0"/>
+            </div>
+        </noscript>
+    </div>
+    <!-- Google Code for Acquisto Conversion Page -->
+
+</div>
+
+{% endblock %}
+
+{% block google-tracker %}
+{% if shop.options.GOOGLE.ANALYTICS.value %}
+{% show_tracker %}
+{% show_receipt %}
+{% endif %}
+{% if shop.options.GOOGLE.ADWORDS.value %}
+{% google_adwords_sale %}
+{% endif %}
+{% endblock %}
+

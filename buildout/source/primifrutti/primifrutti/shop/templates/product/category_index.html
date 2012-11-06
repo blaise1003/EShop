@@ -1,0 +1,87 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load thumbnail %}
+{% load satchmo_util %}
+
+{% block globalnavbar %}
+<li><a href="{% url satchmo_home %}">Home</a></li>
+<li class="active"><a href="{% url satchmo_category_index %}">{% trans "Prodotti" %}</a></li>
+<li><a href="/pagine/l-azienda">{% trans "L'azienda" %}</a></li>
+<li><a href="/pagine/offerte">{% trans "Offerte" %}</a></li>
+<li><a href="{% url satchmo_contact %}">{% trans "Contacts" %}</a></li>
+{% endblock globalnavbar %}
+
+{% block navbar %}
+<li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+<li>{% trans "Category Index" %}</li>
+{% endblock %}
+
+{% block content %}
+      <div class="category">
+          {% if categorylist %}
+              <h1>{% trans "Categories" %}</h1>
+              <div class="row-fluid">
+              {% for category in categorylist %}
+                    <div class="span3 well">
+                        <div class="portletItem">
+                            <div class="filigrana">
+                            <span>{{shop_name}}</span>
+                            {% if category.main_image %}
+                            <a href="{{category.get_absolute_url}}">
+                                {% thumbnail category.main_image.picture 165x120 as image %}
+              	                <img src="{{ image.absolute_url }}" class="thumbnail"
+                                      alt="{{category.name}}"
+                                      width="168px"
+                                      height="120px" />
+                            </a>
+                            {% endif %}
+                            </div>
+                            <h3>{{ category.name|truncatewords_html:3 }}</h3>
+                            <p>
+                                {% if category.description %}
+                                    {{ category.description|truncatewords_html:5 }}
+                                {% else %}
+                                    <span class="discreet">{% trans "no description available" %}</span>
+                                {% endif %}
+                            </p>
+                            <div class="buttonCart">
+                            
+                                <div class="actions-extend">
+                                    <a href="{{category.get_absolute_url}}"
+                                       class="btn"
+                                      rel="tooltip"
+                                      title="{% trans 'Category details' %}">
+                                      {% trans 'Category details' %}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:"3" %}
+                    <div class="clearfix">&nbsp;</div>
+                    {% endif %}
+              {% endfor %}
+              </div>
+              {% comment %}**Now the pagination section**"{% endcomment %}
+              {% if is_paginated %}
+                <div class="pagination pagination-centered">
+                  <ul>
+                    <li {% if not page_obj.has_previous %}class="disabled"{% endif %}>
+                      <a href="{% if page_obj.has_previous %}{% url satchmo_category_index %}?page={{ page_obj.previous_page_number }}{% else %}#{% endif %}">
+                        <<
+                      </a>
+                    </li>
+                    <li class="disabled">
+                      <a href="#">{{ page_obj.number }}/{{ page_obj.paginator.num_pages }}</a>
+                    </li>
+                    <li {% if not page_obj.has_next %}class="disabled"{% endif %}>
+                      <a href="{% if page_obj.has_next %}{% url satchmo_category_index %}?page={{ page_obj.next_page_number }}{% else %}#{% endif %}">
+                        >>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              {% endif %}
+          {% endif %}
+    </div>
+{% endblock %}
+

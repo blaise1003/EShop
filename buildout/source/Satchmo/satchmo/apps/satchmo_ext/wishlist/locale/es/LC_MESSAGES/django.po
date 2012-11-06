@@ -1,0 +1,126 @@
+# 
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-28 19:29+0000\n"
+"PO-Revision-Date: 2011-09-28 21:34\n"
+"Last-Translator: Andrea  de la Huerta <info@metamorfosys.de>\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"X-Translated-Using: django-rosetta 0.6.1\n"
+
+#: config.py:8
+msgid "Wishlist slug"
+msgstr "Slug para lista de compras"
+
+#: config.py:9
+msgid "The url slug for wishlists.  Requires server restart if changed."
+msgstr ""
+"El slug de url para las listas de compras. Requiere reiniciar el "
+"servidor si se modifica."
+
+#: models.py:33
+msgid "Contact"
+msgstr "Contacto"
+
+#: models.py:34
+msgid "Product"
+msgstr "Producto"
+
+#: models.py:35
+msgid "Details"
+msgstr "Detalles"
+
+#: models.py:36
+msgid "Creation Date"
+msgstr "Fecha de creación"
+
+#: models.py:61
+msgid "Product Wish"
+msgstr "Producto en la lista"
+
+#: models.py:62
+msgid "Product Wishes"
+msgstr "Productos en la lista"
+
+#: views.py:60 views.py:82
+msgid "The product you have requested does not exist."
+msgstr "El producto que has solicitado no existe."
+
+#: views.py:93
+msgid "The contact associated with this request does not exist."
+msgstr "El contacto asociado a esta solicitud no existe."
+
+#: views.py:97
+msgid "Success"
+msgstr "Éxito"
+
+#: views.py:99
+msgid "Error"
+msgstr "Error"
+
+#: views.py:115
+#, python-format
+msgid ""
+"Wishlist product '%(product)s' could't be added to the cart. "
+"%(details)s"
+msgstr ""
+"El producto '%(product)s' deseado no se pudo agregar a la cesta. "
+"%(details)s"
+
+#: views.py:156 views.py:167 views.py:169
+msgid "No such wishlist item."
+msgstr "No existe tal artículo en la lista."
+
+#: views.py:162
+msgid "You must be logged in to do that."
+msgstr "Primero debes iniciar sesión."
+
+#: templates/wishlist/index.html:7 templates/wishlist/login_required.html:4
+msgid "Home"
+msgstr "Inicio"
+
+#: templates/wishlist/index.html:8 templates/wishlist/index.html.py:18
+#: templates/wishlist/login_required.html:5
+#: templates/wishlist/plugins/shop_sidebar_actions.html:4
+msgid "Wishlist"
+msgstr "Lista de compras"
+
+#: templates/wishlist/index.html:27
+#, python-format
+msgid "added on %(create_date)s"
+msgstr "agregado el %(create_date)s"
+
+#: templates/wishlist/index.html:31
+msgid "Add to cart"
+msgstr "Añadir a la cesta"
+
+#: templates/wishlist/index.html:35
+msgid "Remove from wishlist"
+msgstr "Borrar de la lista de compras"
+
+#: templates/wishlist/login_required.html:11
+msgid ""
+"You are authenticated but need to set up your contact information. You "
+"can update it "
+msgstr ""
+"Ya has iniciado sesión, pero debes completar tu información de "
+"contacto. La puedes actualizar "
+
+#: templates/wishlist/login_required.html:11
+msgid "here"
+msgstr "aquí"
+
+#: templates/wishlist/login_required.html:13
+#, python-format
+msgid ""
+"Sorry, you must be <a href=\"%(login_url)s\">logged-in</a> to access your"
+" wishlist."
+msgstr ""
+"Lo sentimos, pero debes <a href=\"%(login_url)s\">iniciar sesión</a> "
+"para acceder a tu lista de compras."
+
+#: templates/wishlist/plugins/product_add_buttons.html:2
+msgid "Add to wishlist"
+msgstr "Agregar a la lista de compras"

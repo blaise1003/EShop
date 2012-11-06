@@ -1,0 +1,74 @@
+<div class="page-header">
+    <h1>Il tuo carrello<small>L'elenco delle cose che stai per acquistare</small></h1>
+</div>
+<ul class="breadcrumb-step">
+    <li><strong>Checkout</strong><span class="divider">/</span></li>
+    <li class="active">1. Carrello <span class="divider">/</span></li>
+    <li>2. Login-Registrazione <span class="divider">/</span></li>
+    <li>3. Conferma ordine<span class="divider">/</span></li>
+    <li>4. Spedizione</li>
+</ul>
+<div class="alert-message warning">
+        <a class="close" href="#">×</a>
+        <p><strong>Spese gratis se raggiungi 50€</strong> Se fai un ordine minimo di 50€ hai le spese di spedizione gratis</p> <img src="/static/theme/img/trasporto.png" />
+        <div class="alert-actions">
+          <a class="btn small" href="#">Continua lo shopping</a>
+        </div>
+      </div>
+<div class="alert-message warning">
+    <a class="close" href="#">×</a>
+    <p>Se scegli di pagare in <strong>contrassegno</strong> (pagamento alla consegna), saranno aggiunti 5.00 € al totale del tuo ordine.</p>
+</div>
+
+<table class="zebra-striped">
+    <thead>
+      <tr>
+        <th>Quantità</th>
+        <th>Prodotto</th>
+        <th>Prezzo</th>
+        <th>Totale<br><small>(tasse incluse)</small></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <form>
+            <input type="hidden" name="cartitem" value="1">
+            <input class="mini" type="text" name="quantity" id="id_quantity" value="1" size="2"><br/>
+            <input class="btn" type="submit" id="id_update_submit" value="Aggiorna">
+          </form>
+        </td> 
+        <td><a href="prodotto.html">Noci di Sorrento</a></td>
+        <td><div class="price">€ 12.00</div></td>
+        <td><div class="price">€ 15.00</div></td>
+        <td><button type="reset" class="btn">Cancella</button></td>
+      </tr>
+      <tr>
+        <td>
+          <form>
+            <input type="hidden" name="cartitem" value="1">
+            <input class="mini" type="text" name="quantity" id="id_quantity" value="1" size="2"><br/>
+            <input class="btn" type="submit" id="id_update_submit" value="Aggiorna">
+          </form>
+        </td> 
+        <td><a href="prodotto.html">Noci di Sorrento</a></td>
+        <td><div class="price">€ 12.00</div></td>
+        <td><div class="price">€ 15.00</div></td>
+        <td><button type="reset" class="btn">Cancella</button></td>
+      </tr>
+      <tr>
+        <td colspan="4"><h3>Totale carrello</h3></td>
+        <td><div class="price red">€ 15.00</div></td>
+      </tr>
+      <tr>
+        <td colspan="4"><h3>Spese di spedizione</h3></td>
+        <td><div class="price red">€ 5.00</div></td>
+      </tr>
+    </tbody>
+</table>
+<div class="well span12">
+    <a href="" class="btn info" title="">Continua lo shopping</a>
+    <a href="#" class="btn">svuota il carrello</a>
+    <a href="#" class="btn primary">Vai alla cassa</a>
+</div>

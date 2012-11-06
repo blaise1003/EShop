@@ -1,0 +1,15 @@
+{% load i18n %}{% load l10n %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title></title></head>
+<body style="font-family:'Helvetica Neue', Helvetica, Arial;font-size:90%;">
+<h1>{{ shop_name}}</h1>
+
+<p>{% blocktrans %}Dear {{ first_name }} {{ last_name }},{% endblocktrans %}</p>
+<p>{% blocktrans %}Thank you for signing up with {{ shop_name }}.{% endblocktrans %}</p>
+
+<p>{% blocktrans %}Your new username is this email address, and you can login at{% endblocktrans %} <a href="http://{{ site_url }}{{ login_url }}">click</a></p>
+
+<p>{% trans "Regards" %},</p>
+<p>{% trans "Store Management" %}</p>
+
+</body>
+</html>

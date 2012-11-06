@@ -1,0 +1,29 @@
+{% load i18n %}{% load l10n %}<html>
+  <body>
+    <p>{% blocktrans %}Congratulations {{ first_name }},{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}You have succesfully invited {{ invites_number }}
+    people! As a reward, we are happy to provide you with an electronic coupon
+    that will get you a {{ discount_amount }} discount on your next purchase!
+    {% endblocktrans %}</p>
+
+    <p>{% blocktrans %}The electronic coupon code is{% endblocktrans %}
+    <code>{{ coupon_code }}</code>.</p>
+
+    <p>{% autoescape off %}{% blocktrans %}In order to use it, you must insert
+    this code in the <em>coupon</em> field found in the checkout page (the page
+    where you give the billing details and select the payment method, right
+    after clicking <em>checkout</em>). After entering the code, the discount of
+    {{ discount_amount|escape }} will be applied to your order.
+    {% endblocktrans %}{% endautoescape %}</p>
+
+    <p>{% autoescape off %}{% localize %}{% blocktrans %}
+    <strong>Important</strong>: Remember that you can use this coupon
+    <strong>only one time</strong> and you must
+    <strong>use it before {{ end_date }}</strong>.
+    {% endblocktrans %}{% endlocalize %}{% endautoescape %}</p>
+
+    <p>{% blocktrans %}All the best,{% endblocktrans %}</p>
+    <p>{{ shop_name }}</p>
+  </body>
+</html>

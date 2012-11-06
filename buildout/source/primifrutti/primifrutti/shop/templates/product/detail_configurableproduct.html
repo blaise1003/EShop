@@ -1,0 +1,174 @@
+{% extends "product/product.html" %}
+{% load i18n %}
+{% load thumbnail %}
+{% load satchmo_price %}
+{% load satchmo_util %}
+{% load satchmo_currency satchmo_category%}
+{% load satchmo_discounts satchmo_tax %}
+{% load app_plugins %}
+{% load satchmo_thumbnail %}
+
+{% block extra-head %}
+
+{% include "shop/_jquery.html" %}
+{% include "shop/_jquery_form.html" %}
+<script type="text/javascript" src="/static/primifrutti/primifrutti/js/satchmo_product.js"></script>
+{% blackbird_logging %}
+<script type="text/javascript">{# Javascript which is generated uniquely for each page #}
+satchmo.default_view_tax = {% if default_view_tax %}true{% else %}false{% endif %};
+
+satchmo.variations = {{ details|as_json }};
+
+satchmo.set_option_ids([{% for option_group in options %}{{ option_group.id }}{% if not forloop.last %},{% endif %}{% endfor %}]);
+
+$(function() {
+    satchmo.update_price();
+    $('.priced').change(function() { satchmo.update_price() });
+});
+
+</script>
+{% endblock %}
+
+
+{% block content %}
+{% block productdetail %}
+<div class="row prodotto">
+    <div class="span7">
+      {% if product.productimage_set.count > 0 %}
+      <div class="product-gallery">
+        <div class="ppy" id="ppy2">
+          <ul class="media-grid ppy-imglist">
+              {% for pic in product.productimage_set.all %}
+                  <li>  
+                        {% thumbnail pic.picture 600x600 as image_large %}
+                        {% thumbnail pic.picture 210x150 as image %}
+                        <a href="{{ image_large.absolute_url }}">
+                          <img src="{{ image.absolute_url }}"  class="thumbnail" 
+                                alt="{{featured_first.name}}"
+                                width="{{image.width}}px"
+                                height="{{image.height}}px" />
+                        </a>
+                    </li>
+              {% endfor %}
+          </ul>
+          <div class="ppy-outer">
+            <div class="ppy-stage">
+                <div class="ppy-counter">
+                    <strong class="ppy-current"></strong> / <strong class="ppy-total"></strong> 
+                </div>
+            </div>
+            <div class="ppy-nav">
+                <div class="nav-wrap">
+                    <a class="ppy-next" title="{% trans 'Next image' %}">{% trans 'Next image' %}</a>
+                    <a class="ppy-switch-enlarge" title="{% trans 'Enlarge' %}">{% trans 'Enlarge' %}</a>
+                    <a class="ppy-switch-compact" title="{% trans 'Close' %}">{% trans 'Close' %}</a>
+                    <a class="ppy-prev" title="{% trans 'Previous image' %}">{% trans 'Previous image' %}</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      <h1 class="tit">{{ product.translated_name }}</h1>
+      <h2 class="desc">{{ product.translated_short_description }}</h2>
+
+      <h3>{% trans "details" %}</h3>
+      <p>{{ product.translated_description }}</p>
+      {% with product.translated_attributes as atts %}
+      {% if atts %}
+        <table class="table table-striped productattributes table-bordered">
+          <tbody>
+              {% for att in product.translated_attributes %}
+                <td><strong>{{ att.description }}:</strong></td>
+                <td>{{ att.value }}</td>
+              {% endfor %}
+          <tr>
+          </tr>
+          </tbody>
+        </table>
+        {% endif %}
+      {% endwith %}
+    </div>
+    <div class="row">
+      <div class="span7">
+        {% if sale %}<strike id="fullprice" style="display: block;">{{ product|discount_price:""|currency }}</strike>{% endif %}
+        <div class="price">
+          {% trans "Price" %} <span id='price'>{{ product|taxed_discount_price:sale|currency }}</span>
+          {% if product.offer %}
+            <img rel="tooltip" class="resize" alt="{% trans 'Offer' %}" title="{% trans 'Offer' %}" src="/static/theme/img/labelsale.png" />
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+        {% if product.active %}
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+            <div id='js_error' class='alert alert-warning'></div>
+            <form id="options" action="{% url satchmo_smart_add %}" method="post" class="form-stacked">
+              {% csrf_token %}
+              {% if options %}
+              <p>{% trans "Please choose your options" %}:</p>
+              {% endif %}
+              <fieldset>
+
+                  {% for option_group in options %}
+                      <select name="{{ option_group.id }}" id="{{option_group.id}}" class="priced">
+                      {% for choice in option_group.items %}
+                       <option value="{{ choice.value }}" {% if choice.selected %}selected="selected"{% endif %}>{{ choice.translated_name }}
+                          {% if choice.price_change %}
+                              {% option_price choice %}
+                          {% endif %}
+                       </option>
+                      {% endfor %}
+                        </select>
+                  {% endfor %}
+                  
+                  <label class="span4 clearfix" for="quantity">{% trans "Quantity" %}</label>
+                  <div class="span4 control-group">
+                  <div class="controls">
+                    <div class="input-prepend">
+                      <span class="add-on">{{product.get_main_units}}</span><input type="text" class="span3" id="quantity" name="quantity" value="1" />
+                    </div>
+                    <input type="hidden" name="productname" id="productname" value="{{product.slug}}" />
+                    <span class="help-block">
+                        {% blocktrans with product.get_main_units as units %}
+                          How many {{ units }} product do you want add to your cart?
+                        {% endblocktrans %}
+                    </span>
+                  </div>
+                </div>
+                <div class="pull-right">
+                  <input id="addcart" type="submit" class="btn btn-small btn-primary-cart"
+                     name="addcart" value="{% trans 'Add to cart' %}" />
+                </div>
+              </fieldset>
+              
+              {% plugin_point "product_add_buttons" %}
+              {% plugin_point "product_form" %}
+            </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock productdetail %}
+
+{% block productfooter %}
+    {% if sale %}{% include "product/product_discount_eligible.html" %}{% endif %}
+    {% plugin_point "product_footer" %}
+{% endblock %}
+
+{% if product.productimage_set.count > 0 %}
+<script type="text/javascript">
+    <!--//<![CDATA[
+    $(document).ready(function () {
+        var options = {
+            caption:    false,
+            navigation: 'permanent',
+            direction:  'left'
+        }
+   
+        $('#ppy2').popeye(options);
+    });
+    //]]>-->
+</script>
+{% endif %}
+{% endblock content %}

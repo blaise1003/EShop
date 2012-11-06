@@ -1,0 +1,37 @@
+{% extends "shop/base.html" %}
+{% load satchmo_google %}
+{% load i18n %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+   <li>{% trans "Account Creation" %}</li>
+{% endblock %}
+
+{% block content %}
+<h1 class="page-header">{% trans "Account Creation" %}</h1>
+	<p>{% trans "Thank you for signing up." %}
+	{% if verify %}
+	{% trans "An activation link has been sent to the email address you supplied, along with instructions for activating your account." %}
+	{% endif %}
+	</p>
+	
+	<div class="well account-buttons">
+		<div class="img-user">&nbsp; </div>
+		<p>
+    		<a class="btn" href="{% url satchmo_profile_update %}">{% trans "Update your profile" %}</a>
+    		<a  class="btn" href="{% url auth_password_change %}">{% trans "Change your password" %}</a>
+   			<a  class="btn" href="{% url satchmo_order_history %}">{% trans "Order History" %}</a>
+		</p>
+	</div>
+
+{% endblock %}
+
+{% block google-tracker %}
+{% if shop.options.GOOGLE.ANALYTICS.value %}
+    {% show_tracker is_secure %}
+    {% google_track_signup %}
+{% endif %}
+{% if shop.options.GOOGLE.ADWORDS.value %}
+    {% google_adwords_signup %}
+{% endif %}
+{% endblock %}

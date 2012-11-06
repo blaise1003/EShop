@@ -1,0 +1,5 @@
+{% load i18n %}
+<form id="search" action="{{ satchmo_search_url }}" method="get" class="navbar-search pull-left">
+    <input type="text" placeholder="{% trans 'search products' %}" size="20" name="keywords" id="search_keywords" />
+    <input type="submit" value="{% trans "Search" %}" class="btn btn-primary" />
+</form>

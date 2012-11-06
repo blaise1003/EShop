@@ -1,0 +1,20 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load satchmo_order %}
+{% load satchmo_google %}
+{% load satchmo_util%}
+{% load normalize_decimal %}
+
+{% block navbar %}
+   <li class="first"><a href="{{ shop_base }}/">{% trans "Home" %}</a></li>
+   <li>{% trans "Checkout" %}</li>
+{% endblock %}
+
+{% block content %}
+<div id="ordersuccess">
+    <div class="ship-step">&nbsp;</div>
+    <h1 class="documentFirstHeading">{% trans "Error. Check your order!" %}</h1>
+    <div class="visualClear"><!-- --></div>
+    <p> &nbsp;</p>
+</div>
+{% endblock %}

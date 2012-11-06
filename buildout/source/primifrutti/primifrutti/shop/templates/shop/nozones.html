@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1 class="page-header">{% trans "Error" %}</h1>
+<h2>{% blocktrans %}
+    We are currently unable to deliver the goods, please try again later. If the error persists, contact the shop
+    {% endblocktrans %} <a href="mailto:{{shop_email}}">{% trans "here" %}</a></h2>
+
+<div id="bttn-cart">
+    <div class="continue">
+        <a class="" href="{% url satchmo_home %}">{% trans "Continue shopping" %}</a>
+    </div>    
+</div>
+{% endblock %}

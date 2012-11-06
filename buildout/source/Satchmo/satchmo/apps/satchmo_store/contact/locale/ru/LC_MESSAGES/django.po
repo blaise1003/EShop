@@ -1,0 +1,1231 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# This file is distributed under the same license as the Satchmo package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Satchmo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-18 19:02+0200\n"
+"PO-Revision-Date: 2009-03-06 13:06+0300\n"
+"Last-Translator: Данил Семеленов <danil.mail@gmail.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: config.py:9
+msgid "Only authenticated users can check out"
+msgstr "Только зарегистрированные пользователи могут произвести оплату"
+
+#: config.py:10
+msgid ""
+"Users will be required to authenticate (and create an account if neccessary) "
+"before checkout."
+msgstr ""
+"Пользователи будут должны залогиниться (и зарегистрироваться при "
+"необходимости) перед оформлением платежа."
+
+#: config.py:18
+msgid "Required billing data"
+msgstr "Требуются данные об оплате"
+
+#: config.py:20
+msgid ""
+"Users may be required to provide some set of billing address. Other fields "
+"are optional. You may shorten the checkout process here, but be careful, as "
+"this may leave you orders with almost no customer data! Some payment modules "
+"may override this setting."
+msgstr ""
+"У пользователей будут запрошены только адреса оплаты. Остальные поля "
+"опциональны. Вы можете упростить процесс оплаты, но будьте осторожны, так "
+"как это может оставить заказы без информации о клиенте! Некоторые методы "
+"оплаты могут переопределять эту настройку."
+
+#: config.py:26 config.py:69 forms.py:36 models.py:151
+msgid "Email"
+msgstr "Электронная почта"
+
+#: config.py:27 forms.py:37 models.py:144
+msgid "Title"
+msgstr "Обращение"
+
+#: config.py:28 models.py:145 templates/contact/update_form.html:29
+msgid "First name"
+msgstr "Имя"
+
+#: config.py:29 models.py:146 templates/contact/update_form.html:32
+msgid "Last name"
+msgstr "Фамилия"
+
+#: config.py:30 forms.py:40
+msgid "Phone"
+msgstr "Телефон"
+
+#: config.py:31 config.py:50 forms.py:41 forms.py:49 models.py:291
+msgid "Addressee"
+msgstr "Адресат"
+
+#: config.py:32 forms.py:42 models.py:89 models.py:149
+#: templates/contact/update_form.html:35
+msgid "Organization"
+msgstr "Организация"
+
+#: config.py:33 config.py:51 forms.py:43 forms.py:50 forms.py:467
+#: models.py:292 models.py:293
+#: templates/contact/_contact_info_form_billing.html:9
+#: templates/contact/_contact_info_form_billing.html:12
+#: templates/contact/_contact_info_form_shipping.html:12
+#: templates/contact/_contact_info_form_shipping.html:15
+#: templates/contact/address_form.html:41
+#: templates/contact/address_form.html:44
+msgid "Street"
+msgstr "Улица"
+
+#: config.py:34 config.py:52
+msgid "Street (second line)"
+msgstr "Улица (вторая строка)"
+
+#: config.py:35 config.py:53 forms.py:45 forms.py:52 forms.py:469
+#: models.py:295 templates/contact/_contact_info_form_billing.html:15
+#: templates/contact/_contact_info_form_shipping.html:18
+#: templates/contact/address_form.html:47
+msgid "City"
+msgstr "Город"
+
+#: config.py:36 config.py:54
+#: templates/contact/_contact_info_form_billing.html:21
+#: templates/contact/_contact_info_form_billing.html:27
+#: templates/contact/_contact_info_form_shipping.html:24
+#: templates/contact/_contact_info_form_shipping.html:30
+#: templates/contact/address_form.html:53
+#: templates/contact/address_form.html:59
+msgid "State/Province"
+msgstr "Область/штат/регион"
+
+#: config.py:37 config.py:55
+msgid "Postal code/ZIP"
+msgstr "Почтовый индекс"
+
+#: config.py:38 config.py:56 forms.py:78 forms.py:79 forms.py:480
+#: models.py:297 templates/contact/_contact_info_form_billing.html:37
+#: templates/contact/_contact_info_form_shipping.html:40
+#: templates/contact/address_form.html:69
+msgid "Country"
+msgstr "Страна"
+
+#: config.py:46
+msgid "Required shipping data"
+msgstr "Требуются данные о доставке"
+
+#: config.py:47
+msgid "Similar to'REQUIRED_BILLING_DATA', except for shipping fields."
+msgstr "Тоже что и 'REQUIRED_BILLING_DATA', только для доставки."
+
+#: config.py:65
+msgid "Account Verification"
+msgstr "Подтверждение регистрации"
+
+#: config.py:66
+msgid ""
+"Select the style of account verification.  'Immediate' means no verification "
+"needed."
+msgstr ""
+"Выберите тип подтверждения регистрации.  'Моментальный' означает то, что "
+"подтверждение не требуется."
+
+#: config.py:68
+msgid "Immediate"
+msgstr "Моментальный"
+
+#: config.py:74
+#, fuzzy
+msgid "Nickname-Registration"
+msgstr "Регистрация"
+
+#: config.py:75
+msgid ""
+"If checked a user will be able to fill in an individual Nickname-Username at "
+"Account-Registration"
+msgstr ""
+
+#: config.py:82
+msgid "Days to verify account"
+msgstr "Дней на подтверждение регистрации"
+
+#: forms.py:38
+msgid "First Name"
+msgstr "Имя"
+
+#: forms.py:39
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: forms.py:46 forms.py:53 forms.py:106 forms.py:113 forms.py:470 forms.py:481
+#: models.py:294
+msgid "State"
+msgstr "Область (штат, регион)"
+
+#: forms.py:47 forms.py:54 forms.py:471
+msgid "ZIP code/Postcode"
+msgstr "Почтовый индекс"
+
+#: forms.py:48 templates/contact/_contact_info_form_shipping.html:6
+msgid "Shipping same as billing?"
+msgstr "Информация о доставке такая же, как и об оплате?"
+
+#: forms.py:147 forms.py:198 forms.py:225 forms.py:238 forms.py:253
+msgid "This field is required."
+msgstr "Это поле обязательно."
+
+#: forms.py:148
+msgid "State is required for your country."
+msgstr "Область (штат, регион) требуется для вашей страны."
+
+#: forms.py:153
+msgid "Invalid state or province."
+msgstr "Неправильный штат или регион."
+
+#: forms.py:168
+msgid "That email address is already in use."
+msgstr "Адресс электронной почты уже занят."
+
+#: forms.py:242
+msgid "Shipping and Billing countries must match"
+msgstr "Страны оплаты и доставки должны совпадать"
+
+#: forms.py:462 templates/contact/update_form.html:46
+msgid "Newsletter"
+msgstr "Новостная рассылка"
+
+#: forms.py:465
+#, fuzzy
+msgid "Addressee Name"
+msgstr "Адресат"
+
+#: forms.py:466 models.py:241 models.py:255 models.py:289
+#: supplier/models.py:18
+msgid "Description"
+msgstr "Описание"
+
+#: forms.py:499 templates/contact/view_profile.html:25
+msgid "Yes"
+msgstr "Да"
+
+#: forms.py:500 templates/contact/view_profile.html:25
+msgid "No"
+msgstr "Нет"
+
+#: forms.py:503
+msgid "Delete entry?"
+msgstr ""
+
+#: models.py:15 models.py:23 models.py:34 models.py:41
+msgid "Key"
+msgstr "Ключ"
+
+#: models.py:16 models.py:24 models.py:35 models.py:42 models.py:71
+msgid "Name"
+msgstr "Название"
+
+#: models.py:30
+msgid "Contact organization type"
+msgstr "Тип организации контакта"
+
+#: models.py:72 models.py:239
+msgid "Type"
+msgstr "Тип"
+
+#: models.py:73 models.py:148
+msgid "Role"
+msgstr "Роль"
+
+#: models.py:74
+msgid "Creation Date"
+msgstr "Дата создания"
+
+#: models.py:75 models.py:152 supplier/models.py:38 supplier/models.py:83
+msgid "Notes"
+msgstr "Примечания"
+
+#: models.py:90
+msgid "Organizations"
+msgstr "Организации"
+
+#: models.py:150
+msgid "Date of birth"
+msgstr "Дата рождения"
+
+#: models.py:153
+msgid "Creation date"
+msgstr "Дата создания"
+
+#: models.py:223 models.py:238
+msgid "Contact"
+msgstr "Контакт"
+
+#: models.py:224
+msgid "Contacts"
+msgstr "Контакты"
+
+#: models.py:227
+msgid "Work"
+msgstr "Рабочий"
+
+#: models.py:228 templates/contact/address_form.html:9
+#: templates/contact/address_form_delete.html:6
+#: templates/contact/login_signup.html:9 templates/contact/update_form.html:5
+#: templates/contact/view_profile.html:6
+#: templates/registration/account_info.html:5
+#: templates/registration/activate.html:6 templates/registration/login.html:5
+#: templates/registration/logout.html:5
+#: templates/registration/password_change_done.html:5
+#: templates/registration/password_change_form.html:5
+#: templates/registration/password_reset_complete.html:5
+#: templates/registration/password_reset_confirm.html:5
+#: templates/registration/password_reset_done.html:5
+#: templates/registration/password_reset_form.html:5
+#: templates/registration/registration_complete.html:6
+#: templates/registration/registration_form.html:5
+#: templates/registration/repeat_activation.html:5
+msgid "Home"
+msgstr "Домашний"
+
+#: models.py:229
+msgid "Fax"
+msgstr "Факс"
+
+#: models.py:230
+msgid "Mobile"
+msgstr "Мобильный"
+
+#: models.py:240
+msgid "Date and Time"
+msgstr "Дата и время"
+
+#: models.py:247
+msgid "Interaction"
+msgstr "Взаимодействи"
+
+#: models.py:248
+msgid "Interactions"
+msgstr "Взаимодействия"
+
+#: models.py:257 models.py:281
+msgid "Phone Number"
+msgstr "Телефонный номер"
+
+#: models.py:259
+msgid "Primary"
+msgstr "Основной"
+
+#: models.py:282
+msgid "Phone Numbers"
+msgstr "Телефонные номера"
+
+#: models.py:290
+msgid "Description of address - Home, Office, Warehouse, etc."
+msgstr "Описание адреса - Дом, Офис, Склад и т.д."
+
+#: models.py:296
+msgid "Zip Code"
+msgstr "Почтовый индекс"
+
+#: models.py:298
+msgid "Default Shipping Address"
+msgstr "Адрес доставки по умолчанию"
+
+#: models.py:300
+msgid "Default Billing Address"
+msgstr "Платежный оплаты по умолчанию"
+
+#: models.py:331
+msgid "Address Book"
+msgstr "Адресная книга"
+
+#: models.py:332
+msgid "Address Books"
+msgstr "Адресные книги"
+
+#: views.py:136
+msgid "Succcessfully saved addressbook changes."
+msgstr ""
+
+#: supplier/models.py:16 supplier/models.py:33
+msgid "Supplier"
+msgstr "Поставщик"
+
+#: supplier/models.py:17
+msgid "Supplier ID"
+msgstr "ID поставщика"
+
+#: supplier/models.py:19
+msgid "Unit Cost"
+msgstr "Цена за единицу"
+
+#: supplier/models.py:20
+msgid "Inventory"
+msgstr "Товары"
+
+#: supplier/models.py:26
+msgid "Raw Item"
+msgstr "Заготовка товара"
+
+#: supplier/models.py:27
+msgid "Raw Items"
+msgstr "Заготовки товаров"
+
+#: supplier/models.py:34
+msgid "Date Created"
+msgstr "Дата создания"
+
+#: supplier/models.py:35
+msgid "Subtotal"
+msgstr "Подытог"
+
+#: supplier/models.py:36
+msgid "Shipping"
+msgstr "Доставка"
+
+#: supplier/models.py:37
+msgid "Tax"
+msgstr "Налог"
+
+#: supplier/models.py:39
+msgid "Total"
+msgstr "Итого"
+
+#: supplier/models.py:55
+msgid "Supplier Order"
+msgstr "Заказ поставщика"
+
+#: supplier/models.py:56
+msgid "Supplier Orders"
+msgstr "Заказы поставщиков"
+
+#: supplier/models.py:63
+msgid "Line Item"
+msgstr "Строка заказа"
+
+#: supplier/models.py:64
+msgid "Line Item Quantity"
+msgstr "Количество данного наименования"
+
+#: supplier/models.py:65
+msgid "Line Item Total"
+msgstr "Всего данного наименования"
+
+#: supplier/models.py:71
+msgid "Sent in"
+msgstr "Отправлено"
+
+#: supplier/models.py:72
+msgid "Shipped"
+msgstr "Доставлен"
+
+#: supplier/models.py:73
+msgid "Received"
+msgstr "Получено"
+
+#: supplier/models.py:82
+msgid "Status"
+msgstr "Статус"
+
+#: supplier/models.py:84
+msgid "Date"
+msgstr "День"
+
+#: supplier/models.py:90
+msgid "Supplier Order Status"
+msgstr "Статус заказа поставщика"
+
+#: supplier/models.py:91
+msgid "Supplier Order Statuses"
+msgstr "Статусы заказов поставщиков"
+
+#: templates/contact/_addressblock.html:14
+msgid "Not set"
+msgstr "Не указан"
+
+#: templates/contact/_contact_info_form_billing.html:4
+msgid "Billing Information"
+msgstr "Платежная информация"
+
+#: templates/contact/_contact_info_form_billing.html:6
+msgid "Bill To"
+msgstr "Оформить на"
+
+#: templates/contact/_contact_info_form_billing.html:6
+#: templates/contact/_contact_info_form_shipping.html:9
+msgid "If different from the first and last names above"
+msgstr "Если отличается от имени и фамилии выше"
+
+#: templates/contact/_contact_info_form_billing.html:33
+#: templates/contact/_contact_info_form_shipping.html:36
+#: templates/contact/address_form.html:65
+msgid "Zipcode/Postcode"
+msgstr "Почтовый индекс"
+
+#: templates/contact/_contact_info_form_shipping.html:4
+msgid "Shipping Information"
+msgstr "Информация о доставке"
+
+#: templates/contact/_contact_info_form_shipping.html:9
+msgid "Ship To"
+msgstr "Доставка в"
+
+#: templates/contact/_login_form.html:10
+msgid "Existing members login"
+msgstr "Вход для зарегистрированных клиентов"
+
+#: templates/contact/_login_form.html:21
+msgid "Email Address:"
+msgstr "Адрес электронной почты:"
+
+#: templates/contact/_login_form.html:30
+msgid "Password:"
+msgstr "Пароль:"
+
+#: templates/contact/_login_form.html:39 templates/registration/login.html:23
+msgid "Login"
+msgstr "Вход"
+
+#: templates/contact/address_form.html:10
+#: templates/contact/address_form_delete.html:7
+#: templates/contact/update_form.html:6 templates/contact/view_profile.html:7
+#: templates/registration/password_change_done.html:7
+#: templates/registration/password_change_form.html:7
+msgid "Account"
+msgstr "Учетная запись"
+
+#: templates/contact/address_form.html:11
+#: templates/contact/address_form_delete.html:8
+#, fuzzy
+msgid "Add Address"
+msgstr "Адресат"
+
+#: templates/contact/address_form.html:17
+msgid "Edit address book entry"
+msgstr ""
+
+#: templates/contact/address_form.html:19
+msgid "Add address to your address book"
+msgstr ""
+
+#: templates/contact/address_form.html:22
+#: templates/contact/update_form.html:17
+msgid "Please correct the following error:"
+msgstr "Пожалуйста, исправьте следующую ошибку:"
+
+#: templates/contact/address_form.html:32
+#: templates/contact/update_form.html:23
+msgid "You&apos;ll need to fill out at least the fields with a *"
+msgstr "Вам нужно заполнить хотя бы поля, помеченные звездочкой (*)"
+
+#: templates/contact/address_form.html:34
+#, fuzzy
+msgid "Address Information"
+msgstr "Основная информация"
+
+#: templates/contact/address_form.html:35
+#, fuzzy
+msgid "Addressee Full Name"
+msgstr "Адресат"
+
+#: templates/contact/address_form.html:38
+#, fuzzy
+msgid "Address Description"
+msgstr "Описание"
+
+#: templates/contact/address_form.html:74
+#: templates/contact/update_form.html:57
+msgid "Update"
+msgstr "Обновить"
+
+#: templates/contact/address_form.html:76
+msgid "Save"
+msgstr ""
+
+#: templates/contact/address_form_delete.html:13
+msgid "Delete address book entry"
+msgstr ""
+
+#: templates/contact/address_form_delete.html:19
+#: templates/contact/view_profile.html:33
+msgid "Delete"
+msgstr ""
+
+#: templates/contact/login_signup.html:13
+#: templates/contact/login_signup_address.html:13
+msgid "Login, or sign up to the store"
+msgstr "Залогиниться или зарегистрироваться"
+
+#: templates/contact/login_signup.html:23
+#: templates/contact/login_signup_address.html:23
+msgid "New Members, Create Your Account Below"
+msgstr "Для новых клиентов - создайте Вашу учетную запись"
+
+#: templates/contact/login_signup.html:29
+#: templates/contact/login_signup_address.html:29
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "Пожалуйста, исправьте ошибку ниже."
+msgstr[1] "Пожалуйста, исправьте ошибки ниже."
+msgstr[2] "Пожалуйста, исправьте ошибки ниже."
+
+#: templates/contact/login_signup.html:47
+#: templates/contact/login_signup_address.html:51
+msgid "Sign me up for Email Updates about new products and special offers!"
+msgstr ""
+"Присылайте мне оповещения о новых продуктах и специальных предложениях!"
+
+#: templates/contact/login_signup.html:53
+#: templates/contact/login_signup_address.html:65
+msgid "Create"
+msgstr "Создать"
+
+#: templates/contact/login_signup_address.html:47
+#: templates/contact/update_form.html:42
+msgid "Phone number"
+msgstr "Телефонный номер"
+
+#: templates/contact/update_form.html:7
+msgid "Update Profile"
+msgstr "Обновить профиль"
+
+#: templates/contact/update_form.html:15
+msgid "Your Profile"
+msgstr "Ваш профиль"
+
+#: templates/contact/update_form.html:25
+msgid "Basic Information"
+msgstr "Основная информация"
+
+#: templates/contact/update_form.html:26 templates/registration/login.html:17
+#: templates/registration/password_reset_form.html:16
+msgid "Email address"
+msgstr "Адресс электронной почты"
+
+#: templates/contact/update_form.html:39
+msgid "Birthday"
+msgstr "День рождения"
+
+#: templates/contact/view_profile.html:11
+#: templates/registration/account_info.html:9
+msgid "Your Account info"
+msgstr "Настройки учетной записи"
+
+#: templates/contact/view_profile.html:14
+#: templates/registration/account_info.html:11
+#, python-format
+msgid "Welcome, %(full_name)s."
+msgstr "Добро пожаловать, %(full_name)s."
+
+#: templates/contact/view_profile.html:17
+msgid "Your profile"
+msgstr "Ваш профиль"
+
+#: templates/contact/view_profile.html:19
+msgid "Email:"
+msgstr "Электронная почта:"
+
+#: templates/contact/view_profile.html:21
+msgid "Organization:"
+msgstr "Организация:"
+
+#: templates/contact/view_profile.html:23
+msgid "Birthday:"
+msgstr "День рождения:"
+
+#: templates/contact/view_profile.html:25
+msgid "Newsletter:"
+msgstr "Новостная рассылка:"
+
+#: templates/contact/view_profile.html:27
+msgid "Billing Address:"
+msgstr "Платежный адрес:"
+
+#: templates/contact/view_profile.html:28
+msgid "Shipping Address:"
+msgstr "Адрес доставки:"
+
+#: templates/contact/view_profile.html:30
+#, fuzzy
+msgid "Address Book Entries"
+msgstr "Адресные книги"
+
+#: templates/contact/view_profile.html:33
+msgid "Edit"
+msgstr ""
+
+#: templates/contact/view_profile.html:37
+#: templates/contact/view_profile.html:52
+#: templates/registration/account_info.html:13
+msgid "Account options"
+msgstr "Настройки учетной записи"
+
+#: templates/contact/view_profile.html:39
+msgid "Update your profile"
+msgstr "Обновить ваш профиль"
+
+#: templates/contact/view_profile.html:41
+#, fuzzy
+msgid "Add address book entry"
+msgstr "Адресная книга"
+
+#: templates/contact/view_profile.html:43
+#: templates/contact/view_profile.html:56
+#: templates/registration/account_info.html:15
+#: templates/registration/password_change_form.html:12
+msgid "Change your password"
+msgstr "Сменить ваш пароль"
+
+#: templates/contact/view_profile.html:45
+msgid "Order History"
+msgstr "История заказов"
+
+#: templates/contact/view_profile.html:50
+msgid ""
+"Sorry, the user you've logged in as doesn't have any contact information."
+msgstr ""
+"Извините, пользователь, под которым вы вошли, не имеет никакой контактной "
+"информации."
+
+#: templates/contact/view_profile.html:50
+msgid "Probably because you are an admin."
+msgstr "Возможно, потому что вы - администратор."
+
+#: templates/contact/view_profile.html:54
+msgid "Set up contact information"
+msgstr "Изменить контактную информацию"
+
+#: templates/registration/activate.html:7
+msgid "Registration Complete"
+msgstr "Регистрация завершена"
+
+#: templates/registration/activate.html:12
+#: templates/registration/repeat_activation.html:11
+msgid "Account Activation"
+msgstr "Активация учетной записи"
+
+#: templates/registration/activate.html:16
+msgid "Thanks for signing up! You are now logged in."
+msgstr "Спасибо за регистрацию! Теперь вы вошли на сайт."
+
+#: templates/registration/activate.html:17
+#, python-format
+msgid "In the future, you can log in using your email address (%(email)s)."
+msgstr ""
+"В будущем, вы сможете входить на сайт, используя ваш адрес электронной почты "
+"(%(email)s)."
+
+#: templates/registration/activate.html:21
+#, python-format
+msgid ""
+"Either your activation link was incorrect, or the activation key for your "
+"account has expired. Activation keys are only valid for %(expiration_days)s "
+"days after registration."
+msgstr ""
+"Либо ваша активационная ссылка неверна, либо срок действия активационного "
+"ключа для вашей учетной записи истек. Активационные ключи действительны "
+"только %(expiration_days)s дн. после регистрации."
+
+#: templates/registration/activation_email.txt:1
+#, fuzzy, python-format
+msgid ""
+"Someone, hopefully you, signed up for a new account at %(site)s using this "
+"email address. If it was you, and you'd like to activate and use your "
+"account, click the link below or copy and paste it into your web browser's "
+"address bar."
+msgstr ""
+"Кто-то, скорее всего вы, запросил регистрирацию на сайте %(site_url)s, "
+"используя этот адрес электронной почты. Если это были вы, то вам следует "
+"активировать вашу учетную запись, для этого перейдите по ссылке ниже или "
+"скопируйте и вставьте ее в адресную строку вашего браузера."
+
+#: templates/registration/activation_email.txt:5
+#, python-format
+msgid ""
+"If you didn't request this, you don't need to do anything; you won't receive "
+"any more email from us, and the account will expire automatically in "
+"%(expiration_days)s days."
+msgstr ""
+"Если это были не вы, то ничего не следует делать; вы не получите больше "
+"писем от нас, и учетная запись будет автоматически удалена через "
+"%(expiration_days)s дн."
+
+#: templates/registration/activation_email_subject.txt:1
+#, fuzzy
+msgid "Registration Confirmation"
+msgstr "Регистрация завершена"
+
+#: templates/registration/login.html:19
+msgid "Password"
+msgstr "Пароль"
+
+#: templates/registration/login.html:37
+msgid "If you do not have an account, please"
+msgstr "Если у вас еще нет учетной записи, пожалуйста"
+
+#: templates/registration/login.html:37
+msgid "click here"
+msgstr "нажмите сюда"
+
+#: templates/registration/login.html:40
+msgid "If you do not remember your password, please"
+msgstr "Если вы не можете вспомнить ваш пароль, пожалуйста"
+
+#: templates/registration/login.html:40
+msgid "click here</a> to have it reset."
+msgstr "нажмите сюда</a>, чтобы сбросить его."
+
+#: templates/registration/logout.html:9
+msgid "You have been successfully logged out."
+msgstr "Вы вышли из учетной записи."
+
+#: templates/registration/password_change_done.html:8
+msgid "Password Change Done"
+msgstr "Смена пароль завершена"
+
+#: templates/registration/password_change_done.html:13
+msgid "Password change successful"
+msgstr "Успешная смена пароля"
+
+#: templates/registration/password_change_done.html:15
+msgid "Your password change has been completed."
+msgstr "Смена вашего пароля успешно завершена."
+
+#: templates/registration/password_change_form.html:8
+msgid "Password Change"
+msgstr "Изменение пароля"
+
+#: templates/registration/password_change_form.html:13
+msgid ""
+"For the sake of security, please enter your old password, and then enter "
+"your new password twice."
+msgstr ""
+"Для безопасности, пожалуйста, введите сначала ваш старый пароль, затем "
+"введите ваш новый пароль дважды."
+
+#: templates/registration/password_change_form.html:20
+msgid "Old password"
+msgstr "Старый пароль"
+
+#: templates/registration/password_change_form.html:27
+msgid "New password"
+msgstr "Новый пароль"
+
+#: templates/registration/password_change_form.html:34
+msgid "Confirm new password"
+msgstr "Подтвердите новый пароль"
+
+#: templates/registration/password_change_form.html:37
+msgid "Change password"
+msgstr "Иззменить пароль"
+
+#: templates/registration/password_reset.txt:2
+msgid "You're receiving this e-mail because you requested a password reset"
+msgstr ""
+"Вы получили это сообщение, потому что запросили сброс пароля для вашей "
+"учетной записи на сайте %(site_name)s"
+
+#: templates/registration/password_reset.txt:3
+#, python-format
+msgid "for your user account at %(site_name)s"
+msgstr ""
+
+#: templates/registration/password_reset.txt:5
+#, fuzzy
+msgid "Please go to the following page and choose a new password:"
+msgstr "Пожалуйста, исправьте следующую ошибку:"
+
+#: templates/registration/password_reset.txt:9
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: templates/registration/password_reset.txt:11
+msgid "Thanks for using our site!"
+msgstr "Спасибо за использование нашего сайта!"
+
+#: templates/registration/password_reset.txt:13
+#, python-format
+msgid "The %(site_name)s team"
+msgstr "Команда сайта %(site_name)s "
+
+#: templates/registration/password_reset_complete.html:10
+#, fuzzy
+msgid "Password reset complete"
+msgstr "Успешный сброс пароля"
+
+#: templates/registration/password_reset_complete.html:12
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:14
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:12
+#, fuzzy
+msgid "Enter new password"
+msgstr "Подтвердите новый пароль"
+
+#: templates/registration/password_reset_confirm.html:14
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:17
+#, fuzzy
+msgid "New password:"
+msgstr "Новый пароль"
+
+#: templates/registration/password_reset_confirm.html:21
+#, fuzzy
+msgid "Confirm password:"
+msgstr "Подтвердите новый пароль"
+
+#: templates/registration/password_reset_confirm.html:25
+#, fuzzy
+msgid "Change my password"
+msgstr "Иззменить пароль"
+
+#: templates/registration/password_reset_confirm.html:30
+#, fuzzy
+msgid "Password reset unsuccessful"
+msgstr "Успешный сброс пароля"
+
+#: templates/registration/password_reset_confirm.html:32
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:10
+msgid "Password reset successful"
+msgstr "Успешный сброс пароля"
+
+#: templates/registration/password_reset_done.html:12
+msgid ""
+"We've e-mailed a new password to the e-mail address you submitted. You "
+"should receive it shortly."
+msgstr ""
+"Мы отправили вам новый пароль на адрес электронной почты, который вы "
+"предоставили. Вы получите его скоро."
+
+#: templates/registration/password_reset_form.html:10
+msgid "Reset your password"
+msgstr "Сбросить ваш пароль"
+
+#: templates/registration/password_reset_form.html:12
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send a "
+"new password to you."
+msgstr ""
+"Забыли свой пароль? Введите ваш адрес электронной почты ниже, и мы отправим "
+"вам новый пароль."
+
+#: templates/registration/password_reset_form.html:20
+msgid "Be sure to enter the same e-mail address you used to register."
+msgstr ""
+"Следует ввести такой же адрес электронной почты, который вы указали при "
+"регистрации."
+
+#: templates/registration/password_reset_form.html:21
+msgid "Reset password"
+msgstr "Сброс пароля"
+
+#: templates/registration/registration_complete.html:7
+#: templates/registration/registration_complete.html:11
+msgid "Account Creation"
+msgstr "Создание учетной записи"
+
+#: templates/registration/registration_complete.html:12
+msgid "Thank you for signing up."
+msgstr "Спасибо за регистрацию."
+
+#: templates/registration/registration_complete.html:14
+msgid ""
+"An activation link has been sent to the email address you supplied, along "
+"with instructions for activating your account."
+msgstr ""
+"Активационная ссылка была отправлена на указанный вами адрес электронной "
+"почты вместе с инструкциями по активации вашей учетной записи."
+
+#: templates/registration/registration_form.html:6
+msgid "Registration"
+msgstr "Регистрация"
+
+#: templates/registration/registration_form.html:10
+msgid "Please Enter Your Account Information"
+msgstr "Пожалуйств, введите информацию для вашей учетной записи"
+
+#: templates/registration/registration_form.html:42
+msgid "Create Account"
+msgstr "Создать учетную запись"
+
+#: templates/registration/repeat_activation.html:6
+msgid "Repeat Activation"
+msgstr "Повторить активацию"
+
+#: templates/registration/repeat_activation.html:13
+msgid "This account has already been activated. Please login."
+msgstr "Эта учетная запись уже активирована. Пожалуйста, войдите на сайт."
+
+#: templates/registration/welcome.html:6 templates/registration/welcome.txt:1
+#, python-format
+msgid "Dear %(first_name)s %(last_name)s,"
+msgstr "Уважаемый(ая) %(first_name)s %(last_name)s,"
+
+#: templates/registration/welcome.html:7 templates/registration/welcome.txt:3
+#, fuzzy, python-format
+msgid "Thank you for signing up with %(shop_name)s."
+msgstr "Спасибо за то, что заргистрировались на сайте %(company_name)s"
+
+#: templates/registration/welcome.html:9 templates/registration/welcome.txt:5
+msgid "Your new username is this email address, and you can login at"
+msgstr ""
+"Ваше новое имя пользователя соответствует этому адресу электронной почты, и "
+"вы можете войти на сайт"
+
+#: templates/registration/welcome.html:11 templates/registration/welcome.txt:7
+msgid "Regards"
+msgstr "С уважением"
+
+#: templates/registration/welcome.html:12 templates/registration/welcome.txt:9
+msgid "Store Management"
+msgstr "Администрация магазина"
+
+#~ msgid "E-mail address"
+#~ msgstr "Адресс электронной почты"
+
+#~ msgid "---Please Select---"
+#~ msgstr "Пожадуйста, выберите"
+
+#~ msgid "Shipping Address"
+#~ msgstr "Адрес доставки"
+
+#~ msgid "Customer"
+#~ msgstr "Заказчик"
+
+#~ msgid "Distributor"
+#~ msgstr "Дистрибьютор"
+
+#~ msgid "Company"
+#~ msgstr "Кампания"
+
+#~ msgid "Government"
+#~ msgstr "Правительство"
+
+#~ msgid "Non-profit"
+#~ msgstr "Некоммерческая"
+
+#~ msgid "Manufacturer"
+#~ msgstr "Производитель"
+
+#~ msgid "In Person"
+#~ msgstr "Лично"
+
+#~ msgid "Online"
+#~ msgstr "Онлайн"
+
+#~ msgid "Show"
+#~ msgstr "Показать"
+
+#~ msgid "Temp"
+#~ msgstr "Временный"
+
+#~ msgid "Pending"
+#~ msgstr "В ожидании"
+
+#~ msgid "In Process"
+#~ msgstr "В процессе"
+
+#~ msgid "Discount Code"
+#~ msgstr "Код скидки"
+
+#~ msgid "Coupon Code"
+#~ msgstr "Код купона"
+
+#~ msgid "Discount amount"
+#~ msgstr "Размер скидки"
+
+#~ msgid "Order method"
+#~ msgstr "Способ заказа"
+
+#~ msgid "Shipping Description"
+#~ msgstr "Описание способа доставки"
+
+#~ msgid "Shipping Method"
+#~ msgstr "Способ доставки"
+
+#~ msgid "Shipping Models"
+#~ msgstr "Модели способов доставки"
+
+#~ msgid "Shipping Cost"
+#~ msgstr "Стоимость доставки"
+
+#~ msgid "Shipping Discount"
+#~ msgstr "Скидка на доставку"
+
+#~ msgid "Timestamp"
+#~ msgstr "Время"
+
+#~ msgid "This is set automatically."
+#~ msgstr "Это будет установлено автоматически."
+
+#~ msgid "Billing Address"
+#~ msgstr "Платежный адрес"
+
+#~ msgid "Totals"
+#~ msgstr "Итого"
+
+#~ msgid "Product Order"
+#~ msgstr "Заказ продукции"
+
+#~ msgid "Product Orders"
+#~ msgstr "Заказы продукции"
+
+#~ msgid "Order"
+#~ msgstr "Заказ"
+
+#~ msgid "Product"
+#~ msgstr "Продукт"
+
+#~ msgid "Quantity"
+#~ msgstr "Количество"
+
+#~ msgid "Unit price"
+#~ msgstr "Цена за единицу"
+
+#~ msgid "Line item price"
+#~ msgstr "Цена за наименование"
+
+#~ msgid "Line item discount"
+#~ msgstr "Скидка за наименование"
+
+#~ msgid "Order Line Items"
+#~ msgstr "Наименования заказов"
+
+#~ msgid "Order Item"
+#~ msgstr "Пункт заказа"
+
+#~ msgid "Value"
+#~ msgstr "Величина"
+
+#~ msgid "Price Change"
+#~ msgstr "Разница в цене"
+
+#~ msgid "Sort Order"
+#~ msgstr "Порядок сортировки"
+
+#~ msgid "The display order for this group."
+#~ msgstr "Порядок отображения для этой группы."
+
+#~ msgid "Order Item Detail"
+#~ msgstr "Подробности пунктов заказа"
+
+#~ msgid "Order Item Details"
+#~ msgstr "Подробности пунктов заказов"
+
+#~ msgid "This download is no longer active"
+#~ msgstr "Скачка больше не доступна"
+
+#~ msgid "You have exceeded the number of allowed downloads."
+#~ msgstr "Вы исчерпали допустимое количество скачек."
+
+#~ msgid "This download link has expired."
+#~ msgstr "Срок действия этой ссылка на скачивание истек."
+
+#~ msgid "Order Status"
+#~ msgstr "Статус заказа"
+
+#~ msgid "Order Statuses"
+#~ msgstr "Статусы заказов"
+
+#~ msgid "Payment Method"
+#~ msgstr "Способ оплаты"
+
+#~ msgid "amount"
+#~ msgstr "количество"
+
+#~ msgid "timestamp"
+#~ msgstr "время"
+
+#~ msgid "Transaction ID"
+#~ msgstr "ID транзакци"
+
+#~ msgid "Order Payment"
+#~ msgstr "Оплата заказа"
+
+#~ msgid "Order Payments"
+#~ msgstr "Оплата заказов"
+
+#~ msgid "value"
+#~ msgstr "значение"
+
+#~ msgid "Model"
+#~ msgstr "Модель"
+
+#~ msgid ""
+#~ "The order you have requested doesn't exist, or you don't have access to "
+#~ "it."
+#~ msgstr "Запрошенный заказ не существует, или у вас нет доступа к нему."
+
+#~ msgid "Discount"
+#~ msgstr "Скидка"
+
+#~ msgid "Items Ordered"
+#~ msgstr "Всего заказано"
+
+#~ msgid "Forgotten your password?"
+#~ msgstr "Забыли свой пароль?"
+
+#~ msgid "Post a photo"
+#~ msgstr "Опубликовать фото"
+
+#~ msgid "Required"
+#~ msgstr "Обязательно"
+
+#~ msgid "Optional"
+#~ msgstr "Необязательно"
+
+#~ msgid "Review:"
+#~ msgstr "Отзыв:"
+
+#~ msgid "Send review"
+#~ msgstr "Оставить отзыв"
+
+#~ msgid "Base Shipping"
+#~ msgstr "Основная доставка"
+
+#~ msgid "Order #"
+#~ msgstr "Заказ №"
+
+#~ msgid "Your email address and password didn't match. Please try again."
+#~ msgstr ""
+#~ "Неправильные адрес электронной почты или пароль. Попробуйте еще раз."
+
+#~ msgid "Your new password is"
+#~ msgstr "Ваш новый пароль"
+
+#~ msgid "Feel free to change this password by going to this page"
+#~ msgstr "Вы можете с легкостью сменить этот пароль, перейдя на эту страницу"
+
+#~ msgid ""
+#~ "You can log in using your email address (%(email)s) or your username "
+#~ "(%(username)s)."
+#~ msgstr ""
+#~ "Вы можете войти, используя ваш адрес электронной почты (%(email)s) или "
+#~ "ваше имя пользователя (%(username)s)."
+
+#~ msgid "(show)"
+#~ msgstr "(показать)"
+
+#~ msgid "(hide)"
+#~ msgstr "(скрыть)"

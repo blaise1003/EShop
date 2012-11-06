@@ -1,0 +1,99 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load satchmo_cart %}
+{% load satchmo_currency %}
+{% load satchmo_util %}
+{% load satchmo_product %}
+{% load satchmo_discounts %}
+{% load normalize_decimal %}
+
+{% block navbar %}
+    <li class="first"><a href="{{shop_base}}/">{% trans "Home" %}</a></li>
+    <li>{% trans "Cart" %}</li>
+{% endblock %}
+
+{% block content %}
+<div id="cart-page" class="portlet-tab lightgradient">
+    <div class="cart-step">&nbsp;</div>
+    <h1 class="documentFirstHeading">{% trans "Your Cart" %}</h1>
+    
+    {% if error_message %}
+        <div class="error">{{ error_message }}</div>
+    {% endif %}
+    {% if cart.is_empty %}
+        <h4>{% trans "Your cart is empty." %}</h4>
+    {% else %}
+        
+    <table class="fluid tb-cart" >
+          <thead>
+               <th align="center">{% trans "Quantity" %}</th>
+               <th align="left">{% trans "Item" %}</th>
+               {% if sale %}
+               <th align="center">{% trans "Regular Price" %}</th>
+               <th>{% trans "Sale Price" %}
+               {% else %}
+               <th align="center">{% trans "Price" %}</th>
+               {% endif %}
+               <th align="center">{% if default_view_tax %}{% trans "Total<br/>(incl.&nbsp;tax)" %}{% else %}{% trans "Total" %}{% endif %}</th>
+               <th></th>
+            </thead>
+          <tr><td colspan="6">&nbsp;</td></tr>
+          {% for cartitem in cart %}
+
+          <tr>
+                 <td align="center" width="10%" class="cart-td">
+                     <form class="qtyform" id="form-{{ cartitem.id }}" action="{% url satchmo_cart_set_qty %}" method="post">
+                         {% csrf_token %}
+                         <input class="button" type="hidden" name="cartitem" value="{{ cartitem.id }}" />
+                         <input type="text" name="quantity" id="id_quantity" value="{{ cartitem.quantity|normalize_decimal }}" size="2" />
+                         <input type="submit" id="id_update_submit" value="{% trans 'update' %}" />
+                     </form>
+                 </td>
+             
+                 <td class="cart-td" align="left" width="40%"><a href="{{cartitem.product.get_absolute_url}}">{{ cartitem.description }}</a></td>
+                 {% if sale %}
+                 <td class="cart-td" align="center" width="13%">{{ cartitem.product|taxed_discount_price:""|currency }}</td>
+                 {% endif %}
+                  <td class="cart-td" align="center" width="13%">{{ cartitem.product|taxed_discount_price:sale|currency }}</td>
+                 <td class="cart-td" align="center" width="13%"><span class="prezzo-bold">{{ cartitem|taxed_discount_line_total:sale|currency }}</span></td>
+                 <td class="cart-td" align="center" width="13%">
+                     <form action="{% url satchmo_cart_remove %}" method="post">
+						 {% csrf_token %}
+                         <input type="hidden" name="cartitem" value="{{ cartitem.id }}" />
+                         <div class="button">
+                             <input class="button" type="submit" value="{% trans 'Remove' %}" />
+                         </div>
+                     </form>
+                 </td>
+          </tr>
+          
+          {% cartitem_custom_details cartitem %}
+          {% cartitem_subscription_details cartitem %}
+          {% endfor %}
+          <tr>
+              <td colspan="{% if sale %}5{% else %}4{% endif %}" align="right"><span class="prezzo-bold">{% trans "Cart Total" %}:</span></td>
+              <td align="right"><span class="prezzo-bold">{{ cart|taxed_discount_cart_total:sale|currency }}</span></td>
+          </tr>
+          
+         </table>
+         <br />
+         {% if sale %}
+              {% include "product/some_discount_eligible.html" %}
+         {% endif %}
+         
+    {% endif %}
+
+</div>
+<div id="bttn-cart">
+    <div class="continue">
+        <a class="" href="/">{% trans "Continue shopping" %}</a>
+    </div>
+    <div class="continue">
+        &nbsp;|&nbsp;<a href="{% url satchmo_cart_empty %}">{% trans 'Empty' %}</a>
+    </div>
+    <div class="addBttnBig">
+        <a href="{% url satchmo_checkout-step1 %}">{% trans 'Check out' %}</a>
+    </div>
+    
+ </div>
+{% endblock %}

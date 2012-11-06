@@ -1,0 +1,114 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+   <li>{% trans "Registration" %}</li>
+{% endblock %}
+
+{% block content %}
+<h1 class="page-header">{% trans "Please Enter Your Account Information" %}</h1>
+<div class="alert alert-info">{% trans "All fields are required" %}</div>
+
+	<form class="form-horizontal" method="post" action="{% url registration_register %}">
+		{% csrf_token %}
+		<fieldset>
+	    {{ form.next }}
+
+ 	   	<div class="control-group">
+ 	   	    <div class="control-label">{{ form.email.label_tag }}</div>
+ 	   	    <div class="controls">
+ 	   	    	{% if form.email.errors %}
+                    <div class="alert alert-error">
+                        {{ form.email }}
+                        <div>{{ form.email.errors|join:", " }}</div>
+                    </div>
+                    {% else %}
+                        {{ form.email }}
+                {% endif %}
+ 	   	    </div>
+	    </div>
+
+
+	    <div class="control-group">
+	        <div class="control-label">{{ form.first_name.label_tag }}</div>
+	        <div class="controls">
+	        	{% if form.first_name.errors %}
+                    <div class="alert alert-error">
+                        {{ form.first_name }}
+                        <div>{{ form.first_name.errors|join:", " }}</div>
+                    </div>
+                    {% else %}
+                        {{ form.first_name }}
+                {% endif %}
+	        </div>
+      	</div>
+      	
+	    <div class="control-group">
+	        <div class="control-label">{{ form.last_name.label_tag }}</div>
+	        <div class="controls">
+	        	{% if form.last_name.errors %}
+                    <div class="alert alert-error">
+                        {{ form.last_name }}
+                        <div>{{ form.last_name.errors|join:", " }}</div>
+                    </div>
+                    {% else %}
+                        {{ form.last_name }}
+                {% endif %}
+	        </div>
+	    </div>
+	    
+	    <div class="control-group">
+	        <div class="control-label">{{ form.password1.label_tag }}</div>
+	        <div class="controls">
+	        	{% if form.password1.errors %}
+                    <div class="alert alert-error">
+                        {{ form.password1 }}
+                        <div>{{ form.password1.errors|join:", " }}</div>
+                    </div>
+                    {% else %}
+                        {{ form.password1 }}
+                {% endif %}
+	        </div>
+	    
+	    </div>
+	    <div class="control-group">
+	        <div class="control-label">{{ form.password2.label_tag }}</div>
+	        <div class="controls">
+	        	{% if form.password2.errors %}
+                    <div class="alert alert-error">
+                        {{ form.password2 }}
+                        <div>{{ form.password2.errors|join:", " }}</div>
+                    </div>
+                    {% else %}
+                        {{ form.password2 }}
+                {% endif %}
+	        </div>
+	    
+	    </div>
+	    {% if show_newsletter %}
+	    <div class="control-group error">
+	        <div class="control-label">{{ form.newsletter.label_tag }}</div>
+	        <div class="controls">
+	        	{% if form.newsletter.errors %}
+                    <div class="alert alert-error">
+                        {{ form.newsletter }}
+                        <div>{{ form.newsletter.errors|join:", " }}</div>
+                    </div>
+                    {% else %}
+                        {{ form.newsletter }}
+                {% endif %}
+	        </div>
+		</div>
+	    {% else %}
+	    <div class="control-group">
+	    	<input type='hidden' name='newsletter' value="False" />
+		</div>
+	    {% endif %}
+		</fieldset>
+		<div class="form-actions">
+			<input type="submit" id="register" class="btn btn-primary" name="Submit3" value="registrati">
+		</div>
+</form>
+
+{% endblock %}

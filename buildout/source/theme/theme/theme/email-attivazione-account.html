@@ -1,0 +1,62 @@
+{% load i18n %}{% load l10n %}
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Attivazione account Primi Frutti</title>
+    <style>
+        body {
+        padding:10px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 22px;
+        color: #333333;
+        background-color: #fff;
+        }
+        .footer {
+        font-size:10px;
+        background-color: #F7F5F5;
+        border-top: 1px solid #E7E7E7;
+        font-size: 12px;
+        margin-top: 20px;
+        padding-top: 20px;
+        }
+        .discreet {
+        color: #585858;
+        font-size: 85%;
+        font-weight: normal;
+        }
+        a:link,
+        a:visited {
+            color: #40721C;
+            text-decoration: none;
+            font-weight:bold;
+        }
+    </style>
+    </head>
+    <body>
+        <img class="logo" src="/static/theme/img/toplogo.jpg" alt="logo" />
+        <p>{% blocktrans %}Hello,{% endblocktrans %}</p>
+        <p>{% blocktrans %}Someone, hopefully you, signed up for a new account at <em>{{ site }}</em> using this email address. If it was you, and you'd like to activate and use your account, click the link below or copy and paste it into your web browser's address bar.{% endblocktrans %}</p>
+        
+        <p>{% autoescape off %}<strong>Primi frutti</strong> è un portale di vendite online dove ti aspettano:{% endautoescape %}
+        <ul>
+            <li>i migliori prodotti sempre freschi e fragranti;</li>
+            <li>tante offerte sempre accattivanti;</li>
+            <li>consegne a domicilio rapide e gratuite;</li>
+        </ul>
+        <br />Fare la spesa non è mai stato così facile, veloce e comodo!<br />
+Registrandoti al nostro portale anche tu potrai ricevere, direttamente a casa, il nostro <a href="http://{{ site_domain }}/prodotti/cesto-frutta/">cesto di frutta fresca</a> in omaggio.
+        </p>
+        
+        <p><a href="http://{{ site }}{% url registration_activate activation_key=activation_key %}">Clicca quì per attivare il tuo account</a></p>
+        <p class="discreet">{% blocktrans %}If you didn't request this, you don't need to do anything; you won't receive any more email from us, and the account will expire automatically in {{ expiration_days }} days.{% endblocktrans %}</p>
+        <br />
+        <p><em>Team {{ shop_name }}</em></p>
+        <a href="http://www.facebook.com/"    title="Facebook" target="_blank">Seguici su Facebook</a>
+        <div align="center" class="footer">
+            <img src="/static/theme/img/logosmall.png" /><br />
+            via prova 1 80126 NApoli - P.IVA 00000000000<br />
+            <a href="mailto:biagio.grimaldi@gmail.com?subject=feedback">biagio.grimaldi@gmail.com</a>
+        </div>
+    </body>
+</html>

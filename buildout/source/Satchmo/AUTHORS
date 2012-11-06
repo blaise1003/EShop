@@ -1,0 +1,26 @@
+The PRIMARY AUTHORS are:
+
+Chris Moffitt who created some of the original models and core structure.
+
+Bruce Kroeze who designed the Payment Module system as well as a bunch of other parts.
+
+John Shaffer who has provided a lot of support with internationalization, the testing framework and a fixes all over the place.
+
+Brian Johnson who led the way with the product model refactoring.
+
+CONTRIBUTORS we know of:
+
+Michal Salaban who hunted and shot some bugs and wrote parts responsible for flexibility and scaling (mostly the signals system).
+Jannis Leidel whose code has been used in autocomplete admin form fields.
+
+Other people who provided bugfixes, translations, etc. and are welcome to ask for their names to be mentioned here.
+Jason F. Hill 
+
+THANKS
+
+This project would obviously not be possible without the outstanding
+Django framework.  Thanks to all of the individuals that started Django and
+open sourced the application.
+
+Thanks also go out to all the people that have contributed ideas or thoughts 
+for the project.

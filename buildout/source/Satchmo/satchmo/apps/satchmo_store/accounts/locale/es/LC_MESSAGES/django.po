@@ -1,0 +1,78 @@
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-18 19:02+0200\n"
+"PO-Revision-Date: 2011-10-04 17:31\n"
+"Last-Translator: Andrea  de la Huerta <info@metamorfosys.de>\n"
+"Language-Team: Spanish <satchmo-users@googlegroups.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.6.1\n"
+
+#: forms.py:27 forms.py:47
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: forms.py:31
+msgid "Title"
+msgstr "Título"
+
+#: forms.py:32
+msgid "Email address"
+msgstr "Correo electrónico"
+
+#: forms.py:34
+msgid "Password (again)"
+msgstr "Contraseña (de nuevo)"
+
+#: forms.py:36
+msgid "Password"
+msgstr "Contraseña"
+
+#: forms.py:38
+msgid "First name"
+msgstr "Nombre"
+
+#: forms.py:40
+msgid "Last name"
+msgstr "Apellido(s)"
+
+#: forms.py:48
+msgid "Please use only letters, numbers and @/./+/-/_"
+msgstr "Por favor usa sólo letras, números y @/./+/-/_"
+
+#: forms.py:66
+msgid "Newsletter"
+msgstr "Boletín"
+
+#: forms.py:75
+msgid "The two passwords do not match."
+msgstr "Las dos contraseñas no son iguales."
+
+#: forms.py:87
+msgid "That username is already in use."
+msgstr "Ese nombre de usuario ya está en uso."
+
+#: forms.py:95
+msgid "That email address is already in use."
+msgstr "Ese correo electrónico ya está en uso."
+
+#: mail.py:17
+#, python-format
+msgid "Welcome to %(shop_name)s"
+msgstr "Bienvenido a %(shop_name)s"
+
+#: views.py:24
+msgid "Yes"
+msgstr "Sí"
+
+#: views.py:25
+msgid "No"
+msgstr "No"
+
+#: views.py:380
+msgid "Registration Form"
+msgstr "Formulario de registro"

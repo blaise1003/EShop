@@ -1,0 +1,61 @@
+{# this text is placed by the satchmo_order template tag "order_tracking_details" #}
+{% load i18n %}
+{% load satchmo_currency %}
+{% load satchmo_checkout %}
+{% load satchmo_util normalize_decimal %}
+
+<div class="pull-left">
+
+<div class="">
+<h2>{% trans 'Order #' %} {{ order.id }}</h2>
+{% if order.notes %}
+<h2>{% trans 'Notes' %}</h2>
+<p>{{ order.notes }}</p>
+{% endif %}
+<h2>{% trans 'Status' %}</h2>
+{% for status in order.orderstatus_set.all %}
+<p>{{status.time_stamp|date:"F jS Y H:i" }}: <span class="label label-success">{{ status.status|status_label }}</span><br/>
+{% if status.notes %}<i>{% trans status.notes %}</i>{% endif %}
+</p>
+{% endfor %}
+</div>
+<div class="">
+<h2>{% trans "Items Ordered" %}</h2>
+{% for item in order.orderitem_set.all %}
+{{ item }} - {{item.unit_price|currency}} x {{item.quantity|normalize_decimal}}{% if item.discount %} - {{ item.discount|currency }}{% endif %} = {{item.sub_total|currency}}<br/>
+{% endfor %}
+</div>
+
+{% if order.shipping_method %}
+<div class="">
+<h2>{% trans "Shipping Method" %}</h2>
+{{ order.shipping_description }}<br/>
+<strong>{% autoescape off %}{{ order.shipping_extimated_date }}{% endautoescape %}</strong><br/>
+{% ifnotequal order.shipping_method order.shipping_description %}{{ order.shipping_method }}<br/>{% endifnotequal %}
+{{ order.shipping_sub_total|currency }}<br/>
+</div>
+{% endif %}
+<div class="">
+<h2>{% trans "Total" %}</h2>
+{% if order.discount %}
+    {% trans "Discount" %} - {{order.discount|currency}}<br/>
+{% endif %}
+{% if order.is_shippable %} {% trans "Shipping" %} + {{order.shipping_sub_total|currency}}<br/> {% endif %}
+{% if order.tax %}
+    {% trans "Tax" %} + {{order.tax|currency}}<br/>
+{% endif %}
+{% trans "Total" %} = {{order.total|currency}}<br/>
+
+{% order_payment_summary order paylink %}
+</div>
+{% if order.is_shippable %}
+ <h2>{% trans "Shipping To" %}</h2>
+{{ order.ship_addressee }}<br />
+{{ order.full_ship_street }}, {{ order.ship_postal_code }}<br />
+{{ order.ship_city }}<br />
+{{ order.ship_state }}<br />
+{{ order.ship_country_name|title }}<br />
+
+
+{% endif %}
+</div>

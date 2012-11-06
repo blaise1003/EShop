@@ -1,0 +1,57 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+   <li>{% trans "Registration" %}</li>
+{% endblock %}
+
+{% block content %}
+<div id="registrati" class="portlet-tab lightgradient">
+	
+	
+	<form method="post" action="{% url registration_register %}">
+		{% csrf_token %}
+		<fieldset>
+			<h1 class="documentFirstHeading">{% trans "Please Enter Your Account Information" %}</h1>
+			<p class="error">{% trans "All fields are required" %}</p>
+	    {% comment %}{{ form.next }}{% endcomment %}
+	    <input type="hidden" name="next" id="id_next" value="{{next}}"/>
+
+ 	   	<div class="clearfix">{{ form.email.label_tag }}<div class="input">
+ 	   	    {% if recipient %}
+ 	   	        <input id="id_email" type="text" name="email" maxlength="75" readonly='readonly' value="{{ recipient }}" />
+ 	   	    {% else %}
+ 	   	        <input id="id_email" type="text" name="email" maxlength="75" />
+ 	   	    {% endif %}
+ 	   	</div>
+	    <p class="input error">{% if form.email.errors %}*** {{ form.email.errors|join:", " }}{% endif %}</p>
+	    </div>
+	    <div class="clearfix">{{ form.first_name.label_tag }}<div class="input">{{ form.first_name }}</div>
+	    <p class="input error">{% if form.first_name.errors %}*** {{ form.first_name.errors|join:", " }}{% endif %}</p>
+      	</div>
+	    <div class="clearfix">{{ form.last_name.label_tag }}<div class="input">{{ form.last_name }}</div>
+	    <p class="input error">{% if form.last_name.errors %}*** {{ form.last_name.errors|join:", " }}{% endif %}</p>
+	    </div>
+	    <div class="clearfix">{{ form.password1.label_tag }}<div class="input">{{ form.password1 }}</div>
+	    <p class="input error">{% if form.password1.errors %}*** {{ form.password1.errors|join:", " }}{% endif %}</p>
+	    </div>
+	    <div class="clearfix">{{ form.password2.label_tag }}<div class="input">{{ form.password2 }}</div>
+	    <p class="input error">{% if form.password2.errors %}*** {{ form.password2.errors|join:", " }}{% endif %}</p>
+	    </div>
+	    {% if show_newsletter %}
+	    <div class="clearfix">{{ form.newsletter.label_tag }}<div class="input">{{ form.newsletter }}</div>
+	    <p class="input error">{% if form.newsletter.errors %}*** {{ form.newsletter.errors|join:", " }}{% endif %}</p>
+		</div>
+	    {% else %}
+	    <div class="clearfix">
+	    	<input type='hidden' name='newsletter' value="False" />
+		</div>
+	    {% endif %}
+		</fieldset>
+		<div class="action">
+			<input type="submit" id="register" class="button blue" name="Submit3" value="registrati">
+		</div>
+</form>
+</div>
+{% endblock %}

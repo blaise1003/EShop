@@ -1,0 +1,13 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="page-header">{% trans "Error" %}</h1>
+    <h2>{% trans "Could not find the page you were looking for." %}</h2>
+
+{% endblock %}

@@ -1,0 +1,77 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# This file is distributed under the same license as the Satchmo package.
+#
+# Translators:
+# florindinu <contact@florindinu.ro>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: Satchmo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-18 18:58+0200\n"
+"PO-Revision-Date: 2011-03-22 15:58+0000\n"
+"Last-Translator: florindinu <contact@florindinu.ro>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1))\n"
+
+#: numbers.py:23
+#, python-format
+msgid "%(value)s is not a valid number"
+msgstr "%(value)s nu este un număr valid"
+
+#: numbers.py:35
+msgid "Please enter a positive number"
+msgstr "Vă rugăm să introduceți un număr pozitiv"
+
+#: views.py:106
+msgid "Card type does not match card number."
+msgstr "Tipurile cardurilor nu corespund numerelor."
+
+#: views.py:108
+msgid "Invalid credit card number."
+msgstr "Numărul cardului este invalid."
+
+#: thumbnail/config.py:4
+msgid "Thumbnail Settings"
+msgstr "Setări imagini mici"
+
+#: thumbnail/config.py:9
+msgid "Thumbnail quality"
+msgstr "Calitate"
+
+#: thumbnail/config.py:10
+msgid ""
+"Use a 1-100 value here, which will change the quality of JPG thumbnails "
+"created for products and categories."
+msgstr ""
+
+#: thumbnail/config.py:16
+msgid "Rename product images?"
+msgstr "Redenumiți imaginile produselor?"
+
+#: thumbnail/config.py:17
+msgid "Automatically rename product images on upload?"
+msgstr "Redenumesc imaginile produselor automat?"
+
+#: thumbnail/widgets.py:20
+msgid "Change:"
+msgstr "Schimbă:"
+
+#: thumbnail/templates/widget/file.html:3
+msgid "Currently"
+msgstr "Acum"
+
+#: thumbnail/templates/widget/file.html:4
+msgid "Change"
+msgstr "Schimbare"
+
+#~ msgid "Please enter one and only one of those fields."
+#~ msgstr "Vă rugăm complectați doar unul dintre câmpuri."
+
+#~ msgid "These fields can not be the same."
+#~ msgstr "Aceste câmpuri nu pot avea aceeași valoare."

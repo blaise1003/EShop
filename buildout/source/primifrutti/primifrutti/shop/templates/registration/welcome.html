@@ -1,0 +1,61 @@
+{% load i18n %}{% load l10n %}
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Attivazione account Primi Frutti</title>
+    <style>
+        body {
+        padding:10px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 22px;
+        color: #333333;
+        background-color: #fff;
+        }
+        .footer {
+        font-size:10px;
+        background-color: #F7F5F5;
+        border-top: 1px solid #E7E7E7;
+        font-size: 12px;
+        margin-top: 20px;
+        padding-top: 20px;
+        }
+        .discreet {
+        color: #585858;
+        font-size: 85%;
+        font-weight: normal;
+        }
+        a:link,
+        a:visited {
+            color: #40721C;
+            text-decoration: none;
+            font-weight:bold;
+        }
+    </style>
+    </head>
+    <body>
+        <img class="logo" src="http://{{ site_url }}/static/theme/img/toplogo.jpg" alt="logo" />
+        <p>{% blocktrans %}Dear {{ first_name }} {{ last_name }},{% endblocktrans %}</p>
+        <p>{% blocktrans %}Thank you for signing up on {{ shop_name }}.{% endblocktrans %}</p>
+
+        <p>{% blocktrans %}Your new username is this email address, and you can login at{% endblocktrans %} <a href="http://{{ site_url }}{{ login_url }}">click</a></p>
+
+        <p>{% autoescape off %}<strong>Primi frutti</strong> è un portale di vendite online dove ti aspettano:{% endautoescape %}
+        <ul>
+            <li>i migliori prodotti sempre freschi e fragranti;</li>
+            <li>tante offerte sempre accattivanti;</li>
+            <li>consegne a domicilio rapide e gratuite;</li>
+        </ul>
+        <br />Fare la spesa non è mai stato così facile, veloce e comodo!
+        </p>
+
+        <br />
+        <p><em>Team {{ shop_name }}</em></p>
+        <a href="http://www.facebook.com/pages/Primi-Frutti-SRL/374963559218054"    title="Facebook" target="_blank">Seguici su Facebook</a>
+        <div align="center" class="footer">
+            <img src="http://{{ site_url }}/static/theme/img/logosmall.png" /><br />
+            Via Nuova Sarno Tr. Aiello, 1 80036 - Palma Campania - P.IVA 04787301219<br />
+            <a href="mailto:direzione@primifrutti.com?subject=feedback">direzione@primifrutti.com</a>
+        </div>
+    </body>
+</html>

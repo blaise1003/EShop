@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>Primi Frutti</title>
+  <link href="/static/theme/img/favicon.ico" rel="icon">
+  <meta charset="utf-8"/>
+  
+
+
+  
+    <link rel="stylesheet/less" type="text/css" href="/static/theme/styles/layout.less" />
+    <script type="text/javascript" src="/static/theme/scripts/less-1.3.0.min.js"></script>
+    <link rel="stylesheet" href="/static/primifrutti/primifrutti/styles/overlays.css" />
+    <link rel="stylesheet" href="/static/primifrutti/primifrutti/popeye/jquery.popeye.css" />
+    <link rel="stylesheet" href="/static/primifrutti/primifrutti/popeye/jquery.popeye.style.css" />
+  
+  
+  <script type="text/javascript" src="/static/theme/scripts/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="/static/theme/scripts/jquery.tools.js"></script>
+  <script type="text/javascript" src="/static/primifrutti/primifrutti/js/jquery.overlayhelpers.js"></script>
+  <script type="text/javascript" src="/static/primifrutti/primifrutti/js/jquery.form.js"></script>
+  <script type="text/javascript" src="/static/primifrutti/primifrutti/js/jquery.forminit.js"></script>
+  <script type="text/javascript" src="/static/theme/scripts/bootstrap/bootstrap-tooltips.js"></script>
+  <script type="text/javascript" src="/static/theme/scripts/bootstrap/bootstrap-transition.js"></script>
+  <script type="text/javascript" src="/static/theme/scripts/bootstrap/bootstrap-carousel.js"></script>
+  <script type="text/javascript" src="/static/primifrutti/primifrutti/popeye/jquery.popeye-2.1.js"></script>
+  
+</head>
+<body class="home">
+  <div id="wrapper" class="container">
+    <div id="header" class="row">
+      <div class="navbar navbar-inner navbar-fixed-top">
+        <div class="container">
+          
+<form id="search" action="/search/" method="get" class="navbar-search pull-left">
+    <input type="text" placeholder="cerca prodotto" size="20" name="keywords" id="search_keywords" />
+    <input type="submit" value="Cerca" class="btn btn-primary" />
+</form>
+          
+          <div class="btn-group pull-right">
+            <span class="btn btn-warning">&nbsp;Entra</span>
+            <span class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></span>
+            <ul class="dropdown-menu">
+              <li>
+                <form action="/accounts/login/" method="post" class="login">
+                  <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='a405a91d40c97ab6b75674132a6d9cc1' /></div>
+                  <fieldset>
+                    <legend class="hidden">Entra</legend>
+                      <div class="clearfix">
+                          <label for="email">e-mail</label>
+                          <div class="input">
+                              <input type="text" required="true" 
+                                  placeholder="nome@dominio.com" class="span3" id="id_username" name="username" />
+                          </div>
+                      </div>
+                      <div class="clearfix">
+                          <label for="password">Password</label>
+                          <div class="input">
+                              <input class="span3" type="password" placeholder="********" 
+                                  name="password" id="id_password" size="20" />
+                          </div>
+                      </div>
+                  </fieldset>
+                  <div class="actions">
+                    <input type="hidden" value="/accounts/" name="next" />
+                    <input id="login" type="submit" value="Entra" name="login" class="btn btn-primary" />
+                    <a id="register" title="Registrati" href="/accounts/register/" class="btn btn-warning">Registrati</a>
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </div>
+          
+          
+        </div>
+      </div>
+      <div id="top-bar">
+          <ul class="navigation nav-tabs">
+              
+<li><a href="/home/">Home</a></li>
+<li class="active"><a href="/categorie/">Prodotti</a></li>
+<li><a href="/pagine/l-azienda">L'azienda</a></li>
+<li><a href="/pagine/offerte">Offerte</a></li>
+<li><a href="/contact/">Contatti</a></li>
+
+          </ul>
+      </div>
+      
+        <div id="banner" class="row">
+            <div class="span6">
+                <a href="/home/">
+                    <img class="logo" src="/static/theme/img/logo.png" alt="PrimiFrutti: La scelta migliore" />
+                </a>
+            </div>
+            <div class="span10">
+                
+<div id="myCarousel" class="carousel">
+<div class="carousel-inner">
+    
+      
+          
+          <div class="item active">
+            <a href="http://www.google.com">
+            <img src="/static/images/banner-picture-bannerhome-1_jpg_630x255_q85.jpg" class="banner"
+                  alt="Banane"
+                  width="630px"
+                  height="255px" />
+            </a>
+          </div>
+      
+          
+          <div class="item ">
+            <a href="http://www.google.com">
+            <img src="/static/images/banner-picture-bannerhome-2_jpg_630x255_q85.jpg" class="banner"
+                  alt="Lamponi"
+                  width="630px"
+                  height="255px" />
+            </a>
+          </div>
+      
+    
+</div>
+<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+            </div>
+        </div>
+        <div class="sfuma"></div>
+      
+    </div>
+    <div class="row">
+      <ul class="breadcrumb span12">
+        
+<li class="first"><a href="/home/">Pagina iniziale</a> <span class="divider">/</span></li>
+
+    <li><a href="/categorie/gamma-4/">4 Gamma</a> <span class="divider">/</span></li>
+
+<li>Noci di Sorrento confezionate</li>
+
+      </ul>
+
+      
+      <div class="social">
+        <ul class="icons">
+          
+          
+          
+        </ul>
+      </div>
+      
+
+      <!--<div class="span3">!-->
+    </div>
+    <div id="main" class="row">
+        
+        <div id="left" class="span4">
+            <div id="navigation" class="portlet">
+            	<div class="portletHeader"><h3>Categorie</h3></div>
+                
+<ul class="nav nav-list"><li><a class='navTreeCurrentItem' title="4 Gamma"                 href="/categorie/gamma-4/"><span>4 Gamma</span></a>                 <ul><li><a  title="5 Gamma"                 href="/categorie/gamma-4/gamma-5/"><span>5 Gamma</span></a></li></ul></li><li><a  title="Complemento"                 href="/categorie/complemento/"><span>Complemento</span></a></li><li><a  title="Conserve"                 href="/categorie/conserve/"><span>Conserve</span></a></li><li><a  title="Frutta"                 href="/categorie/frutta/"><span>Frutta</span></a></li><li><a  title="Frutta esotica"                 href="/categorie/frutta-esotica/"><span>Frutta esotica</span></a></li><li><a  title="Frutta secca"                 href="/categorie/frutta-secca/"><span>Frutta secca</span></a></li><li><a  title="Ingrosso"                 href="/categorie/ingrosso/"><span>Ingrosso</span></a></li><li><a  title="Latticini"                 href="/categorie/latticini/"><span>Latticini</span></a></li><li><a  title="Legumi"                 href="/categorie/legumi/"><span>Legumi</span></a></li><li><a  title="Pasta fresca"                 href="/categorie/pasta-fresca/"><span>Pasta fresca</span></a></li><li><a  title="Pasta secca"                 href="/categorie/pasta-secca/"><span>Pasta secca</span></a></li><li><a  title="Uova fresche"                 href="/categorie/uova-fresche/"><span>Uova fresche</span></a></li><li><a  title="Verdura"                 href="/categorie/verdura/"><span>Verdura</span></a></li></ul>
+
+            </div>
+        </div>
+        
+        
+        
+        <div id="content" class="span10">
+        
+
+<div class="row prodotto">
+    <div class="span7">
+      
+      <div class="product-gallery">
+        <div class="ppy" id="ppy2">
+          <ul class="media-grid ppy-imglist">
+              
+                  <li>  
+                        
+                        
+                        <a href="/static/images/productimage-picture-noci-di-sorrento-confezionate-4_jpg_600x600_q85.jpg">
+                          <img src="/static/images/productimage-picture-noci-di-sorrento-confezionate-4_jpg_210x150_q85.jpg"  class="thumbnail" 
+                                alt=""
+                                width="210px"
+                                height="140px" />
+                        </a>
+                    </li>
+              
+          </ul>
+          <div class="ppy-outer">
+            <div class="ppy-stage">
+                <div class="ppy-counter">
+                    <strong class="ppy-current"></strong> / <strong class="ppy-total"></strong> 
+                </div>
+            </div>
+            <div class="ppy-nav">
+                <div class="nav-wrap">
+                    <a class="ppy-next" title="Prossima immagine">Prossima immagine</a>
+                    <a class="ppy-switch-enlarge" title="Allarga">Allarga</a>
+                    <a class="ppy-switch-compact" title="Chiudi">Chiudi</a>
+                    <a class="ppy-prev" title="Immagine precedente">Immagine precedente</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h1 class="tit">Noci di Sorrento confezionate</h1>
+      <h2 class="desc">La più pregiata e diffusa varietà campana è la Sorrento, originaria della penisola sorrentina, che col tempo ha dato luogo a un'ampia gamma di biotipi, tutti commercialmente noti come Noce di Sorrento. I due ecotipi più diffusi sono: uno allungato, regolare, leggermente appuntito all'apice e smussato alla base, l'altro rotondeggiante, più piccolo. Le valve, in entrambi i casi, sono lisce, di ridotto spessore, il frutto è costituito dal gheriglio di sapore gradevolissimo, poco oleoso di colore bianco crema. Una delle principali caratteristiche è che, a differenza delle altre cultivar il gheriglio può facilmente essere estratto integro, cosa che la rende particolarmente apprezzato dall'industria dolciaria e dai consumatori. La raccolta si concentra nei mesi di settembre e ottobre con una resa estremamente variabile, anche in considerazione delle condizioni nelle quali si trova la coltura.</h2>
+
+      <h3>dettagli</h3>
+      <p>La più pregiata e diffusa varietà campana è la Sorrento, originaria della penisola sorrentina, che col tempo ha dato luogo a un'ampia gamma di biotipi, tutti commercialmente noti come Noce di Sorrento. I due ecotipi più diffusi sono: uno allungato, regolare, leggermente appuntito all'apice e smussato alla base, l'altro rotondeggiante, più piccolo. Le valve, in entrambi i casi, sono lisce, di ridotto spessore, il frutto è costituito dal gheriglio di sapore gradevolissimo, poco oleoso di colore bianco crema. Una delle principali caratteristiche è che, a differenza delle altre cultivar il gheriglio può facilmente essere estratto integro, cosa che la rende particolarmente apprezzato dall'industria dolciaria e dai consumatori. La raccolta si concentra nei mesi di settembre e ottobre con una resa estremamente variabile, anche in considerazione delle condizioni nelle quali si trova la coltura.</p>
+
+      
+      
+        <table class="table table-striped productattributes">
+          <tbody>
+              
+                <td><strong>Unità di misura:</strong></td>
+                <td>busta</td>
+              
+          <tr>
+          </tr>
+          </tbody>
+        </table>
+        
+      
+    </div>
+    <div class="row">
+      <div class="span7">
+           
+
+           
+           <div class="price">Prezzo €12,10</div>
+      </div>
+    </div>
+    <div class="row clearfix">
+        
+            
+            <form id="options" action="/add/" method="post" class="form-stacked">
+              <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='a405a91d40c97ab6b75674132a6d9cc1' /></div>
+              <fieldset>
+                
+                  <label class="span4 clearfix" for="quantity">Quantità</label>
+                  <div class="span4 control-group">
+                  <div class="controls">
+                    <div class="input-prepend">
+                      <span class="add-on">busta</span><input type="text" class="span3" id="quantity" name="quantity" value="1" />
+                    </div>
+                    <input type="hidden" name="productname" value="noci-di-sorrento-confezionate" />
+                    <span class="help-block">
+                        
+                      La quantità di prodotto che vuoi comprare espressa in busta
+                    
+                    </span>
+                  </div>
+                </div>
+                <div class="pull-right">
+                  <input type="submit" class="btn btn-small btn-primary-cart"
+                     name="addcart" value="Aggiungi al carrello" />
+                </div>
+              </fieldset>
+              
+              
+
+
+              
+
+
+            </form>
+        
+    </div>
+  </div>
+
+
+
+    
+    
+
+
+
+
+
+<script type="text/javascript">
+    <!--//<![CDATA[
+    $(document).ready(function () {
+        var options = {
+            caption:    false,
+            navigation: 'permanent',
+            direction:  'left'
+        }
+   
+        $('#ppy2').popeye(options);
+    });
+    //]]>-->
+</script>
+
+
+        </div>
+        
+        
+        
+        <div id="right" class="span2">
+          
+
+<div class="portlet sale">
+  <div class="portletHeader">
+      <div class="labelicon">
+          <img class="resize" src="/static/theme/img/labelsale.png" />
+      </div>
+      <h3>Offerta!</h3>
+  </div>
+  <div class="portletItem">
+      <ul class="media-grid unstyled">
+          <li>
+              <a href="/prodotti/noci-di-sorrento-confezionate/">
+                  
+                  <img src="/static/images/productimage-picture-noci-di-sorrento-confezionate-4_jpg_128x128_q85.jpg" class="thumbnail"
+                        alt="Noci in offerta"
+                        width="128px"
+                        height="px" />
+              </a>
+          </li>
+      </ul>
+      <p>Noci in offerta</p>
+      <div class="buttonCart">
+              <div class="price">€12,10</div>
+              <div class="actions iconsmall">
+                <a href="/prodotti/noci-di-sorrento-confezionate/" rel="tooltip"
+                      alt="Noci di Sorrento confezionate" title="Dettagli Prodotto"
+                      class="info"></a>
+                
+                <form action="/add/" method="post">
+                    <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='a405a91d40c97ab6b75674132a6d9cc1' /></div>
+                    <input type="hidden" name="quantity"
+                          value="1" />
+                    <input type="hidden" name="productname"
+                          value="noci-di-sorrento-confezionate" />
+                    <div>
+                        <input type="submit" class="cart" title="Aggiungi al carrello"
+                          name="addcart" value="" rel="tooltip" />
+                        
+
+
+                        
+
+
+                    </div>
+                </form>
+                
+              </div>
+      </div>
+  </div>
+</div>
+
+          
+
+<div class="portlet sale gift">
+  <div class="portletHeader">
+      <div class="labelicon">
+          <img class="resize" src="/static/theme/img/labelgift.png" />
+      </div>
+      <h3>Regali</h3>
+  </div>
+  <div class="portletItem">
+      <ul class="media-grid unstyled">
+          <li>
+              <a href="/prodotti/formaggio-fresco-di-carmasciano/">
+                  
+                  <img src="/static/images/productimage-picture-formaggio-fresco-di-carmasciano-3_jpg_128x128_q85.jpg" class="thumbnail"
+                        alt=""
+                        width="128px"
+                        height="px" />
+              </a>
+          </li>
+      </ul>
+      <p>Formaggio fresco di Carmasciano</p>
+      <div class="buttonCart">
+              <div class="price">€12,10</div>
+              <div class="actions iconsmall">
+                <a href="/prodotti/formaggio-fresco-di-carmasciano/" title="Dettagli Prodotto"
+                      alt="Formaggio fresco di Carmasciano" rel="tooltip"
+                      class="info"></a>
+                
+                <form action="/add/" method="post">
+                    <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='a405a91d40c97ab6b75674132a6d9cc1' /></div>
+                    <input type="hidden" name="quantity"
+                          value="1" />
+                    <input type="hidden" name="productname"
+                          value="formaggio-fresco-di-carmasciano" />
+                    <div>
+                        <input type="submit" class="cart" rel="tooltip"
+                          name="addcart" value="" title="Aggiungi al carrello"/>
+                        
+
+
+                        
+
+
+                    </div>
+                </form>
+                
+              </div>
+      </div>
+  </div>
+</div>
+
+        </div>
+        
+    </div>
+  </div>
+  
+  <div id="page-footer" class="footer">
+    <div class="container row">
+      <div class="span4">
+        <dl>
+          <dt>PASSAPAROLA</dt>
+          <dd><a href="/invites/invite_friends/" rel="tooltip" title="Invita gli amici">Invita gli amici</a></dd>
+          <dd><a href="/pagine/buono-regalo/" rel="tooltip" title="Buono Regalo">Buono Regalo</a></dd>
+        </dl>
+      </div>
+      <div class="span4">
+        <dl>
+          <dt>SICUREZZA</dt>
+          <dd><a href="/pagine/condizioni-spedizione" rel="tooltip" title="Condizioni di spedizione">Condizioni spedizione</a></dd>
+          <dd><a href="/pagine/tipologie-pagamento" rel="tooltip" title="Tipologie di pagamento">Tipologie di pagamento</a></dd>
+        </dl>
+      </div>
+      <div class="span4">
+        <dl>
+          <dt>CHI SIAMO</dt>
+          <dd><a href="/pagine/l-azienda" rel="tooltip" title="L'azienda">L'azienda</a></dd>
+          <dd><a href="/pagine/offerte" rel="tooltip" title="Offerte">Offerte</a></dd>
+          <dd><a href="/contact" rel="tooltip" title="Contatti">Contatti</a></dd>
+        </dl>   
+      </div>
+      <div class="span4">
+        <dl>
+          <dt>DOVE SIAMO</dt>
+          <dd>
+            <address>
+              <p>address</p>
+              <p>00000 - city</p>
+              <p>P.IVA 12345678910</p>
+            </address>
+          </dd>
+        </dl>   
+      </div>
+      <div class="span4">
+        <ul class="unstyled">
+          <li><a href="/sitemap.xml" rel="tooltip" title="Mappa del sito">Mappa del sito</a><span>|</span></li>
+          <li><a href="/accounts/login" rel="tooltip" title="login">login</a></li>      
+        </ul>
+        <p class="carte">Carte di credito</p>
+        <div class="social-footer">
+      
+          <like colorscheme="light" show_faces="false" layout="button_count" font="segoe ui" action="like" width="400" image="/static/theme/img/logo.png" title="Primi Frutti" href="" class="fb_edge_widget_with_comment fb_iframe_widget">
+            <span>
+              <iframe id="f3be8a2be0691dc" name="f31d7dabf6da502" style="border: medium none; overflow: hidden; height: 20px; width: 120px;" src="http://www.facebook.com/plugins/like.php?action=like&amp;api_key=1449414641&amp;channel_url=http%3A%2F%2Fstatic.ak.fbcdn.net%2Fconnect%2Fxd_proxy.php%23%3F%3D%26cb%3Df3bd189c4d96e4%26origin%3Dhttp%253A%252F%252Fhttp:///home/%252Ffaee101139f5be%26relation%3Dparent.parent%26transport%3Dpostmessage&amp;colorscheme=light&amp;font=segoe%20ui&amp;href=&amp;layout=button_count&amp;locale=it_IT&amp;node_type=link&amp;sdk=joey&amp;show_faces=false&amp;width=400&amp;">
+              </iframe>
+            </span>
+          </like>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="colophon">
+      <a href="http://biagiogrimaldi.netsons.org">by Biagio Grimaldi</a>
+    </div>
+  </div>
+  
+      
+        
+      
+    
+    
+      <script type="text/javascript">
+      $(window).load(function() {
+        if ($('.carousel').length > 0)
+          $('.carousel').carousel();
+        $("[rel='tooltip']").tooltip();
+      });
+      </script>
+    
+</body>
+</html>

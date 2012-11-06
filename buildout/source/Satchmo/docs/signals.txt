@@ -1,0 +1,310 @@
+:tocdepth: 3
+
+.. _signals:
+
+Signals in Satchmo
+==================
+
+Signals are a very powerful tool available in Django that allows you to decouple aspects of your application. The `Django Signals Documentation`_, has this summary:
+
+    "In a nutshell, signals allow certain senders to notify a set of receivers that some action has taken place."
+
+In addition to all of the built in `Django signals`_, Satchmo includes a number of store related signals. By using these signals, you can add very unique customizations to your store without needing to modify the Satchmo code.
+
+Signal Descriptions
+--------------------
+
+.. currentmodule:: livesettings.signals
+
+.. autofunction:: configuration_value_changed(sender, old_value=None, new_value=None, setting=None, **kwargs)
+
+.. currentmodule:: satchmo_store.shop.signals
+
+.. TODO document satchmo_order_status_changed
+
+.. TODO document satchmo_shipping_price_query
+
+.. autofunction:: order_success(sender, order=None, **kwargs)
+
+.. autofunction:: order_cancel_query(sender, order=None, **kwargs)
+
+.. autofunction:: order_cancelled(sender, order=None, **kwargs)
+
+.. autofunction:: satchmo_cart_add_complete(sender, cart=None, cartitem=None, product=None, request=None, form=None, **kwargs)
+
+.. autofunction:: satchmo_cart_add_verify(sender, cart=None, cartitem=None, added_quantity=None, details=None, **kwargs)
+
+.. autofunction:: satchmo_cart_changed(sender, cart=None, request=None, **kwargs)
+
+.. autofunction:: satchmo_cartitem_price_query(sender, cartitem=None, **kwargs)
+
+.. autofunction:: satchmo_cart_details_query(sender, product=None, quantity=None, details=None, request=None, form=None, **kwargs)
+
+.. autofunction:: satchmo_post_copy_item_to_order(sender, cartitem=None, order=None, orderitem=None, **kwargs)
+
+.. autofunction:: satchmo_context(sender, context=None, **kwargs)
+
+.. autofunction:: cart_add_view(sender, request=None, method=None, **kwargs)
+
+.. autofunction:: sendfile_url_for_file(sender, file=None, product=None, url_dict={}, **kwargs)
+
+.. autofunction:: rendering_store_mail(sender, send_mail_args={}, context={}, **kwargs)
+
+.. autofunction:: sending_store_mail(sender, send_mail_args={}, context={}, **kwargs)
+
+.. currentmodule:: satchmo_store.contact.signals
+
+.. autofunction:: satchmo_contact_view(sender, contact=None, contact_dict=None, **kwargs)
+
+.. autofunction:: satchmo_contact_location_changed(sender, contact=None, **kwargs)
+
+.. autofunction:: validate_postcode(sender, postcode=None, country=None, **kwargs)
+
+.. currentmodule:: satchmo_store.accounts.signals
+
+.. autofunction:: satchmo_registration(sender, contact=None, subscribed=None, data=None, **kwargs)
+
+.. autofunction:: satchmo_registration_verified(sender, contact=None, **kwargs)
+
+.. currentmodule:: satchmo_ext.newsletter.signals
+
+.. autofunction:: newsletter_subscription_updated(sender, old_state=None, new_state=None, contact=None, attributes=None, **kwargs)
+
+.. currentmodule:: payment.signals
+
+.. TODO document discount_validate
+
+.. autofunction:: confirm_sanity_check(sender, controller=None, **kwargs)
+
+.. autofunction:: payment_methods_query(sender, methods=None, cart=None, order=None, contact=None, **kwargs)
+
+.. autofunction:: payment_choices(sender, choices=None, **kwargs)
+
+.. currentmodule:: product.signals
+
+.. autofunction:: index_prerender(sender, request=None, context=None, category=None, brand=None, object_list=None, **kwargs)
+
+.. autofunction:: satchmo_price_query(sender, price=None, slug=None, discountable=None, **kwargs)
+
+.. autofunction:: subtype_order_success(sender, product=None, order=None, subtype=None, **kwargs)
+
+.. autofunction:: discount_filter_items(sender, discounted=None, order=None, **kwargs)
+
+External Signals Used in Satchmo
+--------------------------------
+
+Satchmo depends on signals in ``signals_ahoy.signals`` and triggers them at
+various points of execution; below are some of them.
+
+.. currentmodule:: signals_ahoy.signals
+
+.. function:: application_search
+
+Sent by :func:`satchmo_store.shop.views.search.search_view` to ask all listeners
+to add search results.
+
+Arguments sent with this signal:
+
+    ``sender``
+        The ``product.models.Product`` model (Note: not an instance of Product)
+
+    ``request``
+        The ``HttpRequest`` object used in the search view
+
+    ``category``
+        The category slug to limit a search to a specific category
+
+    ``keywords``
+        A list of keywords search for
+
+    ``results``
+        A dictionary of results to update with search results. The contents of the dictionary should contain the following information:
+
+        ``categories``
+            A ``QuerySet`` of ``product.models.Cateogry`` objects which matched the search criteria
+
+        ``products``
+            A ``Queryset`` of ``product.models.Product`` objects which matched the search critera
+
+.. function:: collect_urls
+
+Sent by urls modules to allow listeners to add or replace urls to that module
+
+Arguments sent with this signal:
+
+    ``sender``
+        The module having url patterns added to it
+
+    ``patterns``
+        The url patterns to be added. This is an instance of ``django.conf.urls.defaults.patterns``
+
+    ``section``
+        The name of the section adding the urls (Note: this argument is not always provided). For example '__init__' or 'product'
+
+    Example::
+
+        from satchmo_store.shop.signals import satchmo_cart_add_complete
+        import myviews
+
+        satchmo_cart_add_complete.connect(myviews.cart_add_listener, sender=None)
+
+.. function:: form_init
+
+Sent when a contact info form is initialized. Contact info forms include:
+
+    - ``contact.forms.ContactInfoForm``
+    - ``contact.forms.ExtendedContactInfoForm``
+    - ``payment.forms.PaymentContactInfoForm``
+
+Arguments sent with this signal:
+
+    ``sender``
+        The model of the form being initialized. The value of sender will be one of the models defined above.
+
+    ``form``
+        An instance of the form (whose type is defined by ``sender``) being intitialized.
+
+See `Ensuring Acceptance of Terms during Checkout`_ for an example of how this signal can be used.
+
+.. function:: form_postsave
+
+Sent after a form has been saved to the database
+
+Arguments sent with this signal:
+
+    ``sender``
+        The form model of the form being set (Note: Not an instance). Possible values include:
+
+        - ``satchmo_store.contact.forms.ContactInfoForm``
+        - ``payment.modules.purchaseorder.forms.PurchaseorderPayShipForm``
+        - ``payment.forms.CreditPayShipForm``
+        - ``payment.forms.SimplePayShipForm``
+        - ``payment.forms.PaymentContactInfoForm``
+
+    ``form``
+        - The instance of the form defined by one of the above models that was saved.
+
+    ``object``
+        - A ``satchmo_store.contact.models.Contact`` instance if the form being saved is an instance of ``satchmo_store.contact.forms.ContactInfoForm`` otherwise this value does not exist.
+
+    ``formdata``
+        - The data associated with the form if the form being saved is an instance of ``satchmo_store.contact.forms.ContactInfoForm`` otherwise this value does not exist.
+
+
+Examples
+--------
+
+Putting it All Together
+^^^^^^^^^^^^^^^^^^^^^^^
+
+This section contains a brief example of how to use signals in your application.
+For this example, we want to have certain products that are only available to members.
+Everyone can see the products, but only members can add to the cart. If
+a non-member tries to purchase a product, they will get a clear error
+message letting them know they need to be a member.
+
+The first thing to do is create a `listeners.py` file in your app. In this case,
+the file would look something like this::
+
+    """
+    A custom listener that will evaluate whether or not the product being added
+    to the cart is available to the current user based on their membership.
+    """
+    from satchmo_store.shop.exceptions import CartAddProhibited
+    from django.utils.translation import gettext_lazy as _
+
+    class ContactCannotOrder(CartAddProhibited):
+        def __init__(self, contact, product, msg):
+            super(ContactCannotOrder, self).__init__(product, msg)
+            self.contact = contact
+
+    def veto_for_non_members(sender, cartitem=None, added_quantity=0, **kwargs):
+        from utils import can_user_buy
+        customer = kwargs['cart'].customer
+        if can_user_buy(cartitem.product, customer):
+            return True
+        else:
+            msg = _("Only members are allowed to purchase this product.")
+            raise ContactCannotOrder(customer, cartitem.product, msg)
+
+Next, you need to create the `can_user_buy` function. Your `utils.py` file could
+look something like this (details left up to the reader)::
+
+    def can_user_buy(product, contact=None):
+        """
+        Given a product and a user, return True if that person can buy it and
+        False if they can not.
+        This doesn't work as it stands now. You'll need to customize the
+        is_member function
+        """
+        if is_member(contact):
+            return True
+        else:
+            return False
+
+The final step is to make sure your new listener is hooked up. In your `models.py`
+add the following code::
+
+    from listeners import veto_for_non_members
+    from satchmo_store.shop import signals
+
+    signals.satchmo_cart_add_verify.connect(veto_for_non_members, sender=None)
+
+
+Now, you should be able to restrict certain products to only your members.
+The nice thing is that you've done this without modifying your satchmo
+base code.
+
+Ensuring Acceptance of Terms during Checkout
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The signal :func:`signals_ahoy.signals.form_init` can be combined with the ``payment.listeners.form_terms_listener`` to add a custom terms and
+conditions acceptance box into your checkout flow.
+
+First, add the terms view in your :file:`/localsite/urls.py` file::
+
+    urlpatterns += patterns('',
+    url(r'^shop_terms/$', 'project-name.localsite.views.shop_terms',
+        name="shop_terms"),
+    )
+
+Next, create the view in your :file:`/localsite/views.py` to display the terms::
+
+    from django.shortcuts import render_to_response
+    from django.template import RequestContext
+
+    def shop_terms(request):
+        ctx = RequestContext(request, {})
+        return render_to_response('localsite/shop-terms.html',
+            context_instance=ctx)
+
+Now, you will need modify the checkout html to display the new form. Copy
+:file:`/satchmo/apps/payment/templates/shop/checkout/pay_ship.html` to
+:file:`/project-name/templates/shop/checkout/pay_ship.html`.
+
+Add the following code to the copied :file:`pay_ship.html` to display the form::
+
+    {{ form.terms }} {{ form.terms.label|safe }}
+    {% if form.terms.errors %}<br/>**{{ form.terms.errors|join:", " }}{% endif %}
+
+Make sure you register the forms_terms_listener by adding the following code to your
+:file:`/localsite/models.py`::
+
+    from payment.forms import SimplePayShipForm
+    from payment.listeners import form_terms_listener
+    from signals_ahoy.signals import form_init
+
+    form_init.connect(form_terms_listener, sender=SimplePayShipForm)
+
+The final step is to create your actual :file:`store-name/templates/localsite/shop-terms.html`,
+like this::
+
+    {% extends "base.html" %}
+    {% block content %}
+    <p>Put all of your sample terms here.</p>
+    {% endblock %}
+
+Now, when users checkout, they must agree to your store's terms.
+
+.. _Django Signals Documentation: http://docs.djangoproject.com/en/dev/topics/signals/
+.. _Django signals: http://docs.djangoproject.com/en/dev/ref/signals/

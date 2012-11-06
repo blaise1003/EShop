@@ -1,0 +1,15 @@
+{% load i18n %}
+
+{% blocktrans %}Administration {{ site_name }},{% endblocktrans %}
+
+{% trans "Stale shipments are summarized below:" %}
+
+{% trans "ID" %} - {% trans "Mission" %} - {% trans "Order ID" %} - {% trans "Contact" %}
+-----------------------------------------------------------------
+{% for item in deliveries %}
+{{ item.id }} - {{ item.mission }} - #{{ item.order.id }} - {{ item.order.contact.email }}
+{% endfor %}
+
+{% block valediction %}{% trans "Regards" %},
+
+{% trans "Store Management" %}{% endblock%}

@@ -1,0 +1,14 @@
+{% extends "admin/object_history.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+    <a href="../../../../../../../">{% trans "Home" %}</a> &rsaquo;
+    <a href="../../../../../../">{% trans "Zones" %}</a> &rsaquo;
+    <a href="../../../../../">{{ app_label|capfirst|escape }}</a> &rsaquo;
+    <a href="../../../../">{{object.zone}}</a> &rsaquo;
+    <a href="../../">{% trans "Exceptional calendars" %}</a> &rsaquo;
+    <a href="../">{{ object|truncatewords:"18" }}</a> &rsaquo; 
+    {% trans 'History' %}
+</div>
+{% endblock %}

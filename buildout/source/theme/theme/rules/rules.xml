@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <theme href="../theme/theme.html" />
+
+  <xsl:strip-space elements="*" />
+
+  <prepend theme='/html' content='/html/@lang'/>
+  <prepend theme='/html/head' content='/html/head/meta'/>
+  <prepend theme='/html/head' content='/html/head/script'/>
+  <replace theme='/html/head/title' content='/html/head/title'/>
+
+  <replace css:theme='body' css:content='body'/>
+
+</rules>

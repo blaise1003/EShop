@@ -1,0 +1,208 @@
+@media all {
+    body {
+        font-family: sans-serif;
+        font-size: 9pt;
+    }
+
+    p {
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    #header {
+        border-bottom: 1pt solid #ccc;
+        padding: 1em;
+        height: 12em;
+    }
+
+    #logo,
+    #shop-info {
+        height: 100%;
+        float: left;
+    }
+
+    #logo {
+        margin-right: 3em;
+        width: 20%;
+    }
+
+    #logo img {
+        width: 100%;
+        margin-top: 1.5em;
+    }
+
+    #shop-info div,
+    #shop-info dl {
+        float: left;
+    }
+
+    #shop-info dl {
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+        margin-left: 2em;
+    }
+
+    #shop-info dl dt {
+        font-weight: bold;
+        color: #777;
+    }
+
+    h1, h2 {
+        clear: both;
+        margin-top: 0.7em;
+    }
+
+    .billing-and-shipping {
+        padding: 1em 2em 1em 2em;
+        float: left;
+        border: 1pt solid #ccc;
+        height: 18em;
+        width: 43%;
+        margin-bottom: 2em;
+    }
+
+    .billing-and-shipping dt,
+    .billing-and-shipping dd {
+        display: block;
+        float: left;
+        margin-top: 0.8em;
+    }
+
+    .billing-and-shipping dt {
+        clear: left;
+    }
+
+    .billing-and-shipping dd {
+        margin-left: 1.5em;
+    }
+
+    #shipping {
+        border-left: none;
+    }
+
+    table {
+        width: 100%;
+        border: 1pt solid #ccc;
+        border-collapse: collapse;
+        margin-bottom: 2em;
+    }
+
+    table td,
+    table th {
+        padding: 0.5em;
+        border: 1pt solid #ccc;
+    }
+
+    table td h5 {
+        margin: 0.4em 0em 0.4em 0em;
+    }
+
+    table td p {
+        margin: 0.2em 0em 0.2em 0em;
+    }
+
+    table.priced td:last-child {
+        width: 9em;
+        text-align: right;
+    }
+
+    table thead tr {
+        font-weight: bold;
+        background-color: #ccc;
+    }
+
+    table tr.price {
+        background-color: #eee;
+    }
+
+    table tr.price td:last-child {
+        font-weight: bold;
+    }
+
+    #payment-info {
+        margin-bottom: 1.5em;
+    }
+
+    #payment-info .shop-details {
+        margin: 1em 0em 1em 3em;
+        padding: 1em;
+        background-color: #eee;
+    }
+
+    .currency {
+        font-weight: bold;
+    }
+
+    div.clear {
+        clear: both;
+    }
+}
+
+@media screen {
+    #wrapper {
+        max-width: 80em;
+        margin: 3em auto;
+        padding: 5em 10em 10em 10em;
+        box-shadow: 0em 0em 2em 0em #999;
+    }
+
+    #navigation-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #555;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    #navigation-bar ul {
+        display: block;
+        float: right;
+        margin-right: 4em;
+    }
+
+    #navigation-bar ul li {
+        float: left;
+        display: block;
+    }
+
+    #navigation-bar ul li a {
+        display: block;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        margin: 0em 1em 0em 1em;
+        padding: 0.5em;
+        border: 1pt solid #ccc;
+    }
+
+    #navigation-bar ul li a:hover {
+        background-color: #777;
+    }
+
+    #navigation-bar h2 {
+        display: block;
+        color: #fff;
+        margin-left: 2em;
+        float: left;
+    }
+}
+
+@media print {
+    #navigation-bar {
+        display: none;
+    }
+
+    .billing-and-shipping {
+        width: 40%;
+    }
+
+    table {
+        page-break-inside: avoid;
+    }
+}

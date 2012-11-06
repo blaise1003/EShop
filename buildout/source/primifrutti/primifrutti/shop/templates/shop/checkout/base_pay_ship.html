@@ -1,0 +1,82 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+   <li>{% trans "Checkout" %}</li>
+{% endblock %}
+
+{% block spancheckout %}
+<div id="content">
+    <ul class="breadcrumb-step">
+        <li class="first"><i class="icon-shopping-cart"></i>
+            {% trans "Checkout:" %}</li><span class="divider">&nbsp;</span>
+        <li>{% trans "1. Cart" %}&nbsp;<i class="icon-ok"></i></li><span class="divider">&nbsp;</span>
+        <li>{% trans "2. Personal Data" %}&nbsp;<i class="icon-ok"></i></li><span class="divider">&nbsp;</span>
+        <li class="active">{% trans "3. Shipment" %}&nbsp;</li><span class="divider">&nbsp;</span>
+        <li>{% trans "4. Order Confirm" %} </li>
+    </ul>
+
+<h1 class="page-header">{% trans "Checkout" %} <small>{% trans "Please complete the following information in order to submit your order." %}</small></h1> 
+
+{% if form.errors %}
+    <h2>{% blocktrans count form.errors|length as count %}Please correct the following error:{% plural %}Please correct the following errors:{% endblocktrans %}</h2>
+    {% if form.non_field_errors %}<p>
+    {{ form.non_field_errors }}
+    </p>{% endif %}
+{% endif %}
+
+<form method="post" action=".">{% csrf_token %}
+<table class="table table-striped">
+
+    {% block payment_table %}
+    {# put your payment module specific rows here.  For example, CC number. #}
+    {% endblock %}
+    
+    {% if cart.is_shippable %}
+    <h2>{% trans "Shipping Information" %}</h2>
+            {% if form.shipping_hidden %}
+                {{ form.shipping }}
+                </table>
+            {% else %}
+                </table>
+                {% block shipping_table %}
+                <div id="shipping">
+                {% if form.shipping_description or form.shipping.field.choices|length_is:1 %}
+                <div class="alert alert-block">{% trans "The following shipping method will be used" %}:</div>
+                {% else %}
+                <div class="alert alert-block">{% trans "Please choose your preferred shipping method" %}</div>
+                {% endif %}
+                {{ form.shipping }}
+                {% if form.shipping_description %}<br/>{{ form.shipping_description }}{% endif %}
+                {% if form.shipping.errors %}*** {{ form.shipping.errors|join:", " }}{% endif %}
+                </div>
+                {% endblock %}
+            {% endif %}
+    {% else %}
+        <tr><td colspan="2">
+            <div class="alert alert-block">{% trans "There are no items in this order to ship." %}</div></td>
+        </tr>
+        <tr><td colspan="2"> {{ form.shipping }} </td></tr>
+    </table>
+
+    {% endif %}
+    
+    {% if form.shipping.field.choices|length_is:0 and cart.is_shippable %}
+        <div class="alert alert-block">
+        {% blocktrans %}No valid shipping method is available. Please verify that your address is correct.{% endblocktrans %}       </div>
+    {% else %}
+    <div class="actions">
+        <input type="submit" class="btn btn-primary" value="{% trans "Confirm" %}"/>
+    </div>
+    {% endif %}
+</form>
+</div>
+{% endblock %}
+
+{% block leftcolumn %}
+{% endblock %}
+
+{% block rightcolumn %}
+{% endblock %}
+

@@ -1,0 +1,83 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# This file is distributed under the same license as the Satchmo package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-18 19:02+0200\n"
+"PO-Revision-Date: 2010-03-01 16:59+0100\n"
+"Last-Translator: Martin Bornhold <mb@bo-tech.de>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: forms.py:27 forms.py:47
+msgid "Username"
+msgstr ""
+
+#: forms.py:31
+msgid "Title"
+msgstr "Titel"
+
+#: forms.py:32
+msgid "Email address"
+msgstr "E-Mail-Adresse"
+
+#: forms.py:34
+msgid "Password (again)"
+msgstr "Passwort (Wiederholung)"
+
+#: forms.py:36
+msgid "Password"
+msgstr "Passwort"
+
+#: forms.py:38
+msgid "First name"
+msgstr "Vorname"
+
+#: forms.py:40
+msgid "Last name"
+msgstr "Nachname"
+
+#: forms.py:48
+msgid "Please use only letters, numbers and @/./+/-/_"
+msgstr ""
+
+#: forms.py:66
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#: forms.py:75
+msgid "The two passwords do not match."
+msgstr "Die beiden Passwörter stimmen nicht überein."
+
+#: forms.py:87
+#, fuzzy
+msgid "That username is already in use."
+msgstr "Diese E-Mail-Adresse wird bereits benutzt."
+
+#: forms.py:95
+msgid "That email address is already in use."
+msgstr "Diese E-Mail-Adresse wird bereits benutzt."
+
+#: mail.py:17
+#, fuzzy, python-format
+msgid "Welcome to %(shop_name)s"
+msgstr "Willkommen zum %s"
+
+#: views.py:24
+msgid "Yes"
+msgstr "Ja"
+
+#: views.py:25
+msgid "No"
+msgstr "Nein"
+
+#: views.py:380
+msgid "Registration Form"
+msgstr "Registrierungsformular"

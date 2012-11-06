@@ -1,0 +1,22 @@
+{% load i18n %}
+<div id="navigation-bar">
+  <h2>
+    {% blocktrans with order_id=order.id %}
+    Order #{{order_id}} - {{document_name}}
+    {% endblocktrans %}
+  </h2>
+  <ul>
+    <li>
+      <a href="javascript:window.print();"
+         title="{% trans "Print this page" %}">
+        {% trans "Print" %}
+      </a>
+    </li>
+    <li>
+      <a href="{% url admin:shop_order_changelist %}"
+         title="{% trans "Back to orders list"%}">
+        {% trans "Go back to the orders list" %}
+      </a>
+    </li>
+  </ul>
+</div>

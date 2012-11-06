@@ -1,0 +1,131 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block extra-head %}
+{% include "contact/_contact_info_form.html" %}
+{% endblock %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a> <span class="divider">/</span></li>
+   <li>{% trans "Checkout" %}</li>
+{% endblock %}
+
+{% block spancheckout %}
+<div id="content">
+    <ul class="breadcrumb-step">
+        <li class="first"><i class="icon-shopping-cart"></i>
+            {% trans "Checkout:" %}</li><span class="divider">&nbsp;</span>
+        <li>{% trans "1. Cart" %}&nbsp;<i class="icon-ok"></i></li><span class="divider">&nbsp;</span>
+        <li class="active">{% trans "2. Personal Data" %}</li><span class="divider">&nbsp;</span>
+        <li>{% trans "3. Shipment" %}</li><span class="divider">&nbsp;</span>
+        <li>{% trans "4. Order Confirm" %}</li>
+    </ul>
+
+<h1 class="page-header">{% trans "Checkout" %}<small> {% trans "Please complete the following information in order to submit your order." %}</small></h1>
+
+
+{% if form.non_field_errors %}
+<div class="alert-message warning">{% trans "Please correct the following errors" %}</div>
+{{ form.non_field_errors }}
+{% endif %}
+{% if user.is_anonymous %}
+<form class="well form-inline" method="post"
+      action="{% if is_secure %}{% url auth_secure_login %}{% else %}{{ login_url }}{% endif %}">{% csrf_token %}
+  <input type="hidden" name="next" value="{% url satchmo_checkout-step1 %}" />
+  <p>
+	{% trans "If you already have an account, you can login now to fill in most of the information below." %}
+	{% trans "This is just a convenience, no account is required!" %}
+  </p>
+    <!-- <label for="id_username">{% trans "Username or email" %}:</label> -->
+    <input type="text" id="id_username"
+           class="input-small vTextField required"
+           name="username" size="15" value="" placeholder="Username" maxlength="75" />
+    <!-- <label for="id_password">{% trans "Password" %}:</label> -->
+    <input type="password" id="id_password"
+           class="input-small vPasswordField required"
+           name="password" size="15" value="" placeholder="Password" maxlength="30" />
+    <button class="btn btn-primary" type="submit">{% trans "Login" %}</button>
+    <a id="register" title="{% trans 'Register' %}" href="{% url registration_register %}" class="btn btn-warning">{% trans 'Register' %}</a>
+</form>
+{% endif %}
+
+
+<form id="checkout" class="form-stripped" method="post" action="{% url satchmo_checkout-step1 %}">{% csrf_token %}
+  <div class="alert alert-info">{% trans "You'll need to fill out at least the fields with a " %} {% spaceless %}
+                    <span rel="tooltip" class="fieldRequired" title="{% trans "required" %}">&nbsp;</span>
+                  {% endspaceless %}</div>
+  {% for fieldset in form.fieldsets %}
+  <fieldset name="{{fieldset.id_}}" id="{{fieldset.id_}}">
+    <legend>{{fieldset.label}}</legend>
+    {% for name, css_class, field in fieldset.items %}
+    <div class="control-group {% if fieldset.id_ == 'shipping' %}
+            {% if css_class != 'noclass' %}
+                {% if name != 'copy_address' %} shiprow {% endif %}
+            {% endif %}
+         {% endif %} control_{{name}}">
+      <div class="controls">
+          <label for="{{name}}" id="label_{{name}}">
+            {% if name != 'street2' %}
+              {% if name != 'ship_street2' %}
+                {% if name == 'commercial_conditions' %}
+                  {{field.label}}
+                  {% if field.field.required %}
+                  {% spaceless %}
+                    <span rel="tooltip" class="fieldRequired" title="{% trans "required" %}">&nbsp;</span>
+                  {% endspaceless %}
+                  {% endif %}
+                  <br/>
+                  <a target="_blank" href="/pagine/condizioni-spedizione">
+                    ({% trans "click here for more details" %})
+                  </a>
+                {% else %}
+                  {{field.label}}
+                  {% if field.field.required %}
+                  {% spaceless %}
+                    <span rel="tooltip" class="fieldRequired" title="{% trans "required" %}">&nbsp;</span>
+                  {% endspaceless %}
+                  {% endif %}
+                  {% if fieldset.id_ == 'payment' %}
+                    <a target="_blank" title="Info"
+                       rel="tooltip"
+                       href="/pagine/tipologie-pagamento">
+                      <i class="icon-info-sign icon-black"></i>
+                    </a>                
+                  {% endif %}
+                {% endif %}
+              {% else %}
+                &nbsp;
+              {% endif %}
+            {% else %}
+                &nbsp;
+            {% endif %}
+          </label>
+          
+        {% if field.errors %}
+          <div class="alert alert-error">
+          {{ field }}
+          <div>{{ field.errors|join:", " }}</div>
+          </div>
+        {% else %}
+          {{ field }}
+      {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+ </fieldset>
+
+ {% endfor %}
+ <div class="form-actions">
+	<button class="btn btn-primary-cart pull-right"  type="submit">{% trans "Continue Checkout" %}</button>
+ </div>
+ {% if sale %}{% include "product/sale_details.html" %}{% endif %}
+</form>
+
+</div>
+{% endblock %}
+
+{% block leftcolumn %}
+{% endblock %}
+
+{% block rightcolumn %}
+{% endblock %}

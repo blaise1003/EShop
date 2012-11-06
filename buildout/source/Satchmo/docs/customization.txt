@@ -1,0 +1,213 @@
+Store Customization
+===================
+
+The real power of Satchmo is not in what it does out of the box but what
+the framework allows you to do with minimal modification.  As you start
+to develop your online presence you will have a whole range of different
+ideas on how you would like to make your store look and feel.  Satchmo 
+provides a simple store layout that you can modify as much or as little 
+as you wish.  There are several ways to tweak Satchmo to your needs.  The
+following list is in order of the relative ease of customization:
+
+1.  CSS customization
+2.  Template customization
+3.  URL customization
+4.  Checkout process customization
+5.  Shipping module customization
+6.  Payment module customization
+7.  Changing views
+8.  Creating custom template tags
+
+CSS Customization
+-----------------
+
+The simplest way to modify Satchmo is to change the attributes in the css
+file used by the default shop.  The current style.css file is located in
+/satchmo/static/css.  You can modify this file directly (not recommended) or
+create a new CSS file and modify the base.html template file to point to
+your new and improved css file.
+
+The benefits of this approach is that it is simple to implement and makes it
+easy to update Satchmo as changes are made.  The downside is that there is 
+only so much you can do with css changes.
+
+.. _template-customization:
+
+Template Customization
+----------------------
+
+Template customization allows you to completely alter the look and feel of 
+your site without having to resort to coding.  The majority of the display 
+elements are accessible via css or template changes. Before making any template 
+changes, it is useful to understand Django templates in general.  
+The `Django Template Author Guide`_ is the best place to start.
+
+The other very important concept to understand is how to setup your environment so that you can selectively
+modify the templates that you need to. You should not modify the templates directly in the Satchmo distribution. Doing
+so will make it more difficult to upgrade and maintain your Satchmo installation.
+
+In the default Satchmo settings.py, our template loaders are::
+
+    TEMPLATE_LOADERS = (
+        'django.template.loaders.filesystem.load_template_source',
+        'django.template.loaders.app_directories.load_template_source',
+         )
+
+These template loaders look for the templates in two different ways.  The first one, the filesystem loader, 
+looks for the templates in the directories you tell it in your settings_local.py file::
+
+    TEMPLATE_DIRS = ('/path/to/your/templates',)
+ 
+The second loader, the app_directories loader, looks for the templates in a directory 
+named "templates" in each application directory.
+
+Any time the system tries to find a template, it follows the order given above.  First it asks the filesystem 
+loader to look in the directories it has been given.  If it finds the template there, it returns that one.  
+Next it asks the app_directories loader to look in the app directories for that template.  
+These are the "fallback" templates to use.
+
+For example, if you wanted to override the default category page template, you can determine that it lives 
+at ``satchmo/apps/product/templates/product/category.html``  It will be found by the app_directory loader if the 
+filesystem loader doesn't find it.
+
+Knowing that, you can tell that the proper place to put your overridden template is at:
+``/path/to/your/templates/product/category.html``
+
+In other word, you just chop the directory tree off at the word "templates" and build your override tree that way.
+
+Another example might be useful. If you wish to override the wishlist index page, which usually 
+lives at: ``satchmo/apps/satchmo_ext/wishlist/templates/index.html``, you would make a directory 
+``wishlist/templates`` and put an index.html file in it.
+
+Now, make the changes to the templates that you have to.  Don't forget, this is
+also the place where you can change the email messages sent to users as well as
+the pdf documents created by the admin interface.  The amount of power and flexibility
+here is much higher than just about any "shopping cart" application out there!
+
+URL Customization
+-----------------
+
+Another nifty feature of Django is the flexibility in configuring the URLs of an 
+application.  Because a web store frequently requires good search engine ranking, 
+you will most likely want to do everything in your power to help your store rise
+in the rankings.  Using good, clean descriptive URLs is a huge plus.  Another benefit
+of flexible URLs is that allows you to easily integrate Satchmo with an existing
+site or differentiate your site with a creative scheme (or language).
+
+For convenience, urls can be modified by changing the SHOP_URLS variable in the
+local_settings.py file.  Any url assigned to this variable will override the existing
+url naming scheme.
+
+Additionally, the Satchmo settings application allows you to change some of the names of
+urls associated with products and categories.
+
+Shipping Module Customization
+-----------------------------
+
+The comments in the dummy.py shipping module walk through how to configure shipping for your
+unique needs.
+
+Payment Module Customization
+----------------------------
+See :ref:`Custom Payment Modules <custom-payment-modules>`
+
+Using Signals
+-------------
+See :ref:`Signals in Satchmo <signals>` for an explanation of the available signals and how to use them to
+customize your store.
+
+.. _Django Template Author Guide: http://docs.djangoproject.com/en/1.1/topics/templates/
+
+Changing Views
+--------------
+
+In some instances, you may wish to selectively override specific Satchmo views. Satchmo includes
+a useful utility- ``replace_urlpattern`` in satchmo_utils.urlhelper to exchange stock urls
+with your own.
+
+Here is a simple example of using it to replace the quick_order view. In this example, we wish to change
+the items that are displayed on the quick order page so that only featured items are shown. The full 
+urls.py is shown below::
+
+    from django.conf.urls.defaults import *
+
+    # Uncomment the next two lines to enable the admin:
+    # from django.contrib import admin
+    # admin.autodiscover()
+
+    from satchmo_store.urls import urlpatterns
+
+    from satchmo_utils.urlhelper import replace_urlpattern
+    from product.models import Product
+
+    product_list = Product.objects.filter(featured=True)
+
+    replacement = url(r'^quickorder/$', 'satchmo_store.shop.views.cart.add_multiple', 
+                {'products': product_list}, 'satchmo_quick_order')
+    replace_urlpattern(urlpatterns, replacement)
+
+Custom Template Tags and Filters
+---------------------------------
+
+If you find yourself in a situation where you need to display additional information on the page
+or where you need to change the way data is displayed, you should consider writing a custom template tag
+or filter. The general process for using the tag or filter would be:
+
+    1. Create the new tag in your application's templatetags directory
+    2. Selectively override the Satchmo templates that use the tag
+    3. Import the new tag at the top of each template and use it in the template
+
+Example tags
+++++++++++++
+
+Here is a quick example showing how you can create an `inclusion tag <http://docs.djangoproject.com/en/dev/howto/custom-template-tags/#inclusion-tags>`_
+to display a list of new arrivals or featured items.
+
+First, make sure you have a :file:`templatetags` directory in your :file:`localsite` directory (this assumes you 
+are using the default satchmo setup). In this directory, create a file called :file:`local_tags.py`
+
+Your :file:`local_tags.py` should look like this::
+
+    from django import template
+    from product.models import Product
+    register = template.Library()
+
+    @register.inclusion_tag('localsite/new_arrivals.html') 
+    def show_new_arrivals(number): 
+        new_arrivals = Product.objects.all().order_by('date_added')[:number] 
+        return {'new_arrivals': new_arrivals}
+
+    @register.inclusion_tag('localsite/featured_items.html') 
+    def show_featured_items(number): 
+        featured_items = Product.objects.filter(featured=True)[:number] 
+        return {'featured_items': featured_items}
+
+Each of these tags also will need a custom html template that will be used to render
+the items. Inside your template directory, create the following files :file:`/localsite/new_arrivals.html`::
+
+    {% for product in new_arrivals %}
+        <ul><a href="{{ product.get_absolute_url }}">{{product.translated_name}}</a></ul>
+    {% endfor %}
+
+As well as this file :file:`/localsite/featured_items.html`::
+
+    {% for product in featured_items %}
+        <ul><a href="{{ product.get_absolute_url }}">{{product.translated_name}}</a></ul>
+    {% endfor %}
+
+In order to use these tags, add them to your templates::
+
+    {% extends "shop/base.html" %}
+    {% load local_tags %}
+
+    <h1>New Arrivals</h1>
+        <ul>
+        {% show_new_arrivals 5 %}
+        </ul>
+    <h1>Featured Items</h1>
+        <ul>
+        {% show_featured_items 5 %}
+        </ul>
+
+This feature is a very powerful and simple way to add custom information into
+your custom satchmo site.

@@ -1,0 +1,153 @@
+<section id="javascript">
+   <div class="page-header">
+     <h1>Using javascript with Bootstrap <small>An index of plugins to get you started</small></h1>
+   </div>
+   <div class="row">
+     <div class="span4">
+       <h2>Getting started</h2>
+       <p>Integrating javascript with the Bootstrap library is super easy. Below we go over the basics and provide you with some awesome plugins to get you started!</p>
+       <p><a class="btn primary" href="./javascript.html">View javascript docs »</a></p>
+     </div>
+     <div class="span12">
+      <h3>What's included</h3>
+       <p>Bring some of Bootstrap's primary components to life with new custom plugins that work with <a href="http://jquery.com/" target="_blank">jQuery</a> and <a href="http://ender.no.de" target="_blank">Ender</a>. We encourage you to extend and modify them to fit your specific development needs.</p>
+        <table class="bordered-table zebra-striped">
+          <thead>
+            <tr>
+              <th style="width: 150px;">File</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="./javascript.html#modal">bootstrap-modal.js</a></td>
+              <td>Our Modal plugin is a <strong>super</strong> slim take on the traditional modal js plugin! We took special care to include only the bare functionality that we require at twitter.</td>
+            </tr>
+            <tr>
+              <td><a href="./javascript.html#alerts">bootstrap-alerts.js</a></td>
+              <td>The alert plugin is a super tiny class for adding close functionality to alerts.</td>
+            </tr>
+            <tr>
+              <td><a href="./javascript.html#dropdowns">bootstrap-dropdown.js</a></td>
+              <td>This plugin is for adding dropdown interaction to the bootstrap topbar or tabbed navigations.</td>
+            </tr>
+            <tr>
+              <td><a href="./javascript.html#scrollspy">bootstrap-scrollspy.js</a></td>
+              <td>The ScrollSpy plugin is for adding an auto updating nav based on scroll position to the bootstrap topbar.</td>
+            </tr>
+            <tr>
+              <td><a href="./javascript.html#buttons">bootstrap-buttons.js</a></td>
+              <td>This plugin offers additional functionality for managing button state.</td>
+            </tr>
+            <tr>
+             <td><a href="./javascript.html#tabs">bootstrap-tabs.js</a></td>
+              <td>This plugin adds quick, dynamic tab and pill functionality for cycling through local content.</td>
+            </tr>
+            <tr>
+              <td><a href="./javascript.html#twipsy">bootstrap-twipsy.js</a></td>
+              <td>Based on the excellent jQuery.tipsy plugin written by Jason Frame; twipsy is an updated version, which doesn't rely on images, uses css3 for animations, and data-attributes for local title storage!</td>
+            </tr>
+            <tr>
+              <td><a href="./javascript.html#popover">bootstrap-popover.js</a></td>
+              <td>The popover plugin provides a simple interface for adding popovers to your application. It extends the <a href="#twipsy">boostrap-twipsy.js</a> plugin, so be sure to grab that file as well when including popovers in your project!</td>
+            </tr>
+          </tbody>
+       </table>
+       <h3>Is javascript necessary?</h3>
+       <p><strong>Nope!</strong> Bootstrap is designed first and foremost to be a CSS library. This javascript provides a basic interactive layer on top of the included styles.</p>
+       <p>However, for those who do need javascript, we've provided the plugins above to help you understand how to integrate Bootstrap with javascript and to give you a quick, lightweight option for the basic functionality right away.</p>
+       <p>For more information and to see some live demos, please refer to our <a href="./javascript.html">plugin documentation page</a>.</p>
+     </div>
+   </div>
+
+
+<!-- Using Bootstrap w/ Less
+================================================== -->
+<section id="less">
+<div class="page-header">
+  <h1>Using Bootstrap with Less <small>Supercharge your CSS with variables, mixins, and functions</small></h1>
+</div>
+<div class="row">
+  <div class="span4">
+    <p>Bootstrap was built from <a href="http://markdotto.com/bootstrap/">Preboot</a>, an open-source pack of mixins and variables to be used in conjunction with <a href="http://lesscss.org" target="_blank">Less</a>, a CSS preprocessor for faster and easier web development.</p>
+    <p>Check out how we used Preboot in Bootstrap and how you can make use of it should you choose to run Less on your next project.</p>
+  </div>
+  <div class="span12">
+    <h2>How to use it</h2>
+    <p>Use this option to make full use of Bootstrap’s Less variables, mixins, and nesting in CSS via javascript in your browser.</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet/less"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"less/bootstrap.less"</span><span class="pln"> </span><span class="atn">media</span><span class="pun">=</span><span class="atv">"all"</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L1"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"js/less-1.1.4.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span></li></ol></pre>
+<p>Not feeling the .js solution? <a href="http://incident57.com/less" target="_blank">Try the Less Mac app</a> or <a href="http://lesscss.org/#-client-side-usage" target="_blank">use Node.js</a> to compile when you deploy your code.</p>
+
+    <h2>What’s included</h2>
+    <p>Here are some of the highlights of what’s included in Twitter Bootstrap as part of Bootstrap. Head over to the Bootstrap website or Github project page to download and learn more.</p>
+    <h3>Variables</h3>
+    <p>Variables in Less are perfect for maintaining and updating your CSS headache free. When you want to change a color value or a frequently used value, update it in one spot and you’re set.</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="com">// Links</span></li><li class="L1"><span class="lit">@linkColor</span><span class="pun">:</span><span class="pln">         </span><span class="com">#8b59c2;</span></li><li class="L2"><span class="lit">@linkColorHover</span><span class="pun">:</span><span class="pln">    darken</span><span class="pun">(</span><span class="lit">@linkColor</span><span class="pun">,</span><span class="pln"> </span><span class="lit">10</span><span class="pun">);</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="com">// Grays</span></li><li class="L5"><span class="lit">@black</span><span class="pun">:</span><span class="pln">             </span><span class="com">#000;</span></li><li class="L6"><span class="lit">@grayDark</span><span class="pun">:</span><span class="pln">          lighten</span><span class="pun">(</span><span class="lit">@black</span><span class="pun">,</span><span class="pln"> </span><span class="lit">25</span><span class="pun">%);</span></li><li class="L7"><span class="lit">@gray</span><span class="pun">:</span><span class="pln">              lighten</span><span class="pun">(</span><span class="lit">@black</span><span class="pun">,</span><span class="pln"> </span><span class="lit">50</span><span class="pun">%);</span></li><li class="L8"><span class="lit">@grayLight</span><span class="pun">:</span><span class="pln">         lighten</span><span class="pun">(</span><span class="lit">@black</span><span class="pun">,</span><span class="pln"> </span><span class="lit">70</span><span class="pun">%);</span></li><li class="L9"><span class="lit">@grayLighter</span><span class="pun">:</span><span class="pln">       lighten</span><span class="pun">(</span><span class="lit">@black</span><span class="pun">,</span><span class="pln"> </span><span class="lit">90</span><span class="pun">%);</span></li><li class="L0"><span class="lit">@white</span><span class="pun">:</span><span class="pln">             </span><span class="com">#fff;</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="com">// Accent Colors</span></li><li class="L3"><span class="lit">@blue</span><span class="pun">:</span><span class="pln">              </span><span class="com">#08b5fb;</span></li><li class="L4"><span class="lit">@green</span><span class="pun">:</span><span class="pln">             </span><span class="com">#46a546;</span></li><li class="L5"><span class="lit">@red</span><span class="pun">:</span><span class="pln">               </span><span class="com">#9d261d;</span></li><li class="L6"><span class="lit">@yellow</span><span class="pun">:</span><span class="pln">            </span><span class="com">#ffc40d;</span></li><li class="L7"><span class="lit">@orange</span><span class="pun">:</span><span class="pln">            </span><span class="com">#f89406;</span></li><li class="L8"><span class="lit">@pink</span><span class="pun">:</span><span class="pln">              </span><span class="com">#c3325f;</span></li><li class="L9"><span class="lit">@purple</span><span class="pun">:</span><span class="pln">            </span><span class="com">#7a43b6;</span></li><li class="L0"><span class="pln">&nbsp;</span></li><li class="L1"><span class="com">// Baseline grid</span></li><li class="L2"><span class="lit">@basefont</span><span class="pun">:</span><span class="pln">          </span><span class="lit">13px</span><span class="pun">;</span></li><li class="L3"><span class="lit">@baseline</span><span class="pun">:</span><span class="pln">          </span><span class="lit">18px</span><span class="pun">;</span></li></ol></pre>
+
+<h3>Commenting</h3>
+<p>Less also provides another style of commenting in addition to CSS’s normal <code>/* ... */</code> syntax.</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="com">// This is a comment</span></li><li class="L1"><span class="com">/* This is also a comment */</span></li></ol></pre>
+
+<h3>Mixins up the wazoo</h3>
+<p>Mixins are basically includes or partials for CSS, allowing you to combine a block of code into one. They’re great for vendor prefixed properties like <code>box-shadow</code>, cross-browser gradients, font stacks, and more. Below is a sample of the mixins that are included with Bootstrap.</p>
+<h4>Font stacks</h4>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="com">#font {</span></li><li class="L1"><span class="pln">  </span><span class="pun">.</span><span class="pln">shorthand</span><span class="pun">(</span><span class="lit">@weight</span><span class="pun">:</span><span class="pln"> normal</span><span class="pun">,</span><span class="pln"> </span><span class="lit">@size</span><span class="pun">:</span><span class="pln"> </span><span class="lit">14px</span><span class="pun">,</span><span class="pln"> </span><span class="lit">@lineHeight</span><span class="pun">:</span><span class="pln"> </span><span class="lit">20px</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L2"><span class="pln">    font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="pln"> </span><span class="lit">@size</span><span class="pun">;</span></li><li class="L3"><span class="pln">    font</span><span class="pun">-</span><span class="pln">weight</span><span class="pun">:</span><span class="pln"> </span><span class="lit">@weight</span><span class="pun">;</span></li><li class="L4"><span class="pln">    line</span><span class="pun">-</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">@lineHeight</span><span class="pun">;</span></li><li class="L5"><span class="pln">  </span><span class="pun">}</span></li><li class="L6"><span class="pln">  </span><span class="pun">.</span><span class="pln">sans</span><span class="pun">-</span><span class="pln">serif</span><span class="pun">(</span><span class="lit">@weight</span><span class="pun">:</span><span class="pln"> normal</span><span class="pun">,</span><span class="pln"> </span><span class="lit">@size</span><span class="pun">:</span><span class="pln"> </span><span class="lit">14px</span><span class="pun">,</span><span class="pln"> </span><span class="lit">@lineHeight</span><span class="pun">:</span><span class="pln"> </span><span class="lit">20px</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L7"><span class="pln">    font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Helvetica Neue"</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Helvetica</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Arial</span><span class="pun">,</span><span class="pln"> sans</span><span class="pun">-</span><span class="pln">serif</span><span class="pun">;</span></li><li class="L8"><span class="pln">    font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="pln"> </span><span class="lit">@size</span><span class="pun">;</span></li><li class="L9"><span class="pln">    font</span><span class="pun">-</span><span class="pln">weight</span><span class="pun">:</span><span class="pln"> </span><span class="lit">@weight</span><span class="pun">;</span></li><li class="L0"><span class="pln">    line</span><span class="pun">-</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">@lineHeight</span><span class="pun">;</span></li><li class="L1"><span class="pln">  </span><span class="pun">}</span></li><li class="L2"><span class="pln">  </span><span class="pun">...</span></li><li class="L3"><span class="pun">}</span></li></ol></pre>
+<h4>Gradients</h4>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="com">#gradient {</span></li><li class="L1"><span class="pln">  </span><span class="pun">...</span></li><li class="L2"><span class="pln">  </span><span class="pun">.</span><span class="pln">vertical </span><span class="pun">(</span><span class="lit">@startColor</span><span class="pun">:</span><span class="pln"> </span><span class="com">#555, @endColor: #333) {</span></li><li class="L3"><span class="pln">    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="lit">@endColor</span><span class="pun">;</span></li><li class="L4"><span class="pln">    background</span><span class="pun">-</span><span class="pln">repeat</span><span class="pun">:</span><span class="pln"> repeat</span><span class="pun">-</span><span class="pln">x</span><span class="pun">;</span></li><li class="L5"><span class="pln">    background</span><span class="pun">-</span><span class="pln">image</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="pln">khtml</span><span class="pun">-</span><span class="pln">gradient</span><span class="pun">(</span><span class="pln">linear</span><span class="pun">,</span><span class="pln"> left top</span><span class="pun">,</span><span class="pln"> left bottom</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">from</span><span class="pun">(</span><span class="lit">@startColor</span><span class="pun">),</span><span class="pln"> to</span><span class="pun">(</span><span class="lit">@endColor</span><span class="pun">));</span><span class="pln"> </span><span class="com">// Konqueror</span></li><li class="L6"><span class="pln">    background</span><span class="pun">-</span><span class="pln">image</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">linear</span><span class="pun">-</span><span class="pln">gradient</span><span class="pun">(</span><span class="lit">@startColor</span><span class="pun">,</span><span class="pln"> </span><span class="lit">@endColor</span><span class="pun">);</span><span class="pln"> </span><span class="com">// FF 3.6+</span></li><li class="L7"><span class="pln">    background</span><span class="pun">-</span><span class="pln">image</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">linear</span><span class="pun">-</span><span class="pln">gradient</span><span class="pun">(</span><span class="lit">@startColor</span><span class="pun">,</span><span class="pln"> </span><span class="lit">@endColor</span><span class="pun">);</span><span class="pln"> </span><span class="com">// IE10</span></li><li class="L8"><span class="pln">    background</span><span class="pun">-</span><span class="pln">image</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">gradient</span><span class="pun">(</span><span class="pln">linear</span><span class="pun">,</span><span class="pln"> left top</span><span class="pun">,</span><span class="pln"> left bottom</span><span class="pun">,</span><span class="pln"> color</span><span class="pun">-</span><span class="pln">stop</span><span class="pun">(</span><span class="lit">0</span><span class="pun">%,</span><span class="pln"> </span><span class="lit">@startColor</span><span class="pun">),</span><span class="pln"> color</span><span class="pun">-</span><span class="pln">stop</span><span class="pun">(</span><span class="lit">100</span><span class="pun">%,</span><span class="pln"> </span><span class="lit">@endColor</span><span class="pun">));</span><span class="pln"> </span><span class="com">// Safari 4+, Chrome 2+</span></li><li class="L9"><span class="pln">    background</span><span class="pun">-</span><span class="pln">image</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">linear</span><span class="pun">-</span><span class="pln">gradient</span><span class="pun">(</span><span class="lit">@startColor</span><span class="pun">,</span><span class="pln"> </span><span class="lit">@endColor</span><span class="pun">);</span><span class="pln"> </span><span class="com">// Safari 5.1+, Chrome 10+</span></li><li class="L0"><span class="pln">    background</span><span class="pun">-</span><span class="pln">image</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="pln">o</span><span class="pun">-</span><span class="pln">linear</span><span class="pun">-</span><span class="pln">gradient</span><span class="pun">(</span><span class="lit">@startColor</span><span class="pun">,</span><span class="pln"> </span><span class="lit">@endColor</span><span class="pun">);</span><span class="pln"> </span><span class="com">// Opera 11.10</span></li><li class="L1"><span class="pln">    background</span><span class="pun">-</span><span class="pln">image</span><span class="pun">:</span><span class="pln"> linear</span><span class="pun">-</span><span class="pln">gradient</span><span class="pun">(</span><span class="lit">@startColor</span><span class="pun">,</span><span class="pln"> </span><span class="lit">@endColor</span><span class="pun">);</span><span class="pln"> </span><span class="com">// The standard</span></li><li class="L2"><span class="pln">  </span><span class="pun">}</span></li><li class="L3"><span class="pln">  </span><span class="pun">...</span></li><li class="L4"><span class="pun">}</span></li></ol></pre>
+
+<h3>Operations</h3>
+<p>Get fancy and perform some math to generate flexible and powerful mixins like the one below.</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="com">// Griditude</span></li><li class="L1"><span class="lit">@gridColumns</span><span class="pun">:</span><span class="pln">       </span><span class="lit">16</span><span class="pun">;</span></li><li class="L2"><span class="lit">@gridColumnWidth</span><span class="pun">:</span><span class="pln">   </span><span class="lit">40px</span><span class="pun">;</span></li><li class="L3"><span class="lit">@gridGutterWidth</span><span class="pun">:</span><span class="pln">   </span><span class="lit">20px</span><span class="pun">;</span></li><li class="L4"><span class="lit">@siteWidth</span><span class="pun">:</span><span class="pln">         </span><span class="pun">(</span><span class="lit">@gridColumns</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="lit">@gridColumnWidth</span><span class="pun">)</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="pun">(</span><span class="lit">@gridGutterWidth</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">(</span><span class="lit">@gridColumns</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">));</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="com">// Make some columns</span></li><li class="L7"><span class="pun">.</span><span class="pln">columns</span><span class="pun">(</span><span class="lit">@columnSpan</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L8"><span class="pln">  width</span><span class="pun">:</span><span class="pln"> </span><span class="pun">(</span><span class="lit">@gridColumnWidth</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="lit">@columnSpan</span><span class="pun">)</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="pun">(</span><span class="lit">@gridGutterWidth</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">(</span><span class="lit">@columnSpan</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">));</span></li><li class="L9"><span class="pun">}</span></li></ol></pre>
+
+    <h2>Compiling Less</h2>
+    <p>After modifying the <code>.less</code> files in /lib/, you'll need to recompile them in order to regenerate the bootstrap-*.*.*.css and bootstrap-*.*.*.min.css files. If you're submitting a pull request to GitHub, you must always recompile.</p>
+    <h3>Ways to compile</h3>
+    <table class="bordered-table zebra-striped">
+      <thead>
+        <tr>
+          <th style="width: 120px;">Method</th>
+          <th>Steps</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Node with makefile</td>
+          <td>
+            <p>Install the less command line compiler with npm by running the following command:</p>
+            <pre>$ npm install lessc</pre>
+            <p>Once installed just run <code>make</code> from the root of your bootstrap directory and you're all set.</p>
+            <p>Additionally, if you have <a href="https://github.com/mynyml/watchr">watchr</a> installed, you may run <code>make watch</code> to have bootstrap automatically rebuilt every time you edit a file in the bootstrap lib (this isn't required, just a convenience method).</p>
+          </td>
+        </tr>
+          <tr><td>Javascript</td>
+          <td>
+            <p><a href="http://lesscss.org/">Download the latest Less.js</a> and include the path to it (and Bootstrap) in the <code>head</code>.</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet/less"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"/path/to/bootstrap.less"</span><span class="tag">&gt;</span></li><li class="L1"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"/path/to/less.js"</span><span class="tag">&gt;&lt;/script&gt;</span></li></ol></pre>
+            <p>To recompile the .less files, just save them and reload your page. Less.js compiles them and stores them in local storage.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Command line</td>
+          <td>
+            <p>If you already have the less command line tool installed, simply run the following command:</p>
+              <pre>$ lessc ./lib/bootstrap.less &gt; bootstrap.css</pre>
+            <p>Be sure to include <code>--compress</code> in that command if you're trying to save some bytes!</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Less Mac app</td>
+          <td>
+            <p><a href="http://incident57.com/less/">The unofficial Mac app</a> watches directories of .less files and compiles the code to local files after every save of a watched .less file.</p>
+            <p>If you like, you can toggle preferences in the app for automatic minifying and which directory the compiled files end up in.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</section>
+
+
+
+    </section>

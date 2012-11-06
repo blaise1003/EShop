@@ -1,0 +1,18 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+   <li>{% trans "Checkout" %}</li>
+{% endblock %}
+
+{% block content %}
+<div id="orderfailure">
+<h4>{% trans "Failed payment" %}</h4>
+    <div class="alert alert-error">{% trans 'We are sorry, but the payment process finished with a failure.' %}
+    <p>{% trans 'You may' %} <a href="{% url satchmo_cart %}">{% trans 'proceed to the cart' %}</a> {% trans 'and check out again, using other payment method.' %}</p>
+    </div>
+
+
+</div>
+{% endblock %}

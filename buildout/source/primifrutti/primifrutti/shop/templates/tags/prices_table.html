@@ -1,0 +1,27 @@
+{% load i18n satchmo_discounts satchmo_currency %}
+{% if prices %}
+   <h3>{% trans "Prices" %}
+       <small>{% if default_view_tax %}{% trans '(incl. tax)' %}{% endif %}</small>
+   </h3>
+   <table class="table table-striped">
+     <thead>
+       <tr>
+         <th>{% trans "Quantity" %}</th>
+         <th>{% trans "Price" %}</th>
+       </tr>
+     </thead>
+     <tbody>
+         {% for price in prices %}
+         <tr>
+             <td>
+                 {{price.quantity|floatformat}} {{ units.value }}
+             </td>
+             <td>
+                 {{ price.price|currency }}
+                 &nbsp;<span class="label label-success">{% trans "Offer" %}</span></td>
+             </td>
+         </tr>
+         {% endfor %}
+     </tbody>
+   </table>
+{% endif %}

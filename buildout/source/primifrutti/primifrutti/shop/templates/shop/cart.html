@@ -1,0 +1,164 @@
+{% extends "shop/base.html" %}
+{% load i18n thumbnail %}
+{% load satchmo_cart %}
+{% load satchmo_currency %}
+{% load satchmo_util %}
+{% load satchmo_product %}
+{% load satchmo_discounts %}
+{% load normalize_decimal %}
+{% load ui_tags %}
+
+{% block navbar %}
+    <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+    <li>{% trans "Cart" %}</li>
+{% endblock %}
+
+{% block spancheckout %}
+<div id="content" class="span12">
+    <div id="cart-page">
+        <ul class="breadcrumb-step">
+            <li class="first"><i class="icon-shopping-cart"></i>
+                {% trans "Checkout:" %}</li><span class="divider">&nbsp;</span>
+            <li class="active">{% trans "1. Cart" %}</li><span class="divider">&nbsp;</span>
+            <li>{% trans "2. Personal Data" %}</li><span class="divider">&nbsp;</span>
+            <li>{% trans "3. Shipment" %}</li><span class="divider">&nbsp;</span>
+            <li>{% trans "4. Order Confirm" %}</li>
+        </ul>
+        <h1 class="page-header">{% trans "Your Cart" %} <small>{% trans "The list of products you're buying" %}</small></h1>
+
+        {% if error_message %}
+            <div class="alert-message warning">{{ error_message }}</div>
+        {% endif %}
+        {% if cart.is_empty %}
+            <h4>{% trans "Your cart is empty." %}</h4>
+        {% else %}
+        
+        <table class="table table-striped">
+              <thead>
+                   <th>{% trans "Item" %}</th>
+                   <th>{% trans "Quantity" %}</th>
+                   {% if sale %}
+                   <th>{% trans "Regular Price" %}</th>
+                   <th>{% trans "Regular Price (incl. tax)" %}</th>
+                   <th>{% trans "Sale Price (incl. tax)" %}
+                   {% else %}
+                   <th>{% trans "Price" %}</th>
+                   <th>{% trans "Price (incl. tax)" %}</th>
+                   {% endif %}
+                   <th class="right">{% trans "Total" %}</th>
+                   <th class="right">{% if default_view_tax %}{% trans "Total<br/>(incl.&nbsp;tax)" %}{% else %}{% trans "Total" %}{% endif %}</th>
+                   <th class="right"></th>
+                </thead>
+              {% for cartitem in cart %}
+              <tr>
+                     <td align="left" width="25%">
+                         <a href="{{cartitem.product.get_absolute_url}}">
+                             {% thumbnail cartitem.product.main_image.picture 60x60 as image %}
+           	                <img src="{{ image.absolute_url }}" class="thumbnail"
+                                   alt="{{cartitem.product.name}}"
+                                   width="{{image.width}}px"
+                                   height="{{image.height}}px" />
+                         </a>
+                         <a href="{{cartitem.product.get_absolute_url}}">{{ cartitem.description }}</a>
+                     </td>
+                     <td width="17%">
+                         <form class="qtyform" id="form-{{ cartitem.id }}" action="{% url satchmo_cart_set_qty %}" method="post">
+                             {% csrf_token %}
+                             <input class="btn" type="hidden" name="cartitem" value="{{ cartitem.id }}" />
+                                 <div class="input-prepend">
+                                   <span class="add-on">{{cartitem.product.get_main_units}}</span>
+                                   <input type="text" id="id_quantity" name="quantity" value="{{ cartitem.quantity|normalize_decimal }}" size="1" />
+                                 </div>
+                                 <i class="icon-refresh"></i>
+                                 <input type="submit" id="id_update_submit" value="{% trans 'update' %}" />
+                         </form>
+                     </td>
+             
+                     <td width="10%">
+                       <p>{{ cartitem.product|untaxed_discount_price:""|currency }}</p>
+                       <p style="font-style: italic; font-size: 80%;">
+                         ({% trans "Tax" %}: {{cartitem.product|product_tax}})
+                       </p>
+                     </td>
+                     {% if sale %}
+                     <td width="10%">
+                         {{ cartitem.product|taxed_discount_price:""|currency }}
+                     </td>
+                     {% endif %}
+                     <td width="10%">{{ cartitem.product|taxed_discount_price:sale|currency }}</td>
+                     <td width="10%" class="right">
+                         <span class="price">{{ cartitem|untaxed_discount_line_total:sale|currency }}</span>
+                     <td width="10%" class="right">
+                         <span class="price">{{ cartitem|taxed_discount_line_total:sale|currency }}</span>
+                     </td>
+                     <td width="8%" class="right">
+                         <form action="{% url satchmo_cart_remove %}" method="post">
+    						 {% csrf_token %}
+                             <input type="hidden" name="cartitem" value="{{ cartitem.id }}" />
+                             <div class="button">
+                                 <i class="icon-remove"></i>
+                                 <input type="submit" value="{% trans 'Remove' %}" />
+                             </div>
+                         </form>
+                     </td>
+              </tr>
+          
+              {% cartitem_custom_details cartitem %}
+              {% cartitem_subscription_details cartitem %}
+              {% endfor %}
+              <tr>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 {% if sale %}<td></td>{% endif %}
+                 <td></td>
+                 <td>
+                     <span class="price tot" style="font-size: 90%;">
+                         <strong>{% trans "Total" %}:</strong>
+                     </span>
+                 </td>
+                 <td>
+                     <span class="price tot" style="font-size: 90%;">
+                         <strong>{% trans "Total (incl. tax)" %}:</strong>
+                     </span>
+                 </td>
+                 <td></td>
+              </tr>
+              <tr>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 {% if sale %}<td></td>{% endif %}
+                 <td></td>
+                 <td style="text-align: right;">
+                     <span class="price tot">
+                         {{ cart|untaxed_discount_cart_total:sale|currency }}
+                     </span>
+                 </td>
+                 <td style="text-align: right;">
+                     <span class="price tot">
+                         {{ cart|taxed_discount_cart_total:sale|currency }}
+                     </span>
+                 </td>
+                 <td></td>
+              </tr>
+             </table>
+             <br />
+             {% if sale %}
+                  {% include "product/some_discount_eligible.html" %}
+             {% endif %}
+        {% endif %}
+    </div>
+    <div id="bttn-cart" class="well">
+        <a class="btn btn-small" href="{% url satchmo_home %}">{% trans "Continue shopping" %}</a>
+        <a class="btn btn-small" href="{% url satchmo_cart_empty %}">{% trans 'Empty' %}</a>
+        <a class="btn pull-right btn-primary-cart" href="{% url satchmo_checkout-step1 %}">{% trans 'Check out' %}</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block leftcolumn %}
+{% endblock %}
+
+{% block rightcolumn %}
+{% endblock %}

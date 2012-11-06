@@ -1,0 +1,72 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load satchmo_order %}
+{% load satchmo_google %}
+{% load satchmo_util%}
+{% load normalize_decimal %}
+
+{% block extra-head %}
+{% endblock %}
+
+{% block navbar %}
+   <li class="first"><a href="{{ shop_base }}/">{% trans "Home" %}</a></li>
+   <li>{% trans "Checkout" %}</li>
+{% endblock %}
+
+{% block content %}
+
+<div id="ordersuccess">
+    <div class="ship-step">&nbsp;</div>
+    <h1 class="documentFirstHeading">{% trans "Thank you for your order!" %}</h1>
+    
+    
+    <h3>{% trans 'Please print out this page as a receipt.  You will also receive an email with this information.' %}</h3>
+    <div class="sf_gray">
+        {% order_tracking_details order %}
+        <div class="visualClear"><!-- --></div>
+        <br />
+        <p class="bold">{% trans "Thank you for your order!" %}</p>
+        <hr />
+        <div class="account-buttons">
+            {% trans "You can check your order status" %}:
+            <a class="button-orange" href="{% url satchmo_order_history %}">{% trans "order history" %}</a> oppure
+            <a class="button-back" href="/">{% trans 'Proceed with another purchase' %}</a>
+        </div>
+    </div>
+    <div class="visualClear"><!-- --></div>
+    <p> &nbsp;</p>
+    
+<!-- Google Code for Acquisto Conversion Page -->
+<div id="google-conversion">
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 958620414;
+var google_conversion_language = "it";
+var google_conversion_format = "2";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "_vWRCKrkggMQ_sWNyQM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/958620414/?label=_vWRCKrkggMQ_sWNyQM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+</div>
+<!-- Google Code for Acquisto Conversion Page -->
+
+{% endblock %}
+
+{% block google-tracker %}
+{% if shop.options.GOOGLE.ANALYTICS.value %}
+{% show_tracker %}
+{% show_receipt %}
+{% endif %}
+{% if shop.options.GOOGLE.ADWORDS.value %}
+{% google_adwords_sale %}
+{% endif %}
+{% endblock %}
+

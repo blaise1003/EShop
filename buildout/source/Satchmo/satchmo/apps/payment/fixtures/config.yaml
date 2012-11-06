@@ -1,0 +1,8 @@
+- fields: {group: PAYMENT_DUMMY, key: CREDITCHOICES, site: 1, value: '["Visa", "Mastercard",
+      "Discover"]'}
+  model: livesettings.setting
+  pk: 1
+- fields: {group: PAYMENT, key: ALLOW_URL_REBILL, site: 1, value: 'True'}
+  model: livesettings.setting
+  pk: 3
+

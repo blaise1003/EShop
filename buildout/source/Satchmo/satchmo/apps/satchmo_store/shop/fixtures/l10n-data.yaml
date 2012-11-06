@@ -1,0 +1,265 @@
+- fields: {active: true, admin_area: !!str 'st', continent: !!str 'NA',
+    iso2_code: !!str 'US', iso3_code: !!str 'USA', name: !!str 'UNITED
+      STATES', numcode: 840, printable_name: !!str 'United States of America'}
+  model: !!str 'l10n.country'
+  pk: !!int '231'
+- fields: {abbrev: !!str 'AL', active: true, country: !!int '231',
+    name: !!str 'Alabama'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '1'
+- fields: {abbrev: !!str 'AK', active: true, country: !!int '231',
+    name: !!str 'Alaska'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '2'
+- fields: {abbrev: !!str 'AS', active: true, country: !!int '231',
+    name: !!str 'American Samoa'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '3'
+- fields: {abbrev: !!str 'AZ', active: true, country: !!int '231',
+    name: !!str 'Arizona'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '4'
+- fields: {abbrev: !!str 'AR', active: true, country: !!int '231',
+    name: !!str 'Arkansas'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '5'
+- fields: {abbrev: !!str 'AE', active: true, country: !!int '231',
+    name: !!str 'Armed Forces Africa'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '6'
+- fields: {abbrev: !!str 'AA', active: true, country: !!int '231',
+    name: !!str 'Armed Forces Americas (except Canada)'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '7'
+- fields: {abbrev: !!str 'AE', active: true, country: !!int '231',
+    name: !!str 'Armed Forces Canada'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '8'
+- fields: {abbrev: !!str 'AE', active: true, country: !!int '231',
+    name: !!str 'Armed Forces Europe'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '9'
+- fields: {abbrev: !!str 'AE', active: true, country: !!int '231',
+    name: !!str 'Armed Forces Middle East'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '10'
+- fields: {abbrev: !!str 'AP', active: true, country: !!int '231',
+    name: !!str 'Armed Forces Pacific'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '11'
+- fields: {abbrev: !!str 'CA', active: true, country: !!int '231',
+    name: !!str 'California'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '12'
+- fields: {abbrev: !!str 'CO', active: true, country: !!int '231',
+    name: !!str 'Colorado'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '13'
+- fields: {abbrev: !!str 'CT', active: true, country: !!int '231',
+    name: !!str 'Connecticut'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '14'
+- fields: {abbrev: !!str 'DE', active: true, country: !!int '231',
+    name: !!str 'Delaware'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '15'
+- fields: {abbrev: !!str 'DC', active: true, country: !!int '231',
+    name: !!str 'District of Columbia'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '16'
+- fields: {abbrev: !!str 'FM', active: true, country: !!int '231',
+    name: !!str 'Federated States of Micronesia'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '17'
+- fields: {abbrev: !!str 'FL', active: true, country: !!int '231',
+    name: !!str 'Florida'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '18'
+- fields: {abbrev: !!str 'GA', active: true, country: !!int '231',
+    name: !!str 'Georgia'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '19'
+- fields: {abbrev: !!str 'GU', active: true, country: !!int '231',
+    name: !!str 'Guam'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '20'
+- fields: {abbrev: !!str 'HI', active: true, country: !!int '231',
+    name: !!str 'Hawaii'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '21'
+- fields: {abbrev: !!str 'ID', active: true, country: !!int '231',
+    name: !!str 'Idaho'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '22'
+- fields: {abbrev: !!str 'IL', active: true, country: !!int '231',
+    name: !!str 'Illinois'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '23'
+- fields: {abbrev: !!str 'IN', active: true, country: !!int '231',
+    name: !!str 'Indiana'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '24'
+- fields: {abbrev: !!str 'IA', active: true, country: !!int '231',
+    name: !!str 'Iowa'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '25'
+- fields: {abbrev: !!str 'KS', active: true, country: !!int '231',
+    name: !!str 'Kansas'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '26'
+- fields: {abbrev: !!str 'KY', active: true, country: !!int '231',
+    name: !!str 'Kentucky'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '27'
+- fields: {abbrev: !!str 'LA', active: true, country: !!int '231',
+    name: !!str 'Louisiana'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '28'
+- fields: {abbrev: !!str 'ME', active: true, country: !!int '231',
+    name: !!str 'Maine'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '29'
+- fields: {abbrev: !!str 'MH', active: true, country: !!int '231',
+    name: !!str 'Marshall Islands'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '30'
+- fields: {abbrev: !!str 'MD', active: true, country: !!int '231',
+    name: !!str 'Maryland'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '31'
+- fields: {abbrev: !!str 'MA', active: true, country: !!int '231',
+    name: !!str 'Massachusetts'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '32'
+- fields: {abbrev: !!str 'MI', active: true, country: !!int '231',
+    name: !!str 'Michigan'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '33'
+- fields: {abbrev: !!str 'MN', active: true, country: !!int '231',
+    name: !!str 'Minnesota'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '34'
+- fields: {abbrev: !!str 'MS', active: true, country: !!int '231',
+    name: !!str 'Mississippi'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '35'
+- fields: {abbrev: !!str 'MO', active: true, country: !!int '231',
+    name: !!str 'Missouri'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '36'
+- fields: {abbrev: !!str 'MT', active: true, country: !!int '231',
+    name: !!str 'Montana'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '37'
+- fields: {abbrev: !!str 'NE', active: true, country: !!int '231',
+    name: !!str 'Nebraska'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '38'
+- fields: {abbrev: !!str 'NV', active: true, country: !!int '231',
+    name: !!str 'Nevada'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '39'
+- fields: {abbrev: !!str 'NH', active: true, country: !!int '231',
+    name: !!str 'New Hampshire'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '40'
+- fields: {abbrev: !!str 'NJ', active: true, country: !!int '231',
+    name: !!str 'New Jersey'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '41'
+- fields: {abbrev: !!str 'NM', active: true, country: !!int '231',
+    name: !!str 'New Mexico'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '42'
+- fields: {abbrev: !!str 'NY', active: true, country: !!int '231',
+    name: !!str 'New York'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '43'
+- fields: {abbrev: !!str 'NC', active: true, country: !!int '231',
+    name: !!str 'North Carolina'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '44'
+- fields: {abbrev: !!str 'ND', active: true, country: !!int '231',
+    name: !!str 'North Dakota'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '45'
+- fields: {abbrev: !!str 'MP', active: true, country: !!int '231',
+    name: !!str 'Northern Mariana Islands'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '46'
+- fields: {abbrev: !!str 'OH', active: true, country: !!int '231',
+    name: !!str 'Ohio'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '47'
+- fields: {abbrev: !!str 'OK', active: true, country: !!int '231',
+    name: !!str 'Oklahoma'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '48'
+- fields: {abbrev: !!str 'OR', active: true, country: !!int '231',
+    name: !!str 'Oregon'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '49'
+- fields: {abbrev: !!str 'PW', active: true, country: !!int '231',
+    name: !!str 'Palau'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '50'
+- fields: {abbrev: !!str 'PA', active: true, country: !!int '231',
+    name: !!str 'Pennsylvania'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '51'
+- fields: {abbrev: !!str 'PR', active: true, country: !!int '231',
+    name: !!str 'Puerto Rico'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '52'
+- fields: {abbrev: !!str 'RI', active: true, country: !!int '231',
+    name: !!str 'Rhode Island'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '53'
+- fields: {abbrev: !!str 'SC', active: true, country: !!int '231',
+    name: !!str 'South Carolina'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '54'
+- fields: {abbrev: !!str 'SD', active: true, country: !!int '231',
+    name: !!str 'South Dakota'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '55'
+- fields: {abbrev: !!str 'TN', active: true, country: !!int '231',
+    name: !!str 'Tennessee'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '56'
+- fields: {abbrev: !!str 'TX', active: true, country: !!int '231',
+    name: !!str 'Texas'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '57'
+- fields: {abbrev: !!str 'UT', active: true, country: !!int '231',
+    name: !!str 'Utah'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '58'
+- fields: {abbrev: !!str 'VT', active: true, country: !!int '231',
+    name: !!str 'Vermont'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '59'
+- fields: {abbrev: !!str 'VI', active: true, country: !!int '231',
+    name: !!str 'Virgin Islands'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '60'
+- fields: {abbrev: !!str 'VA', active: true, country: !!int '231',
+    name: !!str 'Virginia'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '61'
+- fields: {abbrev: !!str 'WA', active: true, country: !!int '231',
+    name: !!str 'Washington'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '62'
+- fields: {abbrev: !!str 'WV', active: true, country: !!int '231',
+    name: !!str 'West Virginia'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '63'
+- fields: {abbrev: !!str 'WI', active: true, country: !!int '231',
+    name: !!str 'Wisconsin'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '64'
+- fields: {abbrev: !!str 'WY', active: true, country: !!int '231',
+    name: !!str 'Wyoming'}
+  model: !!str 'l10n.adminarea'
+  pk: !!int '65'

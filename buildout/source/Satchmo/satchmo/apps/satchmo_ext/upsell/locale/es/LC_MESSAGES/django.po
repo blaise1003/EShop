@@ -1,0 +1,84 @@
+# 
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-28 19:29+0000\n"
+"PO-Revision-Date: 2011-09-28 21:34\n"
+"Last-Translator: Andrea  de la Huerta <info@metamorfosys.de>\n"
+"Language-Team: Spanish <satchmo-users@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"X-Translated-Using: django-rosetta 0.6.1\n"
+
+#: models.py:24
+msgid "Checkbox to add 1"
+msgstr "Casilla para añadir 1"
+
+#: models.py:25
+msgid "Checkbox to add 1, checked by default"
+msgstr "Casilla para añadir 1, marcada por defecto"
+
+#: models.py:26
+msgid "Checkbox to match quantity"
+msgstr "Casilla que coincide con la cantidad"
+
+#: models.py:27
+msgid "Checkbox to match quantity, checked by default"
+msgstr "Casilla que coincide con la cantidad, marcada por defecto"
+
+#: models.py:28
+msgid "Form with 0 quantity"
+msgstr "Formulario con cantidad 0"
+
+#: models.py:33
+msgid "Target Product"
+msgstr "Productos de origen"
+
+#: models.py:35
+msgid "The products for which you want to show this goal product as an Upsell."
+msgstr ""
+"Los productos para los que se quiere mostrar este producto como una "
+"sugerencia de venta."
+
+#: models.py:37
+msgid "Goal Product"
+msgstr "Producto a sugerir"
+
+#: models.py:40
+msgid "Creation Date"
+msgstr "Fecha de creación"
+
+#: models.py:42
+msgid "Upsell Style"
+msgstr "Estilo del producto sugerido"
+
+#: models.py:45
+msgid "Notes"
+msgstr "Notas"
+
+#: models.py:46
+msgid "Internal notes"
+msgstr "Notas internas"
+
+#: models.py:129
+msgid "language"
+msgstr "idioma"
+
+#: models.py:131
+msgid "Description"
+msgstr "descripción"
+
+#: views.py:69
+#, python-format
+msgid "'%(product)s' couldn't be added to the cart. %(details)s"
+msgstr "No se pudo agregar '%(product)s' a la cesta. %(details)s"
+
+#: templates/upsell/product_upsell.html:15
+msgid "Add"
+msgstr "Agregar"
+
+#: templates/upsell/product_upsell.html:18
+msgid "Quantity"
+msgstr "Cantidad"

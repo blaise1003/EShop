@@ -1,0 +1,40 @@
+{% load i18n %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title></title></head>
+<body style="font-family:'Helvetica Neue', Helvetica, Arial;font-size:90%;">
+<h1>{% blocktrans %}Administration {{ site_name }},{% endblocktrans %}</h1>
+
+<p>{% trans "Stale shipments are summarized below:" %}</p>
+
+<table style="width:100%;margin-bottom:20px;">
+	<tr style="width:80%;border-bottom:1px solid #ccc;">
+		<th style="text-align:left;border-bottom:1px solid #ccc;">{% trans "ID" %}</th>
+		<th style="text-align:left;border-bottom:1px solid #ccc;">{% trans "Mission" %}</th>
+		<th style="text-align:left;border-bottom:1px solid #ccc;">{% trans "Order ID" %}</th>
+		<th style="text-align:left;border-bottom:1px solid #ccc;">{% trans "Contact" %}</th>
+	</tr>
+	{% for item in deliveries %}
+	<tr>
+		<td>
+		{{ item.id }}
+		</td>
+		<td>
+		{{ item.mission }}
+		</td>
+		<td>
+		#{{ item.order.id }}
+		</td>
+		<td>
+		{{ item.order.contact.email }}
+		</td>
+	</tr>
+	{% endfor %}
+
+</table>
+
+
+<p>{% trans "Regards" %},</p>
+<p>{% trans "Store Management" %}</p>
+
+</body>
+</html>

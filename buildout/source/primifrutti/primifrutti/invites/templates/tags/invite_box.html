@@ -1,0 +1,5 @@
+{% load i18n %}
+
+{% if invites_available %}
+    <li><a href="{% url invites_invite %}"><i class="icon-list-alt"></i>&nbsp;{% trans "Invite your friends" %}</a></li>
+{% endif %}

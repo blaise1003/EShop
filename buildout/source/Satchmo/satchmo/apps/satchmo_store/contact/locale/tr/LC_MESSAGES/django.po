@@ -1,0 +1,1257 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# This file is distributed under the same license as the Satchmo package.
+# Selin Çuhadar <selincuhadar@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Satchmo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-18 19:02+0200\n"
+"PO-Revision-Date: 2008-06-09 18:18+0200\n"
+"Last-Translator: Selin Çuhadar <selincuhadar@gmail.com>\n"
+"Language-Team: Turkish <selincuhadar@gmail.com>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Country: TURKEY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: config.py:9
+msgid "Only authenticated users can check out"
+msgstr ""
+
+#: config.py:10
+msgid ""
+"Users will be required to authenticate (and create an account if neccessary) "
+"before checkout."
+msgstr ""
+
+#: config.py:18
+msgid "Required billing data"
+msgstr ""
+
+#: config.py:20
+msgid ""
+"Users may be required to provide some set of billing address. Other fields "
+"are optional. You may shorten the checkout process here, but be careful, as "
+"this may leave you orders with almost no customer data! Some payment modules "
+"may override this setting."
+msgstr ""
+
+#: config.py:26 config.py:69 forms.py:36 models.py:151
+msgid "Email"
+msgstr "Email"
+
+#: config.py:27 forms.py:37 models.py:144
+#, fuzzy
+msgid "Title"
+msgstr "Tutar"
+
+#: config.py:28 models.py:145 templates/contact/update_form.html:29
+msgid "First name"
+msgstr "Adınız"
+
+#: config.py:29 models.py:146 templates/contact/update_form.html:32
+msgid "Last name"
+msgstr "Soyadınız"
+
+#: config.py:30 forms.py:40
+msgid "Phone"
+msgstr "Telefon"
+
+#: config.py:31 config.py:50 forms.py:41 forms.py:49 models.py:291
+#, fuzzy
+msgid "Addressee"
+msgstr "Adres Defteri"
+
+#: config.py:32 forms.py:42 models.py:89 models.py:149
+#: templates/contact/update_form.html:35
+msgid "Organization"
+msgstr "Kuruluş"
+
+#: config.py:33 config.py:51 forms.py:43 forms.py:50 forms.py:467
+#: models.py:292 models.py:293
+#: templates/contact/_contact_info_form_billing.html:9
+#: templates/contact/_contact_info_form_billing.html:12
+#: templates/contact/_contact_info_form_shipping.html:12
+#: templates/contact/_contact_info_form_shipping.html:15
+#: templates/contact/address_form.html:41
+#: templates/contact/address_form.html:44
+msgid "Street"
+msgstr "Cadde"
+
+#: config.py:34 config.py:52
+msgid "Street (second line)"
+msgstr ""
+
+#: config.py:35 config.py:53 forms.py:45 forms.py:52 forms.py:469
+#: models.py:295 templates/contact/_contact_info_form_billing.html:15
+#: templates/contact/_contact_info_form_shipping.html:18
+#: templates/contact/address_form.html:47
+msgid "City"
+msgstr "Şehir"
+
+#: config.py:36 config.py:54
+#: templates/contact/_contact_info_form_billing.html:21
+#: templates/contact/_contact_info_form_billing.html:27
+#: templates/contact/_contact_info_form_shipping.html:24
+#: templates/contact/_contact_info_form_shipping.html:30
+#: templates/contact/address_form.html:53
+#: templates/contact/address_form.html:59
+msgid "State/Province"
+msgstr "Eyalet/İl"
+
+#: config.py:37 config.py:55
+msgid "Postal code/ZIP"
+msgstr ""
+
+#: config.py:38 config.py:56 forms.py:78 forms.py:79 forms.py:480
+#: models.py:297 templates/contact/_contact_info_form_billing.html:37
+#: templates/contact/_contact_info_form_shipping.html:40
+#: templates/contact/address_form.html:69
+msgid "Country"
+msgstr "Ülke"
+
+#: config.py:46
+msgid "Required shipping data"
+msgstr ""
+
+#: config.py:47
+msgid "Similar to'REQUIRED_BILLING_DATA', except for shipping fields."
+msgstr ""
+
+#: config.py:65
+msgid "Account Verification"
+msgstr "Hesap Doğrulama"
+
+#: config.py:66
+msgid ""
+"Select the style of account verification.  'Immediate' means no verification "
+"needed."
+msgstr ""
+"Hesap Doğrulama şeklini seçiniz. 'Şimdiki' doğrulamaya gerek yok anlamına "
+"gelir."
+
+#: config.py:68
+#, fuzzy
+msgid "Immediate"
+msgstr "Şimdiki"
+
+#: config.py:74
+#, fuzzy
+msgid "Nickname-Registration"
+msgstr "Kayıt"
+
+#: config.py:75
+msgid ""
+"If checked a user will be able to fill in an individual Nickname-Username at "
+"Account-Registration"
+msgstr ""
+
+#: config.py:82
+#, fuzzy
+msgid "Days to verify account"
+msgstr "Hesabınızın doğrulanacağı günler"
+
+#: forms.py:38
+#, fuzzy
+msgid "First Name"
+msgstr "Adınız"
+
+#: forms.py:39
+#, fuzzy
+msgid "Last Name"
+msgstr "Soyadınız"
+
+#: forms.py:46 forms.py:53 forms.py:106 forms.py:113 forms.py:470 forms.py:481
+#: models.py:294
+msgid "State"
+msgstr "Eyalet"
+
+#: forms.py:47 forms.py:54 forms.py:471
+#, fuzzy
+msgid "ZIP code/Postcode"
+msgstr "Posta kodu"
+
+#: forms.py:48 templates/contact/_contact_info_form_shipping.html:6
+msgid "Shipping same as billing?"
+msgstr "Kargo için fatura adresini kullan?"
+
+#: forms.py:147 forms.py:198 forms.py:225 forms.py:238 forms.py:253
+msgid "This field is required."
+msgstr "Bu alan gerekli."
+
+#: forms.py:148
+msgid "State is required for your country."
+msgstr "Eyalet ülkeniz için gerekli."
+
+#: forms.py:153
+msgid "Invalid state or province."
+msgstr ""
+
+#: forms.py:168
+msgid "That email address is already in use."
+msgstr ""
+
+#: forms.py:242
+msgid "Shipping and Billing countries must match"
+msgstr ""
+
+#: forms.py:462 templates/contact/update_form.html:46
+msgid "Newsletter"
+msgstr "Haberler"
+
+#: forms.py:465
+#, fuzzy
+msgid "Addressee Name"
+msgstr "Adres Defteri"
+
+#: forms.py:466 models.py:241 models.py:255 models.py:289
+#: supplier/models.py:18
+msgid "Description"
+msgstr "Tanıtım"
+
+#: forms.py:499 templates/contact/view_profile.html:25
+msgid "Yes"
+msgstr "Evet"
+
+#: forms.py:500 templates/contact/view_profile.html:25
+msgid "No"
+msgstr "Hayır"
+
+#: forms.py:503
+msgid "Delete entry?"
+msgstr ""
+
+#: models.py:15 models.py:23 models.py:34 models.py:41
+#, fuzzy
+msgid "Key"
+msgstr "anahtar"
+
+#: models.py:16 models.py:24 models.py:35 models.py:42 models.py:71
+msgid "Name"
+msgstr "İsim"
+
+#: models.py:30
+#, fuzzy
+msgid "Contact organization type"
+msgstr "İletişim Bilgileri"
+
+#: models.py:72 models.py:239
+msgid "Type"
+msgstr "Çeşit"
+
+#: models.py:73 models.py:148
+msgid "Role"
+msgstr "İşlev"
+
+#: models.py:74
+msgid "Creation Date"
+msgstr "Üretim Tarihi"
+
+#: models.py:75 models.py:152 supplier/models.py:38 supplier/models.py:83
+msgid "Notes"
+msgstr "Notlar"
+
+#: models.py:90
+msgid "Organizations"
+msgstr "Kuruluşlar"
+
+#: models.py:150
+msgid "Date of birth"
+msgstr "Üretim tarihi"
+
+#: models.py:153
+msgid "Creation date"
+msgstr "Oluşturma Tarihi"
+
+#: models.py:223 models.py:238
+msgid "Contact"
+msgstr "İrtibat"
+
+#: models.py:224
+msgid "Contacts"
+msgstr "İrtibatlar"
+
+#: models.py:227
+msgid "Work"
+msgstr "İş"
+
+#: models.py:228 templates/contact/address_form.html:9
+#: templates/contact/address_form_delete.html:6
+#: templates/contact/login_signup.html:9 templates/contact/update_form.html:5
+#: templates/contact/view_profile.html:6
+#: templates/registration/account_info.html:5
+#: templates/registration/activate.html:6 templates/registration/login.html:5
+#: templates/registration/logout.html:5
+#: templates/registration/password_change_done.html:5
+#: templates/registration/password_change_form.html:5
+#: templates/registration/password_reset_complete.html:5
+#: templates/registration/password_reset_confirm.html:5
+#: templates/registration/password_reset_done.html:5
+#: templates/registration/password_reset_form.html:5
+#: templates/registration/registration_complete.html:6
+#: templates/registration/registration_form.html:5
+#: templates/registration/repeat_activation.html:5
+msgid "Home"
+msgstr "Ev"
+
+#: models.py:229
+msgid "Fax"
+msgstr "Fax"
+
+#: models.py:230
+msgid "Mobile"
+msgstr "Cep"
+
+#: models.py:240
+msgid "Date and Time"
+msgstr "Tarih ve Saat"
+
+#: models.py:247
+#, fuzzy
+msgid "Interaction"
+msgstr "Etkileşim"
+
+#: models.py:248
+#, fuzzy
+msgid "Interactions"
+msgstr "Etkileşimler"
+
+#: models.py:257 models.py:281
+msgid "Phone Number"
+msgstr "Telefon Numarası"
+
+#: models.py:259
+msgid "Primary"
+msgstr ""
+
+#: models.py:282
+msgid "Phone Numbers"
+msgstr "Telefon Numaraları"
+
+#: models.py:290
+msgid "Description of address - Home, Office, Warehouse, etc."
+msgstr "Adres - Ev, Ofis, Depo, etc."
+
+#: models.py:296
+msgid "Zip Code"
+msgstr "Posta Kodu"
+
+#: models.py:298
+msgid "Default Shipping Address"
+msgstr "Geçerli Kargo Adresi"
+
+#: models.py:300
+msgid "Default Billing Address"
+msgstr "Geçerli Fatura Adresi"
+
+#: models.py:331
+msgid "Address Book"
+msgstr "Adres Defteri"
+
+#: models.py:332
+msgid "Address Books"
+msgstr "Adres Defterleri"
+
+#: views.py:136
+msgid "Succcessfully saved addressbook changes."
+msgstr ""
+
+#: supplier/models.py:16 supplier/models.py:33
+#, fuzzy
+msgid "Supplier"
+msgstr "Tedarikçi"
+
+#: supplier/models.py:17
+msgid "Supplier ID"
+msgstr "Tedarikçi ID"
+
+#: supplier/models.py:19
+msgid "Unit Cost"
+msgstr "Birim Tutarı"
+
+#: supplier/models.py:20
+msgid "Inventory"
+msgstr ""
+
+#: supplier/models.py:26
+msgid "Raw Item"
+msgstr ""
+
+#: supplier/models.py:27
+msgid "Raw Items"
+msgstr ""
+
+#: supplier/models.py:34
+msgid "Date Created"
+msgstr "Üretim Tarihi"
+
+#: supplier/models.py:35
+msgid "Subtotal"
+msgstr "Ara Tutar"
+
+#: supplier/models.py:36
+msgid "Shipping"
+msgstr "Kargo"
+
+#: supplier/models.py:37
+msgid "Tax"
+msgstr "Vergi"
+
+#: supplier/models.py:39
+msgid "Total"
+msgstr "Tutar"
+
+#: supplier/models.py:55
+msgid "Supplier Order"
+msgstr "Tedarikçi Siparişi"
+
+#: supplier/models.py:56
+msgid "Supplier Orders"
+msgstr "Tedarikçi Siparişleri"
+
+#: supplier/models.py:63
+msgid "Line Item"
+msgstr ""
+
+#: supplier/models.py:64
+msgid "Line Item Quantity"
+msgstr ""
+
+#: supplier/models.py:65
+msgid "Line Item Total"
+msgstr ""
+
+#: supplier/models.py:71
+msgid "Sent in"
+msgstr "Gönderildi"
+
+#: supplier/models.py:72
+msgid "Shipped"
+msgstr "Nakledildi"
+
+#: supplier/models.py:73
+msgid "Received"
+msgstr "İletildi"
+
+#: supplier/models.py:82
+msgid "Status"
+msgstr "Durum"
+
+#: supplier/models.py:84
+#, fuzzy
+msgid "Date"
+msgstr "Eyalet"
+
+#: supplier/models.py:90
+msgid "Supplier Order Status"
+msgstr "Tedarikçi Sipariş Durumu"
+
+#: supplier/models.py:91
+msgid "Supplier Order Statuses"
+msgstr "Tedarikçi Sipariş Durumları"
+
+#: templates/contact/_addressblock.html:14
+msgid "Not set"
+msgstr "Ayarlanmadı"
+
+#: templates/contact/_contact_info_form_billing.html:4
+msgid "Billing Information"
+msgstr "Fatura Bilgileri"
+
+#: templates/contact/_contact_info_form_billing.html:6
+#, fuzzy
+msgid "Bill To"
+msgstr "Fatura Kesildi"
+
+#: templates/contact/_contact_info_form_billing.html:6
+#: templates/contact/_contact_info_form_shipping.html:9
+msgid "If different from the first and last names above"
+msgstr ""
+
+#: templates/contact/_contact_info_form_billing.html:33
+#: templates/contact/_contact_info_form_shipping.html:36
+#: templates/contact/address_form.html:65
+msgid "Zipcode/Postcode"
+msgstr "Posta kodu"
+
+#: templates/contact/_contact_info_form_shipping.html:4
+#, fuzzy
+msgid "Shipping Information"
+msgstr "Fatura Bilgileri"
+
+#: templates/contact/_contact_info_form_shipping.html:9
+#, fuzzy
+msgid "Ship To"
+msgstr "Kargo Tutarı"
+
+#: templates/contact/_login_form.html:10
+msgid "Existing members login"
+msgstr ""
+
+#: templates/contact/_login_form.html:21
+#, fuzzy
+msgid "Email Address:"
+msgstr "Email adresi"
+
+#: templates/contact/_login_form.html:30
+msgid "Password:"
+msgstr "Şifre:"
+
+#: templates/contact/_login_form.html:39 templates/registration/login.html:23
+msgid "Login"
+msgstr "Oturum aç"
+
+#: templates/contact/address_form.html:10
+#: templates/contact/address_form_delete.html:7
+#: templates/contact/update_form.html:6 templates/contact/view_profile.html:7
+#: templates/registration/password_change_done.html:7
+#: templates/registration/password_change_form.html:7
+msgid "Account"
+msgstr "Kullanıcı Hesabı"
+
+#: templates/contact/address_form.html:11
+#: templates/contact/address_form_delete.html:8
+#, fuzzy
+msgid "Add Address"
+msgstr "Adres Defteri"
+
+#: templates/contact/address_form.html:17
+msgid "Edit address book entry"
+msgstr ""
+
+#: templates/contact/address_form.html:19
+msgid "Add address to your address book"
+msgstr ""
+
+#: templates/contact/address_form.html:22
+#: templates/contact/update_form.html:17
+#, fuzzy
+msgid "Please correct the following error:"
+msgstr ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#: templates/contact/address_form.html:32
+#: templates/contact/update_form.html:23
+msgid "You&apos;ll need to fill out at least the fields with a *"
+msgstr ""
+
+#: templates/contact/address_form.html:34
+#, fuzzy
+msgid "Address Information"
+msgstr "Temel Bilgiler"
+
+#: templates/contact/address_form.html:35
+#, fuzzy
+msgid "Addressee Full Name"
+msgstr "Adres Defteri"
+
+#: templates/contact/address_form.html:38
+#, fuzzy
+msgid "Address Description"
+msgstr "Tanıtım"
+
+#: templates/contact/address_form.html:74
+#: templates/contact/update_form.html:57
+msgid "Update"
+msgstr "Güncelleme"
+
+#: templates/contact/address_form.html:76
+msgid "Save"
+msgstr ""
+
+#: templates/contact/address_form_delete.html:13
+msgid "Delete address book entry"
+msgstr ""
+
+#: templates/contact/address_form_delete.html:19
+#: templates/contact/view_profile.html:33
+msgid "Delete"
+msgstr ""
+
+#: templates/contact/login_signup.html:13
+#: templates/contact/login_signup_address.html:13
+msgid "Login, or sign up to the store"
+msgstr ""
+
+#: templates/contact/login_signup.html:23
+#: templates/contact/login_signup_address.html:23
+msgid "New Members, Create Your Account Below"
+msgstr ""
+
+#: templates/contact/login_signup.html:29
+#: templates/contact/login_signup_address.html:29
+#, fuzzy
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+msgstr[1] ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#: templates/contact/login_signup.html:47
+#: templates/contact/login_signup_address.html:51
+msgid "Sign me up for Email Updates about new products and special offers!"
+msgstr ""
+
+#: templates/contact/login_signup.html:53
+#: templates/contact/login_signup_address.html:65
+#, fuzzy
+msgid "Create"
+msgstr "Üretim Tarihi"
+
+#: templates/contact/login_signup_address.html:47
+#: templates/contact/update_form.html:42
+msgid "Phone number"
+msgstr "Telefon numarası"
+
+#: templates/contact/update_form.html:7
+msgid "Update Profile"
+msgstr "Profilini Güncelle"
+
+#: templates/contact/update_form.html:15
+msgid "Your Profile"
+msgstr "Profilin"
+
+#: templates/contact/update_form.html:25
+msgid "Basic Information"
+msgstr "Temel Bilgiler"
+
+#: templates/contact/update_form.html:26 templates/registration/login.html:17
+#: templates/registration/password_reset_form.html:16
+msgid "Email address"
+msgstr "Email adresi"
+
+#: templates/contact/update_form.html:39
+msgid "Birthday"
+msgstr "Doğumgünü"
+
+#: templates/contact/view_profile.html:11
+#: templates/registration/account_info.html:9
+msgid "Your Account info"
+msgstr "Kullanıcı Hesap bilgileri"
+
+#: templates/contact/view_profile.html:14
+#: templates/registration/account_info.html:11
+#, python-format
+msgid "Welcome, %(full_name)s."
+msgstr "Hoşgeldin, %(full_name)s."
+
+#: templates/contact/view_profile.html:17
+msgid "Your profile"
+msgstr "Profiliniz"
+
+#: templates/contact/view_profile.html:19
+msgid "Email:"
+msgstr "Email:"
+
+#: templates/contact/view_profile.html:21
+#, fuzzy
+msgid "Organization:"
+msgstr "Kuruluş"
+
+#: templates/contact/view_profile.html:23
+msgid "Birthday:"
+msgstr "Doğumgünü:"
+
+#: templates/contact/view_profile.html:25
+msgid "Newsletter:"
+msgstr "Bülten:"
+
+#: templates/contact/view_profile.html:27
+msgid "Billing Address:"
+msgstr "Fatura Adresi:"
+
+#: templates/contact/view_profile.html:28
+msgid "Shipping Address:"
+msgstr "Kargo Adresi:"
+
+#: templates/contact/view_profile.html:30
+#, fuzzy
+msgid "Address Book Entries"
+msgstr "Adres Defterleri"
+
+#: templates/contact/view_profile.html:33
+msgid "Edit"
+msgstr ""
+
+#: templates/contact/view_profile.html:37
+#: templates/contact/view_profile.html:52
+#: templates/registration/account_info.html:13
+msgid "Account options"
+msgstr "Kullanıcı Hesabı seçenekleri"
+
+#: templates/contact/view_profile.html:39
+msgid "Update your profile"
+msgstr "Profilini güncelle"
+
+#: templates/contact/view_profile.html:41
+#, fuzzy
+msgid "Add address book entry"
+msgstr "Adres Defteri"
+
+#: templates/contact/view_profile.html:43
+#: templates/contact/view_profile.html:56
+#: templates/registration/account_info.html:15
+#: templates/registration/password_change_form.html:12
+msgid "Change your password"
+msgstr "Şifereni değiştir"
+
+#: templates/contact/view_profile.html:45
+msgid "Order History"
+msgstr "Geçmişi Düzenle"
+
+#: templates/contact/view_profile.html:50
+msgid ""
+"Sorry, the user you've logged in as doesn't have any contact information."
+msgstr ""
+"Üzgünüz, oturum açtığınız kullanıcının iletişim bilgilerine ulaşılamıyor."
+
+#: templates/contact/view_profile.html:50
+msgid "Probably because you are an admin."
+msgstr "Muhtemelen yönetici olduğunuz için."
+
+#: templates/contact/view_profile.html:54
+msgid "Set up contact information"
+msgstr "İletişim bilgilerinizi oluşturun"
+
+#: templates/registration/activate.html:7
+msgid "Registration Complete"
+msgstr "Kayıt Tamamlandı"
+
+#: templates/registration/activate.html:12
+#: templates/registration/repeat_activation.html:11
+msgid "Account Activation"
+msgstr "Kullanıcı Hesabı Aktivasyonu "
+
+#: templates/registration/activate.html:16
+msgid "Thanks for signing up! You are now logged in."
+msgstr "Giriş yaptığınız için teşekkürler! Artık oturum açabilirsiniz."
+
+#: templates/registration/activate.html:17
+#, python-format
+msgid "In the future, you can log in using your email address (%(email)s)."
+msgstr ""
+"Gelecekte, email adresinizi (%(email)s) kullanarak oturum açabileceksiniz."
+
+#: templates/registration/activate.html:21
+#, python-format
+msgid ""
+"Either your activation link was incorrect, or the activation key for your "
+"account has expired. Activation keys are only valid for %(expiration_days)s "
+"days after registration."
+msgstr ""
+"Ya aktivasyon linkiniz yanliş, yada kullanıcı hesabınız için olan aktivasyon "
+"anahtarı kapatıldı. Aktivasyon anahtarları sadece kayıt yaptırdıktan sonra  "
+"%(expiration_days)s gün geçerlidir."
+
+#: templates/registration/activation_email.txt:1
+#, fuzzy, python-format
+msgid ""
+"Someone, hopefully you, signed up for a new account at %(site)s using this "
+"email address. If it was you, and you'd like to activate and use your "
+"account, click the link below or copy and paste it into your web browser's "
+"address bar."
+msgstr ""
+"Biri, umud ediyoruz ki bu sizsiniz, bu email adresini  %(site_url)s "
+"kullanarak yeni bir kullanıcı hesabı için giriş yapmış. Eğer sizseniz, ve "
+"kullanıcı hesanınızı aktif edip kullanmak isterseniz, aşağıda ki linki "
+"tıklayın yada web tarayıcınızın adres çuğuna kopyalayıp yapıştırın."
+
+#: templates/registration/activation_email.txt:5
+#, python-format
+msgid ""
+"If you didn't request this, you don't need to do anything; you won't receive "
+"any more email from us, and the account will expire automatically in "
+"%(expiration_days)s days."
+msgstr ""
+"Eğer istemiyorsanız, hiçbir şey yapmanıza gerek yok; artık bizden mail "
+"almayacaksınız, ve kullanıcı hesabınız  %(expiration_days)s içinde otomatik "
+"olarak kapatılacak."
+
+#: templates/registration/activation_email_subject.txt:1
+#, fuzzy
+msgid "Registration Confirmation"
+msgstr "Kayıt Tamamlandı"
+
+#: templates/registration/login.html:19
+msgid "Password"
+msgstr "Şifre"
+
+#: templates/registration/login.html:37
+msgid "If you do not have an account, please"
+msgstr "Kullanıcı hesabınız yoksa, lütfen"
+
+#: templates/registration/login.html:37
+msgid "click here"
+msgstr "tıklayın"
+
+#: templates/registration/login.html:40
+msgid "If you do not remember your password, please"
+msgstr "Şifrenizi hatırlamıyorsanız, lütfen"
+
+#: templates/registration/login.html:40
+msgid "click here</a> to have it reset."
+msgstr "yeniden oluşturmak için tıklayın"
+
+#: templates/registration/logout.html:9
+msgid "You have been successfully logged out."
+msgstr ""
+
+#: templates/registration/password_change_done.html:8
+msgid "Password Change Done"
+msgstr "Şifre değiştirildi"
+
+#: templates/registration/password_change_done.html:13
+msgid "Password change successful"
+msgstr "Şifre değişikliği başarılı"
+
+#: templates/registration/password_change_done.html:15
+msgid "Your password change has been completed."
+msgstr "Şifre değişikliğiniz tamamlandı."
+
+#: templates/registration/password_change_form.html:8
+msgid "Password Change"
+msgstr "şifre Değiştir"
+
+#: templates/registration/password_change_form.html:13
+msgid ""
+"For the sake of security, please enter your old password, and then enter "
+"your new password twice."
+msgstr ""
+"Güvenlik için, lütfen önce eski şifrenizi, sonra yeni şifrenizi girin..."
+
+#: templates/registration/password_change_form.html:20
+msgid "Old password"
+msgstr "Eski şifre"
+
+#: templates/registration/password_change_form.html:27
+msgid "New password"
+msgstr "Yeni şifre"
+
+#: templates/registration/password_change_form.html:34
+msgid "Confirm new password"
+msgstr "Yeni şifreyi doğrulayın"
+
+#: templates/registration/password_change_form.html:37
+msgid "Change password"
+msgstr "Şifreyi değiştir"
+
+#: templates/registration/password_reset.txt:2
+#, fuzzy
+msgid "You're receiving this e-mail because you requested a password reset"
+msgstr ""
+"Bu mail size %(site_name)s tarafından, kullanıcı hesabı sifrenizi yeniden "
+"oluşturmak istediğiniz için gönderildi."
+
+#: templates/registration/password_reset.txt:3
+#, python-format
+msgid "for your user account at %(site_name)s"
+msgstr ""
+
+#: templates/registration/password_reset.txt:5
+#, fuzzy
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#: templates/registration/password_reset.txt:9
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: templates/registration/password_reset.txt:11
+msgid "Thanks for using our site!"
+msgstr "Sitemizi tercih ettiğiniz için teşekkürler!"
+
+#: templates/registration/password_reset.txt:13
+#, fuzzy, python-format
+msgid "The %(site_name)s team"
+msgstr "Sevgili  %(first_name)s  %(last_name)s,"
+
+#: templates/registration/password_reset_complete.html:10
+#, fuzzy
+msgid "Password reset complete"
+msgstr "Şifre başarıyla oluşturuldu"
+
+#: templates/registration/password_reset_complete.html:12
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:14
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:12
+#, fuzzy
+msgid "Enter new password"
+msgstr "Yeni şifreyi doğrulayın"
+
+#: templates/registration/password_reset_confirm.html:14
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:17
+#, fuzzy
+msgid "New password:"
+msgstr "Yeni şifre"
+
+#: templates/registration/password_reset_confirm.html:21
+#, fuzzy
+msgid "Confirm password:"
+msgstr "Yeni şifreyi doğrulayın"
+
+#: templates/registration/password_reset_confirm.html:25
+#, fuzzy
+msgid "Change my password"
+msgstr "Şifreyi değiştir"
+
+#: templates/registration/password_reset_confirm.html:30
+#, fuzzy
+msgid "Password reset unsuccessful"
+msgstr "Şifre başarıyla oluşturuldu"
+
+#: templates/registration/password_reset_confirm.html:32
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:10
+msgid "Password reset successful"
+msgstr "Şifre başarıyla oluşturuldu"
+
+#: templates/registration/password_reset_done.html:12
+msgid ""
+"We've e-mailed a new password to the e-mail address you submitted. You "
+"should receive it shortly."
+msgstr ""
+"Yenişifreniz bize bildirmiş olduğunuz email adresine gönderildi. Kısa "
+"zamanda size ulaşacaktır."
+
+#: templates/registration/password_reset_form.html:10
+msgid "Reset your password"
+msgstr "Şifrenizi yeniden oluşturun"
+
+#: templates/registration/password_reset_form.html:12
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send a "
+"new password to you."
+msgstr ""
+"Şifrenizi mi unuttunuz? Email adresinizi aşağıya girin, size yeni bir şifre "
+"yollayacağız."
+
+#: templates/registration/password_reset_form.html:20
+msgid "Be sure to enter the same e-mail address you used to register."
+msgstr ""
+"Kayıt yaptırdığınız email adresi ile aynı email adresinizi girdiğinize emin "
+"olun."
+
+#: templates/registration/password_reset_form.html:21
+msgid "Reset password"
+msgstr "Şifreyi yeniden oluştur"
+
+#: templates/registration/registration_complete.html:7
+#: templates/registration/registration_complete.html:11
+msgid "Account Creation"
+msgstr "Kullanıcı Hesabı Oluştur"
+
+#: templates/registration/registration_complete.html:12
+msgid "Thank you for signing up."
+msgstr "Kaydolduğunuz için teşekkürler."
+
+#: templates/registration/registration_complete.html:14
+msgid ""
+"An activation link has been sent to the email address you supplied, along "
+"with instructions for activating your account."
+msgstr ""
+"Bize bildirdiğiniz email adresinize, aktivasyon bilgileri ile birlikte bir "
+"aktivasyon linki gönderildi."
+
+#: templates/registration/registration_form.html:6
+msgid "Registration"
+msgstr "Kayıt"
+
+#: templates/registration/registration_form.html:10
+msgid "Please Enter Your Account Information"
+msgstr "Lütfen Kullanıcı Hesabı Bilgilerinizi Girin"
+
+#: templates/registration/registration_form.html:42
+msgid "Create Account"
+msgstr "Kullanıcı Hesabı Oluştur"
+
+#: templates/registration/repeat_activation.html:6
+msgid "Repeat Activation"
+msgstr "Aktivasyonu Tekrarla"
+
+#: templates/registration/repeat_activation.html:13
+msgid "This account has already been activated. Please login."
+msgstr "Bu Kullanıcı hesabı daha önce aktif edildi. Lütfen giriş yapın"
+
+#: templates/registration/welcome.html:6 templates/registration/welcome.txt:1
+#, python-format
+msgid "Dear %(first_name)s %(last_name)s,"
+msgstr "Sevgili  %(first_name)s  %(last_name)s,"
+
+#: templates/registration/welcome.html:7 templates/registration/welcome.txt:3
+#, fuzzy, python-format
+msgid "Thank you for signing up with %(shop_name)s."
+msgstr "Giriş yaptığınız için teşekkürler,  %(company_name)s"
+
+#: templates/registration/welcome.html:9 templates/registration/welcome.txt:5
+msgid "Your new username is this email address, and you can login at"
+msgstr ""
+"Yeni kullanıcı adınız bu email adresi, bunu kullanarak oturum açabilirsiniz"
+
+#: templates/registration/welcome.html:11 templates/registration/welcome.txt:7
+msgid "Regards"
+msgstr "Saygılar"
+
+#: templates/registration/welcome.html:12 templates/registration/welcome.txt:9
+msgid "Store Management"
+msgstr "Mağaza Yönetimi"
+
+#, fuzzy
+#~ msgid "---Please Select---"
+#~ msgstr "Lütfen Seçin"
+
+#~ msgid "Shipping Address"
+#~ msgstr "Kargo Adresi"
+
+#~ msgid "E-mail address"
+#~ msgstr "Email adresi"
+
+#~ msgid "Customer"
+#~ msgstr "Müşteri"
+
+#~ msgid "Distributor"
+#~ msgstr "Dağıtıcı"
+
+#~ msgid "Company"
+#~ msgstr "Şirket"
+
+#, fuzzy
+#~ msgid "Government"
+#~ msgstr "Yönetim"
+
+#, fuzzy
+#~ msgid "Non-profit"
+#~ msgstr "Kar amacı gütmeyen"
+
+#~ msgid "Manufacturer"
+#~ msgstr "Üretici"
+
+#, fuzzy
+#~ msgid "In Person"
+#~ msgstr "Şahsi"
+
+#~ msgid "Online"
+#~ msgstr "Bağlı"
+
+#~ msgid "Show"
+#~ msgstr "Göster"
+
+#~ msgid "Temp"
+#~ msgstr "Temp"
+
+#~ msgid "Pending"
+#~ msgstr "Beklemede"
+
+#~ msgid "In Process"
+#~ msgstr "İşlemde"
+
+#~ msgid "Discount Code"
+#~ msgstr "İndirim Kodu"
+
+#~ msgid "Coupon Code"
+#~ msgstr "Kupon Kodu"
+
+#~ msgid "Discount amount"
+#~ msgstr "İndirim Miktarı"
+
+#~ msgid "Order method"
+#~ msgstr "Sipariş Şekli"
+
+#~ msgid "Shipping Description"
+#~ msgstr "Kargo Tanıtımı"
+
+#~ msgid "Shipping Method"
+#~ msgstr "Kargo Şekli"
+
+#~ msgid "Shipping Models"
+#~ msgstr "Kargo Modelleri"
+
+#~ msgid "Shipping Discount"
+#~ msgstr "Kargo İndirimi"
+
+#~ msgid "Timestamp"
+#~ msgstr "Tarih Bilgisi"
+
+#~ msgid "This is set automatically."
+#~ msgstr "Otomatik ayarlanmıştır."
+
+#~ msgid "Billing Address"
+#~ msgstr "Fatura Adresi"
+
+#~ msgid "Totals"
+#~ msgstr "Tutarlar"
+
+#~ msgid "Product Order"
+#~ msgstr "Ürün Siparişi"
+
+#~ msgid "Product Orders"
+#~ msgstr "Ürün Siparişleri"
+
+#~ msgid "Order"
+#~ msgstr "Sipariş"
+
+#~ msgid "Product"
+#~ msgstr "Ürün"
+
+#~ msgid "Quantity"
+#~ msgstr "Miktar"
+
+#~ msgid "Unit price"
+#~ msgstr "Birim Fiyatı"
+
+#~ msgid "Value"
+#~ msgstr "Değer"
+
+#~ msgid "Price Change"
+#~ msgstr "Fiyat Değişikliği"
+
+#, fuzzy
+#~ msgid "Sort Order"
+#~ msgstr "Sıralama Düzeni"
+
+#~ msgid "The display order for this group."
+#~ msgstr "Bu gurup için teşhir sırası."
+
+#, fuzzy
+#~ msgid "This download is no longer active"
+#~ msgstr "Bu indirme aktif değil"
+
+#, fuzzy
+#~ msgid "You have exceeded the number of allowed downloads."
+#~ msgstr "İzin verilen indirme saysını geçtiniz."
+
+#, fuzzy
+#~ msgid "This download link has expired."
+#~ msgstr "Bu indirme linki kapatıldı."
+
+#~ msgid "Order Status"
+#~ msgstr "Sipariş Durumu"
+
+#~ msgid "Order Statuses"
+#~ msgstr "Sipariş Durumları"
+
+#~ msgid "Payment Method"
+#~ msgstr "Ödeme Şekli"
+
+#~ msgid "amount"
+#~ msgstr "miktar"
+
+#~ msgid "timestamp"
+#~ msgstr "tarih bilgisi"
+
+#~ msgid "Transaction ID"
+#~ msgstr "İşlem ID"
+
+#~ msgid "Order Payment"
+#~ msgstr "Sipariş Ödemesi"
+
+#~ msgid "Order Payments"
+#~ msgstr "Sipariş Ödemeleri"
+
+#~ msgid "value"
+#~ msgstr "değer"
+
+#~ msgid "Model"
+#~ msgstr "Model"
+
+#~ msgid ""
+#~ "The order you have requested doesn't exist, or you don't have access to "
+#~ "it."
+#~ msgstr ""
+#~ "Sipariş ettiğiniz ürün bulunmamaktır, yada girişinize izin verilmiyor."
+
+#~ msgid "Discount"
+#~ msgstr "İndirim"
+
+#~ msgid "Items Ordered"
+#~ msgstr "Sipariş Edilen Ürünler"
+
+#~ msgid "Username:"
+#~ msgstr "Kullanıcı Adı:"
+
+#~ msgid "Forgotten your password?"
+#~ msgstr "Şifrenizi mi unuttunuz?"
+
+#~ msgid "Post a photo"
+#~ msgstr "Fotograf ekle"
+
+#~ msgid "Required"
+#~ msgstr "Gerekli"
+
+#~ msgid "Optional"
+#~ msgstr "Opsiyonel"
+
+#~ msgid "Review:"
+#~ msgstr "Yorum:"
+
+#~ msgid "Send review"
+#~ msgstr "Yorum ekle"
+
+#, fuzzy
+#~ msgid "Base Shipping"
+#~ msgstr "Taban Kargo"
+
+#~ msgid "Order #"
+#~ msgstr "sipariş #"
+
+#~ msgid "Your email address and password didn't match. Please try again."
+#~ msgstr "Email adresinizi ve şifreniz eşleşmedi. Lütfen tekrar deneyin."
+
+#~ msgid "Your new password is"
+#~ msgstr "Yeni şifreniz"
+
+#~ msgid "Feel free to change this password by going to this page"
+#~ msgstr "Bu sayfaya giderik şifrenizi rahatlıkla değiştirebilirsiniz"
+
+#~ msgid ""
+#~ "You can log in using your email address (%(email)s) or your username "
+#~ "(%(username)s)."
+#~ msgstr ""
+#~ "Email adresinizi (%(email)s) yada soyadınızı (%(username)s) kullanarak "
+#~ "oturum açabilirsiniz."

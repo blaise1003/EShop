@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load i18n satchmo_currency %}
+<html>
+  <head>
+    <title>
+      {% blocktrans with order_id=order.id shop_name=shopDetails.store_name %}
+        {{shop_name}} ― Packing slip for order #{{order_id}}
+      {% endblocktrans %}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">/*<![CDATA[*/
+    {% include "shop/pdf/styles.css" %}
+    /*]]>*/</style>
+  </head>
+  <body>
+    {% include "shop/pdf/navbar.html" with document_name=_("Packing slip") %}
+    <div id="wrapper">
+      {% include "shop/pdf/header.html" %}
+      <h1>
+        {% blocktrans with order_id=order.id %}
+        Order #{{order_id}}
+        {% endblocktrans %}
+      </h1>
+
+      {% include "shop/pdf/billing_and_shipping.html" %}
+
+      <h2>{% trans "Ordered products" %}</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>{% trans "Description" %}</th>
+            <th>{% trans "Quantity" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in order.orderitem_set.all %}
+          <tr>
+            <td>{{item.product.name|fix_ampersands}}</td>
+            <td>{{item.quantity}}</td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="2" class="alert">{% trans "No products!" %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <p>
+        {% blocktrans %}
+        Thank you for your business!
+        {% endblocktrans %}
+      </p>
+    </div>
+  </body>
+</html>

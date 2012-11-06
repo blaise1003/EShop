@@ -1,0 +1,1836 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# This file is distributed under the same license as the PACKAGE package.
+# Terry Laundos Aguiar <terry@s1solucoes.com.br>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-19 11:22+0200\n"
+"PO-Revision-Date: 2010-05-12 11:04-0300\n"
+"Last-Translator: Ederson Mota Pereira <edermp@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+
+#: config.py:11
+msgid "Payment Settings"
+msgstr "Configurações de Pagamento"
+
+#: config.py:16
+msgid "Cron Passkey"
+msgstr "Chave Cron"
+
+#: config.py:17
+msgid ""
+"Enter an authentication passkey to secure your recurring billing cron url."
+msgstr ""
+"Digite uma senha de autentição para proteger sua url de cobrança recorrente."
+
+#: config.py:24
+msgid "Allow URL Access to Cron for subscription rebills"
+msgstr "Permitir acesso a URL de cobranças recorrentes."
+
+#: config.py:25
+msgid "Do you want to allow remote url calls for subscription billing?"
+msgstr "Você deseja permitir chamadas de url remota para cobrança?"
+
+#: config.py:32 modules/authorizenet/config.py:34
+#: modules/autosuccess/config.py:11 modules/cod/config.py:14
+#: modules/cybersource/config.py:28 modules/dummy/config.py:14
+#: modules/giftcertificate/config.py:41 modules/google/config.py:73
+#: modules/paypal/config.py:48 modules/purchaseorder/config.py:11
+#: modules/sagepay/config.py:19 modules/sermepa/config.py:49
+#: modules/trustcommerce/config.py:32
+msgid "Accept real payments"
+msgstr "Aceitar pagamentos reais"
+
+#: config.py:33
+msgid ""
+"False if you want to be in test mode.  This is the master switch, turn it "
+"off to force all payments into test mode."
+msgstr ""
+"Falso se você quiser estar no modo de teste. Esta é a chave master, desligue "
+"para forçar todos os pagamentos para o modo de teste."
+
+#: config.py:40
+msgid "Email owner?"
+msgstr "Enviar email ao proprietário?"
+
+#: config.py:41
+msgid "True if you want to email the owner on order"
+msgstr "Verdadeiro se você quer enviar emails para clientes sobre pedidos"
+
+#: config.py:48
+msgid "Extra order emails?"
+msgstr "Enviar emails extras?"
+
+#: config.py:50
+msgid ""
+"Put all email addresses you want to email in addition to the owner when an "
+"order is placed."
+msgstr ""
+"Coloque todos os endereços você deseja, que  além do proprietário, receba "
+"notificações a cada novo pedido."
+
+#: config.py:58 modules/dummy/config.py:60
+msgid "Early AUTH"
+msgstr "AUTH prévio"
+
+#: config.py:59
+msgid ""
+"Where possible, Authenticate on the card entry page.  This causes an "
+"immediate $.01 AUTH and release, allowing errors with the card to show on "
+"the card entry page instead of on the confirmation page.  Note that this is "
+"only supported for payment modules that can do Authorizations.  It will be "
+"silently ignored for any other processors."
+msgstr ""
+"Onde possível, realizar autenticação na página de entrada do cartão. Isto "
+"causa uma cobrança AUTH  de $.01 e estorna, possibilitando que erros com o "
+"cartão sejam exibidos na página de entrada do cartão ao invés da página de "
+"confirmação. Note que isto somente é suportado em módulos de pagamento que "
+"realizem Autorizações. Isto será silenciosamente ignorado em outros "
+"processadores."
+
+#: config.py:64
+msgid "Country match required?"
+msgstr "Necessário ser o mesmo país?"
+
+#: config.py:65
+msgid ""
+"If True, then customers may not have different countries for shipping and "
+"billing."
+msgstr ""
+"Se verdadeiro, clientes não podem ter países diferentes para envio e "
+"cobrança."
+
+#: config.py:70
+msgid "Minimum Order"
+msgstr "Pedido Mínimo"
+
+#: config.py:71
+msgid "The minimum cart total before checkout is allowed."
+msgstr "Valor mínimo de carrinho antes da finalização da compra ser permitida."
+
+#: config.py:76
+msgid "Save Credit Card Numbers"
+msgstr "Salvar números de Cartões de Crédito"
+
+#: config.py:77
+msgid ""
+"If False, then the credit card will never be written to disk.  For PCI "
+"compliance, this is required unless you have your database server on a "
+"separate server not connected to the internet."
+msgstr ""
+"Se Falso, o número de cartão de crédito nunca será salvo no disco. Para "
+"atender ao PCI, isto é necessário a não ser que seu servidor de banco de "
+"dados esteja em um servidor separado não conectado a Internet."
+
+#: config.py:82
+msgid "Number of years to display for CC expiration"
+msgstr "Número de anos a exibir para expiração do CC"
+
+#: config.py:83
+msgid ""
+"Number of years that will be added to today's year for the CC expiration "
+"drop down"
+msgstr ""
+"Número de anos que será adicionado ao ano atual para a caixa de seleção da "
+"data de expiração"
+
+#: config.py:88
+msgid "Use discounts"
+msgstr "Usar descontos"
+
+#: config.py:89
+msgid "If disabled, customers will not be asked for any discount codes."
+msgstr ""
+"Se desabilitado, os clientes não serão perguntados sobre códigos de desconto."
+
+#: forms.py:102 forms.py:213
+msgid "Discount"
+msgstr "Desconto"
+
+#: forms.py:155
+msgid "New price"
+msgstr "Novo preço"
+
+#: forms.py:156
+msgid "Shipping adjustment"
+msgstr "Ajuste de envio"
+
+#: forms.py:157 modules/giftcertificate/models.py:104
+#: modules/purchaseorder/models.py:14
+#: templates/payment/admin/charge_remaining_confirm.html:16
+msgid "Notes"
+msgstr "Notas"
+
+#: forms.py:173 templates/shop/checkout/balance_remaining.html:23
+#: templates/shop/checkout/form.html:52
+msgid "Payment method"
+msgstr "Método de pagamento"
+
+#: forms.py:251
+msgid "This field is required"
+msgstr "Este campo é obrigatório."
+
+#: forms.py:254
+msgid "Selected payment method requires this field to be filled"
+msgstr "Módulo de pagamento selecionado requer que este campo seja preenchido"
+
+#: forms.py:276
+msgid "Invalid discount code."
+msgstr "Código de Desconto inválido."
+
+#: forms.py:373
+msgid "This field is required."
+msgstr "Este campo é obrigatório."
+
+#: forms.py:508
+msgid "Your card has expired."
+msgstr "Seu cartão está vencido."
+
+#: forms.py:517
+msgid "Invalid ccv."
+msgstr "CCV inválido."
+
+#: listeners.py:19
+msgid "terms and conditions"
+msgstr "termos e condições"
+
+#: listeners.py:21
+#, python-format
+msgid "Do you accept the %(terms_link)s?"
+msgstr "Você aceita as  %(terms_link)s?"
+
+#: models.py:29
+msgid "Description"
+msgstr "Descrição"
+
+#: models.py:30
+msgid "Active"
+msgstr "Ativo"
+
+#: models.py:31
+msgid "Should this be displayed as an option for the user?"
+msgstr "Este deve ser exibido como uma opção para o usuário?"
+
+#: models.py:32
+msgid "Option Name"
+msgstr "Nome da Opção"
+
+#: models.py:34
+msgid "The class name as defined in payment.py"
+msgstr "O nome da classe como definido em payment.py"
+
+#: models.py:35
+msgid "Sort Order"
+msgstr "Ordenar"
+
+#: models.py:38
+msgid "Payment Option"
+msgstr "Opção de Pagamento"
+
+#: models.py:39
+msgid "Payment Options"
+msgstr "Opções de Pagamento"
+
+#: models.py:48
+msgid "Credit Card Type"
+msgstr "Tipo de Cartão de Crédito"
+
+#: models.py:49
+msgid "CC Number (Last 4 digits)"
+msgstr "Número do cartão de crédito (últimos 4 dígitos)"
+
+#: models.py:51
+msgid "Encrypted Credit Card"
+msgstr "Cartão de Crédito Criptografado"
+
+#: models.py:53
+msgid "Expiration Month"
+msgstr "Mês do vencimento"
+
+#: models.py:54
+msgid "Expiration Year"
+msgstr "Ano do vencimento"
+
+#: models.py:55
+msgid "card_holder Name"
+msgstr "Nome titular"
+
+#: models.py:56
+msgid "Start Month"
+msgstr "Mês Início"
+
+#: models.py:57
+msgid "Start Year"
+msgstr "Ano Início"
+
+#: models.py:107 modules/authorizenet/config.py:6
+#: modules/cybersource/config.py:6 modules/sagepay/config.py:6
+#: modules/trustcommerce/config.py:5
+msgid "Credit Card"
+msgstr "Cartão de Crédito"
+
+#: models.py:108 modules/authorizenet/config.py:60
+#: modules/cybersource/config.py:48 modules/trustcommerce/config.py:49
+msgid "Credit Cards"
+msgstr "Cartões de Crédito"
+
+#: modules/base.py:45 modules/base.py:77 modules/base.py:82
+#: modules/base.py:178
+msgid "Not Implemented"
+msgstr "Não Implementado"
+
+#: modules/base.py:379 modules/autosuccess/processor.py:21
+#: modules/cod/processor.py:26 modules/dummy/processor.py:44
+#: modules/dummy/processor.py:66 modules/dummy/processor.py:79
+#: modules/dummy/processor.py:85 modules/giftcertificate/processor.py:52
+#: modules/purchaseorder/processor.py:31 views/confirm.py:281
+msgid "Success"
+msgstr "Sucesso"
+
+#: modules/base.py:381
+msgid "Failure"
+msgstr "Falha"
+
+#: modules/authorizenet/config.py:6 modules/cybersource/config.py:6
+#: modules/sagepay/config.py:6 modules/trustcommerce/config.py:5
+msgid "CreditCard"
+msgstr "CreditCard"
+
+#: modules/authorizenet/config.py:9
+msgid "Authorize.net Payment Settings"
+msgstr "Ajustes do Authorize.net"
+
+#: modules/authorizenet/config.py:16
+msgid "Submit to URL"
+msgstr "Submeta à URL"
+
+#: modules/authorizenet/config.py:17 modules/cybersource/config.py:17
+msgid "This is the address to submit live transactions."
+msgstr "Este é o endereço para transações live"
+
+#: modules/authorizenet/config.py:22
+msgid "Submit to Test URL"
+msgstr "Submeter à URL teste"
+
+#: modules/authorizenet/config.py:35
+msgid ""
+"False if you want to submit to the test urls.  NOTE: If you are testing, "
+"then you can use the cc# 4222222222222 to force a bad credit card response.  "
+"If you use that number and a ccv of 222, that will force a bad ccv response "
+"from authorize.net"
+msgstr ""
+"Falso se você deseja submeter para as urls de teste. NOTE: Se você está "
+"testando, então você pode usar o CC número 4222222222222 para forçar uma "
+"resposta negativa. Se você usar este número e o código de verificação 222, "
+"isto irá forçar uma resposta de ccv inválido da authorize.net"
+
+#: modules/authorizenet/config.py:40
+msgid "Force a test post?"
+msgstr "Forçar um post de teste?"
+
+#: modules/authorizenet/config.py:41
+msgid ""
+"True if you want to submit to the live url using a test flag, which won't be "
+"accepted."
+msgstr ""
+"Verdadeiro se você deseja enviar para a URL real usando uma bandeira de "
+"teste, o que não será aceito."
+
+#: modules/authorizenet/config.py:46 modules/autosuccess/config.py:17
+#: modules/cod/config.py:21 modules/cybersource/config.py:34
+#: modules/dummy/config.py:20 modules/giftcertificate/config.py:28
+#: modules/google/config.py:79 modules/paypal/config.py:54
+#: modules/purchaseorder/config.py:17 modules/sagepay/config.py:48
+#: modules/sermepa/config.py:22 modules/trustcommerce/config.py:21
+msgid "Implementation module"
+msgstr "Módulo Implementação"
+
+#: modules/authorizenet/config.py:52 modules/autosuccess/config.py:23
+#: modules/cod/config.py:27 modules/cybersource/config.py:40
+#: modules/dummy/config.py:26 modules/giftcertificate/config.py:16
+#: modules/google/config.py:85 modules/paypal/config.py:60
+#: modules/purchaseorder/config.py:23 modules/sagepay/config.py:54
+#: modules/sermepa/config.py:28 modules/trustcommerce/config.py:15
+msgid "Module key"
+msgstr "Módulo chave"
+
+#: modules/authorizenet/config.py:58 modules/autosuccess/config.py:29
+#: modules/cod/config.py:33 modules/cybersource/config.py:46
+#: modules/dummy/config.py:32 modules/giftcertificate/config.py:34
+#: modules/google/config.py:91 modules/paypal/config.py:66
+#: modules/purchaseorder/config.py:29 modules/sagepay/config.py:60
+#: modules/sermepa/config.py:34 modules/trustcommerce/config.py:47
+msgid "English name for this group on the checkout screens"
+msgstr "Nome em inglês para esse grupo nas telas de checkout"
+
+#: modules/authorizenet/config.py:61 modules/autosuccess/config.py:32
+#: modules/cod/config.py:36 modules/cybersource/config.py:49
+#: modules/dummy/config.py:35 modules/giftcertificate/config.py:37
+#: modules/google/config.py:94 modules/paypal/config.py:69
+#: modules/purchaseorder/config.py:32 modules/sagepay/config.py:63
+#: modules/sermepa/config.py:37 modules/trustcommerce/config.py:50
+msgid "This will be passed to the translation utility"
+msgstr "Isto será passado para o utilitário de tradução"
+
+#: modules/authorizenet/config.py:65 modules/autosuccess/config.py:36
+#: modules/cod/config.py:40 modules/cybersource/config.py:59
+#: modules/dummy/config.py:39 modules/giftcertificate/config.py:47
+#: modules/google/config.py:98 modules/paypal/config.py:73
+#: modules/purchaseorder/config.py:36 modules/sagepay/config.py:101
+#: modules/sermepa/config.py:42 modules/trustcommerce/config.py:54
+msgid ""
+"The url base used for constructing urlpatterns which will use this module"
+msgstr "A base url usada para construir padrões url que irão usar este módulo"
+
+#: modules/authorizenet/config.py:70 modules/cybersource/config.py:64
+#: modules/dummy/config.py:44 modules/sagepay/config.py:67
+#: modules/trustcommerce/config.py:59
+msgid "Available credit cards"
+msgstr "Cartões de crédito disponíveis"
+
+#: modules/authorizenet/config.py:80
+msgid "Your authorize.net transaction login"
+msgstr "Seu login de transação authorize.net"
+
+#: modules/authorizenet/config.py:85
+msgid "Your authorize.net transaction key"
+msgstr "Sua chave de transação authorize.net"
+
+#: modules/authorizenet/config.py:90 modules/dummy/config.py:54
+msgid "Capture Payment immediately?"
+msgstr "Capturar pagamento imediatamente?"
+
+#: modules/authorizenet/config.py:92 modules/dummy/config.py:56
+msgid ""
+"IMPORTANT: If false, a capture attempt will be made when the order is marked "
+"as shipped.\""
+msgstr ""
+"IMPORTANTE: Se Falso, uma tentativa de captura será realizada quando o "
+"pedido for marcado como entregue.\""
+
+#: modules/authorizenet/config.py:96 modules/autosuccess/config.py:41
+#: modules/cod/config.py:45 modules/cybersource/config.py:84
+#: modules/dummy/config.py:66 modules/giftcertificate/config.py:52
+#: modules/google/config.py:103 modules/paypal/config.py:78
+#: modules/sagepay/config.py:106 modules/sermepa/config.py:165
+#: modules/trustcommerce/config.py:79
+msgid "Verbose logs"
+msgstr "Logs detalhados"
+
+#: modules/authorizenet/config.py:97 modules/autosuccess/config.py:42
+#: modules/cod/config.py:46 modules/cybersource/config.py:85
+#: modules/dummy/config.py:67 modules/giftcertificate/config.py:53
+#: modules/google/config.py:104 modules/paypal/config.py:79
+#: modules/sagepay/config.py:107 modules/sermepa/config.py:166
+#: modules/trustcommerce/config.py:80
+msgid "Add extensive logs during post."
+msgstr "Adicionar logs adicionais durante o post"
+
+#: modules/authorizenet/config.py:104
+msgid "Enable ARB?"
+msgstr "Ativar ARB?"
+
+#: modules/authorizenet/config.py:106
+msgid ""
+"Enable ARB processing for setting up subscriptions.  You must have this "
+"enabled in your Authorize account for it to work."
+msgstr ""
+
+#: modules/authorizenet/config.py:111
+msgid "Submit to URL (ARB)"
+msgstr "URL para envio (ARB)"
+
+#: modules/authorizenet/config.py:112
+msgid "This is the address to submit live transactions for ARB."
+msgstr "Este é o endereço para envio de ransações reais para ARB."
+
+#: modules/authorizenet/config.py:119
+msgid "Submit to Test URL (ARB)"
+msgstr "Enviar para URL de teste (ARB)"
+
+#: modules/authorizenet/config.py:120
+msgid "This is the address to submit test transactions for ARB."
+msgstr "Este é o endereço para enviar transações de teste ao ARB"
+
+#: modules/authorizenet/processor.py:37 modules/authorizenet/processor.py:87
+#: modules/cybersource/processor.py:109 modules/sagepay/processor.py:138
+#: modules/trustcommerce/processor.py:88
+msgid "No charge needed, paid in full."
+msgstr "Cobrança não necessária, pago integralmente."
+
+#: modules/authorizenet/processor.py:61
+msgid "Already complete"
+msgstr "Quase finalizado"
+
+#: modules/authorizenet/processor.py:436 modules/authorizenet/processor.py:499
+msgid "Could not talk to Authorize.net gateway"
+msgstr "Não foi possível estabelecer comunicação com o gateway Authorize.net"
+
+#: modules/autosuccess/config.py:5
+msgid "Payment Auto Success Module Settings"
+msgstr "Configurações de Módulo de Pagamento Auto Sucesso"
+
+#: modules/autosuccess/config.py:12 modules/cod/config.py:15
+#: modules/cybersource/config.py:29 modules/dummy/config.py:15
+#: modules/giftcertificate/config.py:42 modules/google/config.py:74
+#: modules/paypal/config.py:49 modules/purchaseorder/config.py:12
+#: modules/sagepay/config.py:20 modules/sermepa/config.py:50
+#: modules/trustcommerce/config.py:33
+msgid "False if you want to be in test mode"
+msgstr "Falso se você quer estar no modo de teste"
+
+#: modules/autosuccess/config.py:31
+msgid "Pay Now"
+msgstr ""
+
+#: modules/cod/config.py:8
+msgid "COD Payment Module Settings"
+msgstr "Ajustes do Módulo de Pagamento COD"
+
+#: modules/cod/config.py:35
+#, fuzzy
+msgid "COD Payment"
+msgstr "Pagamento"
+
+#: modules/cybersource/config.py:9
+msgid "Cybersource.net Payment Settings"
+msgstr "Configurações de pagamento do Cybersource.net"
+
+#: modules/cybersource/config.py:16
+msgid "WSDL URL"
+msgstr "WSDL URL"
+
+#: modules/cybersource/config.py:22
+msgid "Submit to Test WSDL URL"
+msgstr "Submeter a teste o WSDL URL"
+
+#: modules/cybersource/config.py:53 modules/google/config.py:21
+#: modules/paypal/config.py:12 modules/sagepay/config.py:95
+msgid "Currency Code"
+msgstr "Código da moeda"
+
+#: modules/cybersource/config.py:54
+msgid "Currency code for Cybersource transactions."
+msgstr "Código de moeda para transações Cybersource."
+
+#: modules/cybersource/config.py:74
+msgid "Your Cybersource merchant ID"
+msgstr "Seu ID de vendedor Cybersource"
+
+#: modules/cybersource/config.py:79
+msgid "Your Cybersource transaction key"
+msgstr "Sua chave de transação Cybersource"
+
+#: modules/dummy/config.py:8
+msgid "Payment Test Module Settings"
+msgstr "Configurações do módulo de testes de pagamentos"
+
+#: modules/dummy/config.py:34
+#, fuzzy
+msgid "Payment test module"
+msgstr "Módulo de teste de pagamento"
+
+#: modules/dummy/config.py:61
+msgid ""
+"Authenticate on the card entry page, causes an immediate $.01 AUTH and "
+"release, allowing errors with the card to show on the card entry page."
+msgstr ""
+"Autenticar na página de entrada do cartão, causando uma cobrança AUTH de "
+"$.01 e estornando, possibilitando que erros com o cartão sejam exibidos na "
+"página de entrada do cartão."
+
+#: modules/dummy/processor.py:36
+msgid "Bad CCV - order declined"
+msgstr "CCV inválido - pedido recusado"
+
+#: modules/dummy/processor.py:41
+msgid "Bad credit card number - order declined"
+msgstr "Número de cartão de créadito inválido - pedido recusado"
+
+#: modules/giftcertificate/config.py:5
+msgid "Gift Certificate Settings"
+msgstr "Configurações de Cartão de Presente"
+
+#: modules/giftcertificate/config.py:10
+msgid "Character Set"
+msgstr "Conjunto de Caracteres"
+
+#: modules/giftcertificate/config.py:12
+msgid ""
+"The characters allowable in randomly-generated certficate codes.  No vowels "
+"means no unfortunate words."
+msgstr ""
+"Caracteres aceitáveis em códigos de cartão gerados automaticamente. Não "
+"aceitar vogais significa que palavras indesejáveis  não serão criadas."
+
+#: modules/giftcertificate/config.py:22
+msgid "Code format"
+msgstr "Formato do código"
+
+#: modules/giftcertificate/config.py:24
+msgid ""
+"Enter the format for your cert code.  Use a '^' for the location of a "
+"randomly generated character."
+msgstr ""
+"Entre o formato para o seu cartão de presente. Use um '^' na posição que "
+"você deseja um caracter aleatório."
+
+#: modules/giftcertificate/config.py:36 modules/giftcertificate/models.py:98
+#: modules/giftcertificate/templates/giftcertificate/_order_summary.html:7
+#: modules/giftcertificate/templates/giftcertificate/balance.html:13
+#: modules/giftcertificate/templates/product/detail_giftcertificateproduct.html:9
+msgid "Gift Certificate"
+msgstr "Cartão de Presente"
+
+#: modules/giftcertificate/forms.py:9
+msgid "Code"
+msgstr "Código"
+
+#: modules/giftcertificate/forms.py:24
+#, fuzzy
+msgid "Invalid gift certificate code."
+msgstr "Código do Cartão de Presente"
+
+#: modules/giftcertificate/forms.py:26
+#, fuzzy
+msgid "Gift certificate balance is 0."
+msgstr "Códigos de Cartão de Presente"
+
+#: modules/giftcertificate/models.py:33
+msgid "Site"
+msgstr "Site"
+
+#: modules/giftcertificate/models.py:34 modules/purchaseorder/models.py:30
+msgid "Order"
+msgstr "Pedido"
+
+#: modules/giftcertificate/models.py:35
+msgid "Certificate Code"
+msgstr "Código Cartão "
+
+#: modules/giftcertificate/models.py:37
+msgid "Purchased by"
+msgstr "Comprado por"
+
+#: modules/giftcertificate/models.py:39
+msgid "Date added"
+msgstr "Data de Inclusão"
+
+#: modules/giftcertificate/models.py:40
+msgid "Valid"
+msgstr "Válido"
+
+#: modules/giftcertificate/models.py:41
+msgid "Message"
+msgstr "Mensagem"
+
+#: modules/giftcertificate/models.py:42
+msgid "Email"
+msgstr "Email"
+
+#: modules/giftcertificate/models.py:43
+msgid "Starting Balance"
+msgstr "Saldo Inicial"
+
+#: modules/giftcertificate/models.py:99
+#: modules/giftcertificate/templates/giftcertificate/balance.html:6
+msgid "Gift Certificates"
+msgstr "Cartões Presente"
+
+#: modules/giftcertificate/models.py:103
+msgid "Date of usage"
+msgstr "Data da utilização"
+
+#: modules/giftcertificate/models.py:105
+msgid "Amount Used"
+msgstr "Valor utilizado"
+
+#: modules/giftcertificate/models.py:107
+msgid "Order Payment"
+msgstr "Pagamento de Pedido"
+
+#: modules/giftcertificate/models.py:108
+msgid "Used by"
+msgstr "Utilizado por "
+
+#: modules/giftcertificate/models.py:125
+msgid "Product"
+msgstr "Produto"
+
+#: modules/giftcertificate/models.py:163
+msgid "Gift certificate product"
+msgstr "Produto do Cartão de Presente"
+
+#: modules/giftcertificate/models.py:164
+msgid "Gift certificate products"
+msgstr "Produtos do Cartão de Presente"
+
+#: modules/giftcertificate/processor.py:30
+msgid "No balance to pay"
+msgstr "Sem saldo a pagar"
+
+#: modules/giftcertificate/processor.py:41
+msgid "No such Gift Certificate"
+msgstr "Cartão de Presente não encontrado"
+
+#: modules/giftcertificate/processor.py:46
+msgid "Bad Gift Certificate"
+msgstr "Carão de Presente Inválido"
+
+#: modules/giftcertificate/processor.py:56
+#, python-format
+msgid "%s balance remains after gift certificate was applied"
+msgstr "%s de saldo após a utilização do Cartão de Presente"
+
+#: modules/giftcertificate/templates/giftcertificate/_order_summary.html:5
+msgid "Gift Certificate Codes"
+msgstr "Códigos de Cartão de Presente"
+
+#: modules/giftcertificate/templates/giftcertificate/_order_summary.html:10
+#, python-format
+msgid "To: %(recipient)s"
+msgstr "Para: %(recipient)s"
+
+#: modules/giftcertificate/templates/giftcertificate/_order_summary.html:15
+#, python-format
+msgid "Starting Balance: %(start_balance)s"
+msgstr "Saldo Inicial: %(start_balance)s"
+
+#: modules/giftcertificate/templates/giftcertificate/_order_summary.html:19
+#, python-format
+msgid "Code: %(code)s"
+msgstr "Código: %(code)s"
+
+#: modules/giftcertificate/templates/giftcertificate/_order_summary.html:24
+#, python-format
+msgid "Message: %(message)s"
+msgstr "Mensagem: %(message)s"
+
+#: modules/giftcertificate/templates/giftcertificate/balance.html:5
+#: modules/giftcertificate/templates/shop/checkout/confirm.html:9
+#: modules/giftcertificate/templates/shop/checkout/giftcertificate/confirm.html:9
+#: templates/shop/checkout/authentication_required.html:5
+#: templates/shop/checkout/balance_remaining.html:6
+#: templates/shop/checkout/base_confirm.html:7
+#: templates/shop/checkout/base_pay_ship.html:5
+#: templates/shop/checkout/confirm.html:9
+#: templates/shop/checkout/empty_cart.html:5
+#: templates/shop/checkout/failure.html:5 templates/shop/checkout/form.html:9
+#: templates/shop/checkout/success.html:7
+#: templates/shop/checkout/cod/confirm.html:9
+#: templates/shop/checkout/purchaseorder/confirm.html:7
+#: templates/shop/checkout/sagepay/confirm.html:9
+msgid "Home"
+msgstr "Início"
+
+#: modules/giftcertificate/templates/giftcertificate/balance.html:15
+msgid "Purchased on:"
+msgstr "Adquirido em:"
+
+#: modules/giftcertificate/templates/giftcertificate/balance.html:21
+#, fuzzy
+msgid "Starting Balance:"
+msgstr "Saldo Inicial"
+
+#: modules/giftcertificate/templates/giftcertificate/balance.html:22
+msgid "Current Balance:"
+msgstr "Saldo Atual"
+
+#: modules/giftcertificate/templates/giftcertificate/balance.html:25
+msgid "No such gift certificate found."
+msgstr "Cartão Presente não encontrado"
+
+#: modules/giftcertificate/templates/giftcertificate/balance.html:30
+msgid "Look up balance"
+msgstr "Verificar Saldo"
+
+#: modules/giftcertificate/templates/product/detail_giftcertificateproduct.html:11
+msgid "Price"
+msgstr "Preço"
+
+#: modules/giftcertificate/templates/product/detail_giftcertificateproduct.html:21
+msgid "Quantity (multiply the gift certificate by this amount)"
+msgstr "Quantidade (multiplicar o cartão de presente por este valor)"
+
+#: modules/giftcertificate/templates/product/detail_giftcertificateproduct.html:24
+msgid "Recipient Email (optional):"
+msgstr "E-mail do destinatário (opcional):"
+
+#: modules/giftcertificate/templates/product/detail_giftcertificateproduct.html:25
+msgid "Message (optional):"
+msgstr "Mensagem (opcional):"
+
+#: modules/giftcertificate/templates/product/detail_giftcertificateproduct.html:30
+msgid "Add to cart"
+msgstr "Adicionar ao carrinho"
+
+#: modules/giftcertificate/templates/shop/checkout/confirm.html:10
+#: modules/giftcertificate/templates/shop/checkout/giftcertificate/confirm.html:10
+#: templates/shop/checkout/authentication_required.html:6
+#: templates/shop/checkout/balance_remaining.html:7
+#: templates/shop/checkout/base_confirm.html:8
+#: templates/shop/checkout/base_confirm.html:12
+#: templates/shop/checkout/base_pay_ship.html:6
+#: templates/shop/checkout/base_pay_ship.html:10
+#: templates/shop/checkout/confirm.html:10
+#: templates/shop/checkout/empty_cart.html:6
+#: templates/shop/checkout/empty_cart.html:10
+#: templates/shop/checkout/failure.html:6 templates/shop/checkout/form.html:10
+#: templates/shop/checkout/form.html:14 templates/shop/checkout/success.html:8
+#: templates/shop/checkout/cod/confirm.html:10
+#: templates/shop/checkout/purchaseorder/confirm.html:8
+#: templates/shop/checkout/sagepay/confirm.html:10
+msgid "Checkout"
+msgstr "Finalizar"
+
+#: modules/giftcertificate/templates/shop/checkout/confirm.html:14
+#: modules/giftcertificate/templates/shop/checkout/giftcertificate/confirm.html:14
+#: templates/shop/checkout/authentication_required.html:14
+#: templates/shop/checkout/base_confirm.html:16
+#: templates/shop/checkout/base_pay_ship.html:14
+#: templates/shop/checkout/confirm.html:14
+#: templates/shop/checkout/form.html:18
+#: templates/shop/checkout/cod/confirm.html:14
+#: templates/shop/checkout/google/confirm.html:6
+#: templates/shop/checkout/google/confirm.html:9
+#: templates/shop/checkout/paypal/confirm.html:7
+#: templates/shop/checkout/paypal/confirm.html:10
+#: templates/shop/checkout/purchaseorder/confirm.html:12
+#: templates/shop/checkout/sagepay/confirm.html:14
+#: templates/shop/checkout/sermepa/confirm.html:6
+#: templates/shop/checkout/sermepa/confirm.html:9
+msgid "Payment"
+msgstr "Pagamento"
+
+#: modules/giftcertificate/templates/shop/checkout/confirm.html:20
+#, python-format
+msgid "Order total: %(orderbalance)s"
+msgstr "Total do Pedido: %(orderbalance)s"
+
+#: modules/giftcertificate/templates/shop/checkout/confirm.html:21
+#, python-format
+msgid ""
+"You are about to use Gift certificate #%(giftcode)s which has "
+"%(certbalance)s total available to pay for your order."
+msgstr ""
+"Você esta prestes a utilizar o Cartão de Presente nº %(giftcode)s que possui "
+"%(certbalance)s disponível para pagar o seu pedido."
+
+#: modules/giftcertificate/templates/shop/checkout/confirm.html:22
+msgid ""
+"If there isn't enough remaining to pay for the whole order, you'll be able "
+"to select another form of payment for the balance after you use this gift "
+"certificate."
+msgstr ""
+
+#: modules/giftcertificate/templates/shop/checkout/giftcertificate/confirm.html:6
+msgid "Please Note:"
+msgstr "Notas Importantes:"
+
+#: modules/giftcertificate/templates/shop/checkout/giftcertificate/confirm.html:19
+#, python-format
+msgid ""
+"About to use your gift certificate: %(giftcode)s, which has a balance of "
+"%(balance)s."
+msgstr ""
+"Prestes a utilizar o seu Cartão de Presente nº %(giftcode)s que possui o "
+"saldo de %(balance)s."
+
+#: modules/giftcertificate/templates/shop/checkout/giftcertificate/confirm.html:23
+msgid "About to use INVALID gift certificate"
+msgstr "Prestes a utilizar um Cartão de Presente INVÁLIDO."
+
+#: modules/giftcertificate/templates/shop/checkout/giftcertificate/pay_ship.html:6
+#: templates/shop/checkout/pay_ship.html:6
+#: templates/shop/checkout/sagepay/pay_ship.html:18
+msgid "Payment Information"
+msgstr "Informações de Pagamento"
+
+#: modules/giftcertificate/templates/shop/checkout/giftcertificate/pay_ship.html:11
+msgid "Gift Certificate Code"
+msgstr "Código do Cartão de Presente"
+
+#: modules/google/config.py:8
+msgid "Google Checkout Module Settings"
+msgstr "Configurações do módulo de checkout Google"
+
+#: modules/google/config.py:15
+msgid "XML Template"
+msgstr "Template XML"
+
+#: modules/google/config.py:16
+msgid ""
+"The XML template to use when submitting to Google. Probably you should not "
+"change this."
+msgstr ""
+"O XML a usar quando submeter ao Google. Provavelmente você não deve mudar "
+"isso."
+
+#: modules/google/config.py:22
+msgid "Currency code for Google Checkout transactions."
+msgstr "Código de moeda para transações Google Checkout."
+
+#: modules/google/config.py:27
+msgid "Checkout Button URL"
+msgstr "URL do Botão de Checkout"
+
+#: modules/google/config.py:32
+msgid "Checkout Button Size"
+msgstr "Tamanho do Botão de Checkout"
+
+#: modules/google/config.py:34
+msgid "Small"
+msgstr "Pequeno"
+
+#: modules/google/config.py:35
+msgid "Medium"
+msgstr "Médio"
+
+#: modules/google/config.py:36
+msgid "Large"
+msgstr "Grande"
+
+#: modules/google/config.py:41 modules/google/config.py:47
+#: modules/paypal/config.py:18 modules/paypal/config.py:24
+#: modules/sermepa/config.py:125
+msgid "Post URL"
+msgstr "Postar URL"
+
+#: modules/google/config.py:42
+msgid "The Google URL for real transaction posting."
+msgstr "A URL Google para postagem de transação real."
+
+#: modules/google/config.py:48
+msgid "The Google URL for test transaction posting."
+msgstr "A URL Google para postagem de transação teste."
+
+#: modules/google/config.py:53
+msgid "Merchant ID"
+msgstr "ID do Vendedor"
+
+#: modules/google/config.py:58
+msgid "Merchant Key"
+msgstr "Chave do Vendedor"
+
+#: modules/google/config.py:63
+msgid "Merchant Test ID"
+msgstr "ID de Teste do Vendedor"
+
+#: modules/google/config.py:68
+msgid "Merchant Test Key"
+msgstr "Chave de Teste de Vendedor"
+
+#: modules/google/config.py:93
+#, fuzzy
+msgid "Google Checkout"
+msgstr "Módulo de checkout Google"
+
+#: modules/google/notifications.py:48
+msgid "Received through Google Checkout."
+msgstr "Recebido pelo Google Checkout"
+
+#: modules/google/notifications.py:69
+msgid "Paid through Google Checkout."
+msgstr "Pago via Google Checkout."
+
+#: modules/google/notifications.py:80
+msgid "Shipped through Google Checkout."
+msgstr "Enviado pelo Google Checkout"
+
+#: modules/google/views.py:137 modules/paypal/views.py:226
+#: modules/sermepa/views.py:229 views/checkout.py:15
+msgid "Your order has already been processed."
+msgstr "Seu pedido já foi processado."
+
+#: modules/paypal/config.py:5
+msgid "Paypal Payment Module Settings"
+msgstr "Configurações de Módulos de Pagamentos via Paypal"
+
+#: modules/paypal/config.py:13
+msgid "Currency code for Paypal transactions."
+msgstr "Código de moeda para transações via Paypal."
+
+#: modules/paypal/config.py:19
+msgid "The Paypal URL for real transaction posting."
+msgstr "URL de Paypal para postagem de transação real."
+
+#: modules/paypal/config.py:25
+msgid "The Paypal URL for test transaction posting."
+msgstr "URL de Paypal para postagem de transação teste."
+
+#: modules/paypal/config.py:30
+msgid "Paypal account email"
+msgstr "Email da conta Paypal"
+
+#: modules/paypal/config.py:31
+msgid "The email address for your paypal account"
+msgstr "O endereço de email para sua conta Paypal"
+
+#: modules/paypal/config.py:36
+msgid "Paypal test account email"
+msgstr "Email de teste da conta Paypal"
+
+#: modules/paypal/config.py:37
+msgid "The email address for testing your paypal account"
+msgstr "O endereço de email para teste de sua conta Paypal"
+
+#: modules/paypal/config.py:42
+msgid "Return URL"
+msgstr "URL de retorno"
+
+#: modules/paypal/config.py:43
+msgid ""
+"Where Paypal will return the customer after the purchase is complete.  This "
+"can be a named url and defaults to the standard checkout success."
+msgstr ""
+"Aonde o Paypal vai retornar o cliente depois que a compra estiver completa. "
+"Pode ser uma url escolhida."
+
+#: modules/paypal/config.py:68
+msgid "PayPal"
+msgstr ""
+
+#: modules/paypal/views.py:53 modules/sermepa/views.py:72 views/confirm.py:212
+msgid "Your order is no longer valid."
+msgstr "Seu pedido não é mais válido."
+
+#: modules/paypal/views.py:170
+msgid "Paid through PayPal."
+msgstr "Pago via PayPal."
+
+#: modules/paypal/views.py:180
+msgid "---Comment via Paypal IPN---"
+msgstr "---Comentário via IPN do Paypal---"
+
+#: modules/purchaseorder/config.py:5
+#, fuzzy
+msgid "Purchase Order Module Settings"
+msgstr "Configurações do módulo de pedidos de compra"
+
+#: modules/purchaseorder/config.py:31
+#, fuzzy
+msgid "Purchase Order"
+msgstr "Pedido de Compra nº"
+
+#: modules/purchaseorder/config.py:41
+msgid "Verbose logging?"
+msgstr "Logs detalhados?"
+
+#: modules/purchaseorder/models.py:9
+msgid "Customer PO Number"
+msgstr "Número PO Cliente"
+
+#: modules/purchaseorder/models.py:11
+msgid "Outstanding Balance"
+msgstr "Saldo pendente"
+
+#: modules/purchaseorder/models.py:13
+msgid "Paid on"
+msgstr "Pago em"
+
+#: modules/sagepay/config.py:6 modules/sagepay/config.py:62
+#, fuzzy
+msgid "Sage Pay Secure Payments"
+msgstr "Pagamentos Seguro Prot/X"
+
+#: modules/sagepay/config.py:12
+#, fuzzy
+msgid "Sage Pay Payment Settings"
+msgstr "Configurações de Pagamentos via Paypal"
+
+#: modules/sagepay/config.py:25
+msgid "Simulated Transactions?"
+msgstr "Transações simuladas?"
+
+#: modules/sagepay/config.py:26
+msgid "Must be false to accept real payments"
+msgstr "Deve ser Falso para aceitar pagamentos reais"
+
+#: modules/sagepay/config.py:31
+msgid "Skip post?"
+msgstr "Pular post?"
+
+#: modules/sagepay/config.py:32
+#, fuzzy
+msgid ""
+"For testing only, this will skip actually posting to Sage Pay servers.  This "
+"is because their servers restrict IPs of posting servers, even for tests.  "
+"If you are developing on a desktop, you'll have to enable this."
+msgstr ""
+"Somente para testes, isto irá pular o post para os servidores Prot/x. Isto é "
+"necessário por que seus servidores restringem o IP de servidores que "
+"realizam post, mesmo para testes. Se você está desenvolvendo em Desktop, "
+"você terá de habilitar esta opção."
+
+#: modules/sagepay/config.py:37
+msgid "Payment Capture"
+msgstr "Captura de Pagamento"
+
+#: modules/sagepay/config.py:38
+#, fuzzy
+msgid ""
+"This can be \"Payment\" which captures immediately, or \"Deferred\".  Note "
+"that you can only use the latter if you set option on your Sage pay account "
+"first."
+msgstr ""
+"Isto pode ser \"Pagamento\" que captura imediatamente, ou \"Adiado\". Note "
+"que você só pode usar a última se você configurar esta opção em sua conta "
+"Prot/x primeiro."
+
+#: modules/sagepay/config.py:83
+msgid "Your Vendor Name"
+msgstr "Seu Nome de Vendedor"
+
+#: modules/sagepay/config.py:85
+msgid ""
+"This is used for Live and Test transactions.  Make sure to add your server "
+"IP address to VSP, or it won't work."
+msgstr ""
+"Isto é usado para transações reais e teste . Certifique-se de adicionar o IP "
+"do seu servidor a VSP, ou não funcionará."
+
+#: modules/sagepay/config.py:89
+msgid "Simulator Vendor Name"
+msgstr "Nome do Vendedor de Simulação"
+
+#: modules/sagepay/config.py:91
+msgid ""
+"This is used for Live and Test transactions.  Make sure to activate the VSP "
+"Simulator (you have to directly request it) and add your server IP address "
+"to the VSP Simulator, or it won't work."
+msgstr ""
+"Isto é usado para transações Live e Test . Certifique-se de ativar o "
+"simulador VSP, e adicionar o endereço IP do seu servidor ao simulador VSP, "
+"ou não funcionará."
+
+#: modules/sagepay/config.py:96
+#, fuzzy
+msgid "Currency code for Sage Pay transactions."
+msgstr "Código de moeda para transações via Paypal."
+
+#: modules/sagepay/forms.py:82
+msgid "You must provide a starting month when using this type of card."
+msgstr "Você deve informar um mês de ínicio quando usando este tipo de cartão."
+
+#: modules/sagepay/forms.py:88 modules/sagepay/forms.py:101
+msgid "This must be a number"
+msgstr "Isto deve ser um número."
+
+#: modules/sagepay/forms.py:91 modules/sagepay/forms.py:104
+msgid "Out of range, must be 1-12"
+msgstr "Fora da faixa, deve estar entre 1 e 12"
+
+#: modules/sagepay/forms.py:95
+msgid "You must provide a starting year when using this type of card."
+msgstr "Você deve informar um ano de início quando usando este tipo de cartão."
+
+#: modules/sagepay/forms.py:108
+msgid "You must provide an issue number when using this type of card."
+msgstr ""
+"Você deve informar o número do protocolo quando usando este tipo de cartão."
+
+#: modules/sagepay/processor.py:153
+msgid "TESTING MODE"
+msgstr "MODO TESTE"
+
+#: modules/sagepay/processor.py:179
+msgid "Invalid response from payment gateway"
+msgstr "Resposta inválida do gateway de pagamento"
+
+#: modules/sagepay/processor.py:198
+msgid "Error processing payment."
+msgstr "Erro processando pagamento."
+
+#: modules/sagepay/views.py:41
+msgid "3D Secure transaction expired. Please try again."
+msgstr "Transação segura 3D expirada. Por favor, tente novamente."
+
+#: modules/sagepay/views.py:58
+msgid ""
+"3D Secure transaction was not approved by payment gateway. Please contact us."
+msgstr ""
+"Transação segura 3D não foi aprovada pelo gateway de pagamento. Por favor, "
+"entre em contato."
+
+#: modules/sermepa/config.py:17
+msgid "SERMEPA (ServiRed) Payment Module Settings"
+msgstr "Configurações módulo de pagamento SERMEPA (ServiRed)"
+
+#: modules/sermepa/config.py:36
+#, fuzzy
+msgid "Credit Card (via SERMEPA)"
+msgstr "Cartão de Crédito"
+
+#: modules/sermepa/config.py:57
+msgid "Currency"
+msgstr "Moeda"
+
+#: modules/sermepa/config.py:60
+msgid "EUR (Euro)"
+msgstr "EUR (Euro)"
+
+#: modules/sermepa/config.py:61
+msgid "USD (US Dollar)"
+msgstr "USD (Dólar Americano)"
+
+#: modules/sermepa/config.py:62
+msgid "GBP (British Pound)"
+msgstr "GBP (Libra Esterlina)"
+
+#: modules/sermepa/config.py:63
+msgid "JPY (Japanese Yen)"
+msgstr "JPY (Yene Japonês)"
+
+#: modules/sermepa/config.py:70
+msgid "Merchant FUC"
+msgstr "FUC do Vendedor"
+
+#: modules/sermepa/config.py:71
+msgid "Your FUC code"
+msgstr "Seu código FUC"
+
+#: modules/sermepa/config.py:77
+msgid "Merchant title"
+msgstr "Título do Vendedor"
+
+#: modules/sermepa/config.py:78
+msgid ""
+"Description of your shop which will be visible on payment confirmation screen"
+msgstr ""
+"Descrição da sua loja que sera visível na tela de confirmação de pagamento"
+
+#: modules/sermepa/config.py:86
+msgid "Signature code"
+msgstr "Código da assinatura"
+
+#: modules/sermepa/config.py:87
+msgid "Your secret code used to sign transaction data"
+msgstr "Seu código secreto usado para assinar os dados da transação"
+
+#: modules/sermepa/config.py:93
+msgid "Test signature code"
+msgstr "Código Assinatura Teste"
+
+#: modules/sermepa/config.py:94
+msgid "Your secret code used to sign transaction data in test payments"
+msgstr ""
+"Seu código secreto usado para assinar os dados da transação em pagamentos de "
+"teste"
+
+#: modules/sermepa/config.py:100
+msgid "Extended signature calculation"
+msgstr ""
+
+#: modules/sermepa/config.py:101
+msgid ""
+"Consult your Sermepa documentation to know the differences between normal "
+"and extended signature calculation, and ask your provider which type of "
+"signature expects you to use. If possible, use extended signature."
+msgstr ""
+
+#: modules/sermepa/config.py:109
+msgid "Terminal number"
+msgstr "Número Terminal"
+
+#: modules/sermepa/config.py:116
+msgid "Test terminal number"
+msgstr "Número Terminal de Teste"
+
+#: modules/sermepa/config.py:118
+msgid "Terminal number used for test payments"
+msgstr "Número de terminal utilizado para pagamentos de teste"
+
+#: modules/sermepa/config.py:126
+msgid "The SERMEPA URL for real transaction posting."
+msgstr "URL SERMEPA para postagem de transação real."
+
+#: modules/sermepa/config.py:133
+msgid "Test Post URL"
+msgstr "URL de Post de Teste"
+
+#: modules/sermepa/config.py:134
+msgid "The SERMEPA URL for test transaction posting."
+msgstr "URL SERMEPA para postagem de transação teste."
+
+#: modules/sermepa/config.py:142
+msgid "Callback URL"
+msgstr "URL retorno"
+
+#: modules/sermepa/config.py:143
+msgid "Callback URL for on-line notifications about payment progress"
+msgstr "URL de retorno para notificações online sobre progresso do pagamento"
+
+#: modules/sermepa/config.py:150
+msgid "OK URL"
+msgstr "URL de OK"
+
+#: modules/sermepa/config.py:151
+msgid "URL for customer to return after successful payment"
+msgstr "URL de retorno para o cliente após pagamento com sucesso"
+
+#: modules/sermepa/config.py:158
+msgid "Failure URL"
+msgstr "URL falha"
+
+#: modules/sermepa/config.py:159
+msgid "URL for customer to return after payment failure"
+msgstr "URL de retorno para o cliente após pagamento com falha"
+
+#: modules/sermepa/views.py:238
+#, python-format
+msgid "The contact is %s"
+msgstr ""
+
+#: modules/sermepa/views.py:241
+#, python-format
+msgid "Processing cart item %s"
+msgstr ""
+
+#: modules/trustcommerce/config.py:8
+msgid "TrustCommerce Payment Settings"
+msgstr "Configurações de Pagamento TrustCommerce"
+
+#: modules/trustcommerce/config.py:27
+msgid "Use Address Verification System (AVS)?"
+msgstr "Usar Sistema de Verificação de Endereços?"
+
+#: modules/trustcommerce/config.py:38
+msgid "Type of authorization to perform."
+msgstr "Tipo de autorização a executar."
+
+#: modules/trustcommerce/config.py:39
+msgid "Refer to manual for details on the different types."
+msgstr "Consulte o manual para detalhes sobre os diferentes tipos."
+
+#: modules/trustcommerce/config.py:41
+msgid "Sale"
+msgstr "Venda"
+
+#: modules/trustcommerce/config.py:42
+msgid "Preauth"
+msgstr "Preauth"
+
+#: modules/trustcommerce/config.py:69
+msgid "Your TrustCommerce login"
+msgstr "Seu login TrustCommerce"
+
+#: modules/trustcommerce/config.py:74
+msgid "Your TrustCommerce password"
+msgstr "Sua senha TrustCommerce"
+
+#: modules/trustcommerce/processor.py:107
+#, python-format
+msgid "Transaction was declined.  Reason: %s"
+msgstr "A transação foi recusada. Motivo: %s"
+
+#: modules/trustcommerce/processor.py:111
+#, python-format
+msgid "Improperly formatted data. Offending fields: %s"
+msgstr "Dados formatador inapropriadamente. Afetando campos: %s"
+
+#: modules/trustcommerce/processor.py:116
+#, python-format
+msgid "An error occurred: %s"
+msgstr "Um erro ocorreu: %s"
+
+#: templates/payment/_order_payment_summary.html:6
+msgid "Paid"
+msgstr "Pago"
+
+#: templates/payment/_order_payment_summary.html:11
+#, python-format
+msgid "Balance = %(balance)s "
+msgstr "Iniciando cálculo de saldo: %(balance)s"
+
+#: templates/payment/_order_payment_summary.html:16
+msgid "Pay remaining balance"
+msgstr "Pague saldo restante"
+
+#: templates/payment/admin/charge_remaining_confirm.html:4
+msgid "Custom Charge"
+msgstr "Cobrança personalizada"
+
+#: templates/payment/admin/charge_remaining_confirm.html:7
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "Por favor corrija o erro abaixo."
+msgstr[1] "Por favor corrija os erros abaixo."
+
+#: templates/payment/admin/charge_remaining_confirm.html:12
+msgid "New amount"
+msgstr "Novo valor"
+
+#: templates/payment/admin/charge_remaining_confirm.html:14
+msgid "Extra Shipping"
+msgstr "Envio extra"
+
+#: templates/shop/checkout/authentication_required.html:10
+msgid "Authentication required"
+msgstr "Autenticação necessária"
+
+#: templates/shop/checkout/authentication_required.html:13
+#: templates/shop/checkout/base_confirm.html:15
+#: templates/shop/checkout/base_pay_ship.html:13
+#: templates/shop/checkout/form.html:17
+msgid "Ship/Bill"
+msgstr "Entrega/Cobrança"
+
+#: templates/shop/checkout/authentication_required.html:15
+#: templates/shop/checkout/base_confirm.html:17
+#: templates/shop/checkout/base_pay_ship.html:15
+#: templates/shop/checkout/form.html:19
+msgid "Confirmation"
+msgstr "Confirmação"
+
+#: templates/shop/checkout/authentication_required.html:23
+msgid ""
+"In order to have access to your products and order history, please log in. "
+"After that you may continue to checkout with your current cart."
+msgstr ""
+
+#: templates/shop/checkout/authentication_required.html:26
+#: templates/shop/checkout/form.html:37
+msgid "Username or email"
+msgstr "Usuário ou email"
+
+#: templates/shop/checkout/authentication_required.html:27
+#: templates/shop/checkout/form.html:38
+msgid "Password"
+msgstr "Senha"
+
+#: templates/shop/checkout/authentication_required.html:28
+#: templates/shop/checkout/form.html:39
+msgid "Login"
+msgstr "Entrar"
+
+#: templates/shop/checkout/authentication_required.html:32
+msgid "If you do not have an account, please"
+msgstr "Se você não possui uma conta, por favor"
+
+#: templates/shop/checkout/authentication_required.html:32
+msgid "click here"
+msgstr "clique aqui"
+
+#: templates/shop/checkout/authentication_required.html:33
+msgid "If you do not remember your password, please"
+msgstr "Se você não lembra a sua senha, por favor"
+
+#: templates/shop/checkout/authentication_required.html:33
+msgid "click here</a> to have it reset."
+msgstr "clique aqui </a> para resetá-la"
+
+#: templates/shop/checkout/balance_remaining.html:12
+msgid "Order Balance"
+msgstr "saldo do Pedido"
+
+#: templates/shop/checkout/balance_remaining.html:17
+#, python-format
+msgid ""
+"To complete this order, you need to pay the %(orderbalance)s balance "
+"remaining on this order."
+msgstr ""
+"Para completar este pedido, você precisará pagar o valor remanescente  de "
+"%(orderbalance)s"
+
+#: templates/shop/checkout/balance_remaining.html:22
+#: templates/shop/checkout/form.html:51
+msgid "How do you want to pay?"
+msgstr "Como você gostaria de pagar?"
+
+#: templates/shop/checkout/balance_remaining.html:26
+#: templates/shop/checkout/form.html:84
+msgid "Continue Checkout"
+msgstr "Continuar"
+
+#: templates/shop/checkout/base_confirm.html:22
+msgid ""
+"The following error was returned while trying to process your payment. "
+"Please correct and resubmit."
+msgstr ""
+"O seguinte erro foi retornado ao processar o seu pagamento. Por favor, "
+"corrija e envie novamente."
+
+#: templates/shop/checkout/base_confirm.html:25
+msgid "Please validate the following information, then submit your order."
+msgstr ""
+"Por favor, revise as seguintes informações, e então confirme seu pedido."
+
+#: templates/shop/checkout/base_confirm.html:41
+#: templates/shop/checkout/google/confirm.html:17
+#: templates/shop/checkout/paypal/confirm.html:18
+#: templates/shop/checkout/paypal/confirm.html:107
+#: templates/shop/checkout/sermepa/confirm.html:17
+#: templates/shop/checkout/sermepa/confirm.html:42
+msgid "Purchase Items"
+msgstr "Confirmar Pedido"
+
+#: templates/shop/checkout/base_pay_ship.html:19
+#: templates/shop/checkout/form.html:22
+msgid ""
+"Please complete the following information in order to submit your order."
+msgstr "Por favor, complete as seguintes informações para enviar o seu pedido."
+
+#: templates/shop/checkout/base_pay_ship.html:22
+#: templates/shop/checkout/form.html:24
+msgid "Please correct the following error:"
+msgid_plural "Please correct the following errors:"
+msgstr[0] "Por favor corrija o seguinte erro:"
+msgstr[1] "Por favor corrija os seguintes erros:"
+
+#: templates/shop/checkout/base_pay_ship.html:41
+msgid "Shipping Information"
+msgstr "Informações de entrega"
+
+#: templates/shop/checkout/base_pay_ship.html:46
+msgid "The following shipping method will be used"
+msgstr "O método de entrega utilizado será"
+
+#: templates/shop/checkout/base_pay_ship.html:48
+msgid "Please choose your preferred shipping method"
+msgstr "Por favor, escolha o seu método de entrega preferido"
+
+#: templates/shop/checkout/base_pay_ship.html:59
+msgid "There are no items in this order to ship."
+msgstr "Não há itens neste pedido para entrega."
+
+#: templates/shop/checkout/base_pay_ship.html:66
+msgid ""
+"No valid shipping method is available. Please verify that your address is "
+"correct."
+msgstr ""
+
+#: templates/shop/checkout/base_pay_ship.html:68
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: templates/shop/checkout/confirm.html:6
+#: templates/shop/checkout/cod/confirm.html:6
+#: templates/shop/checkout/sagepay/confirm.html:6
+msgid ""
+"The following error was returned while trying to process your card.  Please "
+"correct and resubmit"
+msgstr ""
+"O seguinte erro foi retornado ao processar o seu cartão. Por favor, corrija "
+"e envie novamente."
+
+#: templates/shop/checkout/confirm.html:20
+#: templates/shop/checkout/sagepay/confirm.html:19
+#, python-format
+msgid ""
+"Your %(credit_card_type)s card ending in %(credit_card_number)s will be "
+"charged %(order_total)s."
+msgstr ""
+"Seu cartão de crédito %(credit_card_type)s terminado em "
+"%(credit_card_number)s será cobrado em %(order_total)s."
+
+#: templates/shop/checkout/confirm.html:22
+#: templates/shop/checkout/purchaseorder/confirm.html:15
+#, python-format
+msgid "This order will be charged on your account for %(order_total)s."
+msgstr "Este pedido será cobrado em sua conta em %(order_total)s."
+
+#: templates/shop/checkout/empty_cart.html:12
+msgid ""
+"Your cart is empty. Please add some items to your cart, then complete the "
+"checkout process."
+msgstr ""
+"Seu carrinho está vazio. Por favor, adicione alguns itens ao seu carrinho  "
+"para finalizar o pedido."
+
+#: templates/shop/checkout/failure.html:11
+msgid "Failed payment"
+msgstr "Falha no pagamento"
+
+#: templates/shop/checkout/failure.html:12
+msgid "We are sorry, but the payment process finished with a failure."
+msgstr "Desculpe, mas o processo de pagamento foi finalizado com uma falha."
+
+#: templates/shop/checkout/failure.html:13
+msgid "You may"
+msgstr "Você pode"
+
+#: templates/shop/checkout/failure.html:13
+msgid "proceed to the cart"
+msgstr "prosseguir para o carrinho"
+
+#: templates/shop/checkout/failure.html:13
+msgid "and check out again, using other payment method."
+msgstr "e finalize o pedido novamente, utilizando outra forma de pagamento"
+
+#: templates/shop/checkout/form.html:33
+msgid ""
+"If you already have an account, you can login now to fill in most of the "
+"information below."
+msgstr ""
+"Se você já possui uma conta, você pode entrar agora para preencher a maioria "
+"das informações abaixo."
+
+#: templates/shop/checkout/form.html:34
+msgid "This is just a convenience, no account is required!"
+msgstr "Estas informações são úteis, mas não é necessário uma conta."
+
+#: templates/shop/checkout/form.html:46
+msgid "You'll need to fill out at least the fields with a *"
+msgstr "Você precisa preencher ao menos os campos com um *"
+
+#: templates/shop/checkout/form.html:56
+msgid "Basic Information"
+msgstr "Informações básicas"
+
+#: templates/shop/checkout/form.html:57
+msgid "Email address"
+msgstr "Endereço de email"
+
+#: templates/shop/checkout/form.html:60
+msgid "First name"
+msgstr "Primeiro nome"
+
+#: templates/shop/checkout/form.html:63
+msgid "Last name"
+msgstr "Último nome"
+
+#: templates/shop/checkout/form.html:66
+msgid "Phone number"
+msgstr "Número de telefone"
+
+#: templates/shop/checkout/form.html:78
+msgid "Discounts"
+msgstr "Descontos"
+
+#: templates/shop/checkout/form.html:79
+msgid "Discount code"
+msgstr "Código de Desconto"
+
+#: templates/shop/checkout/pay_ship.html:11
+#: templates/shop/checkout/sagepay/pay_ship.html:26
+msgid "Type of credit card"
+msgstr "Tipo de Cartão de Crédito"
+
+#: templates/shop/checkout/pay_ship.html:14
+#: templates/shop/checkout/sagepay/pay_ship.html:29
+msgid "Credit card number"
+msgstr "Número Cartão de Crédito"
+
+#: templates/shop/checkout/pay_ship.html:17
+#: templates/shop/checkout/sagepay/pay_ship.html:39
+msgid "Expiration date"
+msgstr "Data de Expiração"
+
+#: templates/shop/checkout/pay_ship.html:20
+#: templates/shop/checkout/sagepay/pay_ship.html:42
+msgid "CCV"
+msgstr "CCV"
+
+#: templates/shop/checkout/success.html:13
+msgid "Thank you for your order!"
+msgstr "Obrigado pelo seu pedido!"
+
+#: templates/shop/checkout/success.html:14
+msgid ""
+"Please print out this page as a receipt.  You will also receive an email "
+"with this information."
+msgstr ""
+"Por favor, imprima esta página como um recibo. Você também receberá um e-"
+"mail com esta confirmação."
+
+#: templates/shop/checkout/cod/confirm.html:17
+#, python-format
+msgid "This order will be COD for %(order_total)s."
+msgstr "Este pedido será pago em dinheiro na entrega por %(order_total)s."
+
+#: templates/shop/checkout/google/confirm.html:11
+msgid "Your payment will be processed through Google Checkout."
+msgstr "Seu pagamento será processado pelo Google Checkout."
+
+#: templates/shop/checkout/google/confirm.html:23
+msgid "Fast checkout through Google"
+msgstr "Finalização rápida pelo Google"
+
+#: templates/shop/checkout/paypal/confirm.html:12
+msgid "Your payment will be processed through PayPal."
+msgstr "Seu pagamento será processado pelo PayPal."
+
+#: templates/shop/checkout/paypal/confirm.html:58
+#, python-format
+msgid "Remaining Balance for order %(order_id)s"
+msgstr ""
+
+#: templates/shop/checkout/paypal/confirm.html:73
+#, fuzzy
+msgid "Shipping for free items"
+msgstr "Informações de entrega"
+
+#: templates/shop/checkout/purchaseorder/pay_ship.html:9
+msgid "Purchase Order #"
+msgstr "Pedido de Compra nº"
+
+#: templates/shop/checkout/sagepay/pay_ship.html:23
+msgid "Card Holder"
+msgstr "Titular do cartão"
+
+#: templates/shop/checkout/sagepay/pay_ship.html:32
+msgid "Issue number"
+msgstr "Número protocolo"
+
+#: templates/shop/checkout/sagepay/pay_ship.html:35
+msgid "Issue date"
+msgstr "Data do protocolo"
+
+#: templates/shop/checkout/sagepay/secure3d_form.html:17
+#, fuzzy
+msgid "Please click the button below to authenticate your card."
+msgstr ""
+"Por favor, revise as seguintes informações, e então confirme seu pedido."
+
+#: templates/shop/checkout/sagepay/secure3d_form.html:18
+#, fuzzy
+msgid "Authenticate"
+msgstr "Autenticação necessária"
+
+#: templates/shop/checkout/sermepa/confirm.html:11
+msgid "Your payment will be processed through Sermepa."
+msgstr "Seu pagamento será processado pelo Sermepa."
+
+#: templates/shop/checkout/sermepa/confirm.html:32
+#, python-format
+msgid "Remaining Balance for order #%(order_id)s"
+msgstr ""
+
+#: templates/shop/checkout/sermepa/confirm.html:34
+#, fuzzy, python-format
+msgid "Order #%(order_id)s"
+msgstr "Total do Pedido: %(orderbalance)s"
+
+#: views/balance.py:72 views/balance.py:97
+msgid ""
+"The orderitem you have requested doesn't exist, or you don't have access to "
+"it."
+msgstr "O item que você pediu não existe, ou você não tem acesso a ele."
+
+#: views/balance.py:87
+msgid "No form found in request."
+msgstr "Nenhum formulário encontrado na solicitação."
+
+#: views/confirm.py:154
+msgid "Order successfully submitted"
+msgstr "Pedido enviado com sucesso."
+
+#: views/confirm.py:232
+#, python-format
+msgid ""
+"There are not enough %(prod)s in stock to complete your order. Please modify "
+"your order."
+msgstr ""
+
+#: views/confirm.py:234
+#, python-format
+msgid ""
+"The following products %(prod)s are no longer available. Please modify your "
+"order."
+msgstr ""
+
+#: views/confirm.py:283
+msgid "This order does not have a zero balance"
+msgstr "Este pedido ainda possui saldo."
+
+#: views/cron.py:21
+msgid "Feature is not enabled."
+msgstr "Recurso não ativado."
+
+#: views/cron.py:79
+msgid "Subscription Renewal Order successfully submitted"
+msgstr "Pedido de renovação da Assinatura enviado com sucesso"
+
+#: views/payship.py:23
+msgid "Please Select"
+msgstr "Por favor selecione"
+
+#~ msgid "Enable SSL"
+#~ msgstr "Ativar SSL"
+
+#~ msgid ""
+#~ "This enables for generic pages like contact information capturing.  \n"
+#~ "    It does not set SSL for individual modules. \n"
+#~ "    You must enable SSL for each payment module individually."
+#~ msgstr ""
+#~ "Esse habilita para páginas genéricas como captura de informação de "
+#~ "contato. /nEle não determina SSL para módulos individuais. /nVocê deve "
+#~ "habilitar o SSL para cada módulo de pagamento individualmente."
+
+#~ msgid "Use SSL for the checkout pages?"
+#~ msgstr "Usar SSL para as páginas de checkout?"
+
+#~ msgid "Use SSL for the module checkout pages?"
+#~ msgstr "Usar SSL para as páginas de checkout de módulo?"
+
+#~ msgid "Initial Balance:"
+#~ msgstr "Saldo Inicial:"
+
+#~ msgid "Prot/X Payment Settings"
+#~ msgstr "Configurações de Pagamento Prot/X"
+
+#~ msgid "Currency code for Prot/X transactions."
+#~ msgstr "Código de moeda para transações via Prot/X"
+
+#~ msgid "Billing Information"
+#~ msgstr "Informações de cobrança"
+
+#~ msgid "Bill To"
+#~ msgstr "Cobrar a "
+
+#~ msgid "If different from the first and last names above"
+#~ msgstr "Se diferente do primeiro e último nomes acima"
+
+#~ msgid "Street"
+#~ msgstr "Rua"
+
+#~ msgid "City"
+#~ msgstr "Cidade"
+
+#~ msgid "State/Province"
+#~ msgstr "Estado"
+
+#~ msgid "Zipcode/Postcode"
+#~ msgstr "CEP"
+
+#~ msgid "Country"
+#~ msgstr "País"
+
+#~ msgid "Shipping same as billing?"
+#~ msgstr "O endereço de entrega é o mesmo de cobrança?"
+
+#~ msgid "Ship To"
+#~ msgstr "Enviar para"
+
+#, fuzzy
+#~ msgid ""
+#~ "Select the payment modules you want to use with your shop.  \n"
+#~ "    If you are adding a new one, you should save and come back to this "
+#~ "page, \n"
+#~ "    as it may have enabled a new configuration section."
+#~ msgstr ""
+#~ "Escolha os módulos de pagamento que você quer usar na sua loja. /njá que "
+#~ "ele pode ter habilitado uma nova seção de configuração."
+
+#~ msgid ""
+#~ "IMPORTANT: If false, you will need to manually go to your authorize.net "
+#~ "merchant account and capture payments.  Setting this to false means you "
+#~ "are authorizing the card only, not capturing payment."
+#~ msgstr ""
+#~ "IMPORTANTE: Se falso, você terá de ir manualmente ao authorize.net em sua "
+#~ "conta e capturar os pagamentos. Definir esta opção para falso significa "
+#~ "que você está autorizando o cartão só, não captando pagamento."
+
+#~ msgid "Auto Success Module"
+#~ msgstr "Módulo de Auto Sucesso"
+
+#~ msgid "COD"
+#~ msgstr "Pagamento na Entrega (COD)"

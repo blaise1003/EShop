@@ -1,0 +1,43 @@
+<div class="big">   
+    
+        <div class="">
+            <img  src="/static/theme/img/prodotto.jpg" />
+            <h1 class="tit">POMODORI MARMANDE</h1>
+            <h2 class="desc ">Descrizione prodotto, vestibulum dictum nisl
+                id risus sagittis a aliquet libero feugiat. </h2>
+            <h3>Prezzi <small>(comprensivi IVA)</small></h3>
+                <table class="table table-striped">
+                 <thead>
+                   <tr>
+                     <th>Quantità</th>
+                     <th>Prezzo</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td>0&dash;10 kg</td>
+                     <td>0.8 €/kg</td>
+                   </tr>
+                   <tr>
+                     <td>10&dash;50 kg</td>
+                     <td>0.4 €/kg <span class="label success">Offerta</span></td>
+                   </tr>
+                 </tbody>
+               </table>
+        </div>
+        <div class="buttonCart">
+            <div class="price">€5,00</div>
+            <div class="actions-extend">
+              <a href="/prodotti/noci-di-sorrento-confezionate/"
+                 class="btn btn-primary-info">Dettagli Prodotto</a>
+              <form action="/add/" method="post">
+                  <div>
+                  <input type="submit"
+                         class="btn btn-primary-cart"
+                         name="addcart"
+                         value="Aggiungi al carrello" />
+                  </div>
+              </form>
+            </div>
+        </div>
+</div>

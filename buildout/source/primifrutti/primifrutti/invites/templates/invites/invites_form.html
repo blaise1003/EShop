@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+ <div id="invite-form">
+    <div class="modal-header">
+        <h1 class="documentFirstHeading">{% trans "Invite Form" %}</h1>
+        {% if message %}
+            <div class="alert alert-{{message.message_type}}">
+                <strong>{{ message.message_text }}</strong> 
+            </div>
+        {% else %}
+            <div class="alert alert-info">
+                {% trans "You'll need to fill out at least the fields with a " %}
+                {% spaceless %}
+                    <span rel="tooltip" class="fieldRequired" title="{% trans "required" %}">&nbsp;</span>
+                {% endspaceless %}
+            </div>
+        {% endif %}
+    </div>
+
+    <form action="{% url invites_invite %}" class="form-horizontal"
+          method="post" accept-charset="utf-8">
+        <div class="modal-body">
+            
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="control-group">
+                <label class="control-label" for="recipient">
+                {% trans "Email" %}{% if form.recipient.field.required %}
+                {% spaceless %}
+                    <span rel="tooltip" class="fieldRequired" title="{% trans "required" %}">&nbsp;</span>
+                {% endspaceless %}{% endif %}
+                </label>
+                <div class="controls">
+                    {% if form.recipient.errors %}
+                    <div class="alert alert-error">
+                        <input type="text" maxlength="75" name="recipient" id="id_recipient"
+                        {% if form.recipient.value %}value="{{ form.recipient.value }}"{% endif %} />
+                        {{ form.recipient.errors }}
+                    </div>
+                    {% else %}
+                        <input type="text" maxlength="75" name="recipient" id="id_recipient"
+                        {% if form.recipient.value %}value="{{ form.recipient.value }}"{% endif %} />
+                    {% endif %}
+                    <em class="help-block">{{ form.recipient.field.help_text }}</em>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="recipient_name">
+                {% trans "Name" %}{% if form.recipient_name.field.required %}
+                {% spaceless %}
+                    <span rel="tooltip" class="fieldRequired" title="{% trans "required" %}">&nbsp;</span>
+                {% endspaceless %}
+                {% endif %}
+                </label>
+                <div class="controls">
+                    {% if form.recipient_name.errors %}
+                    <div class="alert alert-error">
+                        <input type="text" maxlength="30" name="recipient_name" id="id_recipient_name" 
+                        {% if form.recipient_name.value %}value="{{ form.recipient_name.value }}"{% endif %} />
+                        {{ form.recipient_name.errors }}
+                    </div>
+                    {% else %}
+                        <input type="text" maxlength="30" name="recipient_name" id="id_recipient_name"
+                        {% if form.recipient_name.value %}value="{{ form.recipient_name.value }}"{% endif %} />
+                    {% endif %}
+                    <em class="help-block">{{ form.recipient_name.field.help_text }}</em>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="recipient_surname">
+                {% trans "Surname" %}{% if form.recipient_surname.field.required %}
+                {% spaceless %}
+                    <span rel="tooltip" class="fieldRequired" title="{% trans "required" %}">&nbsp;</span>
+                {% endspaceless %}
+                {% endif %}
+                </label>
+                <div class="controls">
+                    {% if form.recipient_surname.errors %}
+                    <div class="alert alert-error">
+                        <input type="text" maxlength="30" name="recipient_surname" id="id_recipient_surname" 
+                        {% if form.recipient_surname.value %}value="{{ form.recipient_surname.value }}"{% endif %} />
+                        {{ form.recipient_surname.errors }}
+                    </div>
+                    {% else %}
+                        <input type="text" maxlength="30" name="recipient_surname" id="id_recipient_surname" 
+                        {% if form.recipient_surname.value %}value="{{ form.recipient_surname.value }}"{% endif %} />
+                    {% endif %}
+                    <em class="help-block">{{ form.recipient_surname.field.help_text }}</em>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="text">
+                {% trans "Message" %}{% if form.text.field.required %}
+                {% spaceless %}
+                    <span rel="tooltip" class="fieldRequired" title="{% trans "required" %}">&nbsp;</span>
+                {% endspaceless %}
+                {% endif %}
+                </label>
+                <div class="controls">
+                    {% if form.text.errors %}
+                    <div class="alert alert-error">
+                        <textarea name="text" cols="30" rows="3" id="id_text">{% if form.text.value %}{{ form.text.value }}{% endif %}</textarea>
+                        {{ form.text.errors }}
+                    </div>
+                    {% else %}
+                        <textarea name="text" cols="30" rows="3" id="id_text">{% if form.text.value %}{{ form.text.value }}{% endif %}</textarea>
+                    {% endif %}
+                    <em class="help-block">{{ form.text.field.help_text }}</em>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <!-- Captcha -->
+                <label class="control-label" for="captcha">
+                {% trans "Captcha" %}{% if form.captcha.field.required %}
+                {% spaceless %}
+                    <span rel="tooltip" class="fieldRequired" title="{% trans "required" %}">&nbsp;</span>
+                {% endspaceless %}
+                {% endif %}
+                </label>
+                <div class="controls">
+                    {% if form.captcha.errors %}
+                    <div class="alert alert-error">
+                        {{ form.captcha }}
+                        {{ form.captcha.errors }}
+                    </div>
+                    {% else %}
+                        {{ form.captcha }}
+                    {% endif %}
+                    <em class="help-block">{{ form.captcha.field.help_text }}</em>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer button form-actions">
+            <input type="hidden" name="user" value="{{ request.user }}" />
+            <input type="submit" class="btn btn-small btn-primary button" value="{% trans 'Send' %}" />
+            <input type="reset" class="btn btn-small button close" value="{% trans 'Cancel' %}" />
+        </div>
+    </form>
+
+ </div>
+{% endblock %}

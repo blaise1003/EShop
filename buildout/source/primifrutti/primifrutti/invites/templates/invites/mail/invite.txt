@@ -1,0 +1,16 @@
+{% load i18n %}{% load l10n %}{% blocktrans %}Hello {{ recipient_name }},{% endblocktrans %}
+
+{{ inviter_name|escape }} {{ inviter_surname|escape }} ({{ inviter_email|escape }}) ti ha invitato a far parte di Primi frutti, un portale di vendite online dove ti aspettano:
+
+- i migliori prodotti sempre freschi e fragranti;
+- tante offerte sempre accattivanti;
+- consegne a domicilio rapide e gratuite;
+
+Fare la spesa non è mai stato così facile, veloce e comodo!
+
+Registrandoti al nostro portale anche tu potrai ricevere, direttamente a casa, il nostro cesto di frutta fresca (http://{{ site_domain }}/prodotti/cesto-frutta/) in omaggio.
+
+Cosa aspetti? Accetta il suo invito andando all'indirizzo http://{{ site_domain }}{{ registration_url }}
+
+Team {{ shop_name }}
+

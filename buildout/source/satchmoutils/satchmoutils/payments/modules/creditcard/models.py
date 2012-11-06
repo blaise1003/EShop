@@ -1,0 +1,2 @@
+from satchmoutils.payments.modules.creditcard import config
+PAYMENT_PROCESSOR=True

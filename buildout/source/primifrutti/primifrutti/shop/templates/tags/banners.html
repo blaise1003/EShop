@@ -1,0 +1,20 @@
+{% load thumbnail %}
+<div id="myCarousel" class="carousel">
+<div class="carousel-inner">
+    {% if banner_list %}
+      {% for banner in banner_list %}
+          {% thumbnail banner.picture 630x255 as image %}
+          <div class="item {% if forloop.first %}active{% endif %}">
+            {% if banner.url %}<a href="{{banner.url}}">{% endif %}
+            <img src="{{ image.absolute_url }}" class="banner"
+                  alt="{{banner.title}}"
+                  width="630px"
+                  height="255px" />
+            {% if banner.url %}</a>{% endif %}
+          </div>
+      {% endfor %}
+    {% endif %}
+</div>
+<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>

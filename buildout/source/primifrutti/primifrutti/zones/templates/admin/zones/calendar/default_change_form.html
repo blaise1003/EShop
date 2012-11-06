@@ -1,0 +1,21 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+{% block extrahead %}{{ block.super }}
+{% if add %}<style type="text/css">/*<![CDATA[*/
+div.submit-row input[name="_addanother"] {
+  display: none;
+}
+div.submit-row input[name="_save"] {
+  display: none;
+}
+/*]]>*/</style>{% endif %}
+{% endblock %}
+{% block breadcrumbs %}{% if not is_popup %}
+<div class="breadcrumbs">
+     <a href="../../../../../../">{% trans "Home" %}</a> &rsaquo;
+     <a href="../../../../../">{{ app_label|capfirst|escape }}</a> &rsaquo;
+     <a href="../../../../">{% trans "Zones" %}</a> &rsaquo;
+     <a href="../../../">{{adminform.model_admin.container_object}}</a> &rsaquo;
+     {% if add %}{% trans "Add default calendar" %}{% else %}{{ original|truncatewords:"18" }}{% endif %}
+</div>
+{% endif %}{% endblock %}

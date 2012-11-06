@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+  @@include "head.html"
+  <body>
+    <div id="wrapper" class="container">
+        @@include "navbar-fixed-top.html" 
+      <div id="header" class="row">
+          @@include "topbar.html"
+          @@include "carousel.html"
+      </div>
+         @@include "breadcrumb.html"
+      <div id="main" class="row">
+        <div id="left" class="span4">
+          @@include "column-left.html"
+        </div>
+        <div id="content" class="span10">
+          @@include "content.html"
+        </div>
+        <div id="right" class="span2">
+          @@include "column-right.html"
+        </div>
+      </div>
+    </div>
+    @@include "footer.html"
+  </body>
+</html>

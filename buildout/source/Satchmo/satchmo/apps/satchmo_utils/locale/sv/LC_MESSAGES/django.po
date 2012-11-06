@@ -1,0 +1,76 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# This file is distributed under the same license as the PACKAGE package.
+# N.L. <kotorinl@yahoo.co.uk>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Satchmo svn\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-18 18:58+0200\n"
+"PO-Revision-Date: 2008-04-30 23:35+0100\n"
+"Last-Translator: N.L. <kotorinl@yahoo.co.uk>\n"
+"Language-Team: Group\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Basepath: ../../../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: SWEDEN\n"
+
+#: numbers.py:23
+#, python-format
+msgid "%(value)s is not a valid number"
+msgstr ""
+
+#: numbers.py:35
+msgid "Please enter a positive number"
+msgstr ""
+
+#: views.py:106
+msgid "Card type does not match card number."
+msgstr ""
+
+#: views.py:108
+msgid "Invalid credit card number."
+msgstr ""
+
+#: thumbnail/config.py:4
+#, fuzzy
+msgid "Thumbnail Settings"
+msgstr "Minatyrbildskvalitet"
+
+#: thumbnail/config.py:9
+msgid "Thumbnail quality"
+msgstr "Minatyrbildskvalitet"
+
+#: thumbnail/config.py:10
+msgid ""
+"Use a 1-100 value here, which will change the quality of JPG thumbnails "
+"created for products and categories."
+msgstr ""
+"Använd ett värde 1-100, som kommer att ändra kvaliteten på JPEG-"
+"miniatyrbilder som skapas för produkter och kategorier."
+
+#: thumbnail/config.py:16
+msgid "Rename product images?"
+msgstr ""
+
+#: thumbnail/config.py:17
+msgid "Automatically rename product images on upload?"
+msgstr ""
+
+#: thumbnail/widgets.py:20
+#, fuzzy
+msgid "Change:"
+msgstr "Ändra"
+
+#: thumbnail/templates/widget/file.html:3
+msgid "Currently"
+msgstr "För närvarande"
+
+#: thumbnail/templates/widget/file.html:4
+msgid "Change"
+msgstr "Ändra"

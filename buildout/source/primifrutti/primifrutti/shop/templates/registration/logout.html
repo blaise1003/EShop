@@ -1,0 +1,12 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+{% endblock %}
+
+{% block content %}
+<div id="logout-content">
+<div class="alert alert-success">{% trans "You have been successfully logged out." %}</div>
+</div>
+{% endblock %}

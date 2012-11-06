@@ -1,0 +1,689 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# This file is distributed under the same license as the Satchmo package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Satchmo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-18 18:59+0200\n"
+"PO-Revision-Date: 2010-05-11 13:20+0300\n"
+"Last-Translator:Pavel Kiper <iwtbarh@gmail.com>\n"
+"Language-Team: Russian\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: config.py:7
+msgid "Shipping Settings"
+msgstr "Настройки доставки"
+
+#: config.py:11
+msgid "Active shipping modules"
+msgstr "Активные модули доставки"
+
+#: config.py:12
+msgid ""
+"Select the active shipping modules, save and reload to set any module-"
+"specific shipping settings."
+msgstr ""
+"Выберите активные модули доставки, сохраните и перезагрузите страницу, чтобы "
+"изменить настройки доставки для выбранных модулей."
+
+#: config.py:14
+msgid "Per piece"
+msgstr "По цене"
+
+#: config.py:21
+msgid "Hide if one?"
+msgstr "Спрятать, если один?"
+
+#: config.py:22
+msgid "Hide shipping form fields if there is only one choice available?"
+msgstr "Не показывать форму доставки, если доступен только один способ?"
+
+#: config.py:26
+msgid "No"
+msgstr "Нет"
+
+#: config.py:27
+msgid "Yes"
+msgstr "Да"
+
+#: config.py:28
+#, fuzzy
+msgid "Show description only"
+msgstr "Показывать только описание"
+
+#: config.py:34
+msgid "Download PDFs from admin page"
+msgstr ""
+
+#: config.py:42
+msgid "Select least expensive by default?"
+msgstr "По умолчанию выбирать самый дешевый?"
+
+#: modules/canadapost/config.py:12
+#, fuzzy
+msgid "Canada Post Shipping Settings"
+msgstr "Настройки доставки Canada Post "
+
+#: modules/canadapost/config.py:22
+msgid "Canada Post Merchant ID"
+msgstr "Идентификатор Canada Post"
+
+#: modules/canadapost/config.py:23
+msgid "The merchant ID assigned by Canada Post"
+msgstr "Идентификатор, выданный Canada Post (Merchant ID)"
+
+#: modules/canadapost/config.py:29
+msgid "Canada Post shipping choices available to customers."
+msgstr "Способы доставки Canada Post, доступный клиентам."
+
+#: modules/canadapost/config.py:54 modules/ups/config.py:61
+#: modules/usps/config.py:68
+msgid "Type of container used to ship product."
+msgstr "Тип упаковки"
+
+#: modules/canadapost/config.py:64
+msgid "Access production Canada Post server"
+msgstr "Использовать рабочий сервер Canada Post"
+
+#: modules/canadapost/config.py:65 modules/ups/config.py:95
+#: modules/usps/config.py:82
+msgid "Use this when your store is in production."
+msgstr "Включите, если ваш магазин в рабочем режиме."
+
+#: modules/canadapost/config.py:70 modules/ups/config.py:100
+#: modules/usps/config.py:87
+msgid "Submit to URL"
+msgstr "URL отправки данных"
+
+#: modules/canadapost/config.py:71
+msgid "Canada Post Sell Online server to submit live transactions."
+msgstr "Сервер для отправки транзакций Canada Post Sell Online"
+
+#: modules/canadapost/config.py:76 modules/ups/config.py:106
+msgid "Submit to TestURL"
+msgstr "URL отправки тестовых данных"
+
+#: modules/canadapost/config.py:77
+msgid "Canada Post Sell Online server to submit test transactions."
+msgstr "Сервер для отправки тестовых транзакций Canada Post Sell Online"
+
+#: modules/canadapost/config.py:82
+msgid "Turn around time"
+msgstr "Время доставки"
+
+#: modules/canadapost/config.py:83
+msgid ""
+"Turn around time in hours. If declared here, this "
+"parameter                     will overwrite the one defined in the "
+"merchant's profile"
+msgstr ""
+"Время доставки в часах. Если параметр указан, насткойка аккаунта Canada Post "
+"будет проигнорирована."
+
+#: modules/canadapost/config.py:89 modules/fedex_web_services/config.py:154
+#: modules/ups/config.py:112 modules/usps/config.py:99
+msgid "Verbose logs"
+msgstr "Подробный журнал"
+
+#: modules/canadapost/config.py:90
+msgid ""
+"Send the entire request and response to the log - for debugging help when "
+"setting up Canada Post."
+msgstr ""
+
+#: modules/canadapost/shipper.py:63
+#, python-format
+msgid "Canada Post - %s"
+msgstr ""
+
+#: modules/canadapost/shipper.py:79
+msgid "Canada Post"
+msgstr ""
+
+#: modules/canadapost/shipper.py:90 modules/ups/shipper.py:107
+#, fuzzy, python-format
+msgid "%s business days"
+msgstr "3-4 рабочих дня"
+
+#: modules/canadapost/shipper.py:92 modules/ups/shipper.py:109
+#, fuzzy, python-format
+msgid "%s business day"
+msgstr "3-4 рабочих дня"
+
+#: modules/canadapost/shipper.py:127 modules/ups/shipper.py:139
+msgid "3 - 4"
+msgstr ""
+
+#: modules/dummy/shipper.py:28
+msgid "Dummy Flat Rate Shipping"
+msgstr "Искусственная фиксированная ставка доставки"
+
+#: modules/dummy/shipper.py:41
+msgid "US Mail"
+msgstr ""
+
+#: modules/dummy/shipper.py:47
+msgid "3 - 4 business days"
+msgstr "3-4 рабочих дня"
+
+#: modules/fedex_web_services/config.py:27
+#, fuzzy
+msgid "FedEx Web Services Shipping Settings"
+msgstr "Настройки доставки"
+
+#: modules/fedex_web_services/config.py:37
+msgid "FedEx Meter Number"
+msgstr ""
+
+#: modules/fedex_web_services/config.py:38
+msgid "Meter Number provided by FedEx."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:43
+msgid "FedEx Account Number"
+msgstr ""
+
+#: modules/fedex_web_services/config.py:44
+msgid "FedEx Account Number."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:49
+msgid "FedEx Authentication Key"
+msgstr ""
+
+#: modules/fedex_web_services/config.py:50
+msgid "FedEx Authentication Key."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:55
+msgid "FedEx Authentication Password"
+msgstr ""
+
+#: modules/fedex_web_services/config.py:56
+msgid "FedEx Authentication Password."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:61
+msgid "The region you are sending your package from."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:62
+msgid "i.e. the region the package leaves from."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:75
+msgid "FedEx Shipping Choices Available to customers."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:103
+msgid "Type of container/package used to ship product."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:118
+msgid "Default/Minimum Item Weight"
+msgstr ""
+
+#: modules/fedex_web_services/config.py:119
+msgid ""
+"The default weight for items which lack a defined weight and the minimum an "
+"item is allowed to be, enter a positive value."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:124
+msgid "Default weight units"
+msgstr ""
+
+#: modules/fedex_web_services/config.py:134 modules/ups/config.py:71
+msgid "Single Box?"
+msgstr ""
+
+#: modules/fedex_web_services/config.py:135 modules/ups/config.py:72
+msgid ""
+"Use just one box and ship by weight?  If no then every item will be sent in "
+"its own box."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:140
+msgid "The method used to give the package to Fedex."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:148
+msgid "Most users will keep the default Regular Pickup."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:155
+msgid ""
+"Send the entire request and response to the log - for debugging help when "
+"setting up FedEx."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:160
+msgid "Use test server?"
+msgstr ""
+
+#: modules/fedex_web_services/config.py:161
+msgid ""
+"Check if you want to use the fedex test servers rather than the production "
+"server."
+msgstr ""
+
+#: modules/fedex_web_services/shipper.py:93
+#, python-format
+msgid "Fedex - %s"
+msgstr ""
+
+#: modules/flat/config.py:5
+msgid "Flat rate"
+msgstr "Фиксированная ставка"
+
+#: modules/flat/config.py:12
+msgid "Flat shipping"
+msgstr "Фиксированная стоимость доставки"
+
+#: modules/flat/config.py:19
+msgid "Flat Shipping Service"
+msgstr "Сервис доставки с фиксированной стоимостью"
+
+#: modules/flat/config.py:20
+msgid "Shipping service used with Flat rate shipping"
+msgstr "Сервис доставки, использующий фиксированную ставку стоимости доставки"
+
+#: modules/flat/config.py:27
+msgid "Flat Delivery Days"
+msgstr "Дней на доставку по фиксированной ставке"
+
+#: modules/flat/shipper.py:23
+msgid "Flat Rate Shipping"
+msgstr "Фиксированная ставка стоимости доставки"
+
+#: modules/no/shipper.py:22 modules/no/shipper.py:34
+msgid "No Shipping"
+msgstr "Доставка с фиксированной стоимостью"
+
+#: modules/no/shipper.py:40
+msgid "immediately"
+msgstr "немедленно"
+
+#: modules/per/config.py:15
+msgid "Per item price"
+msgstr "Цена за штуку"
+
+#: modules/per/config.py:22
+msgid "Per Item Shipping Service"
+msgstr "Сервис доставки со стоимостью по количеству"
+
+#: modules/per/config.py:23
+msgid "Shipping service used with per item shipping"
+msgstr "Сервис доставки со стоимостью доставки по количеству"
+
+#: modules/per/config.py:30
+msgid "Per Item Delivery Days"
+msgstr "Дней на доставку по количеству"
+
+#: modules/per/shipper.py:23
+msgid "Per Item shipping"
+msgstr "Стоимость доставки за штуку"
+
+#: modules/productshipping/config.py:7
+msgid "Shipping By Product"
+msgstr ""
+
+#: modules/productshipping/models.py:89 modules/tiered/models.py:91
+#: modules/tieredquantity/models.py:85
+msgid "Key"
+msgstr "Ключ"
+
+#: modules/productshipping/models.py:90 modules/tiered/models.py:92
+#: modules/tieredquantity/models.py:86 modules/tieredweight/models.py:115
+msgid "Ordering"
+msgstr "Порядок сортировки"
+
+#: modules/productshipping/models.py:91 modules/tiered/models.py:93
+#: modules/tieredquantity/models.py:87 modules/tieredweight/models.py:116
+msgid "Active"
+msgstr ""
+
+#: modules/productshipping/models.py:194 modules/tiered/models.py:205
+#: modules/tieredquantity/models.py:199 modules/tieredweight/models.py:244
+msgid "language"
+msgstr "язык"
+
+#: modules/productshipping/models.py:195 modules/tiered/models.py:206
+#: modules/tieredquantity/models.py:200
+msgid "Carrier"
+msgstr "Служба доставки"
+
+#: modules/productshipping/models.py:196 modules/tiered/models.py:207
+#: modules/tieredquantity/models.py:201
+msgid "Description"
+msgstr "Описание"
+
+#: modules/productshipping/models.py:197 modules/tiered/models.py:208
+#: modules/tieredquantity/models.py:202
+msgid "Method"
+msgstr "Метод"
+
+#: modules/productshipping/models.py:197 modules/tiered/models.py:208
+#: modules/tieredquantity/models.py:202
+msgid "i.e. US Mail"
+msgstr "например, US Mail"
+
+#: modules/productshipping/models.py:198 modules/tiered/models.py:209
+#: modules/tieredquantity/models.py:203
+msgid "Delivery Days"
+msgstr "Дней на доставку"
+
+#: modules/productshipping/models.py:206 modules/tiered/models.py:219
+#, fuzzy
+msgid "Shipping Price"
+msgstr "Сервис доставки с фиксированной стоимостью"
+
+#: modules/tiered/config.py:7
+msgid "Tiered Shipping"
+msgstr "Многоуровневая доставка"
+
+#: modules/tiered/models.py:216
+msgid "Min Price"
+msgstr "Минимальная цена"
+
+#: modules/tiered/models.py:217
+msgid "The minimum price for this tier to apply"
+msgstr "Минимальная цена для данного уровня"
+
+#: modules/tiered/models.py:220 modules/tieredquantity/models.py:213
+msgid "Expires"
+msgstr ""
+
+#: modules/tieredquantity/config.py:4
+msgid "Tiered Quantity"
+msgstr ""
+
+#: modules/tieredquantity/models.py:207
+msgid "Min Quantity"
+msgstr ""
+
+#: modules/tieredquantity/models.py:208
+#, fuzzy
+msgid "Minimum qty in order for this to apply?"
+msgstr "Минимальная цена для данного уровня"
+
+#: modules/tieredquantity/models.py:209
+#, fuzzy
+msgid "Handling Price"
+msgstr "Минимальная цена"
+
+#: modules/tieredquantity/models.py:211
+#, fuzzy
+msgid "Shipping Per Item"
+msgstr "Настройки доставки"
+
+#: modules/tieredweight/config.py:10
+#, fuzzy
+msgid "Tiered Weight Shipping"
+msgstr "Многоуровневая доставка"
+
+#: modules/tieredweight/models.py:114 modules/tieredweight/models.py:127
+#: modules/tieredweight/models.py:140
+#, fuzzy
+msgid "carrier"
+msgstr "Служба доставки"
+
+#: modules/tieredweight/models.py:117
+msgid "default_zone"
+msgstr ""
+
+#: modules/tieredweight/models.py:128
+#, fuzzy
+msgid "carriers"
+msgstr "Служба доставки"
+
+#: modules/tieredweight/models.py:141
+msgid "name"
+msgstr ""
+
+#: modules/tieredweight/models.py:142
+msgid "countries"
+msgstr ""
+
+#: modules/tieredweight/models.py:143
+msgid "handling"
+msgstr ""
+
+#: modules/tieredweight/models.py:154 modules/tieredweight/models.py:243
+#: modules/tieredweight/models.py:261
+msgid "zone"
+msgstr ""
+
+#: modules/tieredweight/models.py:155
+msgid "zones"
+msgstr ""
+
+#: modules/tieredweight/models.py:245
+#, fuzzy
+msgid "description"
+msgstr "Описание"
+
+#: modules/tieredweight/models.py:246
+#, fuzzy
+msgid "method"
+msgstr "Метод"
+
+#: modules/tieredweight/models.py:246
+msgid "i.e. Air, Land, Sea"
+msgstr ""
+
+#: modules/tieredweight/models.py:247
+#, fuzzy
+msgid "delivery"
+msgstr "Дней на доставку"
+
+#: modules/tieredweight/models.py:256
+msgid "zone translation"
+msgstr ""
+
+#: modules/tieredweight/models.py:257
+msgid "zone translations"
+msgstr ""
+
+#: modules/tieredweight/models.py:262
+msgid "min weight"
+msgstr ""
+
+#: modules/tieredweight/models.py:263
+msgid "handling adjustment"
+msgstr ""
+
+#: modules/tieredweight/models.py:265
+#, fuzzy
+msgid "shipping price"
+msgstr "Сервис доставки с фиксированной стоимостью"
+
+#: modules/tieredweight/models.py:266
+msgid "expires"
+msgstr ""
+
+#: modules/tieredweight/models.py:276
+msgid "weight tier"
+msgstr ""
+
+#: modules/tieredweight/models.py:277
+msgid "weight tiers"
+msgstr ""
+
+#: modules/ups/config.py:9
+#, fuzzy
+msgid "UPS Shipping Settings"
+msgstr "Настройки доставки"
+
+#: modules/ups/config.py:17
+msgid "UPS XML Access Key"
+msgstr ""
+
+#: modules/ups/config.py:18
+msgid "XML Access Key Provided by UPS"
+msgstr ""
+
+#: modules/ups/config.py:23
+msgid "UPS User ID"
+msgstr ""
+
+#: modules/ups/config.py:24
+msgid "User ID provided by UPS site."
+msgstr ""
+
+#: modules/ups/config.py:29
+msgid "UPS Account Number"
+msgstr ""
+
+#: modules/ups/config.py:30
+msgid "UPS Account Number."
+msgstr ""
+
+#: modules/ups/config.py:35
+msgid "UPS User Password"
+msgstr ""
+
+#: modules/ups/config.py:36
+msgid "User password provided by UPS site."
+msgstr ""
+
+#: modules/ups/config.py:41
+msgid ""
+"UPS Shipping Choices Available to customers. These are valid domestic codes "
+"only."
+msgstr ""
+
+#: modules/ups/config.py:55 modules/usps/config.py:29
+msgid "Handling Fee"
+msgstr ""
+
+#: modules/ups/config.py:56
+msgid "The cost of packaging and getting the package off"
+msgstr ""
+
+#: modules/ups/config.py:77
+msgid "Time in Transit?"
+msgstr ""
+
+#: modules/ups/config.py:78
+msgid ""
+"Use the UPS Time In Transit API? It is slower but delivery dates are more "
+"accurate."
+msgstr ""
+
+#: modules/ups/config.py:83
+msgid "UPS Pickup option."
+msgstr ""
+
+#: modules/ups/config.py:94
+msgid "Access production UPS server"
+msgstr ""
+
+#: modules/ups/config.py:101 modules/usps/config.py:88
+msgid "Address to submit live transactions."
+msgstr ""
+
+#: modules/ups/config.py:107 modules/usps/config.py:94
+msgid "Address to submit test transactions."
+msgstr ""
+
+#: modules/ups/config.py:113
+msgid ""
+"Send the entire request and response to the log - for debugging help when "
+"setting up UPS."
+msgstr ""
+
+#: modules/ups/shipper.py:83
+#, python-format
+msgid "UPS - %s"
+msgstr ""
+
+#: modules/ups/shipper.py:100
+msgid "UPS"
+msgstr ""
+
+#: modules/usps/config.py:9
+#, fuzzy
+msgid "U.S.P.S. Shipping Settings"
+msgstr "Настройки доставки"
+
+#: modules/usps/config.py:17
+msgid "USPS  Username"
+msgstr ""
+
+#: modules/usps/config.py:18
+msgid "User ID provided by USPS site."
+msgstr ""
+
+#: modules/usps/config.py:23
+msgid "USPS Password"
+msgstr ""
+
+#: modules/usps/config.py:24
+msgid "User password provided by USPS site."
+msgstr ""
+
+#: modules/usps/config.py:30
+msgid "The cost of packaging and taking order to post office"
+msgstr ""
+
+#: modules/usps/config.py:35
+msgid "USPS Shipping Choices Available to customers."
+msgstr ""
+
+#: modules/usps/config.py:81
+msgid "Access production USPS server"
+msgstr ""
+
+#: modules/usps/config.py:93
+msgid "Submit to Test URL"
+msgstr ""
+
+#: modules/usps/config.py:100
+msgid ""
+"Send the entire request and response to the log - for debugging help when "
+"setting up USPS."
+msgstr ""
+
+#: modules/usps/shipper.py:129
+#, python-format
+msgid "USPS - %s"
+msgstr "Почта США - %s"
+
+#: modules/usps/shipper.py:145
+msgid "USPS"
+msgstr "Почта США"
+
+#: modules/usps/shipper.py:153
+#, python-format
+msgid "in %s"
+msgstr "%s"
+
+#: modules/usps/shipper.py:154
+#, python-format
+msgid "by %s"
+msgstr "%s"
+
+#: modules/usps/shipper.py:156
+#, fuzzy, python-format
+msgid "in %s business days"
+msgstr "3-4 рабочих дня"
+
+#: modules/usps/shipper.py:158
+#, fuzzy, python-format
+msgid "in %s business day"
+msgstr "3-4 рабочих дня"
+
+#: templates/shipping/options.html:6
+#, python-format
+msgid "Sent via %(method)s arrives approximately %(expected_delivery)s."
+msgstr ""
+"Отправлено через %(method)s, прибудет приблизительно %(expected_delivery)s."

@@ -1,0 +1,25 @@
+Satchmo Introduction
+=====================
+
+History
+-------
+Like most Open Source projects, Satchmo was started to "scratch an itch."  This
+particular itch was to create a framework for developing a python based shopping 
+cart framework software using Django.  After a little bit of discussion on the Django list, 
+we created our own project in April 2006.
+
+In August 2007, we released the first public release of Satchmo - version 0.5.
+We have had several releases since then and are continually improving the features and functions
+included in Satchmo.
+
+Project Mission
+---------------
+Satchmo's mission is to use Django to create an open source framework for creating 
+unique and robust online stores. To provide maximum flexibility, Satchmo is licensed 
+under the BSD license.
+
+Current Development Status
+--------------------------
+With the release of version 0.5, Satchmo entered beta status.  The most recent release is 0.9.1 and
+includes many improvements and fixes over 0.9.  All users are encouraged to use this latest version. 
+Please refer to this document for the backwards incompatible changes - http://bitbucket.org/chris1610/satchmo/wiki/BackwardsIncompatibleChanges

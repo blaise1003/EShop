@@ -1,0 +1,147 @@
+{% extends "admin/index.html" %}
+{% load i18n %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{% load adminmedia %}{% admin_media_prefix %}css/dashboard.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/primifrutti/primifrutti/styles/admin_zones.css"/>
+{% endblock %}
+{% block navbar %}
+   <li>{% trans "Invites Report" %}</li>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+    <ul class="object-tools">
+        <li>
+          <a class="addlink" href="{% url admin:index %}">
+            {% trans 'Admin' %}
+          </a>
+        </li>
+    </ul>
+    
+    <ul class="messagelist">
+      <li class="info">{% trans "Max invites available for each contact" %}: {{max_invites}}</li>
+    </ul>
+    
+    {% if msg %}
+    <ul class="messagelist">
+      <li class="info">{{msg}}</li>
+    </ul>
+    {% endif %}
+    
+    {% if contacts_invites %}
+        <div id="changelist" class="module filtered">
+            <div id="toolbar">
+                <form method="GET" action="{% url satchmo_invites_report %}">
+                    {% csrf_token %}
+                    <table class="deliveries_form">
+                        <tr>
+                            <td>
+                                <div>
+                                    <label for="searchbar">
+                                        {% trans "Contact name" %}
+                                        <img alt="Search" src="/static/admin/img/admin/icon_searchbox.png">
+                                    </label>
+                                    <input type="text" name="contact_name" id="contact_name" value="" />
+                                </div>
+                            </td>
+                            <td>
+                                <select name="order_by" id="order_by">
+                                   <option value="contact_name">{% trans "Contact name" %}</option>
+                                   <option value="contact_id">{% trans "Contact #" %}</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="submit" name="submit" id="submit" value="{% trans 'Submit' %}" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+        <div class="results">
+        <table id="result_list" cellspacing="0" summary="{% trans 'Invites Report' %}">
+            <thead>
+            <tr>
+                <th scope="col">{% trans 'Contact #' %}</th>
+    			<th scope="col">{% trans 'Contact name' %}</th>
+    			<th scope="col">{% trans 'Invites sent' %}</th>
+    			<th scope="col">{% trans 'Used invites' %}</th>
+    			<th scope="col">{% trans 'Not used invites' %}</th>
+    			<th scope="col">{% trans 'Discount available' %}</th>
+    			<th scope="col">{% trans 'Contact via email' %}</th>
+    			<th scope="col">{% trans 'Reset invites' %}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in contacts_invites %}
+            <tr class="row{{forloop.counter}}">
+                <td>
+    				<a href="{% url admin:contact_contact_change item.contact_id %}" target="_blank">
+                    {{ item.contact_id }}
+    				</a>
+                </td>
+                <td>
+                    <a href="{% url admin:contact_contact_change item.contact_id %}" target="_blank">
+                    {{ item.contact }}
+    				</a>
+                </td>
+                <td>
+                    {{ item.invites_sended }}
+                </td>
+                <td>
+                    {{ item.used_invites }}
+                </td>
+                <td>
+                    {{ item.not_used_invites }}
+                </td>
+                <td>
+                    {% if item.coupon %}
+                        <a href="{% url admin:product_discount_change item.coupon.id %}" target="_blank">
+                        {{ item.coupon.description }} ({{ item.coupon.code }})
+        				</a>
+        			{% else %}
+        			    {% trans "N.A." %}
+        		    {% endif %}
+                        
+                </td>
+                <td>
+                    <a href="mailto:{{item.contact_email}}"
+                         title="{% trans 'contact via email' %}"><img src="/static/primifrutti/primifrutti/img/mail.png" alt="send" /></a>
+                </td>
+                <td>
+                    <a href="{% url satchmo_invites_reset item.user_id %}"
+                         title="{% trans 'reset invites' %}"><img src="/static/primifrutti/primifrutti/img/ok.png" alt="confirm" /></a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        
+        {% comment %}**Now the pagination section**"{% endcomment %}
+        {% if is_paginated %}
+            <p class="paginator">
+                <span class="page-links">
+                    {% if page_obj.has_previous %}
+                        <a href="{% url satchmo_invites_report %}?page={{ page_obj.previous_page_number }}">{% trans 'previous' %}</a>
+                    {% endif %}
+                    <span class="page-current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+                    {% if page_obj.has_next %}
+                        <a href="{% url satchmo_invites_report %}?page={{ page_obj.next_page_number }}">{% trans 'next' %}</a>
+                    {% endif %}
+                </span>
+            </p>
+        {% endif %}
+        </div>
+    {% else %}
+        <p class="paginator">{% trans 'No contacts' %}</p>
+        <a href="{% url satchmo_invites_report %}">{% trans 'Return' %}</a>
+    {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block sidebar %}{% endblock %}

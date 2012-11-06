@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="it">
+ <head>
+  <title>
+   Primifrutti Theme
+  </title>
+  <meta charset="utf-8" />
+  <style type="text/css">
+   @import url("./static/theme/styles/layout.css") ;
+  </style>
+  <script type="text/javascript" src="/static/theme/scripts/bootstrap/bootstrap-modal.js">
+  </script>
+  <script type="text/javascript" src="/static/theme/scripts/bootstrap/bootstrap-carousel.js">
+  </script>
+  <script type="text/javascript" src="/static/theme/scripts/jquery-1.7.1.js">
+  </script>
+  <script type="text/javascript" src="/static/theme/scripts/jquery.tools.min.js">
+  </script>
+ </head>
+ <body>
+  <div id="wrapper" class="container">
+   <div class="navbar navbar-inner navbar-fixed-top">
+    <div class="container">
+     <form class="navbar-search pull-left">
+      <input type="text" placeholder="cerca i prodotti" value="" name="keywords" size="25" />
+      <input type="submit" class="btn btn-primary" value="Cerca" />
+     </form>
+     <div class="nav nav-pills btn-group pull-right open ">
+      <a class="dropdown" href="#">
+       User
+      </a>
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+       <span class="caret">
+       </span>
+      </a>
+      <ul class="dropdown-menu">
+       <li>
+        <a href="/accounts/update/" title="Aggiorna profilo">
+         <i class="icon-pencil">
+         </i>
+         Aggiorna profilo
+        </a>
+       </li>
+       <li>
+        <a href="/accounts/password_change/" title="Modifica password">
+         <i class="icon-pencil">
+         </i>
+         Modifica password
+        </a>
+       </li>
+       <li>
+        <a href="/history/" title="Storia ordine">
+         <i class="icon-list-alt">
+         </i>
+         Storia degli ordini
+        </a>
+       </li>
+       <li>
+        <a href="/invites/invite_friends/" rel="#pb_1">
+         <i class="icon-list-alt">
+         </i>
+         Invita gli amici
+        </a>
+       </li>
+       <li class="divider">
+       </li>
+       <li>
+        <a href="#">
+         <i class="i">
+         </i>
+         Amministra
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         <i class="i">
+         </i>
+         Esci
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="nav nav-pills pull-right btn-group ">
+      <a class="dropdown" href="#">
+       Login
+      </a>
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+       <span class="caret">
+       </span>
+      </a>
+      <ul class="dropdown-menu">
+       <li>
+        <form action="/accounts/login/" method="post" class="login">
+         <div style="display:none">
+          <input type="hidden" name="csrfmiddlewaretoken" value="e27ba2450bf71faf7176b43aafd35a3d" />
+         </div>
+         <fieldset>
+          <legend class="hidden">
+           Dati di accesso
+          </legend>
+          <div class="clearfix">
+           <label for="email">
+            Email
+           </label>
+           <div class="input">
+            <input type="email" required="true" placeholder="nome@dominio.com" class="span3 " id="id_username" name="username" />
+           </div>
+          </div>
+          <div class="clearfix">
+           <label for="password">
+            Password
+           </label>
+           <div class="input">
+            <input class="span3" type="password" value="********" name="password" id="id_password" size="20" />
+           </div>
+          </div>
+         </fieldset>
+         <div class="actions">
+          <input type="hidden" value="/accounts/" name="next" />
+          <input id="login" type="submit" value="Entra" name="login" class="btn btn-primary" />
+          <a id="register" title="Registrati" href="/accounts/register/" class="btn btn-warning">
+           Registrati
+          </a>
+         </div>
+        </form>
+       </li>
+      </ul>
+     </div>
+     <div class="nav nav-pills pull-right btn-group ">
+      <a class="dropdown" href="#">
+       Carrello
+      </a>
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+       <span class="caret">
+       </span>
+      </a>
+      <ul class="dropdown-menu">
+       <li>
+        <div class="price">
+         Hai 1 oggetto nel carrello
+         <a href="/cart/">
+          €5,00
+         </a>
+        </div>
+       </li>
+       <li class="divider">
+       </li>
+       <li>
+        <a href="/checkout/">
+         Vai alla cassa
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div id="header" class="row">
+    <div id="top-bar">
+     <ul class="navigation nav-tabs">
+      <li class="active">
+       <a href="#">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="prodotto.html">
+        Prodotti
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        L'azienda
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Offerte
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        Contatti
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div id="banner" class="row">
+     <div class="span6">
+      <img class="logo" src="/static/theme/img/logo.png" alt="logo" />
+     </div>
+     <div class="span10">
+      <div id="myCarousel" class="carousel slide">
+       <div class="carousel-inner">
+        <div class="item">
+         <img src="/static/theme/img/banner1.jpg" alt="" />
+         <div class="carousel-caption">
+          <h4>
+           First Thumbnail label
+          </h4>
+          <p>
+           Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+          </p>
+          <p>
+           prezzo
+          </p>
+         </div>
+        </div>
+        <div class="item">
+         <img src="/static/theme/img/banner1.jpg" alt="" />
+         <div class="carousel-caption">
+          <h4>
+           Second Thumbnail label
+          </h4>
+          <p>
+           Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+          </p>
+         </div>
+        </div>
+        <div class="item active">
+         <img src="/static/theme/img/banner1.jpg" alt="" />
+         <div class="carousel-caption">
+          <h4>
+           Tagliatelle scontate
+          </h4>
+          <p class="span6 pull-left">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ...
+          </p>
+          <p class="price pull-right">
+           <span class="labelprice">
+            Prezzo
+           </span>
+           <span class="currency">
+            €12,10
+           </span>
+          </p>
+         </div>
+        </div>
+       </div>
+       <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        ‹
+       </a>
+       <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        ›
+       </a>
+      </div>
+     </div>
+    </div>
+    <div class="sfuma">
+    </div>
+   </div>
+   <div id="main" class="row">
+    <div id="content" class="span12">
+     <div id="content">
+      <ul class="breadcrumb-step">
+       <li>
+        <i class="icon-shopping-cart">
+        </i>
+        Checkout
+        <span class="divider">
+         &nbsp;
+        </span>
+       </li>
+       <li>
+        Carrello
+        <i class="icon-ok">
+        </i>
+        <span class="divider">
+         &nbsp;
+        </span>
+       </li>
+       <li class="active">
+        Informazioni personali
+        <span class="divider">
+         &nbsp;
+        </span>
+       </li>
+       <li>
+        Consegna
+        <span class="divider">
+         &nbsp;
+        </span>
+       </li>
+       <li>
+        Conferma l'ordine
+       </li>
+      </ul>
+      <h1 class="page-header">
+       Checkout
+       <small>
+        Completa i seguenti dati per inoltrare il tuo ordine
+       </small>
+      </h1>
+      <form id="checkout" class="form-stripped" method="post" action="/checkout/">
+       <div style="display:none">
+        <input type="hidden" name="csrfmiddlewaretoken" value="04088975240523963d2eff28ff5088fd" />
+       </div>
+       <div class="alert alert-info">
+        Devi inserire le informazioni obbligatorie segnalate da
+        <span class="fieldRequired" title="Obbligatorio">
+         (Obbligatorio)
+        </span>
+       </div>
+       <fieldset name="payment" id="payment">
+        <legend>
+         Pagamento
+        </legend>
+        <div class="control-group  control_paymentmethod">
+         <div class="controls">
+          <label for="paymentmethod" id="label_paymentmethod">
+           Tipo di pagamento
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+           <a target="_blank" rel="tooltip" href="/pagine/tipologie-pagamento" data-original-title="Info">
+            <i class="icon-info-sign icon-black">
+            </i>
+           </a>
+          </label>
+          <ul>
+           <li>
+            <label for="id_paymentmethod_0">
+             <input checked="checked" type="radio" id="id_paymentmethod_0" value="BONIFICO" name="paymentmethod" />
+             Bonifico
+            </label>
+           </li>
+           <li>
+            <label for="id_paymentmethod_1">
+             <input type="radio" id="id_paymentmethod_1" value="CONTRASSEGNO" name="paymentmethod" />
+             Payment on delivery
+            </label>
+           </li>
+           <li>
+            <label for="id_paymentmethod_2">
+             <input type="radio" id="id_paymentmethod_2" value="CREDITCARD" name="paymentmethod" />
+             Creditcard (Bancasella)
+            </label>
+           </li>
+           <li>
+            <label for="id_paymentmethod_3">
+             <input type="radio" id="id_paymentmethod_3" value="PAYPAL" name="paymentmethod" />
+             PayPal
+            </label>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </fieldset>
+       <fieldset name="personal" id="personal">
+        <legend>
+         Basic informations
+        </legend>
+        <div class="control-group  control_first_name">
+         <div class="controls">
+          <label for="first_name" id="label_first_name">
+           Nome
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+          </label>
+          <input id="id_first_name" type="text" name="first_name" value="" maxlength="30" />
+         </div>
+        </div>
+        <div class="control-group  control_last_name">
+         <div class="controls">
+          <label for="last_name" id="label_last_name">
+           Cognome
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+          </label>
+          <input id="id_last_name" type="text" name="last_name" value="" maxlength="30" />
+         </div>
+        </div>
+        <div class="control-group  control_email">
+         <div class="controls">
+          <label for="email" id="label_email">
+           e-mail
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+          </label>
+          <input id="id_email" type="text" name="email" value="" maxlength="75" />
+         </div>
+        </div>
+        <div class="control-group  control_phone">
+         <div class="controls">
+          <label for="phone" id="label_phone">
+           Telefono
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+          </label>
+          <input id="id_phone" type="text" name="phone" value="0810608213" maxlength="30" />
+         </div>
+        </div>
+        <div class="control-group  control_organization">
+         <div class="controls">
+          <label for="organization" id="label_organization">
+           Azienda
+          </label>
+          <input id="id_organization" type="text" name="organization" maxlength="50" />
+         </div>
+        </div>
+       </fieldset>
+       <fieldset name="billing" id="billing">
+        <legend>
+         Billing informations
+        </legend>
+        <div class="control-group  control_addressee">
+         <div class="controls">
+          <label for="addressee" id="label_addressee">
+           Destinatario
+          </label>
+          <input id="id_addressee" type="text" name="addressee" value="cinzia cinzia" maxlength="61" />
+         </div>
+        </div>
+        <div class="control-group  control_street1">
+         <div class="controls">
+          <label for="street1" id="label_street1">
+           Via
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+          </label>
+          <input id="id_street1" type="text" name="street1" value="Martiri delle Foibe" maxlength="30" />
+         </div>
+        </div>
+        <div class="control-group  control_street2">
+         <div class="controls">
+          <label for="street2" id="label_street2">
+           &nbsp;
+          </label>
+          <input id="id_street2" type="text" name="street2" value="d" maxlength="30" />
+         </div>
+        </div>
+        <div class="control-group  control_city">
+         <div class="controls">
+          <label for="city" id="label_city">
+           Città
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+          </label>
+          <input id="id_city" type="text" name="city" value="Civitanova Marche" maxlength="30" />
+         </div>
+        </div>
+        <div class="control-group  control_state">
+         <div class="controls">
+          <label for="state" id="label_state">
+           Provincia
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+          </label>
+          <select name="state" id="id_state">
+           <option value="">
+            ---Seleziona---
+           </option>
+           <option value="AG">
+            Agrigento
+           </option>
+           <option value="AL">
+            Alessandria
+           </option>
+           <option value="AN">
+            Ancona
+           </option>
+           <option value="AO">
+            Aosta
+           </option>
+           <option value="AR">
+            Arezzo
+           </option>
+           <option value="AP">
+            Ascoli Piceno
+           </option>
+           <option value="AT">
+            Asti
+           </option>
+           <option value="AV">
+            Avellino
+           </option>
+           <option value="BA">
+            Bari
+           </option>
+           <option value="BT">
+            Barletta-Andria-Trani
+           </option>
+           <option value="BL">
+            Belluno
+           </option>
+           <option value="BN">
+            Benevento
+           </option>
+           <option value="BG">
+            Bergamo
+           </option>
+           <option value="BI">
+            Biella
+           </option>
+           <option value="BO">
+            Bologna
+           </option>
+           <option value="BZ">
+            Bolzano
+           </option>
+           <option value="BS">
+            Brescia
+           </option>
+           <option value="BR">
+            Brindisi
+           </option>
+           <option value="CA">
+            Cagliari
+           </option>
+           <option value="CL">
+            Caltanissetta
+           </option>
+           <option value="CB">
+            Campobasso
+           </option>
+           <option value="CI">
+            Carbonia-Iglesias
+           </option>
+           <option value="CE">
+            Caserta
+           </option>
+           <option value="CT">
+            Catania
+           </option>
+           <option value="CZ">
+            Catanzaro
+           </option>
+           <option value="CH">
+            Chieti
+           </option>
+           <option value="CO">
+            Como
+           </option>
+           <option value="CS">
+            Cosenza
+           </option>
+           <option value="CR">
+            Cremona
+           </option>
+           <option value="KR">
+            Crotone
+           </option>
+           <option value="CN">
+            Cuneo
+           </option>
+           <option value="EN">
+            Enna
+           </option>
+           <option value="FE">
+            Ferrara
+           </option>
+           <option value="FI">
+            Firenze
+           </option>
+           <option value="FG">
+            Foggia
+           </option>
+           <option value="FC">
+            Forlì-Cesena
+           </option>
+           <option value="FR">
+            Frosinone
+           </option>
+           <option value="GE">
+            Genova
+           </option>
+           <option value="GO">
+            Gorizia
+           </option>
+           <option value="GR">
+            Grosseto
+           </option>
+           <option value="IM">
+            Imperia
+           </option>
+           <option value="IS">
+            Isernia
+           </option>
+           <option value="AQ">
+            L'Aquila
+           </option>
+           <option value="SP">
+            La Spezia
+           </option>
+           <option value="LT">
+            Latina
+           </option>
+           <option value="LE">
+            Lecce
+           </option>
+           <option value="LC">
+            Lecco
+           </option>
+           <option value="LI">
+            Livorno
+           </option>
+           <option value="LO">
+            Lodi
+           </option>
+           <option value="LU">
+            Lucca
+           </option>
+           <option value="MC" selected="selected">
+            Macerata
+           </option>
+           <option value="MN">
+            Mantova
+           </option>
+           <option value="MS">
+            Massa-Carrara
+           </option>
+           <option value="MT">
+            Matera
+           </option>
+           <option value="VS">
+            Medio Campidano
+           </option>
+           <option value="ME">
+            Messina
+           </option>
+           <option value="MI">
+            Milano
+           </option>
+           <option value="MO">
+            Modena
+           </option>
+           <option value="MB">
+            Monza e della Brianza
+           </option>
+           <option value="NA">
+            Napoli
+           </option>
+           <option value="NO">
+            Novara
+           </option>
+           <option value="NU">
+            Nuoro
+           </option>
+           <option value="OG">
+            Ogliastra
+           </option>
+           <option value="OT">
+            Olbia-Tempio
+           </option>
+           <option value="OR">
+            Oristano
+           </option>
+           <option value="PD">
+            Padova
+           </option>
+           <option value="PA">
+            Palermo
+           </option>
+           <option value="PR">
+            Parma
+           </option>
+           <option value="PV">
+            Pavia
+           </option>
+           <option value="PG">
+            Perugia
+           </option>
+           <option value="PU">
+            Pesaro e Urbino
+           </option>
+           <option value="PE">
+            Pescara
+           </option>
+           <option value="PC">
+            Piacenza
+           </option>
+           <option value="PI">
+            Pisa
+           </option>
+           <option value="PT">
+            Pistoia
+           </option>
+           <option value="PN">
+            Pordenone
+           </option>
+           <option value="PZ">
+            Potenza
+           </option>
+           <option value="PO">
+            Prato
+           </option>
+           <option value="RG">
+            Ragusa
+           </option>
+           <option value="RA">
+            Ravenna
+           </option>
+           <option value="RC">
+            Reggio Calabria
+           </option>
+           <option value="RE">
+            Reggio Emilia
+           </option>
+           <option value="RI">
+            Rieti
+           </option>
+           <option value="RN">
+            Rimini
+           </option>
+           <option value="RM">
+            Roma
+           </option>
+           <option value="RO">
+            Rovigo
+           </option>
+           <option value="SA">
+            Salerno
+           </option>
+           <option value="SS">
+            Sassari
+           </option>
+           <option value="SV">
+            Savona
+           </option>
+           <option value="SI">
+            Siena
+           </option>
+           <option value="SR">
+            Siracusa
+           </option>
+           <option value="SO">
+            Sondrio
+           </option>
+           <option value="TA">
+            Taranto
+           </option>
+           <option value="TE">
+            Teramo
+           </option>
+           <option value="TR">
+            Terni
+           </option>
+           <option value="TO">
+            Torino
+           </option>
+           <option value="TP">
+            Trapani
+           </option>
+           <option value="TN">
+            Trento
+           </option>
+           <option value="TV">
+            Treviso
+           </option>
+           <option value="TS">
+            Trieste
+           </option>
+           <option value="UD">
+            Udine
+           </option>
+           <option value="VA">
+            Varese
+           </option>
+           <option value="VE">
+            Venezia
+           </option>
+           <option value="VB">
+            Verbano-Cusio-Ossola
+           </option>
+           <option value="VC">
+            Vercelli
+           </option>
+           <option value="VR">
+            Verona
+           </option>
+           <option value="VV">
+            Vibo Valentia
+           </option>
+           <option value="VI">
+            Vicenza
+           </option>
+           <option value="VT">
+            Viterbo
+           </option>
+          </select>
+         </div>
+        </div>
+        <div class="control-group  control_postal_code">
+         <div class="controls">
+          <label for="postal_code" id="label_postal_code">
+           CAP/codice postale
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+          </label>
+          <input id="id_postal_code" type="text" name="postal_code" value="80100" maxlength="10" />
+         </div>
+        </div>
+        <div class="control-group  control_country">
+         <div class="controls">
+          <label for="country" id="label_country">
+           Nazione
+          </label>
+          <select name="country" id="id_country">
+           <option value="108" selected="selected">
+            Italy
+           </option>
+          </select>
+         </div>
+        </div>
+        <div class="control-group  control_business_number">
+         <div class="controls">
+          <label for="business_number" id="label_business_number">
+           P. IVA
+          </label>
+          <input id="id_business_number" type="text" class="" value="00000000000" name="business_number" />
+         </div>
+        </div>
+        <div class="control-group  control_person_number">
+         <div class="controls">
+          <label for="person_number" id="label_person_number">
+           Codice fiscale
+          </label>
+          <input id="id_person_number" type="text" class="" name="person_number" />
+         </div>
+        </div>
+       </fieldset>
+       <fieldset name="shipping" id="shipping">
+        <legend>
+         Shipping informations
+        </legend>
+        <div class="control-group 
+          control_copy_address">
+         <div class="controls">
+          <label for="copy_address" id="label_copy_address">
+           L'indirizzo di consegna e' lo stesso di fatturazione
+          </label>
+          <input type="checkbox" name="copy_address" id="id_copy_address" />
+         </div>
+        </div>
+        <div class="control-group shiprow control_ship_addressee">
+         <div class="controls">
+          <label for="ship_addressee" id="label_ship_addressee">
+           Destinatario
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+          </label>
+          <input id="id_ship_addressee" type="text" name="ship_addressee" maxlength="61" />
+         </div>
+        </div>
+        <div class="control-group shiprow control_ship_street1">
+         <div class="controls">
+          <label for="ship_street1" id="label_ship_street1">
+           Via
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+          </label>
+          <input id="id_ship_street1" type="text" name="ship_street1" value="Martiri delle Foibe" maxlength="30" />
+         </div>
+        </div>
+        <div class="control-group shiprow control_ship_street2">
+         <div class="controls">
+          <label for="ship_street2" id="label_ship_street2">
+           &nbsp;
+          </label>
+          <input id="id_ship_street2" type="text" name="ship_street2" value="d" maxlength="30" />
+         </div>
+        </div>
+        <div class="control-group shiprow control_ship_city">
+         <div class="controls">
+          <label for="ship_city" id="label_ship_city">
+           Città
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+          </label>
+          <input id="id_ship_city" type="text" name="ship_city" value="Civitanova Marche" maxlength="30" />
+         </div>
+        </div>
+        <div class="control-group shiprow control_ship_state">
+         <div class="controls">
+          <label for="ship_state" id="label_ship_state">
+           Provincia
+          </label>
+          <select name="ship_state" id="id_ship_state">
+           <option value="">
+            ---Seleziona---
+           </option>
+           <option value="AG">
+            Agrigento
+           </option>
+           <option value="AL">
+            Alessandria
+           </option>
+           <option value="AN">
+            Ancona
+           </option>
+           <option value="AO">
+            Aosta
+           </option>
+           <option value="AR">
+            Arezzo
+           </option>
+           <option value="AP">
+            Ascoli Piceno
+           </option>
+           <option value="AT">
+            Asti
+           </option>
+           <option value="AV">
+            Avellino
+           </option>
+           <option value="BA">
+            Bari
+           </option>
+           <option value="BT">
+            Barletta-Andria-Trani
+           </option>
+           <option value="BL">
+            Belluno
+           </option>
+           <option value="BN">
+            Benevento
+           </option>
+           <option value="BG">
+            Bergamo
+           </option>
+           <option value="BI">
+            Biella
+           </option>
+           <option value="BO">
+            Bologna
+           </option>
+           <option value="BZ">
+            Bolzano
+           </option>
+           <option value="BS">
+            Brescia
+           </option>
+           <option value="BR">
+            Brindisi
+           </option>
+           <option value="CA">
+            Cagliari
+           </option>
+           <option value="CL">
+            Caltanissetta
+           </option>
+           <option value="CB">
+            Campobasso
+           </option>
+           <option value="CI">
+            Carbonia-Iglesias
+           </option>
+           <option value="CE">
+            Caserta
+           </option>
+           <option value="CT">
+            Catania
+           </option>
+           <option value="CZ">
+            Catanzaro
+           </option>
+           <option value="CH">
+            Chieti
+           </option>
+           <option value="CO">
+            Como
+           </option>
+           <option value="CS">
+            Cosenza
+           </option>
+           <option value="CR">
+            Cremona
+           </option>
+           <option value="KR">
+            Crotone
+           </option>
+           <option value="CN">
+            Cuneo
+           </option>
+           <option value="EN">
+            Enna
+           </option>
+           <option value="FE">
+            Ferrara
+           </option>
+           <option value="FI">
+            Firenze
+           </option>
+           <option value="FG">
+            Foggia
+           </option>
+           <option value="FC">
+            Forlì-Cesena
+           </option>
+           <option value="FR">
+            Frosinone
+           </option>
+           <option value="GE">
+            Genova
+           </option>
+           <option value="GO">
+            Gorizia
+           </option>
+           <option value="GR">
+            Grosseto
+           </option>
+           <option value="IM">
+            Imperia
+           </option>
+           <option value="IS">
+            Isernia
+           </option>
+           <option value="AQ">
+            L'Aquila
+           </option>
+           <option value="SP">
+            La Spezia
+           </option>
+           <option value="LT">
+            Latina
+           </option>
+           <option value="LE">
+            Lecce
+           </option>
+           <option value="LC">
+            Lecco
+           </option>
+           <option value="LI">
+            Livorno
+           </option>
+           <option value="LO">
+            Lodi
+           </option>
+           <option value="LU">
+            Lucca
+           </option>
+           <option value="MC" selected="selected">
+            Macerata
+           </option>
+           <option value="MN">
+            Mantova
+           </option>
+           <option value="MS">
+            Massa-Carrara
+           </option>
+           <option value="MT">
+            Matera
+           </option>
+           <option value="VS">
+            Medio Campidano
+           </option>
+           <option value="ME">
+            Messina
+           </option>
+           <option value="MI">
+            Milano
+           </option>
+           <option value="MO">
+            Modena
+           </option>
+           <option value="MB">
+            Monza e della Brianza
+           </option>
+           <option value="NA">
+            Napoli
+           </option>
+           <option value="NO">
+            Novara
+           </option>
+           <option value="NU">
+            Nuoro
+           </option>
+           <option value="OG">
+            Ogliastra
+           </option>
+           <option value="OT">
+            Olbia-Tempio
+           </option>
+           <option value="OR">
+            Oristano
+           </option>
+           <option value="PD">
+            Padova
+           </option>
+           <option value="PA">
+            Palermo
+           </option>
+           <option value="PR">
+            Parma
+           </option>
+           <option value="PV">
+            Pavia
+           </option>
+           <option value="PG">
+            Perugia
+           </option>
+           <option value="PU">
+            Pesaro e Urbino
+           </option>
+           <option value="PE">
+            Pescara
+           </option>
+           <option value="PC">
+            Piacenza
+           </option>
+           <option value="PI">
+            Pisa
+           </option>
+           <option value="PT">
+            Pistoia
+           </option>
+           <option value="PN">
+            Pordenone
+           </option>
+           <option value="PZ">
+            Potenza
+           </option>
+           <option value="PO">
+            Prato
+           </option>
+           <option value="RG">
+            Ragusa
+           </option>
+           <option value="RA">
+            Ravenna
+           </option>
+           <option value="RC">
+            Reggio Calabria
+           </option>
+           <option value="RE">
+            Reggio Emilia
+           </option>
+           <option value="RI">
+            Rieti
+           </option>
+           <option value="RN">
+            Rimini
+           </option>
+           <option value="RM">
+            Roma
+           </option>
+           <option value="RO">
+            Rovigo
+           </option>
+           <option value="SA">
+            Salerno
+           </option>
+           <option value="SS">
+            Sassari
+           </option>
+           <option value="SV">
+            Savona
+           </option>
+           <option value="SI">
+            Siena
+           </option>
+           <option value="SR">
+            Siracusa
+           </option>
+           <option value="SO">
+            Sondrio
+           </option>
+           <option value="TA">
+            Taranto
+           </option>
+           <option value="TE">
+            Teramo
+           </option>
+           <option value="TR">
+            Terni
+           </option>
+           <option value="TO">
+            Torino
+           </option>
+           <option value="TP">
+            Trapani
+           </option>
+           <option value="TN">
+            Trento
+           </option>
+           <option value="TV">
+            Treviso
+           </option>
+           <option value="TS">
+            Trieste
+           </option>
+           <option value="UD">
+            Udine
+           </option>
+           <option value="VA">
+            Varese
+           </option>
+           <option value="VE">
+            Venezia
+           </option>
+           <option value="VB">
+            Verbano-Cusio-Ossola
+           </option>
+           <option value="VC">
+            Vercelli
+           </option>
+           <option value="VR">
+            Verona
+           </option>
+           <option value="VV">
+            Vibo Valentia
+           </option>
+           <option value="VI">
+            Vicenza
+           </option>
+           <option value="VT">
+            Viterbo
+           </option>
+          </select>
+         </div>
+        </div>
+        <div class="control-group shiprow control_ship_postal_code">
+         <div class="controls">
+          <label for="ship_postal_code" id="label_ship_postal_code">
+           CAP/codice postale
+           <span class="fieldRequired" title="Obbligatorio">
+            (Obbligatorio)
+           </span>
+          </label>
+          <input id="id_ship_postal_code" type="text" name="ship_postal_code" value="80100" maxlength="10" />
+         </div>
+        </div>
+        <div class="control-group shiprow control_ship_country">
+         <div class="controls">
+          <label for="ship_country" id="label_ship_country">
+           Nazione
+          </label>
+          <select name="ship_country" id="id_ship_country" value="108">
+           <option value="108" selected="selected">
+            Italy
+           </option>
+          </select>
+         </div>
+        </div>
+       </fieldset>
+       <fieldset name="zones" id="zones">
+        <legend>
+         Informazioni sulla zona consegna
+        </legend>
+        <div class="control-group  control_zone">
+         <div class="controls">
+          <label for="zone" id="label_zone">
+           Zona
+          </label>
+          <select id="id_zone" class="noclass" name="zone">
+           <option value="">
+            ---------
+           </option>
+           <option value="2" selected="selected">
+            Fuorigrotta
+           </option>
+           <option value="1">
+            Soccavo
+           </option>
+           <option value="3">
+            Vomero
+           </option>
+          </select>
+         </div>
+        </div>
+       </fieldset>
+       <fieldset name="other" id="other">
+        <legend>
+         Altre
+        </legend>
+        <div class="control-group  control_discount">
+         <div class="controls">
+          <label for="discount" id="label_discount">
+           Discount
+          </label>
+          <input id="id_discount" type="text" name="discount" maxlength="30" />
+         </div>
+        </div>
+        <div class="control-group  control_commercial_conditions">
+         <div class="controls">
+          <label for="commercial_conditions" id="label_commercial_conditions">
+           Ho letto le condizioni commerciali
+           <br />
+           <a target="_blank" href="/pagine/condizioni-spedizione">
+            (clicca qui per maggiori informazioni)
+           </a>
+          </label>
+          <input id="id_commercial_conditions" type="checkbox" class="" name="commercial_conditions" />
+         </div>
+        </div>
+        <div class="control-group  control_is_gift">
+         <div class="controls">
+          <label for="is_gift" id="label_is_gift">
+           È un regalo
+          </label>
+          <input id="id_is_gift" type="checkbox" class="" name="is_gift" />
+         </div>
+        </div>
+       </fieldset>
+       <div class="form-actions">
+        <button class="btn btn-primary-cart pull-right" type="submit">
+         Vai alla cassa
+        </button>
+       </div>
+      </form>
+     </div>
+    </div>
+   </div>
+   <div id="page-footer" class="footer">
+    <div class="container row">
+     <div class="span4">
+      <dl>
+       <dt>
+        PASSAPAROLA
+       </dt>
+       <dd>
+        <a href="/invites/invite_friends/" title="Invita gli amici">
+         Invita gli amici
+        </a>
+       </dd>
+       <dd>
+        <a href="/invites/buono_regalo/" title="Buono Regalo">
+         Buono Regalo
+        </a>
+       </dd>
+      </dl>
+     </div>
+     <div class="span4">
+      <dl>
+       <dt>
+        SICUREZZA
+       </dt>
+       <dd>
+        <a href="/pagine/condizioni-spedizione" title="link">
+         Condizioni spedizione
+        </a>
+       </dd>
+       <dd>
+        <a href="/pagine/tipologie-pagamento" title="link">
+         Tipologie di pagamento
+        </a>
+       </dd>
+      </dl>
+     </div>
+     <div class="span4">
+      <dl>
+       <dt>
+        CHI SIAMO
+       </dt>
+       <dd>
+        <a href="/pagine/l-azienda" title="link">
+         L'Azienda
+        </a>
+       </dd>
+       <dd>
+        <a href="/pagine/offerte" title="link">
+         Offerte
+        </a>
+       </dd>
+       <dd>
+        <a href="/contact" title="link">
+         Contatti
+        </a>
+       </dd>
+      </dl>
+     </div>
+     <div class="span4">
+      <dl>
+       <dt>
+        DOVE SIAMO
+       </dt>
+       <dd>
+        <address>
+         <p>
+          address
+         </p>
+         <p>
+          00000 - city
+         </p>
+         <p>
+          P.IVA 12345678910
+         </p>
+        </address>
+       </dd>
+      </dl>
+     </div>
+     <div class="span4">
+      <ul class="unstyled">
+       <li>
+        <a href="/sitemap.xml" title="link">
+         Mappa del sito
+        </a>
+        <span>
+         |
+        </span>
+       </li>
+       <li>
+        <a href="/accounts/logout" title="link">
+         Logout
+        </a>
+       </li>
+      </ul>
+      <p class="carte">
+       Carte di credito
+      </p>
+      <div class="social-footer">
+       <like colorscheme="light" show_faces="false" layout="button_count" font="segoe ui" action="like" width="400" image="/media/images/productimage-picture-default_jpg_85x85_q85.jpg" title="Farmacia Miano" href="http://www.mianoonline.com/" class="fb_edge_widget_with_comment fb_iframe_widget">
+        <span>
+         <iframe id="f3be8a2be0691dc" name="f31d7dabf6da502" style="border: medium none; overflow: hidden; height: 20px; width: 120px;" src="http://www.facebook.com/plugins/like.php?action=like&amp;api_key=1449414641&amp;channel_url=http%3A%2F%2Fstatic.ak.fbcdn.net%2Fconnect%2Fxd_proxy.php%23%3F%3D%26cb%3Df3bd189c4d96e4%26origin%3Dhttp%253A%252F%252Fhttp://www.mianoonline.com/%252Ffaee101139f5be%26relation%3Dparent.parent%26transport%3Dpostmessage&amp;colorscheme=light&amp;font=segoe%20ui&amp;href=http://www.facebook.com/FarmaciaMiano&amp;layout=button_count&amp;locale=it_IT&amp;node_type=link&amp;sdk=joey&amp;show_faces=false&amp;width=400&amp;">
+         </iframe>
+        </span>
+       </like>
+      </div>
+     </div>
+    </div>
+    <div class="colophon">
+     <a href="biagiogrimaldi.netsons.org" title="">
+      by Biagio Grimaldi
+     </a>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

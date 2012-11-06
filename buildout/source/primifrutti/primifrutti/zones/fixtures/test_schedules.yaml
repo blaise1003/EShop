@@ -1,0 +1,155 @@
+- model: zones.zone
+  pk: 1
+  fields:
+    site: 1
+    name: 'Zona 1'
+
+- model: zones.zone
+  pk: 2
+  fields:
+    site: 1
+    name: 'Zona 2'
+
+- model: zones.zone
+  pk: 3
+  fields:
+    site: 1
+    name: 'Zona 3'
+
+- model: zones.zone
+  pk: 4
+  fields:
+    site: 1
+    name: 'Zona 4'
+
+- model: zones.calendar
+  pk: 1
+  fields:
+    zone: 1
+    valid_from:
+    valid_to:
+    slack_days: 1
+
+- model: zones.calendar
+  pk: 2
+  fields:
+    zone: 1
+    valid_from: 2011-12-24
+    valid_to: 2012-01-01
+    slack_days: 1
+
+- model: zones.calendar
+  pk: 3
+  fields:
+    zone: 1
+    valid_from: 2012-01-02
+    valid_to: 2012-01-08
+    slack_days: 1
+
+- model: zones.calendar
+  pk: 4
+  fields:
+    zone: 2
+    valid_from:
+    valid_to:
+    slack_days: 1
+
+- model: zones.calendar
+  pk: 5
+  fields:
+    zone: 3
+    valid_from: 2012-01-02
+    valid_to: 2012-01-08
+    slack_days: 1
+
+- model: zones.calendar
+  pk: 6
+  fields:
+    zone: 4
+    valid_from:
+    valid_to:
+    slack_days: 1
+
+- model: zones.calendarday
+  pk: 1
+  fields:
+    calendar: 1
+    weekday: 3
+
+- model: zones.calendarday
+  pk: 2
+  fields:
+    calendar: 3
+    weekday: 1
+
+- model: zones.calendarday
+  pk: 3
+  fields:
+    calendar: 4
+    weekday: 1
+
+- model: zones.calendarday
+  pk: 4
+  fields:
+    calendar: 4
+    weekday: 4
+
+- model: zones.calendarday
+  pk: 5
+  fields:
+    calendar: 5
+    weekday: 1
+
+- model: zones.calendarday
+  pk: 6
+  fields:
+    calendar: 6
+    weekday: 1
+
+- model: zones.mission
+  pk: 1
+  fields:
+    calendar_day: 1
+    starts: !!python/object/new:datetime.time [8]
+    ends: !!python/object/new:datetime.time [11]
+    shipments: 2
+
+- model: zones.mission
+  pk: 2
+  fields:
+    calendar_day: 2
+    starts: !!python/object/new:datetime.time [8]
+    ends: !!python/object/new:datetime.time [11]
+    shipments: 1
+
+- model: zones.mission
+  pk: 3
+  fields:
+    calendar_day: 2
+    starts: !!python/object/new:datetime.time [15]
+    ends: !!python/object/new:datetime.time [18]
+    shipments: 1
+
+- model: zones.mission
+  pk: 4
+  fields:
+    calendar_day: 3
+    starts: !!python/object/new:datetime.time [15]
+    ends: !!python/object/new:datetime.time [18]
+    shipments: 1
+
+- model: zones.mission
+  pk: 5
+  fields:
+    calendar_day: 4
+    starts: !!python/object/new:datetime.time [15]
+    ends: !!python/object/new:datetime.time [18]
+    shipments: 1
+
+- model: zones.mission
+  pk: 6
+  fields:
+    calendar_day: 5
+    starts: !!python/object/new:datetime.time [8]
+    ends: !!python/object/new:datetime.time [11]
+    shipments: 1

@@ -1,0 +1,85 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# This file is distributed under the same license as the Satchmo package.
+# Selin Çuhadar <selincuhadar@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Satchmo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-18 19:02+0200\n"
+"PO-Revision-Date: 2008-06-09 18:18+0200\n"
+"Last-Translator: Selin Çuhadar <selincuhadar@gmail.com>\n"
+"Language-Team: Turkish <selincuhadar@gmail.com>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Country: TURKEY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: forms.py:27 forms.py:47
+msgid "Username"
+msgstr ""
+
+#: forms.py:31
+msgid "Title"
+msgstr ""
+
+#: forms.py:32
+msgid "Email address"
+msgstr "Email adresi"
+
+#: forms.py:34
+msgid "Password (again)"
+msgstr "Şifre (tekrar)"
+
+#: forms.py:36
+msgid "Password"
+msgstr "Şifre"
+
+#: forms.py:38
+msgid "First name"
+msgstr "Adınız"
+
+#: forms.py:40
+msgid "Last name"
+msgstr "Soyadınız"
+
+#: forms.py:48
+msgid "Please use only letters, numbers and @/./+/-/_"
+msgstr ""
+
+#: forms.py:66
+msgid "Newsletter"
+msgstr "Haberler"
+
+#: forms.py:75
+msgid "The two passwords do not match."
+msgstr "Şifreler eşleşmedi."
+
+#: forms.py:87
+#, fuzzy
+msgid "That username is already in use."
+msgstr "Bu email adresi kullanılıyor."
+
+#: forms.py:95
+msgid "That email address is already in use."
+msgstr "Bu email adresi kullanılıyor."
+
+#: mail.py:17
+#, fuzzy, python-format
+msgid "Welcome to %(shop_name)s"
+msgstr "Hoşgeldiniz, %s"
+
+#: views.py:24
+msgid "Yes"
+msgstr "Evet"
+
+#: views.py:25
+msgid "No"
+msgstr "Hayır"
+
+#: views.py:380
+msgid "Registration Form"
+msgstr "Kayıt Formu"

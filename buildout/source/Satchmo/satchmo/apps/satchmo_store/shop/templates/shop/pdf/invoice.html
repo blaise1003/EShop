@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+{% load i18n satchmo_currency %}
+<html>
+  <head>
+    <title>
+      {% blocktrans with order_id=order.id shop_name=shopDetails.store_name %}
+        {{shop_name}} ― Invoice for order #{{order_id}}
+      {% endblocktrans %}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">/*<![CDATA[*/
+    {% include "shop/pdf/styles.css" %}
+    /*]]>*/</style>
+  </head>
+  <body>
+    {% include "shop/pdf/navbar.html" with document_name=_("Invoice") %}
+    <div id="wrapper">
+      {% include "shop/pdf/header.html" %}
+      <h1>
+        {% blocktrans with order_id=order.id %}
+        Invoice for order #{{order_id}}
+        {% endblocktrans %}
+      </h1>
+
+      {% include "shop/pdf/billing_and_shipping.html" %}
+
+      <h2>{% trans "Order details" %}</h2>
+
+      <h3>{% trans "Products" %}</h3>
+      <table class="priced">
+        <thead>
+          <tr>
+            <th>{% trans "Description" %}</th>
+            <th>{% trans "Quantity" %}</th>
+            <th>{% trans "Unit price" %}</th>
+            <th>{% trans "Discount" %}</th>
+            <th>{% trans "Total" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in order.orderitem_set.all %}
+          <tr>
+            <td>{{item.product.name|fix_ampersands}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.unit_price|currency}}</td>
+	        <td>{{item.discount|currency}}</td>
+            <td>{{item.sub_total|currency}} </td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="5" class="alert">{% trans "No products!" %}</td>
+          </tr>
+          {% endfor %}
+          <tr class="price">
+            <td colspan="4">{% trans "Subtotal" %}</td>
+            <td>{{order.sub_total|currency}}</td>
+          </tr>
+          {% if order.discount %}
+          <tr class="price">
+	        <td colspan="4">{% trans "Discount" %}</td>
+            <td>- {{order.item_discount|currency}}</td>
+          </tr>
+          {% endif %}
+        </tbody>
+      </table>
+
+      <h3>{% trans "Shipping" %}</h3>
+      <table class="priced">
+        <tbody>
+          <tr class="price">
+	        <td colspan="4">
+              <h5>{{order.shipping_method}}</h5>
+              <p class="description">{{order.shipping_description}}</p>
+            </td>
+            <td>{{order.shipping_cost|currency}}</td>
+          </tr>
+          {% if order.shipping_discount %}
+          <tr class="price">
+            <td colspan="4">{% trans "Shipping Discount" %}</td>
+            <td>- {{ order.shipping_discount|currency }}</td>
+          </tr>
+          {% endif %}
+        </tbody>
+     </table>
+
+     <h3>{% trans "Totals" %}</h3>
+     <table class="priced">
+       <tbody>
+         <tr class="price">
+	       <td colspan="4">{% trans "Tax" %}</td>
+           <td>{{order.tax|currency}}</td>
+         </tr>
+         <tr class="price">
+	       <td colspan="4">{% trans "Total" %}</td>
+           <td>{{order.total|currency}}</td>
+         </tr>
+         <tr class="price">
+	       <td colspan="4">{% trans "Payments Made" %}</td>
+           <td>- {{order.balance_paid|currency}}</td>
+         </tr>
+         <tr class="price">
+	       <td colspan="4">{% trans "Balance Due" %}</td>
+           <td>{{order.balance|currency}}</td>
+         </tr>
+        </tbody>
+      </table>
+
+      <h2>{% trans "Payment information" %}</h2>
+      <div id="payment-info">
+        <p>
+          {% blocktrans with order_total=order.total|currency %}
+          Payment total of <span class="currency">{{order_total}}</span>
+          due to:
+          {% endblocktrans %}
+        </p>
+        <div class="shop-details">
+          {% if shopDetails.street1 %}
+          <p>{{shopDetails.street1}}</p>
+          {% endif %}
+          {% if shopDetails.street1 %}
+          <p>{{shopDetails.street2}}</p>
+          {% endif %}
+          <p>
+            {% if shopDetails.city %}{{shopDetails.city}}{% endif %}{% if shopDetails.state or shopDetails.postal_code %},{% endif %}
+            {% if shopDetails.postal_code %}{{shopDetails.postal_code}}{% endif %}
+            {% if shopDetails.state %}{{shopDetails.state}}{% endif %}
+          </p>
+          {% if shopDetails.country %}
+          <p>
+            {{shopDetails.country.name}}
+          </p>
+          {% endif %}
+        </div>
+
+        {% blocktrans with order_date=order.time_stamp|date:"DATE_FORMAT" order_total=order.total|currency %}
+        <span class="currency">{{order_total}}</span> was charged to your
+        {{credit_card_type}} card (ending with
+        <code>{{credit_card_number}}</code>) on <em>{{order_date}}</em>.
+        {% endblocktrans %}
+      </div>
+      <p>
+        {% blocktrans %}
+        This invoice has been paid in full.
+        Thank you for your business!
+        {% endblocktrans %}
+      </p>
+    </div>
+  </body>
+</html>

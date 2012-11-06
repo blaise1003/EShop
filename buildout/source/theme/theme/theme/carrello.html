@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="it">
+ <head>
+  <title>
+   Primifrutti Theme
+  </title>
+  <meta charset="utf-8" />
+  <style type="text/css">
+   @import url("./static/theme/styles/layout.css") ;
+  </style>
+  <script type="text/javascript" src="/static/theme/scripts/bootstrap/bootstrap-modal.js">
+  </script>
+  <script type="text/javascript" src="/static/theme/scripts/bootstrap/bootstrap-carousel.js">
+  </script>
+  <script type="text/javascript" src="/static/theme/scripts/jquery-1.7.1.js">
+  </script>
+  <script type="text/javascript" src="/static/theme/scripts/jquery.tools.min.js">
+  </script>
+ </head>
+ <body>
+  <div id="wrapper" class="container">
+   <div id="header" class="row no-banner">
+   </div>
+   <div id="main" class="row">
+    <div id="left" class="span4">
+     <div id="navigation" class="portlet">
+      <div class="portletHeader">
+       <h3>
+        Categorie
+       </h3>
+      </div>
+      <ul class="nav nav-list">
+       <li>
+        <a class="navTreeCurrentItem" title="4 Gamma" href="/categoria/gamma-4/">
+         <span>
+          4 Gamma
+         </span>
+        </a>
+        <ul>
+         <li>
+          <a title="5 Gamma" href="/categoria/gamma-4/gamma-5/">
+           <span>
+            5 Gamma
+           </span>
+          </a>
+         </li>
+         <li>
+          <a title="5 Gamma" href="/categoria/gamma-4/gamma-5/">
+           <span>
+            5 Gamma
+           </span>
+          </a>
+         </li>
+         <li>
+          <a title="5 Gamma" href="/categoria/gamma-4/gamma-5/">
+           <span>
+            5 Gamma
+           </span>
+          </a>
+         </li>
+         <li>
+          <a title="5 Gamma" href="/categoria/gamma-4/gamma-5/">
+           <span>
+            5 Gamma
+           </span>
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a title="Complemento" href="/categoria/complemento/">
+         <span>
+          Complemento
+         </span>
+        </a>
+       </li>
+       <li>
+        <a title="Conserve" href="/categoria/conserve/">
+         <span>
+          Conserve
+         </span>
+        </a>
+       </li>
+       <li>
+        <a title="Frutta" href="/categoria/frutta/">
+         <span>
+          Frutta
+         </span>
+        </a>
+       </li>
+       <li>
+        <a title="Frutta esotica" href="/categoria/frutta-esotica/">
+         <span>
+          Frutta esotica
+         </span>
+        </a>
+       </li>
+       <li>
+        <a title="Frutta secca" href="/categoria/frutta-secca/">
+         <span>
+          Frutta secca
+         </span>
+        </a>
+       </li>
+       <li>
+        <a title="Ingrosso" href="/categoria/ingrosso/">
+         <span>
+          Ingrosso
+         </span>
+        </a>
+       </li>
+       <li>
+        <a title="Latticini" href="/categoria/latticini/">
+         <span>
+          Latticini
+         </span>
+        </a>
+       </li>
+       <li>
+        <a title="Legumi" href="/categoria/legumi/">
+         <span>
+          Legumi
+         </span>
+        </a>
+       </li>
+       <li>
+        <a title="Pasta fresca" href="/categoria/pasta-fresca/">
+         <span>
+          Pasta fresca
+         </span>
+        </a>
+       </li>
+       <li>
+        <a title="Pasta secca" href="/categoria/pasta-secca/">
+         <span>
+          Pasta secca
+         </span>
+        </a>
+       </li>
+       <li>
+        <a title="Uova fresche" href="/categoria/uova-fresche/">
+         <span>
+          Uova fresche
+         </span>
+        </a>
+       </li>
+       <li>
+        <a title="Verdura" href="/categoria/verdura/">
+         <span>
+          Verdura
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div id="content" class="span10">
+     <div class="page-header">
+      <h1>
+       Il tuo carrello
+       <small>
+        L'elenco delle cose che stai per acquistare
+       </small>
+      </h1>
+     </div>
+     <ul class="breadcrumb-step">
+      <li>
+       <strong>
+        Checkout
+       </strong>
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li class="active">
+       1. Carrello
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li>
+       2. Login-Registrazione
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li>
+       3. Conferma ordine
+       <span class="divider">
+        /
+       </span>
+      </li>
+      <li>
+       4. Spedizione
+      </li>
+     </ul>
+     <div class="alert-message warning">
+      <a class="close" href="#">
+       ×
+      </a>
+      <p>
+       <strong>
+        Spese gratis se raggiungi 50€
+       </strong>
+       Se fai un ordine minimo di 50€ hai le spese di spedizione gratis
+      </p>
+      <img src="/static/theme/img/trasporto.png" />
+      <div class="alert-actions">
+       <a class="btn small" href="#">
+        Continua lo shopping
+       </a>
+      </div>
+     </div>
+     <div class="alert-message warning">
+      <a class="close" href="#">
+       ×
+      </a>
+      <p>
+       Se scegli di pagare in
+       <strong>
+        contrassegno
+       </strong>
+       (pagamento alla consegna), saranno aggiunti 5.00 € al totale del tuo ordine.
+      </p>
+     </div>
+     <table class="zebra-striped">
+      <thead>
+       <tr>
+        <th>
+         Quantità
+        </th>
+        <th>
+         Prodotto
+        </th>
+        <th>
+         Prezzo
+        </th>
+        <th>
+         Totale
+         <br />
+         <small>
+          (tasse incluse)
+         </small>
+        </th>
+        <th>
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         <form>
+          <input type="hidden" name="cartitem" value="1" />
+          <input class="mini" type="text" name="quantity" id="id_quantity" value="1" size="2" />
+          <br />
+          <input class="btn" type="submit" id="id_update_submit" value="Aggiorna" />
+         </form>
+        </td>
+        <td>
+         <a href="prodotto.html">
+          Noci di Sorrento
+         </a>
+        </td>
+        <td>
+         <div class="price">
+          € 12.00
+         </div>
+        </td>
+        <td>
+         <div class="price">
+          € 15.00
+         </div>
+        </td>
+        <td>
+         <button type="reset" class="btn">
+          Cancella
+         </button>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <form>
+          <input type="hidden" name="cartitem" value="1" />
+          <input class="mini" type="text" name="quantity" id="id_quantity" value="1" size="2" />
+          <br />
+          <input class="btn" type="submit" id="id_update_submit" value="Aggiorna" />
+         </form>
+        </td>
+        <td>
+         <a href="prodotto.html">
+          Noci di Sorrento
+         </a>
+        </td>
+        <td>
+         <div class="price">
+          € 12.00
+         </div>
+        </td>
+        <td>
+         <div class="price">
+          € 15.00
+         </div>
+        </td>
+        <td>
+         <button type="reset" class="btn">
+          Cancella
+         </button>
+        </td>
+       </tr>
+       <tr>
+        <td colspan="4">
+         <h3>
+          Totale carrello
+         </h3>
+        </td>
+        <td>
+         <div class="price red">
+          € 15.00
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td colspan="4">
+         <h3>
+          Spese di spedizione
+         </h3>
+        </td>
+        <td>
+         <div class="price red">
+          € 5.00
+         </div>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <div class="well span12">
+      <a href="" class="btn info" title="">
+       Continua lo shopping
+      </a>
+      <a href="#" class="btn">
+       svuota il carrello
+      </a>
+      <a href="#" class="btn primary">
+       Vai alla cassa
+      </a>
+     </div>
+    </div>
+   </div>
+   <div id="page-footer" class="footer">
+    <div class="container row">
+     <div class="span4">
+      <dl>
+       <dt>
+        PASSAPAROLA
+       </dt>
+       <dd>
+        <a href="/invites/invite_friends/" title="Invita gli amici">
+         Invita gli amici
+        </a>
+       </dd>
+       <dd>
+        <a href="/invites/buono_regalo/" title="Buono Regalo">
+         Buono Regalo
+        </a>
+       </dd>
+      </dl>
+     </div>
+     <div class="span4">
+      <dl>
+       <dt>
+        SICUREZZA
+       </dt>
+       <dd>
+        <a href="/pagine/condizioni-spedizione" title="link">
+         Condizioni spedizione
+        </a>
+       </dd>
+       <dd>
+        <a href="/pagine/tipologie-pagamento" title="link">
+         Tipologie di pagamento
+        </a>
+       </dd>
+      </dl>
+     </div>
+     <div class="span4">
+      <dl>
+       <dt>
+        CHI SIAMO
+       </dt>
+       <dd>
+        <a href="/pagine/l-azienda" title="link">
+         L'Azienda
+        </a>
+       </dd>
+       <dd>
+        <a href="/pagine/offerte" title="link">
+         Offerte
+        </a>
+       </dd>
+       <dd>
+        <a href="/contact" title="link">
+         Contatti
+        </a>
+       </dd>
+      </dl>
+     </div>
+     <div class="span4">
+      <dl>
+       <dt>
+        DOVE SIAMO
+       </dt>
+       <dd>
+        <address>
+         <p>
+          address
+         </p>
+         <p>
+          00000 - city
+         </p>
+         <p>
+          P.IVA 12345678910
+         </p>
+        </address>
+       </dd>
+      </dl>
+     </div>
+     <div class="span4">
+      <ul class="unstyled">
+       <li>
+        <a href="/sitemap.xml" title="link">
+         Mappa del sito
+        </a>
+        <span>
+         |
+        </span>
+       </li>
+       <li>
+        <a href="/accounts/logout" title="link">
+         Logout
+        </a>
+       </li>
+      </ul>
+      <p class="carte">
+       Carte di credito
+      </p>
+      <div class="social-footer">
+       <like colorscheme="light" show_faces="false" layout="button_count" font="segoe ui" action="like" width="400" image="/media/images/productimage-picture-default_jpg_85x85_q85.jpg" title="Farmacia Miano" href="http://www.mianoonline.com/" class="fb_edge_widget_with_comment fb_iframe_widget">
+        <span>
+         <iframe id="f3be8a2be0691dc" name="f31d7dabf6da502" style="border: medium none; overflow: hidden; height: 20px; width: 120px;" src="http://www.facebook.com/plugins/like.php?action=like&amp;api_key=1449414641&amp;channel_url=http%3A%2F%2Fstatic.ak.fbcdn.net%2Fconnect%2Fxd_proxy.php%23%3F%3D%26cb%3Df3bd189c4d96e4%26origin%3Dhttp%253A%252F%252Fhttp://www.mianoonline.com/%252Ffaee101139f5be%26relation%3Dparent.parent%26transport%3Dpostmessage&amp;colorscheme=light&amp;font=segoe%20ui&amp;href=http://www.facebook.com/FarmaciaMiano&amp;layout=button_count&amp;locale=it_IT&amp;node_type=link&amp;sdk=joey&amp;show_faces=false&amp;width=400&amp;">
+         </iframe>
+        </span>
+       </like>
+      </div>
+     </div>
+    </div>
+    <div class="colophon">
+     <a href="biagiogrimaldi.netsons.org" title="">
+      by Biagio Grimaldi
+     </a>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

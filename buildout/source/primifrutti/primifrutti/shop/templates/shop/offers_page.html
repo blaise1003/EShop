@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load i18n thumbnail satchmo_currency satchmo_discounts app_plugins %}
+
+{% block globalnavbar %}
+<li><a href="{% url satchmo_home %}">Home</a></li>
+<li><a href="{% url satchmo_category_index %}">{% trans "Prodotti" %}</a></li>
+<li><a href="/pagine/l-azienda">{% trans "L'azienda" %}</a></li>
+<li class="active"><a href="/pagine/offerte">{% trans "Offerte" %}</a></li>
+<li><a href="{% url satchmo_contact %}">{% trans "Contacts" %}</a></li>
+{% endblock globalnavbar %}
+
+{% block content %}
+      <div id="vetrina">
+          {% if offer_list %}
+              <h1>{% trans "Offers" %}</h1>
+              <div class="row small">
+              {% for offer in offer_list %}
+                    <div class="span3">
+                        <div class="portletItem">   
+                            <div class="filigrana">
+                            <span>{{shop_name}}</span>
+                            <a href="{{offer.product.get_absolute_url}}">
+                                {% thumbnail offer.product.main_image.picture 165x120 as image %}
+              	                <img src="{{ image.absolute_url }}" class="thumbnail"
+                                      alt="{{offer.product.name}}"
+                                      width="{{image.width}}px"
+                                      height="{{image.height}}px" />
+                            </a>
+                            </div>
+                            <h3>{{ offer.product.name }}</h3>
+                            {% if offer.product.short_description %}
+                              <p>{{ offer.product.short_description|truncatewords_html:5 }}</p>
+                            {% else %}
+                              <p><span class="discreet">{% trans "no description available" %}</span></p>
+                            {% endif %}
+                            <div class="buttonCart">
+                                <div class="price">{{ offer.product|taxed_discount_price:''|currency }}</div>
+                                <div class="actions iconsmall">
+                                    <a rel="tooltip" href="{{offer.product.get_absolute_url}}" class="info"
+                                         title="{% trans 'Product details' %}"></a>
+                                    {% if offer.product.active %}
+                                    <form action="{% url satchmo_smart_add %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="quantity" 
+                                            value="1" />
+                                        <input type="hidden" name="productname" 
+                                            value="{{offer.product.slug}}" />
+                                        <input rel="tooltip"  type="submit" class="cart" name="addcart" 
+                                             title="{% trans 'Add to cart' %}"
+                                             value="" />
+                                        {% plugin_point "product_add_buttons" %}
+                                        {% plugin_point "product_form" %}
+                                    </form>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              {% endfor %}
+              </div>
+              {% comment %}**Now the pagination section**"{% endcomment %}
+              {% if is_paginated %}
+                <div class="pagination pagination-centered">
+                  <ul>
+                    <li {% if not page_obj.has_previous %}class="disabled"{% endif %}>
+                      <a href="{% if page_obj.has_previous %}{% url satchmo_offers %}?page={{ page_obj.previous_page_number }}{% else %}#{% endif %}">
+                        <<
+                      </a>
+                    </li>
+                    <li class="disabled">
+                      <a href="#">{{ page_obj.number }}/{{ page_obj.paginator.num_pages }}</a>
+                    </li>
+                    <li {% if not page_obj.has_next %}class="disabled"{% endif %}>
+                      <a href="{% if page_obj.has_next %}{% url satchmo_offers %}?page={{ page_obj.next_page_number }}{% else %}#{% endif %}">
+                        >>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              {% endif %}
+          {% endif %}
+    </div>
+{% endblock %}

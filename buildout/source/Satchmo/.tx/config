@@ -1,0 +1,63 @@
+[main]
+host = https://www.transifex.net
+
+[satchmo.ocale-en-LC_MESSAGES-django-po_0]
+file_filter = satchmo/apps/l10n/locale/<lang>/LC_MESSAGES/django.po
+source_file = satchmo/apps/l10n/locale/en/LC_MESSAGES/django.po
+source_lang = en
+
+[satchmo.ocale-en-LC_MESSAGES-django-po_1]
+file_filter = satchmo/apps/payment/locale/<lang>/LC_MESSAGES/django.po
+source_file = satchmo/apps/payment/locale/en/LC_MESSAGES/django.po
+source_lang = en
+
+[satchmo.ocale-en-LC_MESSAGES-django-po_2]
+file_filter = satchmo/apps/payment/modules/giftcertificate/locale/<lang>/LC_MESSAGES/django.po
+source_file = satchmo/apps/payment/modules/giftcertificate/locale/en/LC_MESSAGES/django.po
+source_lang = en
+
+[satchmo.ocale-en-LC_MESSAGES-django-po_3]
+file_filter = satchmo/apps/product/locale/<lang>/LC_MESSAGES/django.po
+source_file = satchmo/apps/product/locale/en/LC_MESSAGES/django.po
+source_lang = en
+
+[satchmo.ocale-en-LC_MESSAGES-django-po_7]
+file_filter = satchmo/apps/satchmo_ext/newsletter/locale/<lang>/LC_MESSAGES/django.po
+source_file = satchmo/apps/satchmo_ext/newsletter/locale/en/LC_MESSAGES/django.po
+source_lang = en
+
+[satchmo.ocale-en-LC_MESSAGES-django-po_9]
+file_filter = satchmo/apps/satchmo_ext/productratings/locale/<lang>/LC_MESSAGES/django.po
+source_file = satchmo/apps/satchmo_ext/productratings/locale/en/LC_MESSAGES/django.po
+source_lang = en
+
+[satchmo.ocale-en-LC_MESSAGES-django-po_15]
+file_filter = satchmo/apps/satchmo_store/accounts/locale/<lang>/LC_MESSAGES/django.po
+source_file = satchmo/apps/satchmo_store/accounts/locale/en/LC_MESSAGES/django.po
+source_lang = en
+
+[satchmo.ocale-en-LC_MESSAGES-django-po_16]
+file_filter = satchmo/apps/satchmo_store/contact/locale/<lang>/LC_MESSAGES/django.po
+source_file = satchmo/apps/satchmo_store/contact/locale/en/LC_MESSAGES/django.po
+source_lang = en
+
+[satchmo.ocale-en-LC_MESSAGES-django-po_17]
+file_filter = satchmo/apps/satchmo_store/shop/locale/<lang>/LC_MESSAGES/django.po
+source_file = satchmo/apps/satchmo_store/shop/locale/en/LC_MESSAGES/django.po
+source_lang = en
+
+[satchmo.ocale-en-LC_MESSAGES-django-po_18]
+file_filter = satchmo/apps/satchmo_utils/locale/<lang>/LC_MESSAGES/django.po
+source_file = satchmo/apps/satchmo_utils/locale/en/LC_MESSAGES/django.po
+source_lang = en
+
+[satchmo.ocale-en-LC_MESSAGES-django-po_19]
+file_filter = satchmo/apps/shipping/locale/<lang>/LC_MESSAGES/django.po
+source_file = satchmo/apps/shipping/locale/en/LC_MESSAGES/django.po
+source_lang = en
+
+[satchmo.ocale-en-LC_MESSAGES-django-po_20]
+file_filter = satchmo/apps/tax/locale/<lang>/LC_MESSAGES/django.po
+source_file = satchmo/apps/tax/locale/en/LC_MESSAGES/django.po
+source_lang = en
+

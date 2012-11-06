@@ -1,0 +1,43 @@
+<div class="navbar navbar-inner navbar-fixed-top">
+    <div class="container">
+        <form class="navbar-search pull-left">
+           <input type="text" placeholder="cerca i prodotti" value="" name="keywords" size="25">
+           <input type="submit" class="btn btn-primary" value="Cerca">
+        </form>
+        <div class="nav nav-pills btn-group pull-right open ">
+          <a class="dropdown" href="#">User</a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/accounts/update/" title="Aggiorna profilo"><i class="icon-pencil"></i>Aggiorna profilo</a></li>
+            <li><a href="/accounts/password_change/" title="Modifica password"><i class="icon-pencil"></i>Modifica password</a></li>
+            <li><a href="/history/" title="Storia ordine"><i class="icon-list-alt"></i>Storia degli ordini</a></li>
+            <li><a href="/invites/invite_friends/" rel="#pb_1"><i class="icon-list-alt"></i>Invita gli amici</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="i"></i>Amministra</a></li>
+            <li><a href="#"><i class="i"></i>Esci</a></li>
+          </ul>
+        </div>
+
+        <div class="nav nav-pills pull-right btn-group ">
+          <a class="dropdown" href="#">Login</a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+                @@include "portletlogin.html"
+            </li>
+          </ul>
+          </div>
+          <div class="nav nav-pills pull-right btn-group ">
+          <a class="dropdown" href="#">Carrello</a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+             <li>
+             <div class="price">Hai 1 oggetto nel carrello <a href="/cart/">€5,00</a></div>
+             </li>
+             <li class="divider"></li>
+             <li><a href="/checkout/">Vai alla cassa</a></li>
+            </ul>
+        </div>
+    
+    </div>
+</div>

@@ -1,0 +1,15 @@
+{% extends "admin/product/change_form.html" %}
+{% load i18n %}
+{% block extrahead %}
+{{block.super}}
+{% endblock %}
+
+{% block after_related_objects %}
+{% if original %}
+<fieldset class="module">
+<h2>{% trans "Helpers" %}</h2>
+<ul><li><a href="{% url satchmo_admin_variation_manager original.pk %}">{% trans "Variation Manager" %}</a></li></ul>
+</fieldset>
+{% endif %}
+{{ block.super }}
+{% endblock %}

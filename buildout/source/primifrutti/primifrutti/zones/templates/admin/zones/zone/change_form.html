@@ -1,0 +1,28 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+{% block object-tools-items %}
+{% with object=adminform.form.instance %}
+  {% with default_calendar=object.default_calendar %}
+    {% if default_calendar %}
+    <li>
+      <a href="{% url admin:zones_calendar_change_default object.pk default_calendar.pk %}">
+        {% trans "Edit default calendar" %}
+      </a>
+    </li>
+    {% else %}
+    <li>
+      <a class="addlink"
+         href="{% url admin:zones_calendar_add_default parent=object.pk %}">
+        {% trans "Add default calendar" %}
+      </a>
+    </li>
+    {% endif %}
+  {% endwith %}
+<li>
+  <a href="{% url admin:zones_calendar_changelist parent=object.pk %}">
+    {% trans "Exceptional calendars" %}
+  </a>
+</li>
+{% endwith %}
+{{block.super}}
+{% endblock %}

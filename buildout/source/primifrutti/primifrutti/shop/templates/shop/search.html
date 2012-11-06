@@ -1,0 +1,69 @@
+{% extends "shop/base.html" %}
+{% load i18n thumbnail %}
+{% load satchmo_currency satchmo_discounts %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+{% endblock %}
+
+{% block content %}
+
+{% if not list_products %}
+	<div class="alert alert-warning">{% trans "Nothing found" %}</div>
+{% else %}
+	{% if list_products %}
+        <h1>{% trans "Products search results" %}</h1>
+        <div class="alert alert-warning">
+        	{% blocktrans count results_count as items %}Search: You found {{ items }} item{% plural %}Search: You found {{ items }} items{% endblocktrans %}
+       	</div>
+		
+		<ul class="unstyled">
+		{% for product in list_products %}
+			<li class="search-element">
+                <a href="{{ product.get_absolute_url }}" class="search-item">
+                    {% with product.main_image as main_image %}
+                        {% thumbnail main_image.picture 60x60 as image %}
+                        <img src="{{ image.absolute_url }}" class="pull-left"
+                              title="{{object.name}}"
+                              alt="{{object.name}}"
+                              width="image.width" height="image.height" />
+                    {% endwith %}
+                </a>
+                <div class="item-details">
+                    <h2><a href="{{ product.get_absolute_url }}">{{ product.translated_name }}</a></h2>
+                    <div class="price">{% trans "Price (for pz):"%} {{ product|taxed_discount_price:''|currency }}</div>
+                </div>
+                <div class="visualClear"></div>
+            </li>
+	    {% endfor %}
+		</ul>
+
+		{% comment %}**Now the pagination section**"{% endcomment %}
+	      {% if is_paginated %}
+	        <div class="pagination pagination-centered">
+	          <ul>
+	            <li {% if not page_obj.has_previous %}class="disabled"{% endif %}>
+	              <a href="{% if page_obj.has_previous %}{% url satchmo_offers %}?page={{ page_obj.previous_page_number }}{% else %}#{% endif %}">
+	                <<
+	              </a>
+	            </li>
+	            <li class="disabled">
+	              <a href="#">{{ page_obj.number }}/{{ page_obj.paginator.num_pages }}</a>
+	            </li>
+	            <li {% if not page_obj.has_next %}class="disabled"{% endif %}>
+	              <a href="{% if page_obj.has_next %}{% url satchmo_offers %}?page={{ page_obj.next_page_number }}{% else %}#{% endif %}">
+	                >>
+	              </a>
+	            </li>
+	          </ul>
+	        </div>
+	      {% endif %}
+	{% else %}
+		{% if category %}
+		<div class="alert alert-warning">
+			<p>{% trans "Nothing found" %}</p>
+        </div>
+		{% endif %}
+	{% endif %}
+{% endif %}
+{% endblock %}

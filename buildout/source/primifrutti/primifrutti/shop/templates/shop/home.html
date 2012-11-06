@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load i18n ui_tags thumbnail satchmo_category satchmo_google satchmo_util satchmo_currency satchmo_discounts app_plugins normalize_decimal %}
+
+{% block content %}
+      <div id="vetrina">
+          {% if featured_first %}
+              <div class="big">   
+                      <div class="clearfix">
+                        {% thumbnail featured_first.main_image.picture 228x158 as image %}
+                    <img src="{{ image.absolute_url }}" 
+                          alt="{{featured_first.name}}"
+                          width="{{image.width}}px"
+                          height="{{image.height}}px" />
+                          {% endif %}
+                          <h1 class="tit">{{featured_first.name}}</h1>
+                          <p class="desc ">{{ featured_first.description|truncatewords_html:50|safe }}</p>
+                          {% prices_table featured_first %}
+                      </div>
+                      <div class="buttonCart">
+                          <div class="price">{% trans "Price" %} {{ featured_first|taxed_discount_price:''|currency }}</div>
+                          <div class="actions-extend">
+                            <a href="{{featured_first.get_absolute_url}}" 
+                                  alt="{{featured_first.name}}"
+                                  class="btn btn-primary-info">
+                                      {% trans "Product details" %}
+                            </a>
+
+                            {% if featured_first.active %}
+                              <form action="{% url satchmo_smart_add %}" method="post">
+                                  {% csrf_token %}
+                                  <input type="hidden" name="quantity"
+                                        value="1" />
+                                  <input type="hidden" name="productname" 
+                                        value="{{featured_first.slug}}" />
+                                  <div>
+                                      <input type="submit" class="btn btn-primary-cart"
+                                        name="addcart" value="{% trans 'Add to cart' %}" />
+                                      {% plugin_point "product_add_buttons" %}
+                                      {% plugin_point "product_form" %}
+                                  </div>
+                              </form>
+                              {% endif %}
+                          </div>
+                      </div>
+              </div>
+              <div class="clear"></div>
+
+              
+              <div class="row small">
+              {% for featured in featured_list %}
+                    <div class="span3">
+                        <div class="portletItem">   
+                            <div class="filigrana"><span>{{shop_name}}</span>
+                            <a href="{{featured.get_absolute_url}}">
+                                {% thumbnail featured.main_image.picture 165x120 as image %}
+              	                <img src="{{ image.absolute_url }}" class="thumbnail"
+                                      alt="{{featured_first.name}}"
+                                      width="{{image.width}}px"
+                                      height="{{image.height}}px" />
+                            </a>
+                            </div>
+                            <h3>{{ featured.name }}</h3>
+                            <p>
+                              {% if featured.short_description %}
+                                {{ featured.short_description|truncatewords_html:10 }}
+                              {% else %}
+                                <span class="discreet">{% trans "no description available" %}</span>
+                              {% endif %}
+                            </p>
+                            <div class="buttonCart">
+                                <div class="price">{{ featured|taxed_discount_price:''|currency }}</div>
+                                <div class="actions iconsmall">
+                                    <a href="{{featured_first.get_absolute_url}}" class="info"
+                                       rel="tooltip"
+                                       title="{% trans 'Product details' %}"></a>
+                                    {% if featured.active %}
+                                    <form action="{% url satchmo_smart_add %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="quantity" 
+                                            value="1" />
+                                        <input type="hidden" name="productname" 
+                                            value="{{featured.slug}}" />
+                                        <input type="submit" class="cart" name="addcart" 
+                                             title="{% trans 'Add to cart' %}"
+                                             rel="tooltip"
+                                             value="" />
+                                        {% plugin_point "product_add_buttons" %}
+                                        {% plugin_point "product_form" %}
+                                    </form>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              {% endfor %}
+              </div>
+    </div>
+{% endblock %}

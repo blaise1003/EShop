@@ -1,0 +1,145 @@
+{% extends "admin/index.html" %}
+{% load i18n %}
+{% load satchmo_currency %}
+{% load satchmo_order normalize_decimal %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{% load adminmedia %}{% admin_media_prefix %}css/dashboard.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/primifrutti/primifrutti/styles/admin_zones.css"/>
+{% endblock %}
+{% block navbar %}
+   <li>{% trans "Stale Shipments" %}</li>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+    <ul class="object-tools">
+        <li>
+          <a class="addlink" href="{% url admin:index %}">
+            {% trans 'Admin' %}
+          </a>
+        </li>
+    </ul>
+    
+    {% if msg %}
+    <ul class="messagelist">
+      <li class="info">{{msg}}</li>
+    </ul>
+    {% endif %}
+    
+    {% if risky_count %}
+    <ul class="messagelist">
+      <li class="info">
+        {% blocktrans count risky_count=risky_count%}
+        There is {{ risky_count }} stale shipment requiring immediate action!
+        {% plural %}
+        There are {{ risky_count }} stale shipments requiring immediate action!
+        {% endblocktrans %}
+      </li>
+    </ul>
+    {% endif %}
+    
+    {% if stale_shipments %}
+        <div id="changelist" class="module filtered">
+            <div id="toolbar">
+                <form method="GET" action="{% url satchmo_deliveries %}">
+                    {% csrf_token %}
+                    <table class="deliveries_form">
+                        <tr>
+                            <td>
+                                <div>
+                                    <label for="searchbar">
+                                        {% trans "Contact name" %}
+                                        <img alt="Search" src="/static/admin/img/admin/icon_searchbox.png">
+                                    </label>
+                                    <input type="text" name="contact_name" id="contact_name" value="" />
+                                </div>
+                            </td>
+                            <td>
+                                <select name="order_by" id="order_by">
+                                   <option value="delivery_date" selected="selected">{% trans "Delivery" %}</option>
+                                   <option value="booking_date" selected="selected">{% trans "Made on" %}</option>
+                                   <option value="contact_name">{% trans "Contact name" %}</option>
+                                   <option value="order_id">{% trans "Order #" %}</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="submit" name="submit" id="submit" value="{% trans 'Submit' %}" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+        <div class="results">
+        <table id="result_list" cellspacing="0" summary="{% trans 'Stale shipments' %}">
+            <thead>
+            <tr>
+                <th scope="col">{% trans 'Order #' %}</th>
+                <th scope="col">{% trans 'Zone' %}</th>
+    			<th scope="col">{% trans 'Made on' %}</th>
+    			<th scope="col">{% trans 'Delivery' %}</th>
+    			<th scope="col">{% trans 'Contact name' %}</th>
+    			<th scope="col">{% trans 'Phone' %}</th>
+    			<th scope="col">{% trans 'Actions' %}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in stale_shipments %}
+            <tr class="row{{forloop.counter}}">
+                <td>
+    				<a href="{% url admin:shop_order_change item.order_id %}" target="_blank">
+                    {{ item.order_id }}
+    				</a>
+                </td>
+                <td>
+                    {{ item.zone }}
+                </td>
+                <td>
+                    {{ item.booked_on }}
+                </td>
+                <td>
+                    {{ item.ship_on }}
+                </td>
+                <td>
+                    {{ item.contact }}
+                </td>
+                <td>
+                    {{ item.primary_phone }}
+                </td>
+                <td>
+                    <a href="mailto:{{item.contact_email}}"><img src="/static/primifrutti/primifrutti/img/mail.png" alt="send" /></a>&nbsp;
+                    <a href="{% url satchmo_confirm_shipment item.id %}"><img src="/static/primifrutti/primifrutti/img/ok.png" alt="confirm" /></a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        
+        {% comment %}**Now the pagination section**"{% endcomment %}
+        {% if is_paginated %}
+            <p class="paginator">
+                <span class="page-links">
+                    {% if page_obj.has_previous %}
+                        <a href="{% url satchmo_deliveries %}?page={{ page_obj.previous_page_number }}">{% trans 'previous' %}</a>
+                    {% endif %}
+                    <span class="page-current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+                    {% if page_obj.has_next %}
+                        <a href="{% url satchmo_deliveries %}?page={{ page_obj.next_page_number }}">{% trans 'next' %}</a>
+                    {% endif %}
+                </span>
+            </p>
+        {% endif %}
+        </div>
+    {% else %}
+        <p class="paginator">{% trans 'No shipments' %}</p>
+        <a href="{% url satchmo_deliveries %}">{% trans 'Return' %}</a>
+    {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block sidebar %}{% endblock %}

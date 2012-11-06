@@ -1,0 +1,35 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load satchmo_order satchmo_currency %}
+
+{% block navbar %}
+   <li class="first"><a href="{% url satchmo_home %}">{% trans "Home" %}</a><span class="divider">/</span></li>
+   <li>{% trans "Checkout" %}</li>
+{% endblock %}
+
+{% block content %}
+<div id="orderstatus">
+<h1 class="page-header">{% trans "Order Balance" %}</h1>
+
+<form method="post" action="{% url satchmo_balance_remaining %}">{% csrf_token %}
+	<div class="alert alert-info">
+        {% with order.balance|currency as orderbalance %}
+	{% blocktrans %}To complete this order, you need to pay the {{ orderbalance }} balance remaining on this order.{% endblocktrans %}
+	{% endwith %}
+	</div>
+	{% ifequal paymentmethod_ct 1 %}{# If we only have one payment method, then the form renders it as a hidden field #}{{ form.paymentmethod }}
+	{% else %}
+	<h2>{% trans "How do you want to pay?" %}</h2>
+	<label for="id_paymentmethod">{% trans "Payment method" %}*</label>
+	    {{ form.paymentmethod }}
+    {% if form.paymentmethod.errors %}
+    <div class="alert alert-error">*** {{ form.paymentmethod.errors|join:", " }}</div>
+    {% endif %}
+	{% endifequal %}
+	<div class="form-actions">
+        <input type="submit" class="btn btn-primary-cart pull-right" value="{% trans "Continue Checkout" %}"/>
+    </div>
+</form>
+
+</div>
+{% endblock %}

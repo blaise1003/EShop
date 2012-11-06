@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block leftcolumn %}
+{% endblock %}
+
+{% block content %}
+    <h2>{% trans "Categories" %}</h2>
+    <ul>
+    {% for category in categories %}
+        <li>
+            <a href="{{category.get_absolute_url}}">{{category.translated_name}}</a>
+        </li>
+    {% endfor %}
+    </ul>
+    
+    <h2>{% trans "Products" %}</h2>
+    <ul>
+    {% for product in products %}
+        <li>
+            <a href="{{product.get_absolute_url}}">{{product.translated_name}}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block rightcolumn %}
+{% endblock %}

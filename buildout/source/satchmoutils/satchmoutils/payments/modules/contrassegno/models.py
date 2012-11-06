@@ -1,0 +1,2 @@
+from satchmoutils.payments.modules.contrassegno import config
+PAYMENT_PROCESSOR=True

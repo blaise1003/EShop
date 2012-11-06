@@ -1,0 +1,2831 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-18 19:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: utils.py:24
+msgid "just now"
+msgstr ""
+
+#: utils.py:29
+#, python-format
+msgid "%(days)s day"
+msgid_plural "%(days)s days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: utils.py:35
+#, python-format
+msgid "%(hours)s hour"
+msgid_plural "%(hours)s hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: utils.py:41
+#, python-format
+msgid "%(minutes)s minute"
+msgid_plural "%(minutes)s minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: utils.py:49
+#, python-format
+msgid "%(heads)s and %(tail)s"
+msgstr ""
+
+#: utils.py:66
+#, python-format
+msgid "%(diff)s ago"
+msgstr ""
+
+#: utils.py:72
+#, python-format
+msgid "%(diff)s left"
+msgstr ""
+
+#: invites/__init__.py:10
+msgid "Invites report"
+msgstr ""
+
+#: invites/__init__.py:12
+msgid "Invites relationships"
+msgstr ""
+
+#: invites/admin.py:11
+msgid "InviteDiscount Options"
+msgstr ""
+
+#: invites/config.py:9
+msgid "Invites settings"
+msgstr ""
+
+#: invites/config.py:17
+msgid "Maximum invites"
+msgstr ""
+
+#: invites/config.py:18
+msgid "The maximum number of invites a user can send"
+msgstr ""
+
+#: invites/form.py:7 invites/models.py:139
+msgid "email address"
+msgstr ""
+
+#: invites/form.py:9
+msgid "Email address of your friend"
+msgstr ""
+
+#: invites/form.py:10 invites/models.py:140
+msgid "first name"
+msgstr ""
+
+#: invites/form.py:12
+msgid "Your friend's name"
+msgstr ""
+
+#: invites/form.py:13 invites/models.py:141
+msgid "last name"
+msgstr ""
+
+#: invites/form.py:15
+msgid "Your friend's surname"
+msgstr ""
+
+#: invites/form.py:16 invites/models.py:142
+msgid "personal note"
+msgstr ""
+
+#: invites/form.py:19
+msgid "Send a personal message to invite your friend"
+msgstr ""
+
+#: invites/form.py:21
+#, fuzzy
+msgid "Insert following word"
+msgstr ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#: invites/models.py:68
+#, python-format
+msgid "You have been invited to join by %(first_name)s %(last_name)s"
+msgstr ""
+
+#: invites/models.py:134 invites/models.py:185 zones/models.py:81
+msgid "site"
+msgstr ""
+
+#: invites/models.py:135
+msgid "code"
+msgstr ""
+
+#: invites/models.py:136 invites/models.py:328
+msgid "inviter"
+msgstr ""
+
+#: invites/models.py:137
+msgid "invited"
+msgstr ""
+
+#: invites/models.py:143
+msgid "used"
+msgstr ""
+
+#: invites/models.py:144
+msgid "has to be counted"
+msgstr ""
+
+#: invites/models.py:187
+msgid "invites target"
+msgstr ""
+
+#: invites/models.py:189
+msgid "the number of succesful invites that trigger the coupon creation"
+msgstr ""
+
+#: invites/models.py:192
+msgid "absolute amount"
+msgstr ""
+
+#: invites/models.py:197
+msgid ""
+"the absolute amount of the discount (e.g. 10€). You must set either this OR "
+"the percentage amount"
+msgstr ""
+
+#: invites/models.py:200
+msgid "percentage amount"
+msgstr ""
+
+#: invites/models.py:205
+msgid ""
+"the percentage amount of the discount, in absolute value (e.g. 30.0). You "
+"must set either this OR the absolute amount"
+msgstr ""
+
+#: invites/models.py:209
+msgid "minimum order value"
+msgstr ""
+
+#: invites/models.py:215
+msgid "shipping"
+msgstr ""
+
+#: invites/models.py:222
+msgid "validity after activation"
+msgstr ""
+
+#: invites/models.py:224
+msgid ""
+"the coupon will be valid for the number of days specified after the mail has "
+"been sent to the discount recipient"
+msgstr ""
+
+#: invites/models.py:228
+msgid "apply to all products"
+msgstr ""
+
+#: invites/models.py:230
+msgid ""
+"Apply this discount to all discountable products? If this is false you must "
+"select products below in the 'Valid Products' section."
+msgstr ""
+
+#: invites/models.py:235
+msgid "valid on these products only"
+msgstr ""
+
+#: invites/models.py:240
+msgid "valid on these categories only"
+msgstr ""
+
+#: invites/models.py:246
+msgid ""
+"You should specify either the absolute amount or the percentage amount, but "
+"you specified none of the two"
+msgstr ""
+
+#: invites/models.py:250
+msgid ""
+"You should specify either the absolute amount or the percentage amount, but "
+"you specified both"
+msgstr ""
+
+#: invites/models.py:259
+#, python-format
+msgid "Invite discount for %(last_name)s %(first_name)s"
+msgstr ""
+
+#: invites/models.py:286
+msgid "A discount coupon for you"
+msgstr ""
+
+#: invites/models.py:329
+msgid "discount"
+msgstr ""
+
+#: invites/models.py:331
+msgid "discount template"
+msgstr ""
+
+#: invites/utils.py:53
+#, python-format
+msgid "%(invites_sended)i/%(max_invites)i"
+msgstr ""
+
+#: invites/utils.py:56
+#, python-format
+msgid "%(not_used_invites)i"
+msgstr ""
+
+#: invites/utils.py:58
+#, python-format
+msgid "%(used_invites)i"
+msgstr ""
+
+#: invites/views.py:29
+#, python-format
+msgid "Invite code already used : %(invite_code)s"
+msgstr ""
+
+#: invites/views.py:67
+msgid "Registration Form"
+msgstr ""
+
+#: invites/views.py:106 invites/views.py:147
+msgid "Error! Check your input"
+msgstr ""
+
+#: invites/views.py:156
+msgid "Error! You have already invited this friend"
+msgstr ""
+
+#: invites/views.py:165
+msgid "Invite created!"
+msgstr ""
+
+#: invites/views.py:188
+#: invites/templates/invites/admin_views/invites_report.html:9
+#: invites/templates/invites/admin_views/invites_report.html:63
+#: invites/templates/invites/admin_views/invites_report_relationships.html:9
+#: invites/templates/invites/admin_views/invites_report_relationships.html:63
+msgid "Invites Report"
+msgstr ""
+
+#: invites/views.py:225
+#, python-format
+msgid "Invites for user %(id)s resetted"
+msgstr ""
+
+#: invites/views.py:227
+#, python-format
+msgid "Error! User %(id)s doesn't exist"
+msgstr ""
+
+#: invites/views.py:229
+msgid "No user selected"
+msgstr ""
+
+#: invites/templates/invites/404.html:5
+#: invites/templates/invites/registration_form.html:5
+#: shop/templates/404.html:5 shop/templates/500.html:5
+#: shop/templates/base.html:209
+#: shop/templates/admin/orders/change_list.html:42
+#: shop/templates/contact/update_form.html:5
+#: shop/templates/contact/view_profile.html:7
+#: shop/templates/product/best_ratings.html:8
+#: shop/templates/product/best_sellers.html:7
+#: shop/templates/product/category.html:19
+#: shop/templates/product/category_index.html:15
+#: shop/templates/product/minimum_order.html:5
+#: shop/templates/product/product.html:31
+#: shop/templates/product/recently_added.html:7
+#: shop/templates/registration/login.html:5
+#: shop/templates/registration/logout.html:5
+#: shop/templates/registration/password_change_done.html:5
+#: shop/templates/registration/password_change_form.html:5
+#: shop/templates/registration/password_reset_complete.html:5
+#: shop/templates/registration/password_reset_confirm.html:5
+#: shop/templates/registration/password_reset_done.html:5
+#: shop/templates/registration/password_reset_form.html:5
+#: shop/templates/registration/registration_complete.html:6
+#: shop/templates/registration/registration_form.html:5
+#: shop/templates/shop/cart.html:12 shop/templates/shop/contact_form.html:13
+#: shop/templates/shop/contact_thanks.html:13
+#: shop/templates/shop/download.html:5
+#: shop/templates/shop/multiple_product_form.html:10
+#: shop/templates/shop/order_history.html:8
+#: shop/templates/shop/order_tracking.html:6 shop/templates/shop/search.html:6
+#: shop/templates/shop/checkout/authentication_required.html:5
+#: shop/templates/shop/checkout/balance_remaining.html:6
+#: shop/templates/shop/checkout/base_confirm.html:7
+#: shop/templates/shop/checkout/base_pay_ship.html:5
+#: shop/templates/shop/checkout/confirm.html:9
+#: shop/templates/shop/checkout/empty_cart.html:5
+#: shop/templates/shop/checkout/failure.html:5
+#: shop/templates/shop/checkout/form.html:9
+#: shop/templates/shop/checkout/success.html:7
+#: shop/templates/shop/checkout/success_bonifico.html:12
+#: shop/templates/shop/checkout/success_contrassegno.html:12
+#: shop/templates/shop/checkout/success_creditcard.html:12
+#: shop/templates/shop/checkout/success_generic.html:12
+#: zones/templates/admin/zones/calendar/change_form.html:5
+#: zones/templates/admin/zones/calendar/change_list.html:6
+#: zones/templates/admin/zones/calendar/default_change_form.html:15
+#: zones/templates/admin/zones/calendar/default_object_history.html:6
+#: zones/templates/admin/zones/calendar/delete_confirmation.html:5
+#: zones/templates/admin/zones/calendar/delete_selected_confirmation.html:6
+#: zones/templates/admin/zones/calendar/object_history.html:6
+msgid "Home"
+msgstr ""
+
+#: invites/templates/invites/404.html:10 shop/templates/404.html:10
+#: shop/templates/500.html:10 shop/templates/shop/nozones.html:5
+msgid "Error"
+msgstr ""
+
+#: invites/templates/invites/invites_form.html:7
+msgid "Invite Form"
+msgstr ""
+
+#: invites/templates/invites/invites_form.html:14
+#: shop/templates/shop/checkout/form.html:54
+msgid "You'll need to fill out at least the fields with a "
+msgstr ""
+
+#: invites/templates/invites/invites_form.html:16
+#: invites/templates/invites/invites_form.html:32
+#: invites/templates/invites/invites_form.html:54
+#: invites/templates/invites/invites_form.html:77
+#: invites/templates/invites/invites_form.html:100
+#: invites/templates/invites/invites_form.html:122
+#: shop/templates/shop/checkout/form.html:55
+#: shop/templates/shop/checkout/form.html:74
+#: shop/templates/shop/checkout/form.html:85
+msgid "required"
+msgstr ""
+
+#: invites/templates/invites/invites_form.html:30 shop/templates/base.html:115
+msgid "Email"
+msgstr ""
+
+#: invites/templates/invites/invites_form.html:52
+msgid "Name"
+msgstr ""
+
+#: invites/templates/invites/invites_form.html:75
+msgid "Surname"
+msgstr ""
+
+#: invites/templates/invites/invites_form.html:98
+msgid "Message"
+msgstr ""
+
+#: invites/templates/invites/invites_form.html:120
+msgid "Captcha"
+msgstr ""
+
+#: invites/templates/invites/invites_form.html:141
+msgid "Send"
+msgstr ""
+
+#: invites/templates/invites/invites_form.html:142
+msgid "Cancel"
+msgstr ""
+
+#: invites/templates/invites/registration_form.html:6
+#: shop/templates/registration/registration_form.html:6
+msgid "Registration"
+msgstr ""
+
+#: invites/templates/invites/registration_form.html:16
+#: shop/templates/registration/registration_form.html:10
+msgid "Please Enter Your Account Information"
+msgstr ""
+
+#: invites/templates/invites/registration_form.html:17
+#: shop/templates/registration/registration_form.html:11
+msgid "All fields are required"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:17
+#: invites/templates/invites/admin_views/invites_report_relationships.html:17
+#: shop/templates/base.html:85
+#: zones/templates/zones/admin_views/deliveries.html:19
+msgid "Admin"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:23
+#: invites/templates/invites/admin_views/invites_report_relationships.html:23
+msgid "Max invites available for each contact"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:42
+#: invites/templates/invites/admin_views/invites_report.html:50
+#: invites/templates/invites/admin_views/invites_report.html:67
+#: invites/templates/invites/admin_views/invites_report_relationships.html:42
+#: invites/templates/invites/admin_views/invites_report_relationships.html:50
+#: invites/templates/invites/admin_views/invites_report_relationships.html:67
+#: zones/templates/zones/admin_views/deliveries.html:52
+#: zones/templates/zones/admin_views/deliveries.html:62
+#: zones/templates/zones/admin_views/deliveries.html:82
+msgid "Contact name"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:51
+#: invites/templates/invites/admin_views/invites_report.html:66
+#: invites/templates/invites/admin_views/invites_report_relationships.html:51
+#: invites/templates/invites/admin_views/invites_report_relationships.html:66
+msgid "Contact #"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:55
+#: invites/templates/invites/admin_views/invites_report_relationships.html:55
+#: zones/templates/zones/admin_views/deliveries.html:67
+msgid "Submit"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:68
+msgid "Invites sent"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:69
+msgid "Used invites"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:70
+msgid "Not used invites"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:71
+msgid "Discount available"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:72
+msgid "Contact via email"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:73
+msgid "Reset invites"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:104
+msgid "N.A."
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:110
+msgid "contact via email"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:114
+msgid "reset invites"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:128
+#: invites/templates/invites/admin_views/invites_report_relationships.html:104
+#: zones/templates/zones/admin_views/deliveries.html:126
+msgid "previous"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:134
+#: invites/templates/invites/admin_views/invites_report_relationships.html:110
+#: zones/templates/zones/admin_views/deliveries.html:132
+msgid "next"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:141
+#: invites/templates/invites/admin_views/invites_report_relationships.html:117
+msgid "No contacts"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report.html:142
+#: invites/templates/invites/admin_views/invites_report_relationships.html:118
+#: zones/templates/zones/admin_views/deliveries.html:140
+msgid "Return"
+msgstr ""
+
+#: invites/templates/invites/admin_views/invites_report_relationships.html:68
+msgid "Invited persons"
+msgstr ""
+
+#: invites/templates/invites/mail/discount.html:3
+#: invites/templates/invites/mail/discount.txt:1
+#, python-format
+msgid "Congratulations %(first_name)s,"
+msgstr ""
+
+#: invites/templates/invites/mail/discount.html:5
+#, python-format
+msgid ""
+"You have succesfully invited %(invites_number)s\n"
+"    people! As a reward, we are happy to provide you with an electronic "
+"coupon\n"
+"    that will get you a %(discount_amount)s discount on your next purchase!\n"
+"    "
+msgstr ""
+
+#: invites/templates/invites/mail/discount.html:10
+#: invites/templates/invites/mail/discount.txt:5
+msgid "The electronic coupon code is"
+msgstr ""
+
+#: invites/templates/invites/mail/discount.html:13
+#, python-format
+msgid ""
+"In order to use it, you must insert\n"
+"    this code in the <em>coupon</em> field found in the checkout page (the "
+"page\n"
+"    where you give the billing details and select the payment method, right\n"
+"    after clicking <em>checkout</em>). After entering the code, the discount "
+"of\n"
+"    %(discount_amount|escape)s will be applied to your order.\n"
+"    "
+msgstr ""
+
+#: invites/templates/invites/mail/discount.html:20
+#, python-format
+msgid ""
+"\n"
+"    <strong>Important</strong>: Remember that you can use this coupon\n"
+"    <strong>only one time</strong> and you must\n"
+"    <strong>use it before %(end_date)s</strong>.\n"
+"    "
+msgstr ""
+
+#: invites/templates/invites/mail/discount.html:26
+#: invites/templates/invites/mail/discount.txt:13
+msgid "All the best,"
+msgstr ""
+
+#: invites/templates/invites/mail/discount.txt:3
+#, python-format
+msgid ""
+"You have succesfully invited %(invites_number)s people! As a reward, we are "
+"happy to provide you with an electronic coupon that will get you a "
+"%(discount_amount)s discount on your next purchase!"
+msgstr ""
+
+#: invites/templates/invites/mail/discount.txt:9
+#, python-format
+msgid ""
+"In order to use it, you must insert this code in the 'coupon' field found in "
+"the checkout page (the page where you give the billing details and select "
+"the payment method, right after clicking 'checkout'). After entering the "
+"code, the discount of %(discount_amount)s will be applied to your order."
+msgstr ""
+
+#: invites/templates/invites/mail/discount.txt:11
+#, python-format
+msgid ""
+"IMPORTANT: Remember that you can use this coupon ONLY ONE TIME and you must "
+"USE IT BEFORE %(end_date|date:\"DATE_FORMAT\")s "
+msgstr ""
+
+#: invites/templates/invites/mail/invite.html:33
+#: invites/templates/invites/mail/invite.txt:1
+#, python-format
+msgid "Hello %(recipient_name)s,"
+msgstr ""
+
+#: invites/templates/tags/invite_box.html:4
+msgid "Invite your friends"
+msgstr ""
+
+#: presents/config.py:13
+msgid "Gift configurations"
+msgstr ""
+
+#: presents/config.py:22
+msgid "Label for gift orders annotation"
+msgstr ""
+
+#: presents/config.py:33
+msgid "Gift Category"
+msgstr ""
+
+#: presents/config.py:34
+msgid "Choose which category contains gift products"
+msgstr ""
+
+#: presents/formextensions.py:22
+msgid "You must specify different shipping address for this gift"
+msgstr ""
+
+#: presents/formextensions.py:35
+msgid "Other informations"
+msgstr ""
+
+#: presents/formextensions.py:50
+msgid "Is this a gift?"
+msgstr ""
+
+#: presents/templates/shop/_order_tracking_details.html:10
+#: shop/templates/shop/_order_tracking_details.html:10
+#: shop/templates/shop/order_history.html:20
+#: zones/templates/zones/admin_views/deliveries.html:63
+#: zones/templates/zones/admin_views/deliveries.html:78
+msgid "Order #"
+msgstr ""
+
+#: presents/templates/shop/_order_tracking_details.html:12
+#: presents/templates/shop/email/_order_detail.txt:2
+#: presents/templates/shop/email/_order_detail_table.html:9
+msgid "Notes"
+msgstr ""
+
+#: presents/templates/shop/_order_tracking_details.html:15
+#: shop/templates/shop/_order_tracking_details.html:11
+#: shop/templates/shop/order_history.html:21
+msgid "Status"
+msgstr ""
+
+#: presents/templates/shop/_order_tracking_details.html:23
+#: presents/templates/shop/email/_order_detail.txt:4
+#: shop/templates/shop/_order_details.html:9
+#: shop/templates/shop/_order_tracking_details.html:22
+msgid "Items Ordered"
+msgstr ""
+
+#: presents/templates/shop/_order_tracking_details.html:31
+#: presents/templates/shop/email/_order_detail.txt:33
+#: shop/templates/shop/_order_details.html:47
+#: shop/templates/shop/_order_tracking_details.html:45
+msgid "Shipping Method"
+msgstr ""
+
+#: presents/templates/shop/_order_tracking_details.html:39
+#: presents/templates/shop/_order_tracking_details.html:47
+#: presents/templates/shop/email/_order_detail.txt:39
+#: presents/templates/shop/email/_order_detail.txt:44
+#: shop/templates/shop/_order_details.html:60
+#: shop/templates/shop/_order_details.html:83
+#: shop/templates/shop/_order_tracking_details.html:29
+#: shop/templates/shop/_order_tracking_details.html:38
+#: shop/templates/shop/cart.html:48 shop/templates/shop/cart.html.py:49
+#: shop/templates/shop/cart.html:117 shop/templates/shop/order_history.html:24
+#: shop/templates/shop/pdf/invoice.html:37
+#: shop/templates/shop/pdf/invoice.html:94
+msgid "Total"
+msgstr ""
+
+#: presents/templates/shop/_order_tracking_details.html:41
+#: presents/templates/shop/email/_order_detail.txt:41
+#: shop/templates/shop/_order_details.html:68
+#: shop/templates/shop/_order_tracking_details.html:31
+#: shop/templates/shop/pdf/invoice.html:36
+#: shop/templates/shop/pdf/invoice.html:60
+msgid "Discount"
+msgstr ""
+
+#: presents/templates/shop/_order_tracking_details.html:43
+#: presents/templates/shop/email/_order_detail.txt:42
+#: shop/templates/shop/_order_details.html:75
+#: shop/templates/shop/_order_tracking_details.html:33
+#: shop/templates/shop/pdf/invoice.html:67
+msgid "Shipping"
+msgstr ""
+
+#: presents/templates/shop/_order_tracking_details.html:45
+#: presents/templates/shop/email/_order_detail.txt:43
+#: shop/templates/shop/_order_details.html:81
+#: shop/templates/shop/_order_tracking_details.html:36
+#: shop/templates/shop/cart.html:80 shop/templates/shop/pdf/invoice.html:90
+msgid "Tax"
+msgstr ""
+
+#: presents/templates/shop/_order_tracking_details.html:52
+#: shop/templates/shop/_order_tracking_details.html:54
+msgid "Shipping To"
+msgstr ""
+
+#: presents/templates/shop/email/_order_detail.txt:9
+#: presents/templates/shop/email/_order_detail_table.html:22
+#: shop/templates/shop/_order_details.html:21
+#: shop/templates/shop/contact_form.html:18
+#: shop/templates/shop/contact_thanks.html:18
+msgid "Contact Information"
+msgstr ""
+
+#: presents/templates/shop/email/_order_detail.txt:15
+#: presents/templates/shop/email/_order_detail_table.html:37
+#: shop/templates/shop/_order_details.html:28
+msgid "Billing Information"
+msgstr ""
+
+#: presents/templates/shop/email/_order_detail.txt:24
+#: presents/templates/shop/email/_order_detail_table.html:38
+#: shop/templates/shop/_order_details.html:39
+msgid "Shipping Address"
+msgstr ""
+
+#: presents/templates/shop/email/_order_detail_table.html:79
+msgid "Discount:"
+msgstr ""
+
+#: presents/templates/shop/email/_order_detail_table.html:88
+msgid "Shipping:"
+msgstr ""
+
+#: presents/templates/shop/email/_order_detail_table.html:97
+msgid "Tax:"
+msgstr ""
+
+#: presents/templates/shop/email/_order_detail_table.html:105
+msgid "Total:"
+msgstr ""
+
+#: presents/templates/shop/email/_order_detail_table.html:119
+msgid "Payment: "
+msgstr ""
+
+#: presents/templates/shop/email/_order_detail_table.html:123
+#: shop/templates/shop/email/order_placed_notice.txt:12
+#, python-format
+msgid ""
+"%(credit_card_type)s card ending in %(credit_card_number)s will be charged "
+"%(order_total)s."
+msgstr ""
+
+#: presents/templates/shop/email/_order_detail_table.html:136
+#: shop/templates/shop/email/order_placed_notice.txt:15
+msgid "This is a downloadable product"
+msgstr ""
+
+#: shipping/modules/calendar_shipping/config.py:6
+#: shipping/modules/calendar_shipping/shipper.py:25
+msgid "Calendar shipping"
+msgstr ""
+
+#: shipping/modules/calendar_shipping/config.py:15
+msgid "Make shipping for zones active"
+msgstr ""
+
+#: shipping/modules/calendar_shipping/config.py:16
+msgid "False if you don't want to ship for zone and calendar"
+msgstr ""
+
+#: shipping/modules/calendar_shipping/config.py:21
+msgid "Shipping standard cost"
+msgstr ""
+
+#: shipping/modules/calendar_shipping/shipper.py:59
+#, python-format
+msgid "(remaining %(slots)s free slot)"
+msgstr ""
+
+#: shipping/modules/calendar_shipping/shipper.py:64
+#, python-format
+msgid "(remaining %(slots)s free slots)"
+msgstr ""
+
+#: shipping/templates/shipping/options.html:4
+msgid "Sent via"
+msgstr ""
+
+#: shipping/templates/shipping/options.html:6
+#, python-format
+msgid "arrives approximately %(expected_delivery)s."
+msgstr ""
+
+#: shop/__init__.py:10
+msgid "Export Categories CSV"
+msgstr ""
+
+#: shop/__init__.py:12
+msgid "Export Products CSV"
+msgstr ""
+
+#: shop/admin.py:42
+#, python-format
+msgid ""
+"the image to show on the banner. It should be <strong>exactly %(width)s "
+"pixel wide and %(height)s pixel high</strong>."
+msgstr ""
+
+#: shop/admin.py:54
+msgid "No image!"
+msgstr ""
+
+#: shop/admin.py:59
+msgid "wide"
+msgstr ""
+
+#: shop/admin.py:59
+msgid "high"
+msgstr ""
+
+#: shop/admin.py:63
+#, python-format
+msgid ""
+"The image is %(current)i pixel %(measure)s. It's supposed to be %(max)i "
+"pixel %(measure)s"
+msgstr ""
+
+#: shop/admin.py:90
+msgid "Offer Options"
+msgstr ""
+
+#: shop/admin.py:101
+#, python-format
+msgid "%(count)d offer activated"
+msgid_plural "%(count)d offers activated"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shop/admin.py:106 shop/admin.py:151
+msgid "Activate"
+msgstr ""
+
+#: shop/admin.py:111
+#, python-format
+msgid "%(count)d offer deactivated"
+msgid_plural "%(count)d offers deactivated"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shop/admin.py:116 shop/admin.py:161
+msgid "Deactivate"
+msgstr ""
+
+#: shop/admin.py:146
+#, python-format
+msgid "%(count)d banner activated"
+msgid_plural "%(count)d banners activated"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shop/admin.py:156
+#, python-format
+msgid "%(count)d banner deactivated"
+msgid_plural "%(count)d banners deactivated"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shop/admin.py:249
+msgid "Home order"
+msgstr ""
+
+#: shop/admin.py:293
+msgid "Database error"
+msgstr ""
+
+#: shop/admin.py:313
+msgid ""
+"Items must be selected in order to perform actions on them. No items have "
+"been changed."
+msgstr ""
+
+#: shop/admin.py:355
+#, python-format
+msgid "%(count)s %(name)s was changed successfully."
+msgid_plural "%(count)s %(name)s were changed successfully."
+msgstr[0] ""
+msgstr[1] ""
+
+#: shop/admin.py:382
+#, python-format
+msgid "%(total_count)s selected"
+msgid_plural "All %(total_count)s selected"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shop/admin.py:392
+#, python-format
+msgid "0 of %(cnt)s selected"
+msgstr ""
+
+#: shop/config.py:9
+msgid "Banners info"
+msgstr ""
+
+#: shop/config.py:16
+msgid "Offers in splash page"
+msgstr ""
+
+#: shop/config.py:17
+msgid "sets the maximum number of offers to be shown in the splash page"
+msgstr ""
+
+#: shop/config.py:24
+msgid "Socials urls info"
+msgstr ""
+
+#: shop/config.py:33
+msgid "Facebook url"
+msgstr ""
+
+#: shop/config.py:34
+msgid "Insert personal facebook url"
+msgstr ""
+
+#: shop/config.py:44
+msgid "Twitter url"
+msgstr ""
+
+#: shop/config.py:45
+msgid "Insert personal twitter url"
+msgstr ""
+
+#: shop/config.py:55
+msgid "Linkedin url"
+msgstr ""
+
+#: shop/config.py:56
+msgid "Insert Linkedin url"
+msgstr ""
+
+#: shop/config.py:66
+msgid "username skype"
+msgstr ""
+
+#: shop/config.py:67
+msgid "Insert personal skype username"
+msgstr ""
+
+#: shop/models.py:49 shop/models.py:137
+msgid "product"
+msgstr ""
+
+#: shop/models.py:50
+msgid "the product being promoted"
+msgstr ""
+
+#: shop/models.py:52
+msgid "headline"
+msgstr ""
+
+#: shop/models.py:53
+msgid "a catching headline for your promotion"
+msgstr ""
+
+#: shop/models.py:56
+msgid "description"
+msgstr ""
+
+#: shop/models.py:57
+msgid "a more detailed description of the promotion"
+msgstr ""
+
+#: shop/models.py:59 shop/models.py:140
+msgid "ordering"
+msgstr ""
+
+#: shop/models.py:60
+msgid ""
+"controls the order in which the promotions are shown. Those with a lower "
+"number will be shown first"
+msgstr ""
+
+#: shop/models.py:64 shop/models.py:104 zones/models.py:83
+msgid "active"
+msgstr ""
+
+#: shop/models.py:65
+msgid "if deselected, the offer doesn't appear on the site"
+msgstr ""
+
+#: shop/models.py:71 shop/models.py:111
+msgid "picture"
+msgstr ""
+
+#: shop/models.py:81
+#, python-format
+msgid "%(title)s (for %(product)s)"
+msgstr ""
+
+#: shop/models.py:87
+msgid "offer"
+msgstr ""
+
+#: shop/models.py:88
+msgid "offers"
+msgstr ""
+
+#: shop/models.py:96
+msgid "Banner"
+msgstr ""
+
+#: shop/models.py:99
+msgid "link"
+msgstr ""
+
+#: shop/models.py:100
+msgid "the address of the page the banner links to"
+msgstr ""
+
+#: shop/models.py:105
+msgid "if deselected, the banner will not appear on the site"
+msgstr ""
+
+#: shop/models.py:122
+#, python-format
+msgid "Banner #%(id)s: %(title)s"
+msgstr ""
+
+#: shop/models.py:127
+msgid "banner"
+msgstr ""
+
+#: shop/models.py:128
+msgid "banners"
+msgstr ""
+
+#: shop/models.py:138
+msgid "the product being featured"
+msgstr ""
+
+#: shop/models.py:141
+msgid ""
+"controls the order in which the products are shown within the homepage. "
+"Those with a lower number will be shown first"
+msgstr ""
+
+#: shop/models.py:147
+#, python-format
+msgid "%(product)s, featured (%(ordering)d)"
+msgstr ""
+
+#: shop/models.py:153
+msgid "product featured sorting"
+msgstr ""
+
+#: shop/models.py:154
+msgid "products featured sorting"
+msgstr ""
+
+#: shop/templates/404.html:11
+msgid "Could not find the page you were looking for."
+msgstr ""
+
+#: shop/templates/500.html:11
+msgid "There was an error with the store.  The admin has been notified."
+msgstr ""
+
+#: shop/templates/base.html:43
+msgid "User"
+msgstr ""
+
+#: shop/templates/base.html:50 shop/templates/base.html.py:51
+msgid "Account Details"
+msgstr ""
+
+#: shop/templates/base.html:58 shop/templates/base.html.py:59
+#: shop/templates/contact/view_profile.html:43
+#: shop/templates/registration/registration_complete.html:21
+msgid "Update your profile"
+msgstr ""
+
+#: shop/templates/base.html:67 shop/templates/base.html.py:68
+#: shop/templates/contact/view_profile.html:47
+#: shop/templates/contact/view_profile.html:60
+#: shop/templates/registration/password_change_form.html:14
+#: shop/templates/registration/registration_complete.html:22
+msgid "Change your password"
+msgstr ""
+
+#: shop/templates/base.html:76 shop/templates/base.html.py:77
+#: shop/templates/contact/view_profile.html:49
+#: shop/templates/registration/registration_complete.html:23
+#: shop/templates/shop/order_history.html:10
+#: shop/templates/shop/order_history.html:15
+msgid "Order History"
+msgstr ""
+
+#: shop/templates/base.html:91 shop/templates/base.html.py:92
+#: shop/templates/shop/contact_form.html:14
+#: shop/templates/shop/contact_thanks.html:14
+msgid "Contact Us"
+msgstr ""
+
+#: shop/templates/base.html:98 shop/templates/base.html.py:99
+msgid "Log out"
+msgstr ""
+
+#: shop/templates/base.html:106 shop/templates/base.html.py:113
+#: shop/templates/base.html:131 shop/templates/registration/login.html:13
+#: shop/templates/registration/login.html:52
+#: shop/templates/shop/checkout/authentication_required.html:32
+#: shop/templates/shop/checkout/form.html:47
+msgid "Login"
+msgstr ""
+
+#: shop/templates/base.html:122 shop/templates/registration/login.html:36
+#: shop/templates/shop/checkout/authentication_required.html:31
+#: shop/templates/shop/checkout/form.html:43
+msgid "Password"
+msgstr ""
+
+#: shop/templates/base.html:132 shop/templates/shop/checkout/form.html:48
+msgid "Register"
+msgstr ""
+
+#: shop/templates/base.html:141 shop/templates/product/minimum_order.html:6
+#: shop/templates/shop/cart.html:13
+msgid "Cart"
+msgstr ""
+
+#: shop/templates/base.html:149
+#, python-format
+msgid ""
+"\n"
+"                  You have %(items)s item into cart\n"
+"                  "
+msgid_plural ""
+"\n"
+"                  You have %(items)s items into cart\n"
+"                  "
+msgstr[0] ""
+msgstr[1] ""
+
+#: shop/templates/base.html:171 shop/templates/shop/cart.html:155
+msgid "Check out"
+msgstr ""
+
+#: shop/templates/base.html:185 shop/templates/product/category.html:12
+#: shop/templates/product/category_index.html:8
+#: shop/templates/product/product.html:24
+#: shop/templates/shop/contact_form.html:6
+#: shop/templates/shop/contact_thanks.html:6
+#: shop/templates/shop/offers_page.html:6
+msgid "Prodotti"
+msgstr ""
+
+#: shop/templates/base.html:186 shop/templates/product/category.html:13
+#: shop/templates/product/category_index.html:9
+#: shop/templates/product/product.html:25
+#: shop/templates/shop/contact_form.html:7
+#: shop/templates/shop/contact_thanks.html:7
+#: shop/templates/shop/offers_page.html:7
+msgid "L'azienda"
+msgstr ""
+
+#: shop/templates/base.html:187 shop/templates/product/category.html:14
+#: shop/templates/product/category_index.html:10
+#: shop/templates/product/product.html:26
+#: shop/templates/shop/contact_form.html:8
+#: shop/templates/shop/contact_thanks.html:8
+#: shop/templates/shop/offers_page.html:8
+msgid "Offerte"
+msgstr ""
+
+#: shop/templates/base.html:188 shop/templates/product/category.html:15
+#: shop/templates/product/category_index.html:11
+#: shop/templates/product/product.html:27
+#: shop/templates/shop/contact_form.html:9
+#: shop/templates/shop/contact_thanks.html:9
+#: shop/templates/shop/offers_page.html:9
+msgid "Contacts"
+msgstr ""
+
+#: shop/templates/base.html:196 shop/templates/shop/splash_page.html:52
+msgid "PrimiFrutti: La scelta migliore"
+msgstr ""
+
+#: shop/templates/base.html:235 shop/templates/product/category_index.html:22
+#: shop/templates/shop/sitemap.html:8
+msgid "Categories"
+msgstr ""
+
+#: shop/templates/admin/orders/change_list.html:64
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: shop/templates/admin/orders/change_list.html:73
+#, fuzzy
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+msgstr[1] ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#: shop/templates/admin/orders/change_list.html:84
+msgid "Filter"
+msgstr ""
+
+#: shop/templates/admin/orders/change_list.html:102
+msgid "TOTAL ORDERS"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:6
+#: shop/templates/contact/view_profile.html:8
+#: shop/templates/registration/password_change_done.html:6
+#: shop/templates/registration/password_change_form.html:6
+#: shop/templates/shop/order_history.html:9
+#: shop/templates/shop/order_tracking.html:7
+msgid "Account"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:7
+msgid "Update Profile"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:15
+msgid "Your Profile"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:16
+msgid "You&apos;ll need to fill out at least the fields with a *"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:19
+#: shop/templates/shop/contact_form.html:21
+#: shop/templates/shop/checkout/base_pay_ship.html:23
+#, fuzzy
+msgid "Please correct the following error:"
+msgstr ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#: shop/templates/contact/update_form.html:27
+msgid "Basic Information"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:28
+#: shop/templates/registration/login.html:21
+msgid "Email address"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:31
+msgid "First name"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:34
+msgid "Last name"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:37
+msgid "Organization"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:41
+msgid "Birthday"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:44
+msgid "Phone number"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:48
+msgid "Newsletter"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:59
+#: shop/templates/contact/view_profile.html:52
+msgid "Administrative information"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:61
+#: shop/templates/contact/view_profile.html:53
+msgid "Business number"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:64
+#: shop/templates/contact/view_profile.html:54
+msgid "Person number"
+msgstr ""
+
+#: shop/templates/contact/update_form.html:72
+msgid "Update"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:13
+msgid "Your Account info"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:18
+#, python-format
+msgid "Welcome, %(full_name)s."
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:21
+msgid "Your profile"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:23
+msgid "Email:"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:25
+msgid "Organization:"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:27
+msgid "Birthday:"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:29
+msgid "Newsletter:"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:29
+msgid "Yes"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:29
+msgid "No"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:31
+msgid "Billing Address:"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:32
+msgid "Shipping Address:"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:34
+msgid "Address Book Entries"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:37
+msgid "Edit"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:37
+#: zones/templates/admin/zones/calendar/delete_confirmation.html:11
+msgid "Delete"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:41
+#: shop/templates/contact/view_profile.html:56
+msgid "Account options"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:45
+msgid "Add address book entry"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:58
+msgid "Set up contact information"
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:63
+msgid ""
+"Sorry, the user you've logged in as doesn't have any contact information."
+msgstr ""
+
+#: shop/templates/contact/view_profile.html:63
+msgid "Probably because you are an admin."
+msgstr ""
+
+#: shop/templates/product/best_ratings.html:9
+msgid "Most Popular"
+msgstr ""
+
+#: shop/templates/product/best_ratings.html:13
+msgid "Best Rated Products"
+msgstr ""
+
+#: shop/templates/product/best_ratings.html:25
+#, python-format
+msgid "Rating %(rating)s"
+msgstr ""
+
+#: shop/templates/product/best_sellers.html:8
+msgid "Best Sellers"
+msgstr ""
+
+#: shop/templates/product/best_sellers.html:13
+msgid "Best Selling Products"
+msgstr ""
+
+#: shop/templates/product/category.html:20
+#: shop/templates/product/category_index.html:16
+msgid "Category Index"
+msgstr ""
+
+#: shop/templates/product/category.html:40
+#: shop/templates/product/category.html:62
+#: shop/templates/product/category.html:143
+#: shop/templates/product/category_index.html:44
+#: shop/templates/shop/home.html:67 shop/templates/shop/offers_page.html:34
+msgid "no description available"
+msgstr ""
+
+#: shop/templates/product/category.html:43 shop/templates/shop/sitemap.html:17
+#: shop/templates/shop/pdf/invoice.html:29
+msgid "Products"
+msgstr ""
+
+#: shop/templates/product/category.html:69 shop/templates/shop/home.html:25
+#: shop/templates/shop/home.html.py:75 shop/templates/shop/offers_page.html:40
+#: shop/templates/tags/gift_box.html:26 shop/templates/tags/offer_box.html:27
+msgid "Product details"
+msgstr ""
+
+#: shop/templates/product/category.html:78
+#: shop/templates/product/detail_configurableproduct.html:142
+#: shop/templates/product/product.html:132 shop/templates/shop/home.html:37
+#: shop/templates/shop/home.html.py:84 shop/templates/shop/offers_page.html:49
+#: shop/templates/tags/gift_box.html:38 shop/templates/tags/offer_box.html:37
+msgid "Add to cart"
+msgstr ""
+
+#: shop/templates/product/category.html:95
+msgid "No products in this category"
+msgstr ""
+
+#: shop/templates/product/category.html:124
+msgid "Children Categories"
+msgstr ""
+
+#: shop/templates/product/category.html:148
+#: shop/templates/product/category_index.html:53
+#: shop/templates/product/category_index.html:54
+msgid "Category details"
+msgstr ""
+
+#: shop/templates/product/detail_configurableproduct.html:62
+#: shop/templates/product/product.html:67
+msgid "Next image"
+msgstr ""
+
+#: shop/templates/product/detail_configurableproduct.html:63
+#: shop/templates/product/product.html:68
+msgid "Enlarge"
+msgstr ""
+
+#: shop/templates/product/detail_configurableproduct.html:64
+#: shop/templates/product/product.html:69
+msgid "Close"
+msgstr ""
+
+#: shop/templates/product/detail_configurableproduct.html:65
+#: shop/templates/product/product.html:70
+msgid "Previous image"
+msgstr ""
+
+#: shop/templates/product/detail_configurableproduct.html:75
+#: shop/templates/product/product.html:80
+msgid "details"
+msgstr ""
+
+#: shop/templates/product/detail_configurableproduct.html:96
+#: shop/templates/product/product.html:102 shop/templates/shop/cart.html:45
+#: shop/templates/shop/home.html:20
+#: shop/templates/shop/multiple_product_form.html:22
+#: shop/templates/shop/splash_page.html:69
+#: shop/templates/tags/prices_table.html:10
+msgid "Price"
+msgstr ""
+
+#: shop/templates/product/detail_configurableproduct.html:98
+#: shop/templates/product/product.html:104
+#: shop/templates/tags/prices_table.html:21
+msgid "Offer"
+msgstr ""
+
+#: shop/templates/product/detail_configurableproduct.html:110
+msgid "Please choose your options"
+msgstr ""
+
+#: shop/templates/product/detail_configurableproduct.html:126
+#: shop/templates/product/product.html:116 shop/templates/shop/cart.html:39
+#: shop/templates/shop/pdf/invoice.html:34
+#: shop/templates/tags/prices_table.html:9
+msgid "Quantity"
+msgstr ""
+
+#: shop/templates/product/detail_configurableproduct.html:134
+#: shop/templates/product/product.html:124
+#, python-format
+msgid ""
+"\n"
+"                          How many %(units)s product do you want add to your "
+"cart?\n"
+"                        "
+msgstr ""
+
+#: shop/templates/product/minimum_order.html:7
+msgid "Notice"
+msgstr ""
+
+#: shop/templates/product/minimum_order.html:14
+#, python-format
+msgid ""
+"This store requires a minimum order of %(value)s (tax excluded) before you "
+"can check out."
+msgstr ""
+
+#: shop/templates/product/minimum_order.html:16
+msgid "Go back to the cart"
+msgstr ""
+
+#: shop/templates/product/recently_added.html:8
+#: shop/templates/product/recently_added.html:12
+msgid "Recently Added"
+msgstr ""
+
+#: shop/templates/product/recently_added.html:31
+#: shop/templates/product/recently_added.html:33
+msgid "Previous"
+msgstr ""
+
+#: shop/templates/product/recently_added.html:36
+#: shop/templates/product/recently_added.html:38
+msgid "Next"
+msgstr ""
+
+#: shop/templates/product/recently_added.html:45
+msgid "Bad Page"
+msgstr ""
+
+#: shop/templates/registration/activation_email.html:38
+msgid "Hello,"
+msgstr ""
+
+#: shop/templates/registration/activation_email.html:39
+#, python-format
+msgid ""
+"Someone, hopefully you, signed up for a new account at <em>%(site)s</em> "
+"using this email address. If it was you, and you'd like to activate and use "
+"your account, click the link below or copy and paste it into your web "
+"browser's address bar."
+msgstr ""
+
+#: shop/templates/registration/activation_email.html:52
+#, python-format
+msgid ""
+"If you didn't request this, you don't need to do anything; you won't receive "
+"any more email from us, and the account will expire automatically in "
+"%(expiration_days)s days."
+msgstr ""
+
+#: shop/templates/registration/login.html:63
+#: shop/templates/shop/checkout/authentication_required.html:36
+msgid "If you do not have an account, please"
+msgstr ""
+
+#: shop/templates/registration/login.html:63
+#: shop/templates/shop/splash_page.html:113
+#: shop/templates/shop/checkout/authentication_required.html:36
+msgid "click here"
+msgstr ""
+
+#: shop/templates/registration/login.html:64
+#: shop/templates/shop/checkout/authentication_required.html:37
+msgid "If you do not remember your password, please"
+msgstr ""
+
+#: shop/templates/registration/login.html:64
+#: shop/templates/shop/checkout/authentication_required.html:37
+msgid "click here</a> to have it reset."
+msgstr ""
+
+#: shop/templates/registration/logout.html:10
+msgid "You have been successfully logged out."
+msgstr ""
+
+#: shop/templates/registration/password_change_done.html:7
+msgid "Password Change Done"
+msgstr ""
+
+#: shop/templates/registration/password_change_done.html:12
+msgid "Password change successful"
+msgstr ""
+
+#: shop/templates/registration/password_change_done.html:13
+msgid "Your password change has been completed."
+msgstr ""
+
+#: shop/templates/registration/password_change_form.html:7
+msgid "Password Change"
+msgstr ""
+
+#: shop/templates/registration/password_change_form.html:14
+msgid ""
+"For the sake of security, please enter your old password, and then enter "
+"your new password twice."
+msgstr ""
+
+#: shop/templates/registration/password_change_form.html:18
+msgid "Old password"
+msgstr ""
+
+#: shop/templates/registration/password_change_form.html:33
+msgid "New password"
+msgstr ""
+
+#: shop/templates/registration/password_change_form.html:48
+msgid "Confirm new password"
+msgstr ""
+
+#: shop/templates/registration/password_change_form.html:63
+msgid "Change password"
+msgstr ""
+
+#: shop/templates/registration/password_reset_complete.html:6
+#: shop/templates/registration/password_reset_done.html:6
+msgid "Password reset"
+msgstr ""
+
+#: shop/templates/registration/password_reset_complete.html:9
+#: shop/templates/registration/password_reset_complete.html:13
+msgid "Password reset complete"
+msgstr ""
+
+#: shop/templates/registration/password_reset_complete.html:14
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: shop/templates/registration/password_reset_complete.html:15
+msgid "Log in"
+msgstr ""
+
+#: shop/templates/registration/password_reset_confirm.html:6
+msgid "Password reset confirmation"
+msgstr ""
+
+#: shop/templates/registration/password_reset_confirm.html:14
+msgid "Enter new password"
+msgstr ""
+
+#: shop/templates/registration/password_reset_confirm.html:14
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: shop/templates/registration/password_reset_confirm.html:18
+msgid "New password:"
+msgstr ""
+
+#: shop/templates/registration/password_reset_confirm.html:33
+msgid "Confirm password:"
+msgstr ""
+
+#: shop/templates/registration/password_reset_confirm.html:48
+msgid "Change my password"
+msgstr ""
+
+#: shop/templates/registration/password_reset_confirm.html:51
+msgid "Password reset unsuccessful"
+msgstr ""
+
+#: shop/templates/registration/password_reset_confirm.html:53
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: shop/templates/registration/password_reset_done.html:9
+#: shop/templates/registration/password_reset_done.html:13
+msgid "Password reset successful"
+msgstr ""
+
+#: shop/templates/registration/password_reset_done.html:15
+msgid ""
+"We've e-mailed you instructions for setting your password to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+
+#: shop/templates/registration/password_reset_form.html:12
+msgid "Reset your password"
+msgstr ""
+
+#: shop/templates/registration/password_reset_form.html:13
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send a "
+"new password to you."
+msgstr ""
+
+#: shop/templates/registration/password_reset_form.html:18
+msgid "E-mail address"
+msgstr ""
+
+#: shop/templates/registration/password_reset_form.html:29
+msgid "Be sure to enter the same e-mail address you used to register."
+msgstr ""
+
+#: shop/templates/registration/password_reset_form.html:34
+msgid "Reset password"
+msgstr ""
+
+#: shop/templates/registration/registration_complete.html:7
+#: shop/templates/registration/registration_complete.html:11
+msgid "Account Creation"
+msgstr ""
+
+#: shop/templates/registration/registration_complete.html:12
+msgid "Thank you for signing up."
+msgstr ""
+
+#: shop/templates/registration/registration_complete.html:14
+msgid ""
+"An activation link has been sent to the email address you supplied, along "
+"with instructions for activating your account."
+msgstr ""
+
+#: shop/templates/registration/welcome.html:38
+#: shop/templates/shop/email/order_complete.txt:3
+#, python-format
+msgid "Dear %(first_name)s %(last_name)s,"
+msgstr ""
+
+#: shop/templates/registration/welcome.html:39
+#, python-format
+msgid "Thank you for signing up on %(shop_name)s."
+msgstr ""
+
+#: shop/templates/registration/welcome.html:41
+msgid "Your new username is this email address, and you can login at"
+msgstr ""
+
+#: shop/templates/shop/_order_details.html:61
+#: shop/templates/shop/pdf/invoice.html:55
+msgid "Subtotal"
+msgstr ""
+
+#: shop/templates/shop/_order_details.html:71
+msgid "Base Shipping"
+msgstr ""
+
+#: shop/templates/shop/_order_details.html:72
+#: shop/templates/shop/pdf/invoice.html:79
+msgid "Shipping Discount"
+msgstr ""
+
+#: shop/templates/shop/_order_details.html:73
+msgid "Shipping (incl. Tax)"
+msgstr ""
+
+#: shop/templates/shop/_order_details.html:79
+msgid "Tax included"
+msgstr ""
+
+#: shop/templates/shop/_search.html:3
+msgid "search products"
+msgstr ""
+
+#: shop/templates/shop/_search.html:4
+msgid "Search"
+msgstr ""
+
+#: shop/templates/shop/cart.html:21
+#: shop/templates/shop/checkout/authentication_required.html:14
+#: shop/templates/shop/checkout/base_confirm.html:16
+#: shop/templates/shop/checkout/base_pay_ship.html:13
+#: shop/templates/shop/checkout/form.html:17
+msgid "Checkout:"
+msgstr ""
+
+#: shop/templates/shop/cart.html:22
+#: shop/templates/shop/checkout/authentication_required.html:15
+#: shop/templates/shop/checkout/base_confirm.html:17
+#: shop/templates/shop/checkout/base_pay_ship.html:14
+#: shop/templates/shop/checkout/form.html:18
+msgid "1. Cart"
+msgstr ""
+
+#: shop/templates/shop/cart.html:23
+#: shop/templates/shop/checkout/authentication_required.html:16
+#: shop/templates/shop/checkout/base_confirm.html:18
+#: shop/templates/shop/checkout/base_pay_ship.html:15
+#: shop/templates/shop/checkout/form.html:19
+msgid "2. Personal Data"
+msgstr ""
+
+#: shop/templates/shop/cart.html:24
+#: shop/templates/shop/checkout/authentication_required.html:17
+#: shop/templates/shop/checkout/base_confirm.html:19
+#: shop/templates/shop/checkout/base_pay_ship.html:16
+#: shop/templates/shop/checkout/form.html:20
+msgid "3. Shipment"
+msgstr ""
+
+#: shop/templates/shop/cart.html:25
+#: shop/templates/shop/checkout/authentication_required.html:18
+#: shop/templates/shop/checkout/base_confirm.html:20
+#: shop/templates/shop/checkout/base_pay_ship.html:17
+#: shop/templates/shop/checkout/form.html:21
+msgid "4. Order Confirm"
+msgstr ""
+
+#: shop/templates/shop/cart.html:27
+msgid "Your Cart"
+msgstr ""
+
+#: shop/templates/shop/cart.html:27
+msgid "The list of products you're buying"
+msgstr ""
+
+#: shop/templates/shop/cart.html:33
+msgid "Your cart is empty."
+msgstr ""
+
+#: shop/templates/shop/cart.html:38
+msgid "Item"
+msgstr ""
+
+#: shop/templates/shop/cart.html:41
+msgid "Regular Price"
+msgstr ""
+
+#: shop/templates/shop/cart.html:42
+msgid "Regular Price (incl. tax)"
+msgstr ""
+
+#: shop/templates/shop/cart.html:43
+msgid "Sale Price (incl. tax)"
+msgstr ""
+
+#: shop/templates/shop/cart.html:46
+msgid "Price (incl. tax)"
+msgstr ""
+
+#: shop/templates/shop/cart.html:49
+msgid "Total<br/>(incl.&nbsp;tax)"
+msgstr ""
+
+#: shop/templates/shop/cart.html:73
+msgid "update"
+msgstr ""
+
+#: shop/templates/shop/cart.html:100
+msgid "Remove"
+msgstr ""
+
+#: shop/templates/shop/cart.html:122
+msgid "Total (incl. tax)"
+msgstr ""
+
+#: shop/templates/shop/cart.html:153 shop/templates/shop/nozones.html:12
+msgid "Continue shopping"
+msgstr ""
+
+#: shop/templates/shop/cart.html:154
+msgid "Empty"
+msgstr ""
+
+#: shop/templates/shop/contact_form.html:27
+msgid "Send Email"
+msgstr ""
+
+#: shop/templates/shop/contact_thanks.html:20
+msgid "Thank you for contacting us."
+msgstr ""
+
+#: shop/templates/shop/contact_thanks.html:22
+msgid "We will attempt to get back to you within 48 hours."
+msgstr ""
+
+#: shop/templates/shop/download.html:13
+msgid "Downloading of"
+msgstr ""
+
+#: shop/templates/shop/download.html:13
+msgid "will commence after clicking the link below:"
+msgstr ""
+
+#: shop/templates/shop/download.html:15
+msgid ""
+"Once you click the link, the download will be counted.  If you have trouble "
+"with the download, please refresh your browser and try the download again"
+msgstr ""
+
+#: shop/templates/shop/multiple_product_form.html:11
+#: shop/templates/shop/multiple_product_form.html:15
+msgid "Quick Order Form"
+msgstr ""
+
+#: shop/templates/shop/multiple_product_form.html:23
+msgid "Qty"
+msgstr ""
+
+#: shop/templates/shop/multiple_product_form.html:52
+msgid "Add to Cart"
+msgstr ""
+
+#: shop/templates/shop/nozones.html:6
+msgid ""
+"\n"
+"    We are currently unable to deliver the goods, please try again later. If "
+"the error persists, contact the shop\n"
+"    "
+msgstr ""
+
+#: shop/templates/shop/nozones.html:8
+msgid "here"
+msgstr ""
+
+#: shop/templates/shop/offers_page.html:15
+msgid "Offers"
+msgstr ""
+
+#: shop/templates/shop/order_history.html:22
+msgid "Date"
+msgstr ""
+
+#: shop/templates/shop/order_history.html:23
+msgid "Items"
+msgstr ""
+
+#: shop/templates/shop/order_history.html:53
+msgid "You haven't made any orders yet."
+msgstr ""
+
+#: shop/templates/shop/order_tracking.html:8
+#: shop/templates/shop/order_tracking.html:13
+msgid "Order Tracking"
+msgstr ""
+
+#: shop/templates/shop/search.html:12 shop/templates/shop/search.html.py:65
+msgid "Nothing found"
+msgstr ""
+
+#: shop/templates/shop/search.html:15
+msgid "Products search results"
+msgstr ""
+
+#: shop/templates/shop/search.html:17
+#, python-format
+msgid "Search: You found %(items)s item"
+msgid_plural "Search: You found %(items)s items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shop/templates/shop/search.html:34
+msgid "Price (for pz):"
+msgstr ""
+
+#: shop/templates/shop/splash_page.html:39
+#, python-format
+msgid ""
+"\n"
+"                        <p>\n"
+"                         Welcome on\n"
+"                        </p>\n"
+"                        <p>\n"
+"                         %(shop_name)s!\n"
+"                        </p>\n"
+"                        "
+msgstr ""
+
+#: shop/templates/shop/splash_page.html:91
+msgid ""
+"\n"
+"                        <p>\n"
+"                           We assure our customers\n"
+"                           <br />\n"
+"                           <strong>\n"
+"                            the freshest fruits \n"
+"                           </strong>\n"
+"                           <br />\n"
+"                           <strong>\n"
+"                            and vegetables\n"
+"                           </strong>\n"
+"                           and with a more flavorful taste.\n"
+"                        </p>\n"
+"                        <p>\n"
+"                           it takes only\n"
+"                           <br />\n"
+"                           <strong>\n"
+"                            few minutes\n"
+"                           </strong>\n"
+"                           and the expenditure is made!\n"
+"                        </p>\n"
+"                        "
+msgstr ""
+
+#: shop/templates/shop/splash_page.html:113
+msgid "FAI LA TUA SPESA"
+msgstr ""
+
+#: shop/templates/shop/checkout/authentication_required.html:6
+#: shop/templates/shop/checkout/balance_remaining.html:7
+#: shop/templates/shop/checkout/base_confirm.html:8
+#: shop/templates/shop/checkout/base_confirm.html:23
+#: shop/templates/shop/checkout/base_pay_ship.html:6
+#: shop/templates/shop/checkout/base_pay_ship.html:20
+#: shop/templates/shop/checkout/confirm.html:10
+#: shop/templates/shop/checkout/empty_cart.html:6
+#: shop/templates/shop/checkout/empty_cart.html:10
+#: shop/templates/shop/checkout/failure.html:6
+#: shop/templates/shop/checkout/form.html:10
+#: shop/templates/shop/checkout/form.html:24
+#: shop/templates/shop/checkout/success.html:8
+#: shop/templates/shop/checkout/success_bonifico.html:13
+#: shop/templates/shop/checkout/success_contrassegno.html:13
+#: shop/templates/shop/checkout/success_creditcard.html:13
+#: shop/templates/shop/checkout/success_generic.html:13
+msgid "Checkout"
+msgstr ""
+
+#: shop/templates/shop/checkout/authentication_required.html:20
+msgid "Authentication required"
+msgstr ""
+
+#: shop/templates/shop/checkout/authentication_required.html:27
+msgid ""
+"In order to have access to your products and order history, please log in. "
+"After that you may continue to checkout with your current cart."
+msgstr ""
+
+#: shop/templates/shop/checkout/authentication_required.html:30
+#: shop/templates/shop/checkout/form.html:39
+msgid "Username or email"
+msgstr ""
+
+#: shop/templates/shop/checkout/balance_remaining.html:12
+msgid "Order Balance"
+msgstr ""
+
+#: shop/templates/shop/checkout/balance_remaining.html:17
+#, python-format
+msgid ""
+"To complete this order, you need to pay the %(orderbalance)s balance "
+"remaining on this order."
+msgstr ""
+
+#: shop/templates/shop/checkout/balance_remaining.html:22
+msgid "How do you want to pay?"
+msgstr ""
+
+#: shop/templates/shop/checkout/balance_remaining.html:23
+msgid "Payment method"
+msgstr ""
+
+#: shop/templates/shop/checkout/balance_remaining.html:30
+#: shop/templates/shop/checkout/form.html:119
+msgid "Continue Checkout"
+msgstr ""
+
+#: shop/templates/shop/checkout/base_confirm.html:23
+msgid "Please validate the following information, then submit your order."
+msgstr ""
+
+#: shop/templates/shop/checkout/base_confirm.html:27
+msgid ""
+"The following error was returned while trying to process your payment. "
+"Please correct and resubmit."
+msgstr ""
+
+#: shop/templates/shop/checkout/base_confirm.html:44
+msgid "Purchase Items"
+msgstr ""
+
+#: shop/templates/shop/checkout/base_pay_ship.html:20
+#: shop/templates/shop/checkout/form.html:24
+msgid ""
+"Please complete the following information in order to submit your order."
+msgstr ""
+
+#: shop/templates/shop/checkout/base_pay_ship.html:37
+msgid "Shipping Information"
+msgstr ""
+
+#: shop/templates/shop/checkout/base_pay_ship.html:46
+msgid "The following shipping method will be used"
+msgstr ""
+
+#: shop/templates/shop/checkout/base_pay_ship.html:48
+msgid "Please choose your preferred shipping method"
+msgstr ""
+
+#: shop/templates/shop/checkout/base_pay_ship.html:58
+msgid "There are no items in this order to ship."
+msgstr ""
+
+#: shop/templates/shop/checkout/base_pay_ship.html:67
+msgid ""
+"No valid shipping method is available. Please verify that your address is "
+"correct."
+msgstr ""
+
+#: shop/templates/shop/checkout/base_pay_ship.html:70
+msgid "Confirm"
+msgstr ""
+
+#: shop/templates/shop/checkout/confirm.html:6
+msgid ""
+"The following error was returned while trying to process your card.  Please "
+"correct and resubmit"
+msgstr ""
+
+#: shop/templates/shop/checkout/confirm.html:14
+#: shop/templates/shop/email/order_complete.txt:13
+#: shop/templates/shop/email/order_placed_notice.txt:9
+msgid "Payment"
+msgstr ""
+
+#: shop/templates/shop/checkout/confirm.html:20
+#: shop/templates/shop/email/order_complete.txt:16
+#, python-format
+msgid ""
+"Your %(credit_card_type)s card ending in %(credit_card_number)s will be "
+"charged %(order_total)s."
+msgstr ""
+
+#: shop/templates/shop/checkout/confirm.html:22
+#, python-format
+msgid "This order will be charged on your account for %(order_total)s."
+msgstr ""
+
+#: shop/templates/shop/checkout/empty_cart.html:12
+msgid ""
+"Your cart is empty. Please add some items to your cart, then complete the "
+"checkout process."
+msgstr ""
+
+#: shop/templates/shop/checkout/failure.html:11
+msgid "Failed payment"
+msgstr ""
+
+#: shop/templates/shop/checkout/failure.html:12
+msgid "We are sorry, but the payment process finished with a failure."
+msgstr ""
+
+#: shop/templates/shop/checkout/failure.html:13
+msgid "You may"
+msgstr ""
+
+#: shop/templates/shop/checkout/failure.html:13
+msgid "proceed to the cart"
+msgstr ""
+
+#: shop/templates/shop/checkout/failure.html:13
+msgid "and check out again, using other payment method."
+msgstr ""
+
+#: shop/templates/shop/checkout/form.html:28
+msgid "Please correct the following errors"
+msgstr ""
+
+#: shop/templates/shop/checkout/form.html:36
+msgid ""
+"If you already have an account, you can login now to fill in most of the "
+"information below."
+msgstr ""
+
+#: shop/templates/shop/checkout/form.html:37
+msgid "This is just a convenience, no account is required!"
+msgstr ""
+
+#: shop/templates/shop/checkout/form.html:79
+msgid "click here for more details"
+msgstr ""
+
+#: shop/templates/shop/checkout/success.html:13
+#: shop/templates/shop/checkout/success_bonifico.html:19
+#: shop/templates/shop/checkout/success_bonifico.html:55
+#: shop/templates/shop/checkout/success_contrassegno.html:19
+#: shop/templates/shop/checkout/success_contrassegno.html:28
+#: shop/templates/shop/checkout/success_creditcard.html:19
+#: shop/templates/shop/checkout/success_creditcard.html:22
+#: shop/templates/shop/checkout/success_generic.html:19
+#: shop/templates/shop/checkout/success_generic.html:24
+msgid "Thank you for your order!"
+msgstr ""
+
+#: shop/templates/shop/checkout/success.html:14
+#: shop/templates/shop/checkout/success_bonifico.html:22
+#: shop/templates/shop/checkout/success_contrassegno.html:21
+#: shop/templates/shop/checkout/success_creditcard.html:20
+#: shop/templates/shop/checkout/success_generic.html:20
+msgid ""
+"Please print out this page as a receipt.  You will also receive an email "
+"with this information."
+msgstr ""
+
+#: shop/templates/shop/checkout/success_bonifico.html:25
+msgid ""
+"La richiesta verr&agrave; evasa una volta ricevuta conferma dell'avvenuto "
+"pagamento."
+msgstr ""
+
+#: shop/templates/shop/checkout/success_bonifico.html:59
+#: shop/templates/shop/checkout/success_contrassegno.html:32
+#: shop/templates/shop/checkout/success_creditcard.html:26
+#: shop/templates/shop/checkout/success_generic.html:28
+msgid "You can check your order status"
+msgstr ""
+
+#: shop/templates/shop/checkout/success_bonifico.html:60
+#: shop/templates/shop/checkout/success_contrassegno.html:33
+#: shop/templates/shop/checkout/success_creditcard.html:27
+#: shop/templates/shop/checkout/success_generic.html:29
+msgid "order history"
+msgstr ""
+
+#: shop/templates/shop/checkout/success_bonifico.html:61
+#: shop/templates/shop/checkout/success_contrassegno.html:34
+#: shop/templates/shop/checkout/success_creditcard.html:28
+#: shop/templates/shop/checkout/success_generic.html:30
+msgid "Proceed with another purchase"
+msgstr ""
+
+#: shop/templates/shop/checkout/success_bonifico.html:69
+msgid ""
+"Attenzione: le spese di spedizione non sono state conteggiate nell'ordine. "
+"<br /> Verrete contattati via email da un nostro operatore e il vostro "
+"ordine verr&agrave; <br /> confermato solo qualora accettiate il preventivo "
+"di spedizione <br />"
+msgstr ""
+
+#: shop/templates/shop/checkout/success_contrassegno.html:24
+msgid ""
+"Attenzione!!! Il pagamento in contrassegno &egrave; valido solo in contanti. "
+"Il corriere accetter&agrave; solo contanti."
+msgstr ""
+
+#: shop/templates/shop/email/order_complete.txt:5
+#, python-format
+msgid "Thank you for ordering with %(shop_name)s."
+msgstr ""
+
+#: shop/templates/shop/email/order_complete.txt:7
+msgid "Your order is summarized below:"
+msgstr ""
+
+#: shop/templates/shop/email/order_complete.txt:19
+msgid "Your order contains products that can be downloaded"
+msgstr ""
+
+#: shop/templates/shop/email/order_complete.txt:20
+msgid "Please click the link to begin the download"
+msgstr ""
+
+#: shop/templates/shop/email/order_complete.txt:26
+#: zones/templates/zones/email/stale_shipments.html:36
+#: zones/templates/zones/email/stale_shipments.txt:13
+msgid "Regards"
+msgstr ""
+
+#: shop/templates/shop/email/order_complete.txt:28
+#: zones/templates/zones/email/stale_shipments.html:37
+#: zones/templates/zones/email/stale_shipments.txt:15
+msgid "Store Management"
+msgstr ""
+
+#: shop/templates/shop/email/order_placed_notice.txt:3
+#, python-format
+msgid "Order placed on %(shop_name)s by %(customer)s<%(email)s>."
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:6
+#, python-format
+msgid ""
+"\n"
+"        %(shop_name)s ― Invoice for order #%(order_id)s\n"
+"      "
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:16
+msgid "Invoice"
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:20
+#, python-format
+msgid ""
+"\n"
+"        Invoice for order #%(order_id)s\n"
+"        "
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:27
+msgid "Order details"
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:33
+msgid "Description"
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:35
+msgid "Unit price"
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:51
+msgid "No products!"
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:86
+msgid "Totals"
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:98
+msgid "Payments Made"
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:102
+msgid "Balance Due"
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:108
+msgid "Payment information"
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:111
+#, python-format
+msgid ""
+"\n"
+"          Payment total of <span class=\"currency\">%(order_total)s</span>\n"
+"          due to:\n"
+"          "
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:136
+#, python-format
+msgid ""
+"\n"
+"        <span class=\"currency\">%(order_total)s</span> was charged to your\n"
+"        %(credit_card_type)s card (ending with\n"
+"        <code>%(credit_card_number)s</code>) on <em>%(order_date)s</em>.\n"
+"        "
+msgstr ""
+
+#: shop/templates/shop/pdf/invoice.html:144
+msgid ""
+"\n"
+"        Thank you for your business!\n"
+"        "
+msgstr ""
+
+#: shop/templates/tags/gift_box.html:8
+msgid "Gifts"
+msgstr ""
+
+#: shop/templates/tags/offer_box.html:8
+msgid "Offer!"
+msgstr ""
+
+#: shop/templates/tags/prices_table.html:3
+msgid "Prices"
+msgstr ""
+
+#: shop/templates/tags/prices_table.html:4
+msgid "(incl. tax)"
+msgstr ""
+
+#: shop/templatetags/ui_tags.py:63
+msgid "pz"
+msgstr ""
+
+#: zones/__init__.py:10 zones/views.py:185
+#: zones/templates/zones/admin_views/deliveries.html:75
+#: zones/templates/zones/admin_views/stale_shipments.html:50
+#: zones/templates/zones/admin_views/stale_shipments.html:51
+msgid "Stale shipments"
+msgstr ""
+
+#: zones/admin.py:201
+#, python-format
+msgid "%(day)s's mission"
+msgstr ""
+
+#: zones/admin.py:202
+#, python-format
+msgid "%(day)s's missions"
+msgstr ""
+
+#: zones/admin.py:353
+#, python-format
+msgid "%(count)d zone activated"
+msgid_plural "%(count)d zones activated"
+msgstr[0] ""
+msgstr[1] ""
+
+#: zones/admin.py:361
+#, python-format
+msgid "%(count)d zone couldn't be activated"
+msgid_plural "%(count)d zones couldn't be activated"
+msgstr[0] ""
+msgstr[1] ""
+
+#: zones/admin.py:382
+msgid "Activate zones"
+msgstr ""
+
+#: zones/admin.py:387
+msgid "Deactivate zones"
+msgstr ""
+
+#: zones/admin.py:393
+msgid ""
+"Before you can activate this zone, you must create a default calendar and "
+"populate it"
+msgstr ""
+
+#: zones/config.py:11
+msgid "Configurations for Zones"
+msgstr ""
+
+#: zones/config.py:20
+msgid "Max days for stale shipments"
+msgstr ""
+
+#: zones/formextensions.py:15
+msgid "Zones informations"
+msgstr ""
+
+#: zones/formextensions.py:28
+#: zones/templates/zones/admin_views/deliveries.html:79
+#: zones/templates/zones/admin_views/stale_shipments.html:56
+msgid "Zone"
+msgstr ""
+
+#: zones/models.py:23
+msgid "contact"
+msgstr ""
+
+#: zones/models.py:27 zones/models.py:158
+msgid "zone"
+msgstr ""
+
+#: zones/models.py:31
+#, python-format
+msgid "zone for %(contact_name)s"
+msgstr ""
+
+#: zones/models.py:36
+msgid "zone for contact"
+msgstr ""
+
+#: zones/models.py:37
+msgid "zones of contacts"
+msgstr ""
+
+#: zones/models.py:82
+msgid "zone name"
+msgstr ""
+
+#: zones/models.py:109
+#, python-format
+msgid "%(zone)s doesn't have a default calendar associated, please add it"
+msgstr ""
+
+#: zones/models.py:119
+#, python-format
+msgid ""
+"%(zone)s's default calendar is void, please add at least one mission to it"
+msgstr ""
+
+#: zones/models.py:159
+msgid "zones"
+msgstr ""
+
+#: zones/models.py:182
+msgid "delivery zone"
+msgstr ""
+
+#: zones/models.py:184
+msgid "valid from"
+msgstr ""
+
+#: zones/models.py:190
+msgid "valid to"
+msgstr ""
+
+#: zones/models.py:195
+msgid "slack days"
+msgstr ""
+
+#: zones/models.py:204
+msgid "You must specify both ends of the validity period or none at all"
+msgstr ""
+
+#: zones/models.py:222
+msgid ""
+"You can specify only one default calendar (with no validity period) per zone"
+msgstr ""
+
+#: zones/models.py:229
+msgid "The validity period starts after it ends"
+msgstr ""
+
+#: zones/models.py:241
+msgid ""
+"There is another calendar present in the validity time of the current one"
+msgstr ""
+
+#: zones/models.py:246
+#, python-format
+msgid "%(zone)s's calendar (%(from)s - %(to)s)"
+msgstr ""
+
+#: zones/models.py:251
+#, python-format
+msgid "%(zone)s's default calendar"
+msgstr ""
+
+#: zones/models.py:258 zones/models.py:283
+msgid "calendar"
+msgstr ""
+
+#: zones/models.py:259
+msgid "calendars"
+msgstr ""
+
+#: zones/models.py:265
+msgid "monday"
+msgstr ""
+
+#: zones/models.py:266
+msgid "tuesday"
+msgstr ""
+
+#: zones/models.py:267
+msgid "wednesday"
+msgstr ""
+
+#: zones/models.py:268
+msgid "thursday"
+msgstr ""
+
+#: zones/models.py:269
+msgid "friday"
+msgstr ""
+
+#: zones/models.py:270
+msgid "saturday"
+msgstr ""
+
+#: zones/models.py:271
+msgid "sunday"
+msgstr ""
+
+#: zones/models.py:284
+msgid "week day"
+msgstr ""
+
+#: zones/models.py:287
+#, python-format
+msgid "%(weekday)s in %(calendar)s"
+msgstr ""
+
+#: zones/models.py:294 zones/models.py:318
+msgid "calendar day"
+msgstr ""
+
+#: zones/models.py:295
+msgid "calendar days"
+msgstr ""
+
+#: zones/models.py:319
+msgid "starts at"
+msgstr ""
+
+#: zones/models.py:320
+msgid "ends at"
+msgstr ""
+
+#: zones/models.py:321
+msgid "maximum shipments"
+msgstr ""
+
+#: zones/models.py:327
+msgid "The mission starts after it ends"
+msgstr ""
+
+#: zones/models.py:339
+msgid "There is another mission to the same zone with a conflicting schedule"
+msgstr ""
+
+#: zones/models.py:358
+#, python-format
+msgid "%(start)s - %(end)s, %(day)s"
+msgstr ""
+
+#: zones/models.py:365 zones/models.py:387
+msgid "mission"
+msgstr ""
+
+#: zones/models.py:366
+msgid "missions"
+msgstr ""
+
+#: zones/models.py:388
+msgid "order"
+msgstr ""
+
+#: zones/models.py:389
+msgid "date"
+msgstr ""
+
+#: zones/models.py:390
+msgid "booken on"
+msgstr ""
+
+#: zones/models.py:392
+msgid "confirmed"
+msgstr ""
+
+#: zones/models.py:400
+#, python-format
+msgid "shipment #%(id)s for order #%(order)s"
+msgstr ""
+
+#: zones/models.py:406
+msgid "shipment"
+msgstr ""
+
+#: zones/models.py:407
+msgid "shipments"
+msgstr ""
+
+#: zones/models.py:778
+msgid "Order confirmed"
+msgstr ""
+
+#: zones/views.py:148
+msgid "Site administration"
+msgstr ""
+
+#: zones/views.py:201
+#, python-format
+msgid "Shipment %(id)s confirmed"
+msgstr ""
+
+#: zones/views.py:203
+#, python-format
+msgid "Error! Shipment %(id)s doeasn't exist"
+msgstr ""
+
+#: zones/views.py:205
+msgid "No sipment selected"
+msgstr ""
+
+#: zones/management/commands/stale_shipments.py:79
+#, python-format
+msgid "%(site_name)s - Stale shipments"
+msgstr ""
+
+#: zones/templates/admin/zones/calendar/change_form.html:6
+#: zones/templates/admin/zones/calendar/change_list.html:10
+#: zones/templates/admin/zones/calendar/default_change_form.html:17
+#: zones/templates/admin/zones/calendar/default_object_history.html:7
+#: zones/templates/admin/zones/calendar/delete_confirmation.html:6
+#: zones/templates/admin/zones/calendar/delete_selected_confirmation.html:10
+#: zones/templates/admin/zones/calendar/object_history.html:7
+msgid "Zones"
+msgstr ""
+
+#: zones/templates/admin/zones/calendar/change_form.html:9
+#: zones/templates/admin/zones/calendar/change_list.html:21
+#: zones/templates/admin/zones/calendar/delete_confirmation.html:9
+#: zones/templates/admin/zones/calendar/delete_selected_confirmation.html:22
+#: zones/templates/admin/zones/calendar/object_history.html:10
+#: zones/templates/admin/zones/zone/change_form.html:23
+msgid "Exceptional calendars"
+msgstr ""
+
+#: zones/templates/admin/zones/calendar/change_form.html:10
+#: zones/templates/zones/admin_views/stale_shipments.html:25
+msgid "Add"
+msgstr ""
+
+#: zones/templates/admin/zones/calendar/default_change_form.html:19
+#: zones/templates/admin/zones/zone/change_form.html:16
+msgid "Add default calendar"
+msgstr ""
+
+#: zones/templates/admin/zones/calendar/default_object_history.html:11
+#: zones/templates/admin/zones/calendar/object_history.html:12
+msgid "History"
+msgstr ""
+
+#: zones/templates/admin/zones/calendar/delete_selected_confirmation.html:24
+msgid "Delete multiple objects"
+msgstr ""
+
+#: zones/templates/admin/zones/zone/change_form.html:9
+msgid "Edit default calendar"
+msgstr ""
+
+#: zones/templates/zones/admin_views/deliveries.html:11
+msgid "Stale Shipments"
+msgstr ""
+
+#: zones/templates/zones/admin_views/deliveries.html:33
+#, python-format
+msgid ""
+"\n"
+"        There is %(risky_count)s stale shipment requiring immediate action!\n"
+"        "
+msgid_plural ""
+"\n"
+"        There are %(risky_count)s stale shipments requiring immediate "
+"action!\n"
+"        "
+msgstr[0] ""
+msgstr[1] ""
+
+#: zones/templates/zones/admin_views/deliveries.html:60
+#: zones/templates/zones/admin_views/deliveries.html:81
+msgid "Delivery"
+msgstr ""
+
+#: zones/templates/zones/admin_views/deliveries.html:61
+#: zones/templates/zones/admin_views/deliveries.html:80
+#: zones/templates/zones/admin_views/stale_shipments.html:57
+msgid "Made on"
+msgstr ""
+
+#: zones/templates/zones/admin_views/deliveries.html:83
+msgid "Phone"
+msgstr ""
+
+#: zones/templates/zones/admin_views/deliveries.html:84
+msgid "Actions"
+msgstr ""
+
+#: zones/templates/zones/admin_views/deliveries.html:139
+#: zones/templates/zones/admin_views/stale_shipments.html:78
+msgid "No shipments"
+msgstr ""
+
+#: zones/templates/zones/admin_views/stale_shipments.html:5
+msgid "Stale Orders"
+msgstr ""
+
+#: zones/templates/zones/admin_views/stale_shipments.html:14
+#, python-format
+msgid "Models available in the %(name)s application."
+msgstr ""
+
+#: zones/templates/zones/admin_views/stale_shipments.html:15
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#: zones/templates/zones/admin_views/stale_shipments.html:31
+msgid "Change"
+msgstr ""
+
+#: zones/templates/zones/admin_views/stale_shipments.html:43
+#, python-format
+msgid ""
+"\n"
+"      There is %(risky_count)s stale shipment requiring immediate action!\n"
+"      "
+msgid_plural ""
+"\n"
+"      There are %(risky_count)s stale shipments requiring immediate action!\n"
+"      "
+msgstr[0] ""
+msgstr[1] ""
+
+#: zones/templates/zones/admin_views/stale_shipments.html:55
+msgid "# Order"
+msgstr ""
+
+#: zones/templates/zones/admin_views/stale_shipments.html:83
+#, python-format
+msgid "See all %(total_shipments)s stale shipments"
+msgstr ""
+
+#: zones/templates/zones/admin_views/stale_shipments.html:88
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: zones/templates/zones/email/stale_shipments.html:5
+#: zones/templates/zones/email/stale_shipments.txt:3
+#, python-format
+msgid "Administration %(site_name)s,"
+msgstr ""
+
+#: zones/templates/zones/email/stale_shipments.html:7
+#: zones/templates/zones/email/stale_shipments.txt:5
+msgid "Stale shipments are summarized below:"
+msgstr ""
+
+#: zones/templates/zones/email/stale_shipments.html:11
+#: zones/templates/zones/email/stale_shipments.txt:7
+msgid "ID"
+msgstr ""
+
+#: zones/templates/zones/email/stale_shipments.html:12
+#: zones/templates/zones/email/stale_shipments.txt:7
+msgid "Mission"
+msgstr ""
+
+#: zones/templates/zones/email/stale_shipments.html:13
+#: zones/templates/zones/email/stale_shipments.txt:7
+msgid "Order ID"
+msgstr ""
+
+#: zones/templates/zones/email/stale_shipments.html:14
+#: zones/templates/zones/email/stale_shipments.txt:7
+msgid "Contact"
+msgstr ""
