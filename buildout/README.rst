@@ -1,6 +1,9 @@
 Installation
 ============
 
+Rename "source" directory in "src"::
+    mv source/ src
+
 Create a file named ``buildout.cfg`` with the following content::
 
     [buildout]
