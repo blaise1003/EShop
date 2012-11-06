@@ -1,0 +1,127 @@
+{{default shop_base = ''}}
+{{default custom_shipping_modules = ''}}
+{{default custom_tax_modules = ''}}
+{{default form_extenders = ''}}
+SATCHMO_SETTINGS = {
+    'SHOP_BASE': '{{shop_base}}',
+    'MULTISHOP': {{boolify(multishop)}},
+    {{if custom_shipping_modules }}
+    'CUSTOM_SHIPPING_MODULES': [
+        {{join(listify(custom_shipping_modules),"',\n        '","'","',")}}
+    ],
+    {{endif}}
+    {{if custom_tax_modules}}
+    'CUSTOM_TAX_MODULES': [
+        {{join(listify(custom_tax_modules),"',\n        '","'","',")}}
+    ],
+    {{endif}}
+    'CATEGORY_SLUG': '{{category_slug}}',
+    'PAGE_SLUG': '{{page_slug}}',
+    'PRODUCT_SLUG': '{{product_slug}}'{{if form_extenders}},
+    'FORM_EXTENDERS': [
+        {{join(listify(form_extenders),"',\n        '","'","',")}}
+    ]{{endif}}{{if links_extenders}},
+    'EXTRA_LINKS': [
+        {{join(listify(links_extenders),"',\n        '","'","',")}}
+    ]{{endif}}
+}
+
+EMAIL_NOTIFICATION = '{{config.admin_email}}'
+DEFAULT_FROM_EMAIL = '{{config.site_email}}'
+ACCOUNT_ACTIVATION_DAYS = 5
+
+MAX_IMAGE_DIMENSION = {{config.max_image_dimension}}
+IMAGE_MIME_TYPES_ACCEPTED = [
+    {{join(listify(image_mimetypes),"',\n    '","'","',")}}
+]
+
+{{if boolify(debug)}}
+LOCAL_DEV = DEBUG
+THUMBNAIL_DEBUG = DEBUG
+{{if debug_toolbar_panels}}
+DEBUG_TOOLBAR_PANELS = (
+    {{join(listify(debug_toolbar_panels),"',\n    '","'","',")}}
+)
+{{endif}}
+{{if debug_toolbar_config}}
+DEBUG_TOOLBAR_CONFIG = {
+{{py:
+debug_toolbar_config_items = [
+    e.split('=', 1) for e in debug_toolbar_config.split()
+]
+}}
+    {{for key, value in debug_toolbar_config_items}}
+    '{{key}}': {{value}},
+    {{endfor}}
+}
+{{endif}}
+{{endif}}
+
+L10N_SETTINGS = {
+{{py:
+currencies = [
+    e.split() for e in l10n_currencies.splitlines() if e.strip() != ""
+]
+}}
+    'currency_formats': {
+        {{for currency in currencies}}
+        '{{currency[0]}}': {
+            'symbol': {{currency[1]}},
+            'positive' : {{currency[2]}},
+            'negative': {{currency[3]}},
+            'decimal' : {{currency[4]}}
+        },
+        {{endfor}}
+    },
+    'default_currency': '{{l10n_default_currency}}',
+    'show_admin_translations': {{boolify(l10n_show_translations)}},
+    'allow_translation_choice': {{boolify(l10n_choose_translations)}}
+}
+
+PDF_RENDERMETHOD = 'wkhtml2pdf'
+WKHTML2PDF_BINARY = {
+    'linux2': '{{wkhtml2pdf_linux}}',
+    'darwin': '{{wkhtml2pdf_osx}}'
+}
+
+# compressor
+COMPRESS_ENABLED = not DEBUG
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+)
+
+# tinyMCE
+TINYMCE_JS_URL = 'theme/scripts/tiny_mce/tiny_mce.js'
+TINYMCE_SPELLCHECKER = False
+TINYMCE_COMPRESSOR = False
+# configure
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': "advanced",
+    'plugins': 'table,advimage,advlink,inlinepopups,preview,media,searchreplace,contextmenu,paste,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,spellchecker',
+    'theme_advanced_buttons1': 'fullscreen,|,bold,italic,underline,strikethrough,|,bullist,numlist,|,justifyleft,justifyright,justifycenter,justifyfull,|,outdent,indent,|,formatselect,styleselect',
+    'theme_advanced_buttons2': 'image,|,copy,paste,|,sub,sup,|,undo,redo,|,link,unlink,anchor,charmap,|,spellchecker',
+    'theme_advanced_buttons3': '',
+    'theme_advanced_toolbar_location': 'top',
+    'theme_advanced_toolbar_align': 'left',
+    'strict_loading_mode': True,
+    'content_css' : "/static/primifrutti/primifrutti/styles/mce_styles.css",
+}
+
+USE_L10N = True
+DATE_FORMAT = "l j F Y"
+TIME_FORMAT = "H:i"
+
+MAX_WIDTH = 630
+MAX_HEIGHT = 255
+
+AJAX_LOOKUP_CHANNELS = {
+    'product' : ('primifrutti.shop.lookups', 'ProductLookup'),
+}
+
+COMPRESS_PRECOMPILERS = (
+    ('text/coffeescript', '{{buildout.bin_directory}}/coffee --compile --stdio'),
+    ('text/less', '{{buildout.bin_directory}}/lessc -x {infile} > {outfile}')
+)

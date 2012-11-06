@@ -1,0 +1,15 @@
+listen_addresses = '${config:pg_host}'
+port = ${config:pg_port}
+log_destination = 'stderr'
+logging_collector = on
+log_directory = '${config:pg_log_directory}'
+log_filename = 'postgresql-server-%Y%m%d%H%M%S%z.log'
+log_truncate_on_rotation = on
+log_rotation_age = 1440
+log_rotation_size = 0
+log_min_messages = info
+log_error_verbosity = verbose
+log_checkpoints = on
+log_connections = on
+log_disconnections = on
+log_line_prefix = '{%u on %d, at %m from %r}'

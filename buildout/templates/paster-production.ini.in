@@ -1,0 +1,10 @@
+[app:main]
+paste.app_factory = djc_recipe_django.app:app_factory
+
+
+[server:main]
+use = egg:gunicorn#main
+host = ${config:gunicorn_host}
+port = ${config:gunicorn_port}
+workers = ${config:gunicorn_n_workers}
+workers_class = ${config:gunicorn_workers_class}

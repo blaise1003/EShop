@@ -1,0 +1,81 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          {config:name}-supervisor
+# Required-Start:    $all
+# Required-Stop:     
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: initscript for {config:name}-supervisor
+# Description:       
+### END INIT INFO
+
+DAEMON=${buildout:directory}/bin/supervisordd
+NAME=supervisordd
+DESC="supervisor daemon"
+PIDFILE=${buildout:directory}/var/supervisord.pid
+PYTHON_EGG_CACHE=/tmp/.python-eggs
+export PYTHON_EGG_CACHE
+
+
+test -x $DAEMON || exit 1
+
+# As far as i can understand, Ubuntu is completely different (and uninteresting
+# to me :P)
+
+# Source function library.
+#. /etc/init.d/functions
+
+
+# Shameless monkey patching here...
+echo_success(){
+    echo " done."
+}
+
+echo_failure(){
+    echo " unable to execute !!!"
+}
+# End of shame - i hope...
+
+
+RETVAL=0
+
+case "$1" in
+  start)
+	echo -n "Starting $NAME:"
+	$DAEMON &
+	sleep 1
+	#pkill -0 $NAME
+	RETVAL=$?
+	if [ $RETVAL -eq 0 ]; then
+		echo_success
+	else
+		echo_failure
+	fi
+	echo
+	;;
+  stop)
+	echo -n "Stopping $NAME:"
+	kill $(cat $PIDFILE)
+	if [ $RETVAL -eq 0 ]; then
+		echo_success
+	else
+		echo_failure
+	fi
+	echo
+	;;
+  status)
+	status $NAME
+	RETVAL=$?
+	;;
+  restart)
+	$0 stop
+	$0 start
+	RETVAL=$?
+	;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|stop|status|restart}" >&2
+	exit 1
+	;;
+esac
+
+exit $RETVAL

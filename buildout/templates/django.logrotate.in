@@ -1,0 +1,11 @@
+${django:wsgi-logfile} {
+	daily
+	rotate 4
+	compress
+	delaycompress
+	missingok
+	notifempty
+	postrotate
+        ${buildout:bin-directory}/supervisordctl restart django
+	endscript
+}
